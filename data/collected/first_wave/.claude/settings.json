@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(/.claude/skills/shaharlab_project_folder_scaffolding/**)",
+      "Edit(/.claude/skills/shaharlab-bayesian-regression/**)",
+      "Bash(mkdir -p \"d:\\\\OneDrive - Tel-Aviv University\\\\github\\\\bayesian_skills\\\\analysis\\\\anxiety_testscore_association\\\\code\" \"d:\\\\OneDrive - Tel-Aviv University\\\\github\\\\bayesian_skills\\\\analysis\\\\anxiety_testscore_association\\\\artifacts\" \"d:\\\\OneDrive - Tel-Aviv University\\\\github\\\\bayesian_skills\\\\analysis\\\\anxiety_testscore_association\\\\output\")",
+      "Edit(/.claude/skills/shaharlab_plotting/**)",
+      "Bash(mkdir -p \"d:\\\\OneDrive - Tel-Aviv University\\\\github\\\\bayesian_skills\\\\analysis\\\\anxiety_exam_bayesian_regression\\\\code\" \"d:\\\\OneDrive - Tel-Aviv University\\\\github\\\\bayesian_skills\\\\analysis\\\\anxiety_exam_bayesian_regression\\\\artifacts\" \"d:\\\\OneDrive - Tel-Aviv University\\\\github\\\\bayesian_skills\\\\analysis\\\\anxiety_exam_bayesian_regression\\\\output\")",
+      "Bash(Get-ChildItem -Path \".\\\\.claude\\\\skills\\\\shaharlab_plotting\\\\\" -Recurse | Select-Object FullName)",
+      "Bash(ls -la d:/.claude/agents 2>/dev/null || echo \"Directory does not exist\")",
+      "Read(//d/.claude/**)",
+      "Bash(cd \"d:/OneDrive - Tel-Aviv University/github/bayesian_skills/.claude/agents/\" && rm lab_architect.md lab_code_reviewer.md shahar_data_scientist.md)",
+      "PowerShell(Get-Content \"data\\\\processed\\\\pairwise_processed.csv\" -TotalCount 5; \"\"; Get-Content \"data\\\\processed\\\\likert_processed.csv\" -TotalCount 5; \"\"; \\(Import-Csv \"data\\\\processed\\\\pairwise_processed.csv\" | Measure-Object\\).Count; Get-ChildItem analysis)",
+      "PowerShell(\"\")",
+      "PowerShell($d = Import-Csv \"data\\\\processed\\\\pairwise_processed.csv\"; $d.window_status | Group-Object | Select Name,Count; $d.skipped | Group-Object | Select Name,Count; \\($d.left_item + $d.right_item | Sort-Object {[int]$_} -Unique\\) -join \",\"; \\($d.participant_id | Sort-Object -Unique\\).Count; $d.Count)",
+      "PowerShell($l = Import-Csv \"data\\\\processed\\\\likert_processed.csv\"; \\($l.item | Sort-Object {[int]$_} -Unique\\) -join \",\"; \\($l.participant_id | Sort-Object -Unique\\) -join \",\"; \\(Get-Command Rscript -ErrorAction SilentlyContinue\\).Source)",
+      "PowerShell($l = Import-Csv \"data\\\\processed\\\\likert_processed.csv\"; \\($l | ForEach-Object { [int]$_.'item' } | Sort-Object -Unique\\) -join \",\"; \\(Get-Command Rscript -ErrorAction SilentlyContinue\\).Source)",
+      "PowerShell(Get-ChildItem \"C:\\\\Program Files\\\\R\" -ErrorAction SilentlyContinue | Select Name; Get-ChildItem \"$env:LOCALAPPDATA\\\\Programs\\\\R\" -ErrorAction SilentlyContinue | Select Name)",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.6.0\\\\bin\\\\Rscript.exe\" -e \"library\\(cmdstanr\\); cat\\(cmdstanr::cmdstan_version\\(\\)\\); cat\\(' | here:', requireNamespace\\('here', quietly=TRUE\\), 'ggdist:', requireNamespace\\('ggdist', quietly=TRUE\\), 'posterior:', requireNamespace\\('posterior', quietly=TRUE\\), 'tidyverse:', requireNamespace\\('tidyverse', quietly=TRUE\\)\\)\")",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.6.0\\\\bin\\\\Rscript.exe\" \"analysis\\\\beta_utility_pairwise\\\\main.R\")",
+      "PowerShell($d = Import-Csv \"d:\\\\OneDrive - Tel-Aviv University\\\\github\\\\PHQ9_pairwise_pilot\\\\data\\\\processed\\\\pairwise_processed.csv\"; \\($d.participant_id | Select-Object -Unique\\).Count; \\($d | Where-Object {$_.skipped -eq 'FALSE' -and $_.window_status -eq 'ok'} | Measure-Object\\).Count; \\($d | Measure-Object\\).Count; $l = Import-Csv \"d:\\\\OneDrive - Tel-Aviv University\\\\github\\\\PHQ9_pairwise_pilot\\\\data\\\\processed\\\\likert_processed.csv\"; \\($l.item | Select-Object -Unique | Sort-Object {[int]$_}\\) -join ',')",
+      "PowerShell($l = Import-Csv \"d:\\\\OneDrive - Tel-Aviv University\\\\github\\\\PHQ9_pairwise_pilot\\\\data\\\\processed\\\\likert_processed.csv\"; $l | Select-Object -Property item, item_phq_number | Sort-Object item -Unique | Format-Table; $d = Import-Csv \"d:\\\\OneDrive - Tel-Aviv University\\\\github\\\\PHQ9_pairwise_pilot\\\\data\\\\processed\\\\pairwise_processed.csv\"; $d | Select-Object @{n='item';e={$_.left_item}}, @{n='phq';e={$_.left_item_phq_number}} | Sort-Object item -Unique | Format-Table)",
+      "PowerShell($l = Import-Csv \"d:\\\\OneDrive - Tel-Aviv University\\\\github\\\\PHQ9_pairwise_pilot\\\\data\\\\processed\\\\likert_processed.csv\"; $l.window_status | Group-Object | Select Name,Count; \\($l | Group-Object participant_id, item | Where-Object Count -gt 1 | Measure-Object\\).Count; $d = Import-Csv \"d:\\\\OneDrive - Tel-Aviv University\\\\github\\\\PHQ9_pairwise_pilot\\\\data\\\\processed\\\\pairwise_processed.csv\"; \\($d.left_item + $d.right_item | Select-Object -Unique\\).Count)",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.6.0\\\\bin\\\\Rscript.exe\" \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--OneDrive---Tel-Aviv-University-github-PHQ9-pairwise-pilot\\\\873de4b4-67c1-4f0e-8913-6d2f30735f94\\\\scratchpad\\\\replot.R\")",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.6.0\\\\bin\\\\Rscript.exe\" -e \"cat\\(requireNamespace\\('patchwork', quietly=TRUE\\)\\)\")",
+      "Read(//d/OneDrive - Tel-Aviv University/github/PHQ9_pairwise_pilot/analysis/beta_utility_pairwise/output/**)",
+      "PowerShell(Get-Process Rscript,R -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Process OneDrive -ErrorAction SilentlyContinue)",
+      "PowerShell($f = Get-Item \"analysis\\\\beta_utility_pairwise\\\\output\\\\clinical_report.pdf\"; $f.Attributes; try { $s=[System.IO.File]::Open\\($f.FullName,'Open','Read','None'\\); $s.Close\\(\\); \"exclusive read ok\" } catch { $_.Exception.Message })",
+      "PowerShell(try { Move-Item \"analysis\\\\beta_utility_pairwise\\\\output\\\\clinical_report.pdf\" \"analysis\\\\beta_utility_pairwise\\\\output\\\\clinical_report_locked_old.pdf\" -Force -ErrorAction Stop; \"renamed\" } catch { $_.Exception.Message })",
+      "PowerShell($od = \\(Get-Process OneDrive -ErrorAction SilentlyContinue\\).Path | Select-Object -First 1; Stop-Process -Name OneDrive -Force -Confirm:$false; Start-Sleep -Seconds 3; try { Remove-Item \"analysis\\\\beta_utility_pairwise\\\\output\\\\clinical_report.pdf\" -Force -ErrorAction Stop; \"removed\" } catch { $_.Exception.Message }; $od)"
+    ],
+    "additionalDirectories": [
+      "d:\\OneDrive - Tel-Aviv University\\github\\bayesian_skills\\analysis\\anxiety_testscore_association",
+      "d:\\OneDrive - Tel-Aviv University\\github\\bayesian_skills\\analysis\\anxiety_exam_bayesian_regression",
+      "D:\\OneDrive - Tel-Aviv University\\github\\bayesian_skills\\.claude\\skills\\shaharlab_plotting\\plot-posterior",
+      "D:\\OneDrive - Tel-Aviv University\\github\\bayesian_skills\\.claude\\skills\\shaharlab_plotting\\references\\plot-posterior",
+      "d:\\OneDrive - Tel-Aviv University\\github\\bayesian_skills\\.claude\\agents"
+    ]
+  }
+}
