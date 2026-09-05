@@ -28,7 +28,9 @@
       "PowerShell(Get-Process OneDrive -ErrorAction SilentlyContinue)",
       "PowerShell($f = Get-Item \"analysis\\\\beta_utility_pairwise\\\\output\\\\clinical_report.pdf\"; $f.Attributes; try { $s=[System.IO.File]::Open\\($f.FullName,'Open','Read','None'\\); $s.Close\\(\\); \"exclusive read ok\" } catch { $_.Exception.Message })",
       "PowerShell(try { Move-Item \"analysis\\\\beta_utility_pairwise\\\\output\\\\clinical_report.pdf\" \"analysis\\\\beta_utility_pairwise\\\\output\\\\clinical_report_locked_old.pdf\" -Force -ErrorAction Stop; \"renamed\" } catch { $_.Exception.Message })",
-      "PowerShell($od = \\(Get-Process OneDrive -ErrorAction SilentlyContinue\\).Path | Select-Object -First 1; Stop-Process -Name OneDrive -Force -Confirm:$false; Start-Sleep -Seconds 3; try { Remove-Item \"analysis\\\\beta_utility_pairwise\\\\output\\\\clinical_report.pdf\" -Force -ErrorAction Stop; \"removed\" } catch { $_.Exception.Message }; $od)"
+      "PowerShell($od = \\(Get-Process OneDrive -ErrorAction SilentlyContinue\\).Path | Select-Object -First 1; Stop-Process -Name OneDrive -Force -Confirm:$false; Start-Sleep -Seconds 3; try { Remove-Item \"analysis\\\\beta_utility_pairwise\\\\output\\\\clinical_report.pdf\" -Force -ErrorAction Stop; \"removed\" } catch { $_.Exception.Message }; $od)",
+      "Read(//c/Users/lihina/.claude/plugins/cache/shaharlab/shaharlab-behavioral-data-analysis/2.0.0/coding-knowledge/01-scaffolding/references/**)",
+      "Read(//c/Users/lihina/.claude/plugins/cache/shaharlab/shaharlab-behavioral-data-analysis/2.0.0/coding-knowledge/04-bayesian-regression/**)"
     ],
     "additionalDirectories": [
       "d:\\OneDrive - Tel-Aviv University\\github\\bayesian_skills\\analysis\\anxiety_testscore_association",
