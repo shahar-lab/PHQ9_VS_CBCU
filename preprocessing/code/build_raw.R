@@ -12,7 +12,7 @@ common_cols <- c("participant_id", "session", "prolific_pid", "prolific_study_id
 
 cbcu_results <- collected |>
   dplyr::filter(phase == "pairwise" | iti_phase == "pairwise") |>
-  dplyr::select(dplyr::all_of(common_cols),
+  dplyr::select(dplyr::all_of(common_cols), phase,
                 left_item_number, left_item_text, right_item_number, right_item_text,
                 chosen_side, chosen_item_number, chosen_item_text,
                 rt_from_stim_ms, stim_onset_ms, phase_trial_num, skipped)
@@ -166,6 +166,7 @@ cbcu_results_dictionary <- tibble::tribble(
   "prolific_session_id", "character", "Prolific session ID (renamed from session_id in second_wave)",
   "rt",                  "numeric",   "jsPsych's built-in trial RT, ms (identical to rt_from_stim_ms in this task; both are timed from stimulus onset, kept as separate columns because jsPsych records rt automatically while rt_from_stim_ms is computed by the task's own code)",
   "study_session",       "factor",    "session_1 = first_wave, session_2 = second_wave. Levels: session_1 (reference), session_2.",
+  "phase",               "character", "\"pairwise\" for the actual comparison-response row, \"iti\" for that trial's inter-trial-interval row. iti rows have no response (chosen_side, rt, etc. are NA by design, not missing data).",
   "left_item_number",    "character", "left-side item identifier",
   "left_item_text",      "character", "left-side item text",
   "right_item_number",   "character", "right-side item identifier",
