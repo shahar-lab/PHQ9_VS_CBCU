@@ -6,6 +6,7 @@ library(here)
 library(tidyverse)
 library(brms)
 library(ggdist)
+library(cmdstanr)
 
 # MASS is loaded via MASS::mvrnorm() calls rather than library(MASS) to avoid
 # masking dplyr::select().
