@@ -35,5 +35,6 @@ source(file.path(code_dir, "describe_collected.R"))
 
 # 3. Build raw data: split the long-format collected log into the four tidy
 # CSVs (cbcu_results, cbcu_quizz, phq9_results, feedback), apply type
-# coercion, write them to data/raw/, and write raw-data-structure-report.md.
+# coercion, write them to data/raw/, and write raw-data-structure-report.md
+# (one section per output CSV).
 source(file.path(code_dir, "build_raw.R"))

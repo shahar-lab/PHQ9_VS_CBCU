@@ -110,102 +110,141 @@ kept_row_ids <- dplyr::bind_rows(
   collected |> dplyr::filter(phase == "feedback")
 )
 
-#### DESCRIBE: NUMERIC AND CATEGORICAL COLUMNS ####
+#### DESCRIBE: PER-CSV NUMERIC AND CATEGORICAL COLUMNS ####
 
-# Combined across the four raw outputs (id columns duplicated across outputs collapse
-# to one row each via bind_rows + the per-column grouping below).
-combined_raw <- dplyr::bind_rows(cbcu_results, cbcu_quizz, phq9_results, feedback)
+describe_numeric <- function(df) {
+  numeric_df <- df |> dplyr::select(dplyr::where(is.numeric))
+  if (ncol(numeric_df) == 0) {
+    return(tibble::tibble(column = character(), n_missing = integer(),
+                           min = numeric(), mean = numeric(), max = numeric()))
+  }
+  numeric_df |>
+    tidyr::pivot_longer(dplyr::everything(), names_to = "column", values_to = "value") |>
+    dplyr::group_by(column) |>
+    dplyr::summarise(
+      n_missing = sum(is.na(value)),
+      min       = round(min(value, na.rm = TRUE), 3),
+      mean      = round(mean(value, na.rm = TRUE), 3),
+      max       = round(max(value, na.rm = TRUE), 3)
+    )
+}
 
-numeric_columns <- combined_raw |>
-  dplyr::select(dplyr::where(is.numeric)) |>
-  tidyr::pivot_longer(dplyr::everything(), names_to = "column", values_to = "value") |>
-  dplyr::group_by(column) |>
-  dplyr::summarise(
-    n_missing = sum(is.na(value)),
-    min       = round(min(value, na.rm = TRUE), 3),
-    mean      = round(mean(value, na.rm = TRUE), 3),
-    max       = round(max(value, na.rm = TRUE), 3)
-  )
+describe_categorical <- function(df) {
+  categorical_df <- df |> dplyr::select(dplyr::where(is.character) | dplyr::where(is.factor))
+  if (ncol(categorical_df) == 0) {
+    return(tibble::tibble(column = character(), n_missing = integer(),
+                           n_levels = integer(), labels = character()))
+  }
+  categorical_df |>
+    dplyr::mutate(dplyr::across(dplyr::everything(), as.character)) |>
+    tidyr::pivot_longer(dplyr::everything(), names_to = "column", values_to = "value") |>
+    dplyr::group_by(column) |>
+    dplyr::summarise(
+      n_missing = sum(is.na(value)),
+      n_levels  = dplyr::n_distinct(value, na.rm = TRUE),
+      labels    = paste(head(sort(unique(value)), 6), collapse = ", ")
+    )
+}
 
-categorical_columns <- combined_raw |>
-  dplyr::select(dplyr::where(is.character) | dplyr::where(is.factor)) |>
-  dplyr::mutate(dplyr::across(dplyr::everything(), as.character)) |>
-  tidyr::pivot_longer(dplyr::everything(), names_to = "column", values_to = "value") |>
-  dplyr::group_by(column) |>
-  dplyr::summarise(
-    n_missing = sum(is.na(value)),
-    n_levels  = dplyr::n_distinct(value, na.rm = TRUE),
-    labels    = paste(head(sort(unique(value)), 6), collapse = ", ")
-  )
+cbcu_results_numeric <- describe_numeric(cbcu_results)
+cbcu_results_categorical <- describe_categorical(cbcu_results)
+cbcu_quizz_numeric <- describe_numeric(cbcu_quizz)
+cbcu_quizz_categorical <- describe_categorical(cbcu_quizz)
+phq9_results_numeric <- describe_numeric(phq9_results)
+phq9_results_categorical <- describe_categorical(phq9_results)
+feedback_numeric <- describe_numeric(feedback)
+feedback_categorical <- describe_categorical(feedback)
 
-#### DESCRIBE: SAMPLE OVERVIEW ####
+#### DESCRIBE: PER-CSV DATA DICTIONARY ####
 
-trials_per_participant <- dplyr::count(cbcu_results |> dplyr::filter(!is.na(chosen_side)),
-                                        prolific_pid, study_session, name = "n_trials")
-
-sample_overview <- tibble::tibble(
-  metric = c("Total observations (kept)", "Participants", "Sessions",
-             "CBCU trials per participant (min / median / max)"),
-  value  = c(format(nrow(kept_row_ids), big.mark = ","),
-             format(dplyr::n_distinct(collected$prolific_pid)),
-             format(dplyr::n_distinct(collected$study_session)),
-             paste(min(trials_per_participant$n_trials),
-                   median(trials_per_participant$n_trials),
-                   max(trials_per_participant$n_trials), sep = " / "))
+cbcu_results_dictionary <- tibble::tribble(
+  ~column,               ~class,      ~meaning,
+  "participant_id",      "character", "jsPsych-generated per-session code (not stable across sessions; do not use as participant key)",
+  "session",             "character", "jsPsych session code",
+  "prolific_pid",        "factor",    "Prolific participant ID (stable across sessions; the participant identity key). Levels = Prolific IDs present in the data, no fixed reference.",
+  "prolific_study_id",   "character", "Prolific study ID",
+  "prolific_session_id", "character", "Prolific session ID (renamed from session_id in second_wave)",
+  "rt",                  "numeric",   "jsPsych's built-in trial RT, ms (identical to rt_from_stim_ms in this task; both are timed from stimulus onset, kept as separate columns because jsPsych records rt automatically while rt_from_stim_ms is computed by the task's own code)",
+  "study_session",       "factor",    "session_1 = first_wave, session_2 = second_wave. Levels: session_1 (reference), session_2.",
+  "left_item_number",    "character", "left-side item identifier",
+  "left_item_text",      "character", "left-side item text",
+  "right_item_number",   "character", "right-side item identifier",
+  "right_item_text",     "character", "right-side item text",
+  "chosen_side",         "character", "left/right side chosen",
+  "chosen_item_number",  "character", "identifier of chosen item",
+  "chosen_item_text",    "character", "text of chosen item",
+  "rt_from_stim_ms",     "numeric",   "RT from stimulus onset, ms (see rt above)",
+  "stim_onset_ms",       "numeric",   "stimulus onset time, ms",
+  "phase_trial_num",     "character", "trial number within the pairwise phase",
+  "skipped",             "character", "whether the trial was skipped: \"true\" or \"false\" for pairwise response rows; blank/NA for the paired iti rows, where the field does not apply"
 )
 
-#### DESCRIBE: DATA DICTIONARY ####
+cbcu_quizz_dictionary <- tibble::tribble(
+  ~column,                 ~class,      ~meaning,
+  "participant_id",        "character", "jsPsych-generated per-session code (not stable across sessions; do not use as participant key)",
+  "session",               "character", "jsPsych session code",
+  "prolific_pid",          "factor",    "Prolific participant ID (stable across sessions; the participant identity key). Levels = Prolific IDs present in the data, no fixed reference.",
+  "prolific_study_id",     "character", "Prolific study ID",
+  "prolific_session_id",   "character", "Prolific session ID (renamed from session_id in second_wave)",
+  "rt",                    "numeric",   "jsPsych's built-in RT for the quiz item, ms",
+  "study_session",         "factor",    "session_1 = first_wave, session_2 = second_wave. Levels: session_1 (reference), session_2.",
+  "quiz_question_num",     "character", "quiz question number, 1-6",
+  "quiz_attempt_num",      "character", "attempt number for that question",
+  "selected_option_index", "character", "index of selected quiz option",
+  "selected_option_text",  "character", "text of selected quiz option",
+  "correct",               "character", "whether the selection was correct"
+)
 
-data_dictionary <- tibble::tribble(
-  ~output_csv,        ~column,                  ~class,      ~meaning,
-  "cbcu_results.csv",  "participant_id",         "character", "jsPsych-generated per-session code (not stable across sessions; do not use as participant key)",
-  "cbcu_results.csv",  "session",                "character", "jsPsych session code",
-  "cbcu_results.csv",  "prolific_pid",           "factor",    "Prolific participant ID (stable across sessions; the participant identity key)",
-  "cbcu_results.csv",  "prolific_study_id",      "character", "Prolific study ID",
-  "cbcu_results.csv",  "prolific_session_id",    "character", "Prolific session ID (renamed from session_id in second_wave)",
-  "cbcu_results.csv",  "rt",                     "numeric",   "jsPsych's built-in trial RT, ms (identical to rt_from_stim_ms in this task; both are timed from stimulus onset, kept as separate columns because jsPsych records rt automatically while rt_from_stim_ms is computed by the task's own code)",
-  "cbcu_results.csv",  "study_session",          "factor",    "session_1 = first_wave, session_2 = second_wave",
-  "cbcu_results.csv",  "left_item_number",       "character", "left-side item identifier",
-  "cbcu_results.csv",  "left_item_text",         "character", "left-side item text",
-  "cbcu_results.csv",  "right_item_number",      "character", "right-side item identifier",
-  "cbcu_results.csv",  "right_item_text",        "character", "right-side item text",
-  "cbcu_results.csv",  "chosen_side",            "character", "left/right side chosen",
-  "cbcu_results.csv",  "chosen_item_number",     "character", "identifier of chosen item",
-  "cbcu_results.csv",  "chosen_item_text",       "character", "text of chosen item",
-  "cbcu_results.csv",  "rt_from_stim_ms",        "numeric",   "RT from stimulus onset, ms (see rt above)",
-  "cbcu_results.csv",  "stim_onset_ms",          "numeric",   "stimulus onset time, ms",
-  "cbcu_results.csv",  "phase_trial_num",        "character", "trial number within the pairwise phase",
-  "cbcu_results.csv",  "skipped",                "character", "whether the trial was skipped: \"true\" or \"false\" for pairwise response rows; blank/NA for the paired iti rows, where the field does not apply",
-  "cbcu_quizz.csv",    "quiz_question_num",      "character", "quiz question number, 1-6",
-  "cbcu_quizz.csv",    "quiz_attempt_num",       "character", "attempt number for that question",
-  "cbcu_quizz.csv",    "selected_option_index",  "character", "index of selected quiz option",
-  "cbcu_quizz.csv",    "selected_option_text",   "character", "text of selected quiz option",
-  "cbcu_quizz.csv",    "correct",                "character", "whether the selection was correct",
-  "phq9_results.csv",  "phq9_1_score...phq9_9_score", "numeric", "PHQ9 item scores, items 1-9",
-  "phq9_results.csv",  "phq9_1_label...phq9_9_label", "character", "PHQ9 item response labels, items 1-9",
-  "phq9_results.csv",  "attn_check_score",       "numeric",   "attention check item score",
-  "phq9_results.csv",  "attn_check_label",       "character", "attention check response label",
-  "phq9_results.csv",  "time_to_submit_ms",      "numeric",   "time to submit the PHQ9 form, ms",
-  "feedback.csv",      "task_understanding_text","character", "parsed free-text task-understanding response",
-  "feedback.csv",      "feedback_text_response", "character", "parsed free-text end-of-study feedback"
+phq9_results_dictionary <- tibble::tribble(
+  ~column,               ~class,      ~meaning,
+  "participant_id",      "character", "jsPsych-generated per-session code (not stable across sessions; do not use as participant key)",
+  "session",             "character", "jsPsych session code",
+  "prolific_pid",        "factor",    "Prolific participant ID (stable across sessions; the participant identity key). Levels = Prolific IDs present in the data, no fixed reference.",
+  "prolific_study_id",   "character", "Prolific study ID",
+  "prolific_session_id", "character", "Prolific session ID (renamed from session_id in second_wave)",
+  "rt",                  "numeric",   "jsPsych's built-in RT for the PHQ9 form, ms",
+  "study_session",       "factor",    "session_1 = first_wave, session_2 = second_wave. Levels: session_1 (reference), session_2.",
+  "phq9_1_score...phq9_9_score", "numeric", "PHQ9 item scores, items 1-9",
+  "phq9_1_label...phq9_9_label", "character", "PHQ9 item response labels, items 1-9",
+  "attn_check_score",    "numeric",   "attention check item score",
+  "attn_check_label",    "character", "attention check response label",
+  "time_to_submit_ms",   "numeric",   "time to submit the PHQ9 form, ms"
+)
+
+feedback_dictionary <- tibble::tribble(
+  ~column,                   ~class,      ~meaning,
+  "prolific_pid",            "factor",    "Prolific participant ID (stable across sessions; the participant identity key). Levels = Prolific IDs present in the data, no fixed reference.",
+  "study_session",           "factor",    "session_1 = first_wave, session_2 = second_wave. Levels: session_1 (reference), session_2.",
+  "task_understanding_text", "character", "parsed free-text task-understanding response (asked before the quiz)",
+  "feedback_text_response",  "character", "parsed free-text end-of-study feedback (how the participant felt during the experiment)"
 )
 
 #### WRITE RAW-DATA STRUCTURE REPORT ####
 
-raw_report_lines <- c(
+report_lines <- c(
   "# Raw data structure report", "",
-  "Built by `preprocessing/code/build_raw.R`. Describes the four tidy CSVs written to",
-  "`data/raw/` (`cbcu_results.csv`, `cbcu_quizz.csv`, `phq9_results.csv`, `feedback.csv`)",
-  "after the collected long-format event log was restructured: column names, classes,",
-  "meanings, and categorical/factor coding.", "",
-  "## Numeric columns", "",   knitr::kable(numeric_columns, format = "pipe"), "",
-  "## Categorical columns", "", knitr::kable(categorical_columns, format = "pipe"), "",
-  "## Sample overview", "",   knitr::kable(sample_overview, format = "pipe"), "",
-  "## Data dictionary", "",
-  "Factor columns: `prolific_pid` (levels = Prolific participant IDs present in the data, no fixed",
-  "reference; this is the participant identity key, stable across a participant's sessions,",
-  "unlike `participant_id` which jsPsych regenerates per session); `study_session`",
-  "(levels `session_1`, `session_2`, reference/first level `session_1`).", "",
-  knitr::kable(data_dictionary, format = "pipe")
+  "Built by `preprocessing/code/build_raw.R`. Describes each of the four tidy CSVs written",
+  "to `data/raw/` after the collected long-format event log was restructured: column names,",
+  "classes, meanings, and categorical/factor coding, one section per output file.", "",
+
+  "## cbcu_results.csv", "",
+  "### Numeric columns", "", knitr::kable(cbcu_results_numeric, format = "pipe"), "",
+  "### Categorical columns", "", knitr::kable(cbcu_results_categorical, format = "pipe"), "",
+  "### Data dictionary", "", knitr::kable(cbcu_results_dictionary, format = "pipe"), "",
+
+  "## cbcu_quizz.csv", "",
+  "### Numeric columns", "", knitr::kable(cbcu_quizz_numeric, format = "pipe"), "",
+  "### Categorical columns", "", knitr::kable(cbcu_quizz_categorical, format = "pipe"), "",
+  "### Data dictionary", "", knitr::kable(cbcu_quizz_dictionary, format = "pipe"), "",
+
+  "## phq9_results.csv", "",
+  "### Numeric columns", "", knitr::kable(phq9_results_numeric, format = "pipe"), "",
+  "### Categorical columns", "", knitr::kable(phq9_results_categorical, format = "pipe"), "",
+  "### Data dictionary", "", knitr::kable(phq9_results_dictionary, format = "pipe"), "",
+
+  "## feedback.csv", "",
+  "### Numeric columns", "", knitr::kable(feedback_numeric, format = "pipe"), "",
+  "### Categorical columns", "", knitr::kable(feedback_categorical, format = "pipe"), "",
+  "### Data dictionary", "", knitr::kable(feedback_dictionary, format = "pipe")
 )
-writeLines(raw_report_lines, file.path(output_dir, "raw-data-structure-report.md"))
+writeLines(report_lines, file.path(output_dir, "raw-data-structure-report.md"))
