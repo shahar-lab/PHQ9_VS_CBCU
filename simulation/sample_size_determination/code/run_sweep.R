@@ -13,3 +13,15 @@ sweep_results <- sweep_grid |>
   })
 
 saveRDS(sweep_results, file.path(artifacts_dir, "sweep_results.rds"))
+write_csv(sweep_results, file.path(artifacts_dir, "sweep_results.csv"))
+
+sweep_results_average <- sweep_results |>
+  group_by(sample_size) |>
+  summarise(
+    median_r     = mean(median_r),
+    hdi_width_85 = mean(hdi_width_85),
+    hdi_width_90 = mean(hdi_width_90),
+    hdi_width_95 = mean(hdi_width_95)
+  )
+
+write_csv(sweep_results_average, file.path(artifacts_dir, "sweep_results_average.csv"))
