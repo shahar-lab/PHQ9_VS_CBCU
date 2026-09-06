@@ -29,7 +29,11 @@ options(knitr.kable.NA = "")
 # reconcile the session-id column name, and tag each row with study_session.
 source(file.path(code_dir, "read_collected.R"))
 
-# 2. Build raw data: split the long-format collected log into the four tidy
+# 2. Describe collected data as it arrived: participant/session counts and
+# per-participant completeness, written to collected-data-structure-report.md.
+source(file.path(code_dir, "describe_collected.R"))
+
+# 3. Build raw data: split the long-format collected log into the four tidy
 # CSVs (cbcu_results, cbcu_quizz, phq9_results, feedback), apply type
-# coercion, write them to data/raw/, and write collected-to-raw-report.md.
+# coercion, write them to data/raw/, and write raw-data-structure-report.md.
 source(file.path(code_dir, "build_raw.R"))

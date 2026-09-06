@@ -100,7 +100,7 @@ readr::write_csv(cbcu_quizz,   file.path(raw_dir, "cbcu_quizz.csv"),   na = "NA"
 readr::write_csv(phq9_results, file.path(raw_dir, "phq9_results.csv"), na = "NA")
 readr::write_csv(feedback,     file.path(raw_dir, "feedback.csv"),     na = "NA")
 
-#### DESCRIBE: ROWS AND HOUSEKEEPING ####
+#### IDENTIFY ROWS KEPT VS. DROPPED AS HOUSEKEEPING ####
 
 kept_row_ids <- dplyr::bind_rows(
   collected |> dplyr::filter(phase == "pairwise" | iti_phase == "pairwise"),
@@ -108,16 +108,6 @@ kept_row_ids <- dplyr::bind_rows(
   collected |> dplyr::filter(!is.na(phq9_1_score)),
   collected |> dplyr::filter(phase == "free_text_explanation"),
   collected |> dplyr::filter(phase == "feedback")
-)
-
-row_summary <- tibble::tibble(
-  metric = c("Rows kept", "Rows dropped as housekeeping", "Participants",
-             "Sessions (session_1)", "Sessions (session_2)"),
-  value  = c(nrow(kept_row_ids),
-             nrow(collected) - nrow(kept_row_ids),
-             dplyr::n_distinct(collected$prolific_pid),
-             dplyr::n_distinct(collected$prolific_pid[collected$study_session == "session_1"]),
-             dplyr::n_distinct(collected$prolific_pid[collected$study_session == "session_2"]))
 )
 
 #### DESCRIBE: NUMERIC AND CATEGORICAL COLUMNS ####
@@ -164,19 +154,6 @@ sample_overview <- tibble::tibble(
                    max(trials_per_participant$n_trials), sep = " / "))
 )
 
-#### DESCRIBE: PER PARTICIPANT ####
-
-per_participant <- collected |>
-  dplyr::group_by(prolific_pid, study_session) |>
-  dplyr::summarise(
-    n_pairwise_trials = sum(phase == "pairwise", na.rm = TRUE),
-    n_quiz_questions  = sum(!is.na(quiz_question_num)),
-    phq9_completed    = any(!is.na(phq9_1_score)),
-    feedback_completed = any(phase == "feedback"),
-    .groups = "drop"
-  ) |>
-  dplyr::arrange(n_pairwise_trials, n_quiz_questions, phq9_completed, feedback_completed)
-
 #### DESCRIBE: DATA DICTIONARY ####
 
 data_dictionary <- tibble::tribble(
@@ -186,7 +163,7 @@ data_dictionary <- tibble::tribble(
   "cbcu_results.csv",  "prolific_pid",           "factor",    "Prolific participant ID (stable across sessions; the participant identity key)",
   "cbcu_results.csv",  "prolific_study_id",      "character", "Prolific study ID",
   "cbcu_results.csv",  "prolific_session_id",    "character", "Prolific session ID (renamed from session_id in second_wave)",
-  "cbcu_results.csv",  "rt",                     "numeric",   "general jsPsych trial RT",
+  "cbcu_results.csv",  "rt",                     "numeric",   "jsPsych's built-in trial RT, ms (identical to rt_from_stim_ms in this task; both are timed from stimulus onset, kept as separate columns because jsPsych records rt automatically while rt_from_stim_ms is computed by the task's own code)",
   "cbcu_results.csv",  "study_session",          "factor",    "session_1 = first_wave, session_2 = second_wave",
   "cbcu_results.csv",  "left_item_number",       "character", "left-side item identifier",
   "cbcu_results.csv",  "left_item_text",         "character", "left-side item text",
@@ -195,10 +172,10 @@ data_dictionary <- tibble::tribble(
   "cbcu_results.csv",  "chosen_side",            "character", "left/right side chosen",
   "cbcu_results.csv",  "chosen_item_number",     "character", "identifier of chosen item",
   "cbcu_results.csv",  "chosen_item_text",       "character", "text of chosen item",
-  "cbcu_results.csv",  "rt_from_stim_ms",        "numeric",   "RT from stimulus onset, ms",
+  "cbcu_results.csv",  "rt_from_stim_ms",        "numeric",   "RT from stimulus onset, ms (see rt above)",
   "cbcu_results.csv",  "stim_onset_ms",          "numeric",   "stimulus onset time, ms",
   "cbcu_results.csv",  "phase_trial_num",        "character", "trial number within the pairwise phase",
-  "cbcu_results.csv",  "skipped",                "character", "whether the trial was skipped",
+  "cbcu_results.csv",  "skipped",                "character", "whether the trial was skipped: \"true\" or \"false\" for pairwise response rows; blank/NA for the paired iti rows, where the field does not apply",
   "cbcu_quizz.csv",    "quiz_question_num",      "character", "quiz question number, 1-6",
   "cbcu_quizz.csv",    "quiz_attempt_num",       "character", "attempt number for that question",
   "cbcu_quizz.csv",    "selected_option_index",  "character", "index of selected quiz option",
@@ -213,20 +190,17 @@ data_dictionary <- tibble::tribble(
   "feedback.csv",      "feedback_text_response", "character", "parsed free-text end-of-study feedback"
 )
 
-#### WRITE REPORT ####
+#### WRITE RAW-DATA STRUCTURE REPORT ####
 
-report_lines <- c(
-  "# Collected-to-raw report", "",
-  "Built by `preprocessing/code/build_raw.R`. This stage restructures the collected long-format",
-  "event log into four tidy CSVs and keeps every real observation; it removes housekeeping rows",
-  "(instructions, breaks, fullscreen prompts) only. This report also serves as the raw-data",
-  "structure report (data dictionary, counts, categorical coding).", "",
-  "## Rows", "",              knitr::kable(row_summary, format = "pipe"), "",
+raw_report_lines <- c(
+  "# Raw data structure report", "",
+  "Built by `preprocessing/code/build_raw.R`. Describes the four tidy CSVs written to",
+  "`data/raw/` (`cbcu_results.csv`, `cbcu_quizz.csv`, `phq9_results.csv`, `feedback.csv`)",
+  "after the collected long-format event log was restructured: column names, classes,",
+  "meanings, and categorical/factor coding.", "",
   "## Numeric columns", "",   knitr::kable(numeric_columns, format = "pipe"), "",
   "## Categorical columns", "", knitr::kable(categorical_columns, format = "pipe"), "",
   "## Sample overview", "",   knitr::kable(sample_overview, format = "pipe"), "",
-  "## Per participant (sorted to surface incomplete cases first)", "",
-  knitr::kable(per_participant, format = "pipe"), "",
   "## Data dictionary", "",
   "Factor columns: `prolific_pid` (levels = Prolific participant IDs present in the data, no fixed",
   "reference; this is the participant identity key, stable across a participant's sessions,",
@@ -234,4 +208,4 @@ report_lines <- c(
   "(levels `session_1`, `session_2`, reference/first level `session_1`).", "",
   knitr::kable(data_dictionary, format = "pipe")
 )
-writeLines(report_lines, file.path(output_dir, "collected-to-raw-report.md"))
+writeLines(raw_report_lines, file.path(output_dir, "raw-data-structure-report.md"))
