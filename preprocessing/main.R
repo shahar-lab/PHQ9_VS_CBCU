@@ -5,6 +5,7 @@ rm(list = ls())
 library(here)
 library(tidyverse)
 library(jsonlite)
+library(gridExtra)
 
 project_root  <- here::here()
 code_dir      <- file.path(project_root, "preprocessing", "code")
@@ -43,3 +44,10 @@ source(file.path(code_dir, "build_raw.R"))
 # completion code column, write demographics.csv to data/raw/, and add its
 # section to raw-data-structure-report.md.
 source(file.path(code_dir, "build_demographics_raw.R"))
+
+# 5. Exploratory QA report on CBCU pairwise raw data: RT plots, outlier/skip/
+# missing/window-departure/trial-count tables, written as a single multi-page
+# PDF to preprocessing/output/raw_data_qa_report.pdf.
+source(file.path(code_dir, "raw_data_qa_plots.R"))
+source(file.path(code_dir, "raw_data_qa_tables.R"))
+source(file.path(code_dir, "raw_data_qa_report.R"))
