@@ -20,3 +20,11 @@ arrived in `data/collected/`, before any restructuring into `data/raw/`.
 |:------------------------|:-------------|-----------------:|----------------:|:--------------|:------------------|
 |6a25badf2f95439c4b79d399 |session_1     |               105|                6|TRUE           |TRUE               |
 |6a25badf2f95439c4b79d399 |session_2     |               105|                6|TRUE           |TRUE               |
+
+## Prolific demographics export
+
+|metric                         | value|
+|:------------------------------|-----:|
+|Submissions in Prolific export |    13|
+|Status: APPROVED               |    10|
+|Status: RETURNED               |     3|

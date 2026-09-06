@@ -184,3 +184,63 @@ classes, meanings, and categorical/factor coding, one section per output file.
 |study_session           |factor    |session_1 = first_wave, session_2 = second_wave. Levels: session_1 (reference), session_2.                                                     |
 |task_understanding_text |character |parsed free-text task-understanding response (asked before the quiz)                                                                           |
 |feedback_text_response  |character |parsed free-text end-of-study feedback (how the participant felt during the experiment)                                                        |
+
+## demographics.csv
+
+Excludes participants with Prolific `Status == "RETURNED"` and drops the
+`Completion code` column.
+
+### Numeric columns
+
+|column | n_missing| min| mean| max|
+|:------|---------:|---:|----:|---:|
+
+### Categorical columns
+
+|column                        | n_missing| n_levels|labels                                                                                                                                                                       |
+|:-----------------------------|---------:|--------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|Age                           |         0|        9|22, 23, 28, 35, 37, 41                                                                                                                                                       |
+|Archived at                   |         0|       10|2026-09-05T11:05:49.066070Z, 2026-09-05T11:13:05.361574Z, 2026-09-05T11:16:44.030787Z, 2026-09-05T11:17:52.788780Z, 2026-09-05T11:18:00.005326Z, 2026-09-05T11:20:02.570153Z |
+|Authenticity check: Bots      |         0|        1|N/A                                                                                                                                                                          |
+|Completed at                  |         0|       10|2026-09-05T11:05:48.664000Z, 2026-09-05T11:13:05.004000Z, 2026-09-05T11:16:43.692000Z, 2026-09-05T11:17:52.461000Z, 2026-09-05T11:17:59.651000Z, 2026-09-05T11:20:02.200000Z |
+|Country of birth              |         0|        3|Nigeria, United Kingdom, United States                                                                                                                                       |
+|Country of residence          |         0|        4|Canada, South Africa, United Kingdom, United States                                                                                                                          |
+|Custom study tncs accepted at |         0|        1|Not Applicable                                                                                                                                                               |
+|Employment status             |         0|        4|Full-Time, Not in paid work (e.g. homemaker', 'retired or disabled), Part-Time, Unemployed (and job seeking)                                                                 |
+|Ethnicity simplified          |         0|        2|Black, White                                                                                                                                                                 |
+|Language                      |         0|        1|English                                                                                                                                                                      |
+|Nationality                   |         0|        4|Canada, South Africa, United Kingdom, United States                                                                                                                          |
+|Participant id                |         0|       10|5d50692435e3af0001f05a15, 66b588a4b3e0e55fc74390b3, 67798278a28708e32bf4b451, 6946d43d6e37a8ebea7882bd, 69d60b821c7fcd0fae5faf58, 69f0b7ddbaaead7656414805                   |
+|Reviewed at                   |         0|       10|2026-09-06T07:45:53.942000Z, 2026-09-06T07:45:54.301000Z, 2026-09-06T07:45:54.665000Z, 2026-09-06T07:45:55.032000Z, 2026-09-06T07:45:55.397000Z, 2026-09-06T07:45:55.742000Z |
+|Sex                           |         0|        2|Female, Male                                                                                                                                                                 |
+|Started at                    |         0|       10|2026-09-05T10:50:06.091000Z, 2026-09-05T10:50:07.085000Z, 2026-09-05T10:50:14.216000Z, 2026-09-05T10:50:21.884000Z, 2026-09-05T10:51:03.144000Z, 2026-09-05T10:51:05.334000Z |
+|Status                        |         0|        1|APPROVED                                                                                                                                                                     |
+|Student status                |         0|        2|No, Yes                                                                                                                                                                      |
+|Submission id                 |         0|       10|6a9bf3d2a734de9552ddc233, 6a9bf3d5dd4fb9775003ae99, 6a9bf3d8d2dbba6390a21933, 6a9bf3e0d626794f460066ee, 6a9bf3e8e54c56f38fe9922f, 6a9bf3f6407566b156733403                   |
+|Time taken                    |         0|       10|1042.0, 1322.0, 1503.0, 1580.0, 1582.0, 1666.0                                                                                                                               |
+|Total approvals               |         0|       10|1318, 132, 151, 1767, 1955, 2406                                                                                                                                             |
+
+### Data dictionary
+
+|column                        |class     |meaning                                                                                                                             |
+|:-----------------------------|:---------|:-----------------------------------------------------------------------------------------------------------------------------------|
+|Submission id                 |character |Prolific submission identifier                                                                                                      |
+|Participant id                |factor    |Prolific participant ID, matches prolific_pid in the other raw CSVs. Levels = Prolific IDs present in the data, no fixed reference. |
+|Status                        |character |Prolific submission status. RETURNED participants have already been excluded from this file.                                        |
+|Custom study tncs accepted at |character |timestamp the study terms were accepted                                                                                             |
+|Started at                    |character |timestamp the Prolific submission started                                                                                           |
+|Completed at                  |character |timestamp the Prolific submission completed                                                                                         |
+|Reviewed at                   |character |timestamp the submission was reviewed                                                                                               |
+|Archived at                   |character |timestamp the submission was archived                                                                                               |
+|Time taken                    |numeric   |total time taken on Prolific, seconds                                                                                               |
+|Total approvals               |numeric   |participant's total prior approvals on Prolific                                                                                     |
+|Age                           |numeric   |self-reported age                                                                                                                   |
+|Sex                           |character |self-reported sex                                                                                                                   |
+|Ethnicity simplified          |character |self-reported ethnicity                                                                                                             |
+|Country of birth              |character |self-reported country of birth                                                                                                      |
+|Country of residence          |character |self-reported country of residence                                                                                                  |
+|Nationality                   |character |self-reported nationality                                                                                                           |
+|Language                      |character |self-reported first language                                                                                                        |
+|Student status                |character |self-reported student status                                                                                                        |
+|Employment status             |character |self-reported employment status                                                                                                     |
+|Authenticity check: Bots      |character |Prolific bot-authenticity check result                                                                                              |

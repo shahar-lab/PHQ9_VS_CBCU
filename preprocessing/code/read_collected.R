@@ -19,3 +19,11 @@ second_wave <- second_wave_files |>
   dplyr::mutate(study_session = "session_2")
 
 collected <- dplyr::bind_rows(first_wave, second_wave)
+
+#### READ COLLECTED DEMOGRAPHICS (Prolific export) ####
+
+demographics_file <- list.files(collected_dir, pattern = "^prolific_demographic_export.*\\.csv$",
+                                 full.names = TRUE)
+
+demographics_collected <- demographics_file |>
+  readr::read_csv(col_types = readr::cols(.default = "c"))

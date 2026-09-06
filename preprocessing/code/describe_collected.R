@@ -33,6 +33,15 @@ per_participant_collected <- collected |>
   ) |>
   dplyr::arrange(n_pairwise_trials, n_quiz_questions, phq9_completed, feedback_completed)
 
+#### DESCRIBE: DEMOGRAPHICS (Prolific export) ####
+
+demographics_status_summary <- tibble::tibble(
+  metric = c("Submissions in Prolific export", "Status: APPROVED", "Status: RETURNED"),
+  value  = c(nrow(demographics_collected),
+             sum(demographics_collected$Status == "APPROVED", na.rm = TRUE),
+             sum(demographics_collected$Status == "RETURNED", na.rm = TRUE))
+)
+
 #### WRITE COLLECTED-DATA STRUCTURE REPORT ####
 
 collected_report_lines <- c(
@@ -41,6 +50,8 @@ collected_report_lines <- c(
   "arrived in `data/collected/`, before any restructuring into `data/raw/`.", "",
   "## Rows", "", knitr::kable(row_summary_collected, format = "pipe"), "",
   "## Per participant (sorted to surface incomplete cases first)", "",
-  knitr::kable(per_participant_collected, format = "pipe")
+  knitr::kable(per_participant_collected, format = "pipe"), "",
+  "## Prolific demographics export", "",
+  knitr::kable(demographics_status_summary, format = "pipe")
 )
 writeLines(collected_report_lines, file.path(output_dir, "collected-data-structure-report.md"))

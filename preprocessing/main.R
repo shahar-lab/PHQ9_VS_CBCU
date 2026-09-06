@@ -38,3 +38,8 @@ source(file.path(code_dir, "describe_collected.R"))
 # coercion, write them to data/raw/, and write raw-data-structure-report.md
 # (one section per output CSV).
 source(file.path(code_dir, "build_raw.R"))
+
+# 4. Build demographics raw: exclude returned participants, drop the
+# completion code column, write demographics.csv to data/raw/, and add its
+# section to raw-data-structure-report.md.
+source(file.path(code_dir, "build_demographics_raw.R"))
