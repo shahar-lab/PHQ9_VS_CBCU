@@ -63,3 +63,8 @@ source(file.path(code_dir, "build_processed_trial_exclusions.R"))
 source(file.path(code_dir, "build_processed_report_md_participants.R"))
 source(file.path(code_dir, "build_processed_report_md_trials.R"))
 source(file.path(code_dir, "build_processed_report_pdf.R"))
+
+# 7. Build the manuscript "Data treatment" paragraph: trial-omission and
+# participant-exclusion statistics computed from the pipeline's own objects,
+# rendered as a single-page PDF to preprocessing/output/.
+source(file.path(code_dir, "build_data_treatment_paragraph.R"))
