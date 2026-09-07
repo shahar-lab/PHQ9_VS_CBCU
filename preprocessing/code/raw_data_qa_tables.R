@@ -74,6 +74,12 @@ window_departure_table <- collected |>
 render_table_page <- function(df, title) {
   grid::grid.newpage()
   grid::grid.text(title, y = 0.97, gp = grid::gpar(fontsize = 14, fontface = "bold"))
+  if (nrow(df) == 0) {
+    # ASSUMED[no message wording given]: tableGrob() cannot render a zero-row data frame,
+    # so a zero-row (but valid) table falls back to a generic one-line notice instead.
+    grid::grid.text("No rows to display.", y = 0.5, gp = grid::gpar(fontsize = 12, fontface = "italic"))
+    return(invisible(NULL))
+  }
   table_grob <- gridExtra::tableGrob(df, rows = NULL)
   gridExtra::grid.arrange(table_grob, top = "", newpage = FALSE)
 }

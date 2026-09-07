@@ -12,9 +12,11 @@ code_dir      <- file.path(project_root, "preprocessing", "code")
 output_dir    <- file.path(project_root, "preprocessing", "output")
 collected_dir <- file.path(project_root, "data", "collected")   # data as it arrived — READ-ONLY
 raw_dir       <- file.path(project_root, "data", "raw")
+processed_dir <- file.path(project_root, "data", "processed")
 
-if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
-if (!dir.exists(raw_dir))    dir.create(raw_dir, recursive = TRUE)
+if (!dir.exists(output_dir))    dir.create(output_dir, recursive = TRUE)
+if (!dir.exists(raw_dir))       dir.create(raw_dir, recursive = TRUE)
+if (!dir.exists(processed_dir)) dir.create(processed_dir, recursive = TRUE)
 
 # Renders empty report cells as blanks rather than "NA".
 options(knitr.kable.NA = "")
@@ -51,3 +53,13 @@ source(file.path(code_dir, "build_demographics_raw.R"))
 source(file.path(code_dir, "raw_data_qa_plots.R"))
 source(file.path(code_dir, "raw_data_qa_tables.R"))
 source(file.path(code_dir, "raw_data_qa_report.R"))
+
+# 6. Build processed CBCU data: participant-level exclusions (missing session,
+# window exits, trial-exclusion rate, quiz comprehension), then trial-level
+# exclusions (missing rt/choice, fast/slow RT) on survivors, writing
+# data/processed/cbcu_results.csv and the markdown + PDF exclusion reports.
+source(file.path(code_dir, "build_processed_participant_exclusions.R"))
+source(file.path(code_dir, "build_processed_trial_exclusions.R"))
+source(file.path(code_dir, "build_processed_report_md_participants.R"))
+source(file.path(code_dir, "build_processed_report_md_trials.R"))
+source(file.path(code_dir, "build_processed_report_pdf.R"))
