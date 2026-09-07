@@ -52,6 +52,7 @@ source(file.path(code_dir, "build_demographics_raw.R"))
 # PDF to preprocessing/output/raw_data_qa_report.pdf.
 source(file.path(code_dir, "raw_data_qa_plots.R"))
 source(file.path(code_dir, "raw_data_qa_tables.R"))
+source(file.path(code_dir, "raw_data_qa_tables_window_departure.R"))
 source(file.path(code_dir, "raw_data_qa_report.R"))
 
 # 6. Build processed CBCU data: participant-level exclusions (missing session,
