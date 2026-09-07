@@ -41,3 +41,13 @@ p_rt_hist <- ggplot2::ggplot(pairwise, ggplot2::aes(x = rt, fill = study_session
   ggplot2::labs(title = "RT distribution, per subject/session (log10 x-axis)",
                 x = "RT (ms, log10 scale)", y = "Count", fill = "Session") +
   ggplot2::theme_minimal(base_size = 8)
+
+#### PLOT 2B: RT HISTOGRAM, LINEAR X-AXIS (kept alongside the log10 version above, per user request) ####
+
+p_rt_hist_linear <- ggplot2::ggplot(pairwise, ggplot2::aes(x = rt, fill = study_session)) +
+  ggplot2::geom_histogram(bins = 40, alpha = 0.8) +
+  ggplot2::facet_wrap(~ subject_session) +
+  ggplot2::scale_fill_manual(values = qa_pal) +
+  ggplot2::labs(title = "RT distribution, per subject/session (linear x-axis)",
+                x = "RT (ms)", y = "Count", fill = "Session") +
+  ggplot2::theme_minimal(base_size = 8)

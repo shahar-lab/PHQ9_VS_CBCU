@@ -4,6 +4,7 @@ grDevices::pdf(file.path(output_dir, "raw_data_qa_report.pdf"), width = 10, heig
 
 print(p_rt_by_trial)
 print(p_rt_hist)
+print(p_rt_hist_linear)
 render_table_page(rt_outlier_table, paste0(
   "RT outlier frequency  —  cutoffs used: fast < ", rt_fast_cutoff_ms,
   " ms, slow > ", rt_slow_cutoff_ms, " ms"

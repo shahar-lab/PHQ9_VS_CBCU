@@ -44,6 +44,6 @@ arrived in `data/collected/`, before any restructuring into `data/raw/`.
 
 |metric                         | value|
 |:------------------------------|-----:|
-|Submissions in Prolific export |    13|
-|Status: APPROVED               |    10|
+|Submissions in Prolific export |    14|
+|Status: APPROVED               |    11|
 |Status: RETURNED               |     3|

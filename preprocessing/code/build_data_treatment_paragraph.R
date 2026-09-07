@@ -10,10 +10,34 @@ n_excluded_participants <- dplyr::n_distinct(excluded_participants$prolific_pid)
 pct_excluded_participants <- round(100 * n_excluded_participants / length(all_pids), 1)
 n_included_participants <- length(included_participants)
 
-# ASSUMED[no wording given for demographics]: fixed placeholder text, ready to be replaced
-# once demographics data is joined into this pipeline. Describes the RETAINED/included
-# sample, not the excluded group.
-demographics_placeholder <- "age mean, ___; range, ___ to ___; ___ males, ___ females"
+# Demographics describe the RETAINED/included sample, not the excluded group.
+# Join key: demographics_raw's `Participant id` (Prolific export column, kept with its
+# original space) matches included_participants' prolific_pid values.
+demographics_included <- demographics_raw |>
+  dplyr::filter(`Participant id` %in% included_participants) |>
+  dplyr::mutate(
+    Age = as.numeric(ifelse(Age %in% c("NA", ""), NA, Age))
+  )
+
+n_demographics_matched <- nrow(demographics_included)
+
+age_mean <- round(mean(demographics_included$Age, na.rm = TRUE), 1)
+age_min  <- min(demographics_included$Age, na.rm = TRUE)
+age_max  <- max(demographics_included$Age, na.rm = TRUE)
+n_male   <- sum(demographics_included$Sex == "Male", na.rm = TRUE)
+n_female <- sum(demographics_included$Sex == "Female", na.rm = TRUE)
+
+demographics_coverage_note <- if (n_demographics_matched < length(included_participants)) {
+  paste0(" (demographics available for ", n_demographics_matched, " of ",
+         length(included_participants), " participants)")
+} else {
+  ""
+}
+
+demographics_summary <- paste0(
+  "age mean, ", age_mean, "; range, ", age_min, " to ", age_max, "; ",
+  n_male, " males, ", n_female, " females", demographics_coverage_note
+)
 
 #### COMPUTE FINAL TRIAL-COUNT STATISTICS ####
 
@@ -41,7 +65,7 @@ sentence_participants <- paste0(
 
 sentence_sample <- paste0(
   "The final sample consisted of ", n_included_participants, " participants (",
-  demographics_placeholder, ")."
+  demographics_summary, ")."
 )
 
 sentence_trial_count <- paste0(
