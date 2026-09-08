@@ -5,20 +5,25 @@
 first_wave_files  <- list.files(file.path(collected_dir, "first_wave"),  pattern = "\\.csv$", full.names = TRUE)
 second_wave_files <- list.files(file.path(collected_dir, "second_wave"), pattern = "\\.csv$", full.names = TRUE)
 
+# Both waves' raw column is named session_id; one early first_wave pilot file
+# additionally has its own prolific_session_id — coalesce so every session ends
+# up under the one name the rest of the pipeline expects.
 first_wave <- first_wave_files |>
-  purrr::map(readr::read_csv, col_types = readr::cols(.default = "c")) |>
-  purrr::list_rbind() |>
-  dplyr::mutate(study_session = "session_1")
+  map(read_csv, col_types = cols(.default = "c")) |>
+  list_rbind() |>
+  mutate(
+    prolific_session_id = coalesce(prolific_session_id, session_id),
+    study_session        = "session_1"
+  ) |>
+  select(-session_id)
 
-# second_wave's raw column is named session_id in the same position/meaning as
-# first_wave's prolific_session_id — rename so both waves combine under one name.
 second_wave <- second_wave_files |>
-  purrr::map(readr::read_csv, col_types = readr::cols(.default = "c")) |>
-  purrr::list_rbind() |>
-  dplyr::rename(prolific_session_id = session_id) |>
-  dplyr::mutate(study_session = "session_2")
+  map(read_csv, col_types = cols(.default = "c")) |>
+  list_rbind() |>
+  rename(prolific_session_id = session_id) |>
+  mutate(study_session = "session_2")
 
-collected <- dplyr::bind_rows(first_wave, second_wave)
+collected <- bind_rows(first_wave, second_wave)
 
 #### READ COLLECTED DEMOGRAPHICS (Prolific export) ####
 
@@ -26,4 +31,4 @@ demographics_file <- list.files(collected_dir, pattern = "^prolific_demographic_
                                  full.names = TRUE)
 
 demographics_collected <- demographics_file |>
-  readr::read_csv(col_types = readr::cols(.default = "c"))
+  read_csv(col_types = cols(.default = "c"))
