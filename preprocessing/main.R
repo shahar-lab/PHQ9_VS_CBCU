@@ -33,7 +33,7 @@ options(knitr.kable.NA = "")
 source(file.path(code_dir, "read_collected.R"))
 
 # 2. Describe collected data as it arrived: participant/session counts and
-# per-participant completeness, written to collected-data-structure-report.md.
+# per-participant completeness, written to summary-collected-data.md.
 source(file.path(code_dir, "describe_collected.R"))
 
 # 3. Build raw data: split the long-format collected log into the four tidy

@@ -1,57 +1,222 @@
 #### DESCRIBE: ROWS AND HOUSEKEEPING ####
 
-kept_row_ids_collected <- dplyr::bind_rows(
-  collected |> dplyr::filter(phase == "pairwise" | iti_phase == "pairwise"),
-  collected |> dplyr::filter(!is.na(quiz_question_num)),
-  collected |> dplyr::filter(!is.na(phq9_1_score)),
-  collected |> dplyr::filter(phase == "free_text_explanation"),
-  collected |> dplyr::filter(phase == "feedback")
-)
-
 row_summary_collected <- tibble::tibble(
-  metric = c("Rows collected", "Rows that are trial/response data",
-             "Rows that are housekeeping (instructions, breaks, fullscreen prompts)",
-             "Participants", "Sessions (session_1)", "Sessions (session_2)"),
-  value  = c(nrow(collected),
-             nrow(kept_row_ids_collected),
-             nrow(collected) - nrow(kept_row_ids_collected),
-             dplyr::n_distinct(collected$prolific_pid),
+  metric = c("Participants", "Sessions (session_1)", "Sessions (session_2)"),
+  value  = c(dplyr::n_distinct(collected$prolific_pid),
              dplyr::n_distinct(collected$prolific_pid[collected$study_session == "session_1"]),
              dplyr::n_distinct(collected$prolific_pid[collected$study_session == "session_2"]))
 )
 
-#### DESCRIBE: PER PARTICIPANT ####
+#### DESCRIBE: FORMAT SECONDS AS min:sec (shared by the PHQ9 and CBCU tables) ####
 
-per_participant_collected <- collected |>
+format_min_sec <- function(seconds) {
+  seconds <- round(seconds)
+  ifelse(is.na(seconds), NA_character_, sprintf("%d:%02d", seconds %/% 60, seconds %% 60))
+}
+
+#### DESCRIBE: PER PARTICIPANT (WINDOW EXITS) ####
+
+# ASSUMED[same window-departure definition as raw_data_qa_tables_window_departure.R]: a
+# "departure" is the start of a contiguous run of non-"ok" window_status rows per
+# participant/session, using row order within `collected` as the timeline; NA window_status
+# is treated as "ok" (no departure logged), and window_left_ms is summed only over away rows.
+window_exits_collected <- collected |>
+  dplyr::mutate(
+    window_status  = ifelse(is.na(window_status), "ok", window_status),
+    window_left_ms = ifelse(window_left_ms %in% c("NA", ""), NA_real_, window_left_ms),
+    window_left_ms = as.numeric(window_left_ms)
+  ) |>
+  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::mutate(away = window_status != "ok", new_departure = away & !dplyr::lag(away, default = FALSE)) |>
+  dplyr::summarise(
+    win_exit_count      = sum(new_departure),
+    win_exit_total_time = ifelse(sum(away) == 0, 0, sum(window_left_ms[away], na.rm = TRUE) / 1000),
+    .groups = "drop"
+  )
+
+#### DESCRIBE: OVERVIEW PER PARTICIPANT (whole session, not phase-specific) ####
+
+# total_time is the full session wall-clock span (first to last logged row), covering
+# instructions, PHQ9, quiz, CBCU, breaks and feedback together, not just one phase.
+overview_per_participant <- collected |>
+  dplyr::mutate(time_elapsed = as.numeric(ifelse(time_elapsed %in% c("NA", ""),
+                                                   NA, time_elapsed))) |>
   dplyr::group_by(prolific_pid, study_session) |>
   dplyr::summarise(
-    n_pairwise_trials = sum(phase == "pairwise", na.rm = TRUE),
-    n_quiz_questions  = sum(!is.na(quiz_question_num)),
-    phq9_completed    = any(!is.na(phq9_1_score)),
-    feedback_completed = any(phase == "feedback"),
+    total_time = (max(time_elapsed, na.rm = TRUE) - min(time_elapsed, na.rm = TRUE)) / 1000,
     .groups = "drop"
   ) |>
-  dplyr::arrange(n_pairwise_trials, n_quiz_questions, phq9_completed, feedback_completed)
+  dplyr::left_join(window_exits_collected, by = c("prolific_pid", "study_session"))
+
+overview_table_wide <- overview_per_participant |>
+  tidyr::pivot_wider(
+    names_from  = study_session,
+    values_from = c(total_time, win_exit_count, win_exit_total_time),
+    names_glue  = "{study_session}__{.value}"
+  ) |>
+  dplyr::select(prolific_pid,
+                dplyr::starts_with("session_1__"), dplyr::starts_with("session_2__")) |>
+  dplyr::arrange(prolific_pid) |>
+  dplyr::mutate(dplyr::across(dplyr::ends_with("completion_time") | dplyr::ends_with("total_time"),
+                               format_min_sec))
+
+# Markdown pipe tables have no spanning-header syntax; this table is written as HTML
+# instead so session_1/session_2 render as a genuine merged (colspan) header row.
+overview_metric_labels <- c("total_time", "win_exit_count", "win_exit_total_time")
+overview_header_html <- c(
+  "<tr><th></th>",
+  paste0("<th colspan=\"", length(overview_metric_labels), "\">session_1</th>"),
+  paste0("<th colspan=\"", length(overview_metric_labels), "\">session_2</th>"),
+  "</tr>",
+  paste0("<tr><th>prolific_pid</th>",
+         paste0("<th>", rep(overview_metric_labels, 2), "</th>", collapse = ""),
+         "</tr>")
+)
+
+overview_cells <- overview_table_wide |>
+  dplyr::mutate(dplyr::across(dplyr::everything(), ~ ifelse(is.na(.x), "", as.character(.x)))) |>
+  dplyr::mutate(dplyr::across(dplyr::everything(), ~ paste0("<td>", .x, "</td>")))
+overview_table_html <- c(
+  "<table>",
+  overview_header_html,
+  paste0("<tr>", do.call(paste0, overview_cells), "</tr>"),
+  "</table>"
+)
+
+#### DESCRIBE: PHQ9 PER PARTICIPANT ####
+
+# phq9_grid is the one row per participant/session where the PHQ9 questionnaire is
+# submitted; phq_items counts how many of the 9 phq9_*_score items were answered on that
+# row, and time_to_submit_ms is its completion time (converted here from ms to s).
+phq9_score_cols <- paste0("phq9_", 1:9, "_score")
+phq9_per_participant <- collected |>
+  dplyr::filter(phase == "phq9_grid") |>
+  dplyr::mutate(
+    time_to_submit_ms = as.numeric(ifelse(time_to_submit_ms %in% c("NA", ""),
+                                           NA, time_to_submit_ms)),
+    phq_items = rowSums(!is.na(dplyr::pick(dplyr::all_of(phq9_score_cols))))
+  ) |>
+  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::summarise(
+    phq_items           = sum(phq_items),
+    phq_completion_time = sum(time_to_submit_ms, na.rm = TRUE) / 1000,
+    .groups = "drop"
+  )
+
+phq9_table_wide <- phq9_per_participant |>
+  tidyr::pivot_wider(
+    names_from  = study_session,
+    values_from = c(phq_items, phq_completion_time),
+    names_glue  = "{study_session}__{.value}"
+  ) |>
+  dplyr::select(prolific_pid,
+                dplyr::starts_with("session_1__"), dplyr::starts_with("session_2__")) |>
+  dplyr::arrange(prolific_pid) |>
+  dplyr::mutate(dplyr::across(dplyr::ends_with("completion_time") | dplyr::ends_with("total_time"),
+                               format_min_sec))
+
+# Markdown pipe tables have no spanning-header syntax; this table is written as HTML
+# instead so session_1/session_2 render as a genuine merged (colspan) header row.
+phq9_metric_labels <- c("items", "completion_time")
+phq9_header_html <- c(
+  "<tr><th></th>",
+  paste0("<th colspan=\"", length(phq9_metric_labels), "\">session_1</th>"),
+  paste0("<th colspan=\"", length(phq9_metric_labels), "\">session_2</th>"),
+  "</tr>",
+  paste0("<tr><th>prolific_pid</th>",
+         paste0("<th>", rep(phq9_metric_labels, 2), "</th>", collapse = ""),
+         "</tr>")
+)
+
+phq9_cells <- phq9_table_wide |>
+  dplyr::mutate(dplyr::across(dplyr::everything(), ~ ifelse(is.na(.x), "", as.character(.x)))) |>
+  dplyr::mutate(dplyr::across(dplyr::everything(), ~ paste0("<td>", .x, "</td>")))
+phq9_table_html <- c(
+  "<table>",
+  phq9_header_html,
+  paste0("<tr>", do.call(paste0, phq9_cells), "</tr>"),
+  "</table>"
+)
+
+#### DESCRIBE: CBCU PER PARTICIPANT ####
+
+# CBCU has no single completion-time field like PHQ9's time_to_submit_ms; its completion
+# time is the wall-clock span (last minus first time_elapsed, converted to seconds)
+# across the pairwise-phase rows for that participant/session.
+# A quiz question that's answered incorrectly is re-asked, incrementing quiz_attempt_num;
+# cbcu_quiz_attempts counts every logged attempt, not distinct questions, so it can exceed
+# the number of quiz questions when a participant retried one or more.
+cbcu_quiz_attempts_collected <- collected |>
+  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::summarise(cbcu_quiz_attempts = sum(!is.na(quiz_question_num)), .groups = "drop")
+
+cbcu_per_participant <- collected |>
+  dplyr::filter(phase == "pairwise" | iti_phase == "pairwise") |>
+  dplyr::mutate(time_elapsed = as.numeric(ifelse(time_elapsed %in% c("NA", ""),
+                                                   NA, time_elapsed))) |>
+  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::summarise(
+    cbcu_items           = sum(phase == "pairwise", na.rm = TRUE),
+    cbcu_completion_time = (max(time_elapsed, na.rm = TRUE) - min(time_elapsed, na.rm = TRUE)) / 1000,
+    .groups = "drop"
+  ) |>
+  dplyr::left_join(cbcu_quiz_attempts_collected, by = c("prolific_pid", "study_session"))
+
+cbcu_table_wide <- cbcu_per_participant |>
+  tidyr::pivot_wider(
+    names_from  = study_session,
+    values_from = c(cbcu_items, cbcu_quiz_attempts, cbcu_completion_time),
+    names_glue  = "{study_session}__{.value}"
+  ) |>
+  dplyr::select(prolific_pid,
+                dplyr::starts_with("session_1__"), dplyr::starts_with("session_2__")) |>
+  dplyr::arrange(prolific_pid) |>
+  dplyr::mutate(dplyr::across(dplyr::ends_with("completion_time") | dplyr::ends_with("total_time"),
+                               format_min_sec))
+
+# Markdown pipe tables have no spanning-header syntax; this table is written as HTML
+# instead so session_1/session_2 render as a genuine merged (colspan) header row.
+cbcu_metric_labels <- c("items", "quiz_attempts", "completion_time")
+cbcu_header_html <- c(
+  "<tr><th></th>",
+  paste0("<th colspan=\"", length(cbcu_metric_labels), "\">session_1</th>"),
+  paste0("<th colspan=\"", length(cbcu_metric_labels), "\">session_2</th>"),
+  "</tr>",
+  paste0("<tr><th>prolific_pid</th>",
+         paste0("<th>", rep(cbcu_metric_labels, 2), "</th>", collapse = ""),
+         "</tr>")
+)
+
+cbcu_cells <- cbcu_table_wide |>
+  dplyr::mutate(dplyr::across(dplyr::everything(), ~ ifelse(is.na(.x), "", as.character(.x)))) |>
+  dplyr::mutate(dplyr::across(dplyr::everything(), ~ paste0("<td>", .x, "</td>")))
+cbcu_table_html <- c(
+  "<table>",
+  cbcu_header_html,
+  paste0("<tr>", do.call(paste0, cbcu_cells), "</tr>"),
+  "</table>"
+)
 
 #### DESCRIBE: DEMOGRAPHICS (Prolific export) ####
 
-demographics_status_summary <- tibble::tibble(
-  metric = c("Submissions in Prolific export", "Status: APPROVED", "Status: RETURNED"),
-  value  = c(nrow(demographics_collected),
-             sum(demographics_collected$Status == "APPROVED", na.rm = TRUE),
-             sum(demographics_collected$Status == "RETURNED", na.rm = TRUE))
-)
+# One row per participant, no session split (Prolific demographics are collected once).
+demographics_table <- demographics_collected |>
+  dplyr::select(`Participant id`, Age, Sex, `Ethnicity simplified`,
+                `Country of residence`, `Student status`, `Employment status`) |>
+  dplyr::arrange(`Participant id`)
 
 #### WRITE COLLECTED-DATA STRUCTURE REPORT ####
 
 collected_report_lines <- c(
-  "# Collected data structure report", "",
-  "Built by `preprocessing/code/describe_collected.R`. Describes the data exactly as it",
-  "arrived in `data/collected/`, before any restructuring into `data/raw/`.", "",
+  "# Summary of collected data", "",
   "## Rows", "", knitr::kable(row_summary_collected, format = "pipe"), "",
-  "## Per participant (sorted to surface incomplete cases first)", "",
-  knitr::kable(per_participant_collected, format = "pipe"), "",
-  "## Prolific demographics export", "",
-  knitr::kable(demographics_status_summary, format = "pipe")
+  "## Overview", "",
+  overview_table_html, "",
+  "## PHQ9", "",
+  phq9_table_html, "",
+  "## CBCU", "",
+  cbcu_table_html, "",
+  "## Demographics per participant", "",
+  knitr::kable(demographics_table, format = "pipe")
 )
-writeLines(collected_report_lines, file.path(output_dir, "collected-data-structure-report.md"))
+writeLines(collected_report_lines, file.path(output_dir, "summary-collected-data.md"))
