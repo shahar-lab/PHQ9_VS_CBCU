@@ -5,21 +5,21 @@ after_participant_exclusions <- pairwise |>
 
 #### TRIAL PHASE: EACH CRITERION IN A NAMED SURVIVOR DATASET ####
 
-after_missing  <- after_participant_exclusions |> dplyr::filter(!is.na(rt), !is.na(chosen_side))
+after_missing  <- after_participant_exclusions |> dplyr::filter(!is.na(rt), !is.na(choice))
 after_fast_rt  <- after_missing               |> dplyr::filter(rt >= rt_fast_cutoff_ms)
 after_slow_rt  <- after_fast_rt               |> dplyr::filter(rt <= rt_slow_cutoff_ms)
 
 # raw_cbcu_results_cols: authoritative column set from data/raw/cbcu_results.csv (built in
-# build_raw.R), so the processed CSV matches it exactly — dropping `pairwise`'s derived
-# `subject_session` column and keeping `phase_trial_num` as the raw file's original character type.
-raw_cbcu_results_cols <- c("participant_id", "session", "prolific_pid", "prolific_study_id",
-                            "prolific_session_id", "rt", "time_elapsed", "study_session", "phase",
-                            "left_item_number", "left_item_text", "right_item_number", "right_item_text",
-                            "chosen_side", "chosen_item_number", "chosen_item_text",
-                            "rt_from_stim_ms", "stim_onset_ms", "phase_trial_num", "skipped")
+# build_cbcu_raw.R), so the processed CSV matches it exactly — dropping `pairwise`'s derived
+# `subject_session` column.
+raw_cbcu_results_cols <- c("prolific_pid", "time", "block", "trial",
+                            "item_number_left", "item_number_right",
+                            "choice", "chosen_item_number", "chosen_item_text",
+                            "rt", "time_elapsed", "skipped",
+                            "item_phq9_left", "item_text_left",
+                            "item_phq9_right", "item_text_right")
 
 cbcu_results_processed <- after_slow_rt |>
-  dplyr::mutate(phase_trial_num = as.character(phase_trial_num)) |>
   dplyr::select(dplyr::all_of(raw_cbcu_results_cols))
 
 #### WRITE PROCESSED CSV ####

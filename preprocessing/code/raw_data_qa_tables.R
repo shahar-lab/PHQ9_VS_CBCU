@@ -1,7 +1,7 @@
 #### TABLE: RT OUTLIER SUMMARY ####
 
 rt_outlier_table <- pairwise |>
-  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::group_by(prolific_pid, time) |>
   dplyr::summarise(
     n_trials = dplyr::n(),
     n_fast = sum(rt < rt_fast_cutoff_ms, na.rm = TRUE),
@@ -14,22 +14,22 @@ rt_outlier_table <- pairwise |>
 #### TABLE: SKIPPED-TRIAL SUMMARY ("Neither bothered me" — a legitimate response, not missing data) ####
 
 skipped_table <- pairwise |>
-  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::group_by(prolific_pid, time) |>
   dplyr::summarise(
     n_trials = dplyr::n(),
-    n_skipped = sum(skipped == "true", na.rm = TRUE),
+    n_skipped = sum(skipped, na.rm = TRUE),
     pct_skipped = round(100 * n_skipped / n_trials, 1),
     .groups = "drop"
   )
 
-#### TABLE: TRUE MISSING-DATA CHECK (rt or chosen_side NA — distinct from skipped) ####
+#### TABLE: TRUE MISSING-DATA CHECK (rt or choice NA — distinct from skipped) ####
 
 missing_table <- pairwise |>
-  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::group_by(prolific_pid, time) |>
   dplyr::summarise(
     n_trials = dplyr::n(),
     n_missing_rt = sum(is.na(rt)),
-    n_missing_choice = sum(is.na(chosen_side)),
+    n_missing_choice = sum(is.na(choice)),
     .groups = "drop"
   )
 
@@ -38,7 +38,7 @@ missing_table <- pairwise |>
 expected_pairwise_trials <- 105
 
 trial_count_table <- pairwise |>
-  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::group_by(prolific_pid, time) |>
   dplyr::summarise(n_trials_found = dplyr::n(), .groups = "drop") |>
   dplyr::mutate(
     expected = expected_pairwise_trials,

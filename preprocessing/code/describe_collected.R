@@ -205,7 +205,7 @@ demographics_table <- demographics_collected |>
                 `Country of residence`, `Student status`, `Employment status`) |>
   dplyr::arrange(`Participant id`)
 
-#### WRITE COLLECTED-DATA STRUCTURE REPORT ####
+#### WRITE COLLECTED-DATA STRUCTURE REPORT (markdown) ####
 
 collected_report_lines <- c(
   "# Summary of collected data", "",
@@ -220,3 +220,30 @@ collected_report_lines <- c(
   knitr::kable(demographics_table, format = "pipe")
 )
 writeLines(collected_report_lines, file.path(output_dir, "summary-collected-data.md"))
+
+#### WRITE COLLECTED-DATA STRUCTURE REPORT (html) ####
+
+summary_report_css <- "
+body { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+       max-width: 1100px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+h1 { border-bottom: 2px solid #333; padding-bottom: 0.3rem; }
+h2 { margin-top: 2rem; color: #333; }
+table { border-collapse: collapse; margin: 0.5rem 0 1.5rem; font-size: 0.9rem; }
+th, td { border: 1px solid #ddd; padding: 4px 10px; text-align: left; white-space: nowrap; }
+thead th, tr:has(> th) { background: #333; color: #fff; }
+tbody tr:nth-child(even) { background: #f6f6f6; }
+tbody tr:hover { background: #eef4fb; }
+"
+
+collected_report_html <- c(
+  "<html><head><meta charset=\"UTF-8\"><title>Summary of collected data</title>",
+  paste0("<style>", summary_report_css, "</style></head><body>"),
+  "<h1>Summary of collected data</h1>",
+  "<h2>Rows</h2>", knitr::kable(row_summary_collected, format = "html"),
+  "<h2>Overview</h2>", overview_table_html,
+  "<h2>PHQ9</h2>", phq9_table_html,
+  "<h2>CBCU</h2>", cbcu_table_html,
+  "<h2>Demographics per participant</h2>", knitr::kable(demographics_table, format = "html"),
+  "</body></html>"
+)
+writeLines(collected_report_html, file.path(output_dir, "summary-collected-data.html"))
