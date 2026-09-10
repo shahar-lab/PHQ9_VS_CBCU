@@ -4,7 +4,8 @@ cbcu_quizz <- collected |>
   dplyr::filter(!is.na(quiz_question_num)) |>
   dplyr::select(dplyr::all_of(common_cols),
                 quiz_question_num, quiz_attempt_num,
-                selected_option_index, selected_option_text, correct)
+                selected_option_index, selected_option_text, correct) |>
+  dplyr::select(-participant_id, -session)
 
 #### TYPE COERCION ####
 
@@ -23,8 +24,6 @@ readr::write_csv(cbcu_quizz, file.path(raw_dir, "cbcu_quizz.csv"), na = "NA")
 
 cbcu_quizz_dictionary <- tibble::tribble(
   ~column,                 ~class,      ~meaning,
-  "participant_id",        "character", "jsPsych-generated per-session code (not stable across sessions; do not use as participant key)",
-  "session",               "character", "jsPsych session code",
   "prolific_pid",          "factor",    "Prolific participant ID (stable across sessions; the participant identity key). Levels = Prolific IDs present in the data, no fixed reference.",
   "prolific_study_id",     "character", "Prolific study ID",
   "prolific_session_id",   "character", "Prolific session ID (renamed from session_id in second_wave)",

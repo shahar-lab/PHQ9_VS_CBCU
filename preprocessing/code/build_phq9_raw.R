@@ -6,7 +6,8 @@ phq9_results <- collected |>
   dplyr::filter(!is.na(phq9_1_score)) |>
   dplyr::select(dplyr::all_of(common_cols),
                 dplyr::all_of(phq9_score_label_cols),
-                attn_check_score, attn_check_label, time_to_submit_ms)
+                attn_check_score, attn_check_label, time_to_submit_ms) |>
+  dplyr::select(-participant_id, -session)
 
 #### TYPE COERCION ####
 
@@ -35,8 +36,6 @@ readr::write_csv(phq9_results, file.path(raw_dir, "phq9_results.csv"), na = "NA"
 
 phq9_results_dictionary <- tibble::tribble(
   ~column,               ~class,      ~meaning,
-  "participant_id",      "character", "jsPsych-generated per-session code (not stable across sessions; do not use as participant key)",
-  "session",             "character", "jsPsych session code",
   "prolific_pid",        "factor",    "Prolific participant ID (stable across sessions; the participant identity key). Levels = Prolific IDs present in the data, no fixed reference.",
   "prolific_study_id",   "character", "Prolific study ID",
   "prolific_session_id", "character", "Prolific session ID (renamed from session_id in second_wave)",
