@@ -5,17 +5,14 @@
 first_wave_files  <- list.files(file.path(collected_dir, "first_wave"),  pattern = "\\.csv$", full.names = TRUE)
 second_wave_files <- list.files(file.path(collected_dir, "second_wave"), pattern = "\\.csv$", full.names = TRUE)
 
-# Both waves' raw column is named session_id; one early first_wave pilot file
-# additionally has its own prolific_session_id — coalesce so every session ends
-# up under the one name the rest of the pipeline expects.
+# Both waves' raw column is named session_id; no file has a separate genuine
+# Prolific session ID, so this is a plain rename to the name the rest of the
+# pipeline expects.
 first_wave <- first_wave_files |>
   map(read_csv, col_types = cols(.default = "c")) |>
   list_rbind() |>
-  mutate(
-    prolific_session_id = coalesce(prolific_session_id, session_id),
-    study_session        = "session_1"
-  ) |>
-  select(-session_id)
+  rename(prolific_session_id = session_id) |>
+  mutate(study_session = "session_1")
 
 second_wave <- second_wave_files |>
   map(read_csv, col_types = cols(.default = "c")) |>

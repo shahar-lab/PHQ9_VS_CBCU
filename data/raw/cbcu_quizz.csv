@@ -23,12 +23,12 @@ prolific_pid,prolific_study_id,prolific_session_id,rt,time_elapsed,study_session
 6a0b57dda1f2bbc0f2c1398b,6a9bed0e3ac0cdf0edd1e9fa,session_1,20902,486885,session_1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
 6a0b57dda1f2bbc0f2c1398b,6a9bed0e3ac0cdf0edd1e9fa,session_1,33196,520083,session_1,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
 6a0b57dda1f2bbc0f2c1398b,6a9bed0e3ac0cdf0edd1e9fa,session_1,17865,537952,session_1,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-6a25badf2f95439c4b79d399,6a96e8fee3cbae0da7c30ed0,6a96f18711f6c59dbfa56297,8974,243012,session_1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
-6a25badf2f95439c4b79d399,6a96e8fee3cbae0da7c30ed0,6a96f18711f6c59dbfa56297,7986,250999,session_1,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
-6a25badf2f95439c4b79d399,6a96e8fee3cbae0da7c30ed0,6a96f18711f6c59dbfa56297,6591,257591,session_1,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-6a25badf2f95439c4b79d399,6a96e8fee3cbae0da7c30ed0,6a96f18711f6c59dbfa56297,10179,267771,session_1,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
-6a25badf2f95439c4b79d399,6a96e8fee3cbae0da7c30ed0,6a96f18711f6c59dbfa56297,8525,276298,session_1,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-6a25badf2f95439c4b79d399,6a96e8fee3cbae0da7c30ed0,6a96f18711f6c59dbfa56297,19400,295699,session_1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a25badf2f95439c4b79d399,6a96e8fee3cbae0da7c30ed0,session_1,8974,243012,session_1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a25badf2f95439c4b79d399,6a96e8fee3cbae0da7c30ed0,session_1,7986,250999,session_1,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
+6a25badf2f95439c4b79d399,6a96e8fee3cbae0da7c30ed0,session_1,6591,257591,session_1,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a25badf2f95439c4b79d399,6a96e8fee3cbae0da7c30ed0,session_1,10179,267771,session_1,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a25badf2f95439c4b79d399,6a96e8fee3cbae0da7c30ed0,session_1,8525,276298,session_1,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a25badf2f95439c4b79d399,6a96e8fee3cbae0da7c30ed0,session_1,19400,295699,session_1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
 6a241cc77b290774b3626f62,6a9bed0e3ac0cdf0edd1e9fa,session_1,33140,483507,session_1,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
 6a241cc77b290774b3626f62,6a9bed0e3ac0cdf0edd1e9fa,session_1,21934,505445,session_1,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
 6a241cc77b290774b3626f62,6a9bed0e3ac0cdf0edd1e9fa,session_1,18718,524165,session_1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
