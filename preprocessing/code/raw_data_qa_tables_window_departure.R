@@ -17,7 +17,7 @@ window_departure_table <- collected |>
     window_left_ms = ifelse(window_left_ms %in% c("NA", ""), NA_real_, window_left_ms),
     window_left_ms = as.numeric(window_left_ms)
   ) |>
-  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::group_by(prolific_id, time) |>
   dplyr::mutate(away = window_status != "ok", new_departure = away & !dplyr::lag(away, default = FALSE)) |>
   dplyr::summarise(
     n_departures = sum(new_departure),

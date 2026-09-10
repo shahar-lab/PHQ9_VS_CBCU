@@ -6,15 +6,14 @@ pct_trials_omitted     <- round(100 * n_trials_omitted / n_trials_pre_exclusion,
 
 #### COMPUTE PARTICIPANT-EXCLUSION STATISTICS ####
 
-n_excluded_participants <- dplyr::n_distinct(excluded_participants$prolific_pid)
+n_excluded_participants <- dplyr::n_distinct(excluded_participants$prolific_id)
 pct_excluded_participants <- round(100 * n_excluded_participants / length(all_pids), 1)
 n_included_participants <- length(included_participants)
 
 # Demographics describe the RETAINED/included sample, not the excluded group.
-# Join key: demographics_raw's `Participant id` (Prolific export column, kept with its
-# original space) matches included_participants' prolific_pid values.
+# Join key: demographics_raw's prolific_id matches included_participants' prolific_id values.
 demographics_included <- demographics_raw |>
-  dplyr::filter(`Participant id` %in% included_participants) |>
+  dplyr::filter(prolific_id %in% included_participants) |>
   dplyr::mutate(
     Age = as.numeric(ifelse(Age %in% c("NA", ""), NA, Age))
   )

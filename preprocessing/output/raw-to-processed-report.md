@@ -22,7 +22,7 @@ participants list below for the full per-participant reason set.
 
 ## Excluded participants
 
-|prolific_pid             |reasons         |
+|prolific_id              |reasons         |
 |:------------------------|:---------------|
 |6946d43d6e37a8ebea7882bd |window_exits    |
 |6a0b57dda1f2bbc0f2c1398b |missing_session |
@@ -42,7 +42,7 @@ participants list below for the full per-participant reason set.
 Percentages are of that session's original pairwise trial count, and
 `pct_excluded_missing` + `pct_excluded_fast` + `pct_excluded_slow` = `pct_excluded_total`.
 
-|prolific_pid             |time  | n_trials| pct_excluded_total| pct_excluded_missing| pct_excluded_fast| pct_excluded_slow|
+|prolific_id              |time  | n_trials| pct_excluded_total| pct_excluded_missing| pct_excluded_fast| pct_excluded_slow|
 |:------------------------|:-----|--------:|------------------:|--------------------:|-----------------:|-----------------:|
 |5d50692435e3af0001f05a15 |time1 |       99|                5.7|                    0|                 0|               5.7|
 |5d50692435e3af0001f05a15 |time2 |      104|                1.0|                    0|                 0|               1.0|

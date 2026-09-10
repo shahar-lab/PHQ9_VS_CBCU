@@ -9,7 +9,7 @@ qa_pal <- c("#0072B2", "#E69F00", "#009E73", "#D55E00", "#CC79A7", "#56B4E9")
 
 # cbcu_results is already pairwise-only, with trial already numeric (build_cbcu_raw.R).
 pairwise <- cbcu_results |>
-  dplyr::mutate(subject_session = paste(prolific_pid, time, sep = " / "))
+  dplyr::mutate(subject_session = paste(prolific_id, time, sep = " / "))
 
 #### PLOT 1: RT BY TRIAL ORDER, FACETED BY SUBJECT ####
 

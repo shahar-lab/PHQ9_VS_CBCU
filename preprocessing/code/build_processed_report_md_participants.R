@@ -1,6 +1,6 @@
 #### PARTICIPANT EXCLUSIONS TABLE (independent criteria, not a sequential cascade) ####
 
-n_starting <- dplyr::n_distinct(pairwise$prolific_pid)
+n_starting <- dplyr::n_distinct(pairwise$prolific_id)
 
 participant_exclusions <- tibble::tibble(
   criterion = c("Starting point (all participants)",

@@ -2,20 +2,20 @@
 
 ## Rows
 
-|metric               | value|
-|:--------------------|-----:|
-|Participants         |    11|
-|Sessions (session_1) |    11|
-|Sessions (session_2) |    10|
+|metric           | value|
+|:----------------|-----:|
+|Participants     |    11|
+|Sessions (time1) |    11|
+|Sessions (time2) |    10|
 
 ## Overview
 
 <table>
 <tr><th></th>
-<th colspan="3">session_1</th>
-<th colspan="3">session_2</th>
+<th colspan="3">time1</th>
+<th colspan="3">time2</th>
 </tr>
-<tr><th>prolific_pid</th><th>total_time</th><th>win_exit_count</th><th>win_exit_total_time</th><th>total_time</th><th>win_exit_count</th><th>win_exit_total_time</th></tr>
+<tr><th>prolific_id</th><th>total_time</th><th>win_exit_count</th><th>win_exit_total_time</th><th>total_time</th><th>win_exit_count</th><th>win_exit_total_time</th></tr>
 <tr><td>5d50692435e3af0001f05a15</td><td>25:01</td><td>0</td><td>0:00</td><td>23:27</td><td>0</td><td>0:00</td></tr>
 <tr><td>66b588a4b3e0e55fc74390b3</td><td>25:19</td><td>1</td><td>0:00</td><td>19:41</td><td>1</td><td>0:00</td></tr>
 <tr><td>67798278a28708e32bf4b451</td><td>13:47</td><td>1</td><td>3:31</td><td>10:06</td><td>0</td><td>0:00</td></tr>
@@ -33,10 +33,10 @@
 
 <table>
 <tr><th></th>
-<th colspan="2">session_1</th>
-<th colspan="2">session_2</th>
+<th colspan="2">time1</th>
+<th colspan="2">time2</th>
 </tr>
-<tr><th>prolific_pid</th><th>items</th><th>completion_time</th><th>items</th><th>completion_time</th></tr>
+<tr><th>prolific_id</th><th>items</th><th>completion_time</th><th>items</th><th>completion_time</th></tr>
 <tr><td>5d50692435e3af0001f05a15</td><td>9</td><td>1:06</td><td>9</td><td>0:52</td></tr>
 <tr><td>66b588a4b3e0e55fc74390b3</td><td>9</td><td>1:44</td><td>9</td><td>2:45</td></tr>
 <tr><td>67798278a28708e32bf4b451</td><td>9</td><td>0:22</td><td>9</td><td>0:31</td></tr>
@@ -54,10 +54,10 @@
 
 <table>
 <tr><th></th>
-<th colspan="3">session_1</th>
-<th colspan="3">session_2</th>
+<th colspan="3">time1</th>
+<th colspan="3">time2</th>
 </tr>
-<tr><th>prolific_pid</th><th>items</th><th>quiz_attempts</th><th>completion_time</th><th>items</th><th>quiz_attempts</th><th>completion_time</th></tr>
+<tr><th>prolific_id</th><th>items</th><th>quiz_attempts</th><th>completion_time</th><th>items</th><th>quiz_attempts</th><th>completion_time</th></tr>
 <tr><td>5d50692435e3af0001f05a15</td><td>105</td><td>6</td><td>12:13</td><td>105</td><td>6</td><td>10:34</td></tr>
 <tr><td>66b588a4b3e0e55fc74390b3</td><td>105</td><td>6</td><td>14:48</td><td>105</td><td>6</td><td>9:48</td></tr>
 <tr><td>67798278a28708e32bf4b451</td><td>105</td><td>6</td><td>10:18</td><td>105</td><td>7</td><td>6:26</td></tr>
@@ -73,7 +73,7 @@
 
 ## Demographics per participant
 
-|Participant id           |Age             |Sex             |Ethnicity simplified |Country of residence |Student status  |Employment status                                        |
+|prolific_id              |Age             |Sex             |Ethnicity simplified |Country of residence |Student status  |Employment status                                        |
 |:------------------------|:---------------|:---------------|:--------------------|:--------------------|:---------------|:--------------------------------------------------------|
 |5d50692435e3af0001f05a15 |53              |Male            |White                |United Kingdom       |No              |Not in paid work (e.g. homemaker', 'retired or disabled) |
 |60721c2da01b3a616edba9a7 |CONSENT_REVOKED |CONSENT_REVOKED |CONSENT_REVOKED      |CONSENT_REVOKED      |CONSENT_REVOKED |CONSENT_REVOKED                                          |

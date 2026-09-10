@@ -11,12 +11,19 @@ returned_participants <- demographics_collected |>
 
 demographics_raw <- demographics_collected |>
   dplyr::filter(Status != "RETURNED") |>
-  dplyr::select(-`Completion code`) |>
+  dplyr::select(-`Completion code`, -Status, -`Submission id`,
+                -`Custom study tncs accepted at`, -`Started at`, -`Completed at`,
+                -`Reviewed at`, -`Archived at`, -`Time taken`) |>
+  dplyr::rename(prolific_id = `Participant id`) |>
   dplyr::mutate(
-    `Participant id`        = factor(`Participant id`),
-    Status                  = factor(Status),
+    prolific_id             = factor(prolific_id),
+    `Total approvals`       = as.numeric(`Total approvals`),
+    Age                     = as.numeric(Age),
     Sex                     = factor(Sex),
     `Ethnicity simplified`  = factor(`Ethnicity simplified`),
+    `Country of birth`      = factor(`Country of birth`),
+    `Country of residence`  = factor(`Country of residence`),
+    Nationality             = factor(Nationality),
     `Student status`        = factor(`Student status`),
     `Employment status`     = factor(`Employment status`)
   )
@@ -27,22 +34,14 @@ readr::write_csv(demographics_raw, file.path(raw_dir, "demographics.csv"), na = 
 
 demographics_dictionary <- tibble::tribble(
   ~column,                          ~class,      ~meaning,
-  "Submission id",                  "character", "Prolific submission identifier",
-  "Participant id",                 "factor",    "Prolific participant ID, matches prolific_pid in the other raw CSVs. Levels = Prolific IDs present in the data, no fixed reference.",
-  "Status",                         "factor",    "Prolific submission status. RETURNED participants have already been excluded from this file.",
-  "Custom study tncs accepted at",  "character", "timestamp the study terms were accepted",
-  "Started at",                     "character", "timestamp the Prolific submission started",
-  "Completed at",                   "character", "timestamp the Prolific submission completed",
-  "Reviewed at",                    "character", "timestamp the submission was reviewed",
-  "Archived at",                    "character", "timestamp the submission was archived",
-  "Time taken",                     "numeric",   "total time taken on Prolific, seconds",
+  "prolific_id",                    "factor",    "Prolific participant ID, matches prolific_id in the other raw CSVs. Levels = Prolific IDs present in the data, no fixed reference.",
   "Total approvals",                "numeric",   "participant's total prior approvals on Prolific",
   "Age",                            "numeric",   "self-reported age",
   "Sex",                            "factor",    "self-reported sex",
   "Ethnicity simplified",           "factor",    "self-reported ethnicity",
-  "Country of birth",               "character", "self-reported country of birth",
-  "Country of residence",           "character", "self-reported country of residence",
-  "Nationality",                    "character", "self-reported nationality",
+  "Country of birth",               "factor",    "self-reported country of birth",
+  "Country of residence",           "factor",    "self-reported country of residence",
+  "Nationality",                    "factor",    "self-reported nationality",
   "Language",                       "character", "self-reported first language",
   "Student status",                 "factor",    "self-reported student status",
   "Employment status",              "factor",    "self-reported employment status",

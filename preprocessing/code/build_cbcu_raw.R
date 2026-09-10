@@ -6,7 +6,7 @@
 break_times_by_session <- collected |>
   dplyr::filter(phase == "phase2_break") |>
   dplyr::mutate(time_elapsed = as.numeric(ifelse(time_elapsed %in% c("NA", ""), NA, time_elapsed))) |>
-  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::group_by(prolific_id, time) |>
   dplyr::summarise(break_times = list(time_elapsed), .groups = "drop")
 
 # The 15 PHQ9 sub-items in their fixed order, giving each a sequential CBCU item number 1-15.
@@ -18,11 +18,11 @@ cbcu_results <- collected |>
     time_elapsed = as.numeric(ifelse(time_elapsed %in% c("NA", ""), NA, time_elapsed)),
     phase_trial_num = as.numeric(ifelse(phase_trial_num %in% c("NA", ""), NA, phase_trial_num))
   ) |>
-  dplyr::left_join(break_times_by_session, by = c("prolific_pid", "study_session")) |>
+  dplyr::left_join(break_times_by_session, by = c("prolific_id", "time")) |>
   dplyr::mutate(block = 1 + purrr::map2_int(time_elapsed, break_times, ~ sum(.y < .x))) |>
   dplyr::transmute(
-    prolific_pid,
-    time               = study_session,
+    prolific_id,
+    time,
     block,
     trial              = phase_trial_num,
     item_number_left   = match(left_item_number, phq9_item_order),
@@ -43,10 +43,10 @@ cbcu_results <- collected |>
 
 cbcu_results <- cbcu_results |>
   dplyr::mutate(
-    prolific_pid = factor(prolific_pid),
-    time         = factor(time, levels = study_session_levels, labels = c("time1", "time2")),
-    choice       = factor(choice),
-    skipped      = as.logical(skipped)
+    prolific_id = factor(prolific_id),
+    time        = factor(time, levels = time_levels),
+    choice      = factor(choice),
+    skipped     = as.logical(skipped)
   )
 
 readr::write_csv(cbcu_results, file.path(raw_dir, "cbcu_results.csv"), na = "NA")
@@ -55,7 +55,7 @@ readr::write_csv(cbcu_results, file.path(raw_dir, "cbcu_results.csv"), na = "NA"
 
 cbcu_results_dictionary <- tibble::tribble(
   ~column,              ~class,      ~meaning,
-  "prolific_pid",       "factor",    "Prolific participant ID (the participant identity key). Levels = Prolific IDs present in the data, no fixed reference.",
+  "prolific_id",        "factor",    "Prolific participant ID (the participant identity key). Levels = Prolific IDs present in the data, no fixed reference.",
   "time",               "factor",    "time1 = first_wave, time2 = second_wave. Levels: time1 (reference), time2.",
   "block",              "numeric",   "block 1-4 within the session, counted from how many of the 3 phase2_break pauses occurred before this trial",
   "trial",              "numeric",   "trial number within the pairwise phase",

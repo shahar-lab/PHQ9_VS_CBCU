@@ -25,7 +25,7 @@ options(knitr.kable.NA = "")
 
 #### COLLECTED DATA ####
 
-# 1. Read and row-bind collected CSVs, tag each row with study_session.
+# 1. Read and row-bind collected CSVs, tag each row with time.
 source(file.path(code_dir, "read_collected.R"))
 
 # 2. Describe collected data as it arrived -> summary-collected-data.md/.html.

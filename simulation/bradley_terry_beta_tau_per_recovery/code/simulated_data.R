@@ -69,3 +69,4 @@ stan_data <- list(
 )
 
 saveRDS(df, file.path(artifacts_dir, "simulated_data.rds"))
+write_csv(df, file.path(artifacts_dir, "simulated_data.csv"))

@@ -5,16 +5,17 @@ cbcu_quizz <- collected |>
   dplyr::select(dplyr::all_of(common_cols),
                 quiz_question_num, quiz_attempt_num,
                 selected_option_index, selected_option_text, correct) |>
-  dplyr::select(-participant_id, -session)
+  dplyr::select(-participant_id, -session) |>
+  dplyr::rename(completion_time = rt)
 
 #### TYPE COERCION ####
 
 cbcu_quizz <- cbcu_quizz |>
   dplyr::mutate(
-    rt              = as.numeric(ifelse(rt %in% c("NA", ""), NA, rt)),
+    completion_time = as.numeric(ifelse(completion_time %in% c("NA", ""), NA, completion_time)),
     time_elapsed    = as.numeric(ifelse(time_elapsed %in% c("NA", ""), NA, time_elapsed)),
-    prolific_pid    = factor(prolific_pid),
-    study_session   = factor(study_session, levels = study_session_levels),
+    prolific_id     = factor(prolific_id),
+    time            = factor(time, levels = time_levels),
     correct         = as.logical(correct)
   )
 
@@ -24,11 +25,9 @@ readr::write_csv(cbcu_quizz, file.path(raw_dir, "cbcu_quizz.csv"), na = "NA")
 
 cbcu_quizz_dictionary <- tibble::tribble(
   ~column,                 ~class,      ~meaning,
-  "prolific_pid",          "factor",    "Prolific participant ID (stable across sessions; the participant identity key). Levels = Prolific IDs present in the data, no fixed reference.",
-  "prolific_study_id",     "character", "Prolific study ID",
-  "prolific_session_id",   "character", "Prolific session ID (renamed from session_id in second_wave)",
-  "rt",                    "numeric",   "jsPsych's built-in RT for the quiz item, ms",
-  "study_session",         "factor",    "session_1 = first_wave, session_2 = second_wave. Levels: session_1 (reference), session_2.",
+  "prolific_id",           "factor",    "Prolific participant ID (stable across sessions; the participant identity key). Levels = Prolific IDs present in the data, no fixed reference.",
+  "completion_time",       "numeric",   "time to complete the quiz, ms",
+  "time",                  "factor",    "time1 = first_wave, time2 = second_wave. Levels: time1 (reference), time2.",
   "quiz_question_num",     "character", "quiz question number, 1-6",
   "quiz_attempt_num",      "character", "attempt number for that question",
   "selected_option_index", "character", "index of selected quiz option",

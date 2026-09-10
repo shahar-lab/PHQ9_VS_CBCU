@@ -1,7 +1,7 @@
 #### PARTICIPANT PHASE: KEEP ONLY INCLUDED PARTICIPANTS ####
 
 after_participant_exclusions <- pairwise |>
-  dplyr::filter(prolific_pid %in% included_participants)
+  dplyr::filter(prolific_id %in% included_participants)
 
 #### TRIAL PHASE: EACH CRITERION IN A NAMED SURVIVOR DATASET ####
 
@@ -12,7 +12,7 @@ after_slow_rt  <- after_fast_rt               |> dplyr::filter(rt <= rt_slow_cut
 # raw_cbcu_results_cols: authoritative column set from data/raw/cbcu_results.csv (built in
 # build_cbcu_raw.R), so the processed CSV matches it exactly — dropping `pairwise`'s derived
 # `subject_session` column.
-raw_cbcu_results_cols <- c("prolific_pid", "time", "block", "trial",
+raw_cbcu_results_cols <- c("prolific_id", "time", "block", "trial",
                             "item_number_left", "item_number_right",
                             "choice", "chosen_item_number", "chosen_item_text",
                             "rt", "time_elapsed", "skipped",

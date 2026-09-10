@@ -20,12 +20,10 @@ tbody tr:hover { background: #eef4fb; }
 <table>
  <thead>
   <tr>
-   <th style="text-align:left;"> prolific_pid </th>
-   <th style="text-align:left;"> prolific_study_id </th>
-   <th style="text-align:left;"> prolific_session_id </th>
-   <th style="text-align:right;"> rt </th>
+   <th style="text-align:left;"> prolific_id </th>
+   <th style="text-align:right;"> completion_time </th>
    <th style="text-align:right;"> time_elapsed </th>
-   <th style="text-align:left;"> study_session </th>
+   <th style="text-align:left;"> time </th>
    <th style="text-align:left;"> quiz_question_num </th>
    <th style="text-align:left;"> quiz_attempt_num </th>
    <th style="text-align:left;"> selected_option_index </th>
@@ -34,15 +32,13 @@ tbody tr:hover { background: #eef4fb; }
   </tr>
  </thead>
 <tbody>
-<tr class="meta-row"><td>factor</td><td>character</td><td>character</td><td>numeric</td><td>numeric</td><td>factor</td><td>character</td><td>character</td><td>character</td><td>character</td><td>logical</td></tr>
-<tr class="meta-row"><td>11 distinct values</td><td>6a96e8fee3cbae0da7c30ed0, 6a96ec018af1fd9a814e0d52, 6a9bed0e3ac0cdf0edd1e9fa, 6a9bedb67096b6da58724573</td><td>session_1, session_2</td><td>[2799 to 94772]</td><td>[70229 to 1143417]</td><td>session_1, session_2</td><td>1, 2, 3, 4, 5, 6</td><td>1, 2</td><td>0, 1, 2, 3</td><td>9 distinct values</td><td>FALSE, TRUE</td></tr>
+<tr class="meta-row"><td>factor</td><td>numeric</td><td>numeric</td><td>factor</td><td>character</td><td>character</td><td>character</td><td>character</td><td>logical</td></tr>
+<tr class="meta-row"><td>11 distinct values</td><td>[2799 to 94772]</td><td>[70229 to 1143417]</td><td>time1, time2</td><td>1, 2, 3, 4, 5, 6</td><td>1, 2</td><td>0, 1, 2, 3</td><td>9 distinct values</td><td>FALSE, TRUE</td></tr>
   <tr>
    <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
-   <td style="text-align:left;"> 6a9bed0e3ac0cdf0edd1e9fa </td>
-   <td style="text-align:left;"> session_1 </td>
    <td style="text-align:right;"> 12060 </td>
    <td style="text-align:right;"> 294237 </td>
-   <td style="text-align:left;"> session_1 </td>
+   <td style="text-align:left;"> time1 </td>
    <td style="text-align:left;"> 1 </td>
    <td style="text-align:left;"> 1 </td>
    <td style="text-align:left;"> 1 </td>
@@ -51,11 +47,9 @@ tbody tr:hover { background: #eef4fb; }
   </tr>
   <tr>
    <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
-   <td style="text-align:left;"> 6a9bed0e3ac0cdf0edd1e9fa </td>
-   <td style="text-align:left;"> session_1 </td>
    <td style="text-align:right;"> 11416 </td>
    <td style="text-align:right;"> 305660 </td>
-   <td style="text-align:left;"> session_1 </td>
+   <td style="text-align:left;"> time1 </td>
    <td style="text-align:left;"> 2 </td>
    <td style="text-align:left;"> 1 </td>
    <td style="text-align:left;"> 0 </td>
@@ -64,11 +58,9 @@ tbody tr:hover { background: #eef4fb; }
   </tr>
   <tr>
    <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
-   <td style="text-align:left;"> 6a9bed0e3ac0cdf0edd1e9fa </td>
-   <td style="text-align:left;"> session_1 </td>
    <td style="text-align:right;"> 8402 </td>
    <td style="text-align:right;"> 314069 </td>
-   <td style="text-align:left;"> session_1 </td>
+   <td style="text-align:left;"> time1 </td>
    <td style="text-align:left;"> 3 </td>
    <td style="text-align:left;"> 1 </td>
    <td style="text-align:left;"> 0 </td>
@@ -77,11 +69,9 @@ tbody tr:hover { background: #eef4fb; }
   </tr>
   <tr>
    <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
-   <td style="text-align:left;"> 6a9bed0e3ac0cdf0edd1e9fa </td>
-   <td style="text-align:left;"> session_1 </td>
    <td style="text-align:right;"> 9444 </td>
    <td style="text-align:right;"> 323517 </td>
-   <td style="text-align:left;"> session_1 </td>
+   <td style="text-align:left;"> time1 </td>
    <td style="text-align:left;"> 4 </td>
    <td style="text-align:left;"> 1 </td>
    <td style="text-align:left;"> 0 </td>
@@ -90,11 +80,9 @@ tbody tr:hover { background: #eef4fb; }
   </tr>
   <tr>
    <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
-   <td style="text-align:left;"> 6a9bed0e3ac0cdf0edd1e9fa </td>
-   <td style="text-align:left;"> session_1 </td>
    <td style="text-align:right;"> 9861 </td>
    <td style="text-align:right;"> 333384 </td>
-   <td style="text-align:left;"> session_1 </td>
+   <td style="text-align:left;"> time1 </td>
    <td style="text-align:left;"> 5 </td>
    <td style="text-align:left;"> 1 </td>
    <td style="text-align:left;"> 0 </td>
@@ -103,11 +91,9 @@ tbody tr:hover { background: #eef4fb; }
   </tr>
   <tr>
    <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
-   <td style="text-align:left;"> 6a9bed0e3ac0cdf0edd1e9fa </td>
-   <td style="text-align:left;"> session_1 </td>
    <td style="text-align:right;"> 4531 </td>
    <td style="text-align:right;"> 337920 </td>
-   <td style="text-align:left;"> session_1 </td>
+   <td style="text-align:left;"> time1 </td>
    <td style="text-align:left;"> 6 </td>
    <td style="text-align:left;"> 1 </td>
    <td style="text-align:left;"> 2 </td>
@@ -116,11 +102,9 @@ tbody tr:hover { background: #eef4fb; }
   </tr>
   <tr>
    <td style="text-align:left;"> 6a0c5f6a4974d3dfbeb467ae </td>
-   <td style="text-align:left;"> 6a9bed0e3ac0cdf0edd1e9fa </td>
-   <td style="text-align:left;"> session_1 </td>
    <td style="text-align:right;"> 16826 </td>
    <td style="text-align:right;"> 679651 </td>
-   <td style="text-align:left;"> session_1 </td>
+   <td style="text-align:left;"> time1 </td>
    <td style="text-align:left;"> 1 </td>
    <td style="text-align:left;"> 1 </td>
    <td style="text-align:left;"> 0 </td>
@@ -129,11 +113,9 @@ tbody tr:hover { background: #eef4fb; }
   </tr>
   <tr>
    <td style="text-align:left;"> 6a0c5f6a4974d3dfbeb467ae </td>
-   <td style="text-align:left;"> 6a9bed0e3ac0cdf0edd1e9fa </td>
-   <td style="text-align:left;"> session_1 </td>
    <td style="text-align:right;"> 19383 </td>
    <td style="text-align:right;"> 699035 </td>
-   <td style="text-align:left;"> session_1 </td>
+   <td style="text-align:left;"> time1 </td>
    <td style="text-align:left;"> 2 </td>
    <td style="text-align:left;"> 1 </td>
    <td style="text-align:left;"> 1 </td>
@@ -142,11 +124,9 @@ tbody tr:hover { background: #eef4fb; }
   </tr>
   <tr>
    <td style="text-align:left;"> 6a0c5f6a4974d3dfbeb467ae </td>
-   <td style="text-align:left;"> 6a9bed0e3ac0cdf0edd1e9fa </td>
-   <td style="text-align:left;"> session_1 </td>
    <td style="text-align:right;"> 9352 </td>
    <td style="text-align:right;"> 708388 </td>
-   <td style="text-align:left;"> session_1 </td>
+   <td style="text-align:left;"> time1 </td>
    <td style="text-align:left;"> 3 </td>
    <td style="text-align:left;"> 1 </td>
    <td style="text-align:left;"> 0 </td>
@@ -155,11 +135,9 @@ tbody tr:hover { background: #eef4fb; }
   </tr>
   <tr>
    <td style="text-align:left;"> 6a0c5f6a4974d3dfbeb467ae </td>
-   <td style="text-align:left;"> 6a9bed0e3ac0cdf0edd1e9fa </td>
-   <td style="text-align:left;"> session_1 </td>
    <td style="text-align:right;"> 37117 </td>
    <td style="text-align:right;"> 745506 </td>
-   <td style="text-align:left;"> session_1 </td>
+   <td style="text-align:left;"> time1 </td>
    <td style="text-align:left;"> 4 </td>
    <td style="text-align:left;"> 1 </td>
    <td style="text-align:left;"> 1 </td>

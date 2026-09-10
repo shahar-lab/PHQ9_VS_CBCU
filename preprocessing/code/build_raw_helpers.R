@@ -5,12 +5,11 @@ collected <- collected |>
   dplyr::mutate(dplyr::across(dplyr::everything(), ~ dplyr::na_if(.x, "NA"))) |>
   dplyr::mutate(dplyr::across(dplyr::everything(), ~ dplyr::na_if(.x, "")))
 
-common_cols <- c("participant_id", "session", "prolific_pid", "prolific_study_id",
-                  "prolific_session_id", "rt", "time_elapsed", "study_session")
+common_cols <- c("participant_id", "session", "prolific_id", "rt", "time_elapsed", "time")
 
-# ASSUMED[no criterion given]: study_session coded as factor with levels
-# c("session_1", "session_2"), matching prolific_pid's factor treatment.
-study_session_levels <- c("session_1", "session_2")
+# ASSUMED[no criterion given]: time coded as factor with levels
+# c("time1", "time2"), matching prolific_id's factor treatment.
+time_levels <- c("time1", "time2")
 
 #### DESCRIBE: PER-COLUMN CLASS/VALUES ROWS (shared across raw datasets) ####
 

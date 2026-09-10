@@ -4,8 +4,8 @@ overall_summary <- tibble::tibble(
   metric = c("Starting participants", "Excluded participants", "Retained participants",
              "Final observations"),
   value = c(n_starting,
-            dplyr::n_distinct(excluded_participants$prolific_pid),
-            dplyr::n_distinct(cbcu_results_processed$prolific_pid),
+            dplyr::n_distinct(excluded_participants$prolific_id),
+            dplyr::n_distinct(cbcu_results_processed$prolific_id),
             format(nrow(cbcu_results_processed), big.mark = ","))
 )
 

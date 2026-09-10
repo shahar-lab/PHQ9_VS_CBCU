@@ -1,10 +1,10 @@
 #### DESCRIBE: ROWS AND HOUSEKEEPING ####
 
 row_summary_collected <- tibble::tibble(
-  metric = c("Participants", "Sessions (session_1)", "Sessions (session_2)"),
-  value  = c(dplyr::n_distinct(collected$prolific_pid),
-             dplyr::n_distinct(collected$prolific_pid[collected$study_session == "session_1"]),
-             dplyr::n_distinct(collected$prolific_pid[collected$study_session == "session_2"]))
+  metric = c("Participants", "Sessions (time1)", "Sessions (time2)"),
+  value  = c(dplyr::n_distinct(collected$prolific_id),
+             dplyr::n_distinct(collected$prolific_id[collected$time == "time1"]),
+             dplyr::n_distinct(collected$prolific_id[collected$time == "time2"]))
 )
 
 #### DESCRIBE: FORMAT SECONDS AS min:sec (shared by the PHQ9 and CBCU tables) ####
@@ -26,7 +26,7 @@ window_exits_collected <- collected |>
     window_left_ms = ifelse(window_left_ms %in% c("NA", ""), NA_real_, window_left_ms),
     window_left_ms = as.numeric(window_left_ms)
   ) |>
-  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::group_by(prolific_id, time) |>
   dplyr::mutate(away = window_status != "ok", new_departure = away & !dplyr::lag(away, default = FALSE)) |>
   dplyr::summarise(
     win_exit_count      = sum(new_departure),
@@ -41,34 +41,34 @@ window_exits_collected <- collected |>
 overview_per_participant <- collected |>
   dplyr::mutate(time_elapsed = as.numeric(ifelse(time_elapsed %in% c("NA", ""),
                                                    NA, time_elapsed))) |>
-  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::group_by(prolific_id, time) |>
   dplyr::summarise(
     total_time = (max(time_elapsed, na.rm = TRUE) - min(time_elapsed, na.rm = TRUE)) / 1000,
     .groups = "drop"
   ) |>
-  dplyr::left_join(window_exits_collected, by = c("prolific_pid", "study_session"))
+  dplyr::left_join(window_exits_collected, by = c("prolific_id", "time"))
 
 overview_table_wide <- overview_per_participant |>
   tidyr::pivot_wider(
-    names_from  = study_session,
+    names_from  = time,
     values_from = c(total_time, win_exit_count, win_exit_total_time),
-    names_glue  = "{study_session}__{.value}"
+    names_glue  = "{time}__{.value}"
   ) |>
-  dplyr::select(prolific_pid,
-                dplyr::starts_with("session_1__"), dplyr::starts_with("session_2__")) |>
-  dplyr::arrange(prolific_pid) |>
+  dplyr::select(prolific_id,
+                dplyr::starts_with("time1__"), dplyr::starts_with("time2__")) |>
+  dplyr::arrange(prolific_id) |>
   dplyr::mutate(dplyr::across(dplyr::ends_with("completion_time") | dplyr::ends_with("total_time"),
                                format_min_sec))
 
 # Markdown pipe tables have no spanning-header syntax; this table is written as HTML
-# instead so session_1/session_2 render as a genuine merged (colspan) header row.
+# instead so time1/time2 render as a genuine merged (colspan) header row.
 overview_metric_labels <- c("total_time", "win_exit_count", "win_exit_total_time")
 overview_header_html <- c(
   "<tr><th></th>",
-  paste0("<th colspan=\"", length(overview_metric_labels), "\">session_1</th>"),
-  paste0("<th colspan=\"", length(overview_metric_labels), "\">session_2</th>"),
+  paste0("<th colspan=\"", length(overview_metric_labels), "\">time1</th>"),
+  paste0("<th colspan=\"", length(overview_metric_labels), "\">time2</th>"),
   "</tr>",
-  paste0("<tr><th>prolific_pid</th>",
+  paste0("<tr><th>prolific_id</th>",
          paste0("<th>", rep(overview_metric_labels, 2), "</th>", collapse = ""),
          "</tr>")
 )
@@ -96,7 +96,7 @@ phq9_per_participant <- collected |>
                                            NA, time_to_submit_ms)),
     phq_items = rowSums(!is.na(dplyr::pick(dplyr::all_of(phq9_score_cols))))
   ) |>
-  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::group_by(prolific_id, time) |>
   dplyr::summarise(
     phq_items           = sum(phq_items),
     phq_completion_time = sum(time_to_submit_ms, na.rm = TRUE) / 1000,
@@ -105,25 +105,25 @@ phq9_per_participant <- collected |>
 
 phq9_table_wide <- phq9_per_participant |>
   tidyr::pivot_wider(
-    names_from  = study_session,
+    names_from  = time,
     values_from = c(phq_items, phq_completion_time),
-    names_glue  = "{study_session}__{.value}"
+    names_glue  = "{time}__{.value}"
   ) |>
-  dplyr::select(prolific_pid,
-                dplyr::starts_with("session_1__"), dplyr::starts_with("session_2__")) |>
-  dplyr::arrange(prolific_pid) |>
+  dplyr::select(prolific_id,
+                dplyr::starts_with("time1__"), dplyr::starts_with("time2__")) |>
+  dplyr::arrange(prolific_id) |>
   dplyr::mutate(dplyr::across(dplyr::ends_with("completion_time") | dplyr::ends_with("total_time"),
                                format_min_sec))
 
 # Markdown pipe tables have no spanning-header syntax; this table is written as HTML
-# instead so session_1/session_2 render as a genuine merged (colspan) header row.
+# instead so time1/time2 render as a genuine merged (colspan) header row.
 phq9_metric_labels <- c("items", "completion_time")
 phq9_header_html <- c(
   "<tr><th></th>",
-  paste0("<th colspan=\"", length(phq9_metric_labels), "\">session_1</th>"),
-  paste0("<th colspan=\"", length(phq9_metric_labels), "\">session_2</th>"),
+  paste0("<th colspan=\"", length(phq9_metric_labels), "\">time1</th>"),
+  paste0("<th colspan=\"", length(phq9_metric_labels), "\">time2</th>"),
   "</tr>",
-  paste0("<tr><th>prolific_pid</th>",
+  paste0("<tr><th>prolific_id</th>",
          paste0("<th>", rep(phq9_metric_labels, 2), "</th>", collapse = ""),
          "</tr>")
 )
@@ -147,42 +147,42 @@ phq9_table_html <- c(
 # cbcu_quiz_attempts counts every logged attempt, not distinct questions, so it can exceed
 # the number of quiz questions when a participant retried one or more.
 cbcu_quiz_attempts_collected <- collected |>
-  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::group_by(prolific_id, time) |>
   dplyr::summarise(cbcu_quiz_attempts = sum(!is.na(quiz_question_num)), .groups = "drop")
 
 cbcu_per_participant <- collected |>
   dplyr::filter(phase == "pairwise" | iti_phase == "pairwise") |>
   dplyr::mutate(time_elapsed = as.numeric(ifelse(time_elapsed %in% c("NA", ""),
                                                    NA, time_elapsed))) |>
-  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::group_by(prolific_id, time) |>
   dplyr::summarise(
     cbcu_items           = sum(phase == "pairwise", na.rm = TRUE),
     cbcu_completion_time = (max(time_elapsed, na.rm = TRUE) - min(time_elapsed, na.rm = TRUE)) / 1000,
     .groups = "drop"
   ) |>
-  dplyr::left_join(cbcu_quiz_attempts_collected, by = c("prolific_pid", "study_session"))
+  dplyr::left_join(cbcu_quiz_attempts_collected, by = c("prolific_id", "time"))
 
 cbcu_table_wide <- cbcu_per_participant |>
   tidyr::pivot_wider(
-    names_from  = study_session,
+    names_from  = time,
     values_from = c(cbcu_items, cbcu_quiz_attempts, cbcu_completion_time),
-    names_glue  = "{study_session}__{.value}"
+    names_glue  = "{time}__{.value}"
   ) |>
-  dplyr::select(prolific_pid,
-                dplyr::starts_with("session_1__"), dplyr::starts_with("session_2__")) |>
-  dplyr::arrange(prolific_pid) |>
+  dplyr::select(prolific_id,
+                dplyr::starts_with("time1__"), dplyr::starts_with("time2__")) |>
+  dplyr::arrange(prolific_id) |>
   dplyr::mutate(dplyr::across(dplyr::ends_with("completion_time") | dplyr::ends_with("total_time"),
                                format_min_sec))
 
 # Markdown pipe tables have no spanning-header syntax; this table is written as HTML
-# instead so session_1/session_2 render as a genuine merged (colspan) header row.
+# instead so time1/time2 render as a genuine merged (colspan) header row.
 cbcu_metric_labels <- c("items", "quiz_attempts", "completion_time")
 cbcu_header_html <- c(
   "<tr><th></th>",
-  paste0("<th colspan=\"", length(cbcu_metric_labels), "\">session_1</th>"),
-  paste0("<th colspan=\"", length(cbcu_metric_labels), "\">session_2</th>"),
+  paste0("<th colspan=\"", length(cbcu_metric_labels), "\">time1</th>"),
+  paste0("<th colspan=\"", length(cbcu_metric_labels), "\">time2</th>"),
   "</tr>",
-  paste0("<tr><th>prolific_pid</th>",
+  paste0("<tr><th>prolific_id</th>",
          paste0("<th>", rep(cbcu_metric_labels, 2), "</th>", collapse = ""),
          "</tr>")
 )
@@ -200,10 +200,14 @@ cbcu_table_html <- c(
 #### DESCRIBE: DEMOGRAPHICS (Prolific export) ####
 
 # One row per participant, no session split (Prolific demographics are collected once).
+# ASSUMED[not explicitly listed]: `demographics_collected` (the raw Prolific export, read in
+# read_collected.R) still carries `Participant id`; renamed locally here to match the
+# prolific_id naming used everywhere else in this report.
 demographics_table <- demographics_collected |>
-  dplyr::select(`Participant id`, Age, Sex, `Ethnicity simplified`,
+  dplyr::rename(prolific_id = `Participant id`) |>
+  dplyr::select(prolific_id, Age, Sex, `Ethnicity simplified`,
                 `Country of residence`, `Student status`, `Employment status`) |>
-  dplyr::arrange(`Participant id`)
+  dplyr::arrange(prolific_id)
 
 #### WRITE COLLECTED-DATA STRUCTURE REPORT (markdown) ####
 

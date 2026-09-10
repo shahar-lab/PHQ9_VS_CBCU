@@ -14,7 +14,7 @@ trial_exclusions <- tibble::tibble(
 #### PER PARTICIPANT AFTER EXCLUSION: RETAINED N_TRIALS + BREAKDOWN OF % EXCLUDED ####
 
 original_trial_counts <- after_participant_exclusions |>
-  dplyr::count(prolific_pid, time, name = "n_trials_original")
+  dplyr::count(prolific_id, time, name = "n_trials_original")
 
 trial_reason <- after_participant_exclusions |>
   dplyr::mutate(
@@ -27,7 +27,7 @@ trial_reason <- after_participant_exclusions |>
   )
 
 per_participant_after_exclusion <- trial_reason |>
-  dplyr::group_by(prolific_pid, time) |>
+  dplyr::group_by(prolific_id, time) |>
   dplyr::summarise(
     n_trials = sum(reason == "kept"),
     pct_excluded_missing = 100 * mean(reason == "missing"),
@@ -35,14 +35,14 @@ per_participant_after_exclusion <- trial_reason |>
     pct_excluded_slow    = 100 * mean(reason == "slow"),
     .groups = "drop"
   ) |>
-  dplyr::left_join(original_trial_counts, by = c("prolific_pid", "time")) |>
+  dplyr::left_join(original_trial_counts, by = c("prolific_id", "time")) |>
   dplyr::mutate(
     pct_excluded_total = round(pct_excluded_missing + pct_excluded_fast + pct_excluded_slow, 1),
     pct_excluded_missing = round(pct_excluded_missing, 1),
     pct_excluded_fast    = round(pct_excluded_fast, 1),
     pct_excluded_slow    = round(pct_excluded_slow, 1)
   ) |>
-  dplyr::select(prolific_pid, time, n_trials,
+  dplyr::select(prolific_id, time, n_trials,
                 pct_excluded_total, pct_excluded_missing, pct_excluded_fast, pct_excluded_slow)
 
 #### APPEND TO MARKDOWN REPORT ####
@@ -51,7 +51,7 @@ report_lines <- c(
   "", "## Trial exclusions (counts in observations)", "",
   knitr::kable(trial_exclusions, format = "pipe"), "",
   paste0("**Final: ", format(nrow(cbcu_results_processed), big.mark = ","),
-         " observations across ", dplyr::n_distinct(cbcu_results_processed$prolific_pid),
+         " observations across ", dplyr::n_distinct(cbcu_results_processed$prolific_id),
          " participants.**"), "",
   "## Per participant after exclusion", "",
   "Percentages are of that session's original pairwise trial count, and",
