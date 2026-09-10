@@ -1,0 +1,227 @@
+<html><head><meta charset="UTF-8">
+<title>Data type validation: cbcu</title>
+<style>
+body { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+       max-width: 1100px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+h1 { border-bottom: 2px solid #333; padding-bottom: 0.3rem; }
+h2 { margin-top: 2rem; color: #333; }
+table { border-collapse: collapse; margin: 0.5rem 0 1.5rem; font-size: 0.9rem; }
+th, td { border: 1px solid #ddd; padding: 4px 10px; text-align: left; white-space: nowrap; }
+thead th { background: #333; color: #fff; position: sticky; top: 0; }
+tbody tr:nth-child(even) { background: #f6f6f6; }
+tbody tr:hover { background: #eef4fb; }
+.scroll-x { overflow-x: auto; border: 1px solid #ddd; margin-bottom: 1.5rem; }
+.scroll-x table { margin: 0; border: none; }
+.meta-row { background: #e2e6ea !important; font-style: italic; }
+</style></head><body>
+<h1>Data type validation: cbcu</h1>
+<h2>Head of data (first 10 rows)</h2>
+<div class="scroll-x">
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> prolific_id </th>
+   <th style="text-align:left;"> time </th>
+   <th style="text-align:right;"> block </th>
+   <th style="text-align:right;"> trial </th>
+   <th style="text-align:right;"> item_number_left </th>
+   <th style="text-align:right;"> item_number_right </th>
+   <th style="text-align:left;"> choice </th>
+   <th style="text-align:right;"> chosen_item_number </th>
+   <th style="text-align:left;"> chosen_item_text </th>
+   <th style="text-align:right;"> rt </th>
+   <th style="text-align:right;"> time_elapsed </th>
+   <th style="text-align:left;"> skipped </th>
+   <th style="text-align:left;"> item_phq9_left </th>
+   <th style="text-align:left;"> item_text_left </th>
+   <th style="text-align:left;"> item_phq9_right </th>
+   <th style="text-align:left;"> item_text_right </th>
+  </tr>
+ </thead>
+<tbody>
+<tr class="meta-row"><td>factor</td><td>factor</td><td>numeric</td><td>numeric</td><td>integer</td><td>integer</td><td>factor</td><td>integer</td><td>character</td><td>numeric</td><td>numeric</td><td>logical</td><td>character</td><td>character</td><td>character</td><td>character</td></tr>
+<tr class="meta-row"><td>11 distinct values</td><td>time1, time2</td><td>[1 to 4]</td><td>[1 to 105]</td><td>[1 to 15]</td><td>[1 to 15]</td><td>left, right, skip</td><td>[1 to 15]</td><td>15 distinct values</td><td>[401 to 168969]</td><td>[106212 to 2208835]</td><td>FALSE, TRUE</td><td>15 distinct values</td><td>15 distinct values</td><td>15 distinct values</td><td>15 distinct values</td></tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 12 </td>
+   <td style="text-align:left;"> left </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:left;"> Feeling hopeless </td>
+   <td style="text-align:right;"> 7259 </td>
+   <td style="text-align:right;"> 349641 </td>
+   <td style="text-align:left;"> FALSE </td>
+   <td style="text-align:left;"> 2b </td>
+   <td style="text-align:left;"> Feeling hopeless </td>
+   <td style="text-align:left;"> 8a </td>
+   <td style="text-align:left;"> Moving or speaking slowly that other people could have noticed </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 13 </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:left;"> right </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:left;"> Overeating </td>
+   <td style="text-align:right;"> 4812 </td>
+   <td style="text-align:right;"> 356473 </td>
+   <td style="text-align:left;"> FALSE </td>
+   <td style="text-align:left;"> 8b </td>
+   <td style="text-align:left;"> Being so fidgety or restless that you have been moving around a lot more than usual </td>
+   <td style="text-align:left;"> 5b </td>
+   <td style="text-align:left;"> Overeating </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 12 </td>
+   <td style="text-align:left;"> left </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:left;"> Feeling tired or having little energy </td>
+   <td style="text-align:right;"> 3242 </td>
+   <td style="text-align:right;"> 361732 </td>
+   <td style="text-align:left;"> FALSE </td>
+   <td style="text-align:left;"> 4 </td>
+   <td style="text-align:left;"> Feeling tired or having little energy </td>
+   <td style="text-align:left;"> 8a </td>
+   <td style="text-align:left;"> Moving or speaking slowly that other people could have noticed </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:left;"> left </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:left;"> Feeling bad about yourself or that you are a failure </td>
+   <td style="text-align:right;"> 109349 </td>
+   <td style="text-align:right;"> 473095 </td>
+   <td style="text-align:left;"> FALSE </td>
+   <td style="text-align:left;"> 6a </td>
+   <td style="text-align:left;"> Feeling bad about yourself or that you are a failure </td>
+   <td style="text-align:left;"> 5a </td>
+   <td style="text-align:left;"> Poor appetite </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:left;"> left </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:left;"> Trouble falling or staying asleep </td>
+   <td style="text-align:right;"> 3164 </td>
+   <td style="text-align:right;"> 478278 </td>
+   <td style="text-align:left;"> FALSE </td>
+   <td style="text-align:left;"> 3a </td>
+   <td style="text-align:left;"> Trouble falling or staying asleep </td>
+   <td style="text-align:left;"> 5a </td>
+   <td style="text-align:left;"> Poor appetite </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 6 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:left;"> skip </td>
+   <td style="text-align:right;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:right;"> 3244 </td>
+   <td style="text-align:right;"> 483532 </td>
+   <td style="text-align:left;"> TRUE </td>
+   <td style="text-align:left;"> 2a </td>
+   <td style="text-align:left;"> Feeling down or depressed </td>
+   <td style="text-align:left;"> 6b </td>
+   <td style="text-align:left;"> Feeling that you have let yourself or your family down </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:left;"> right </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:left;"> Feeling bad about yourself or that you are a failure </td>
+   <td style="text-align:right;"> 5468 </td>
+   <td style="text-align:right;"> 491012 </td>
+   <td style="text-align:left;"> FALSE </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> Little interest or pleasure in doing things </td>
+   <td style="text-align:left;"> 6a </td>
+   <td style="text-align:left;"> Feeling bad about yourself or that you are a failure </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 13 </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:left;"> right </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:left;"> Feeling that you have let yourself or your family down </td>
+   <td style="text-align:right;"> 34995 </td>
+   <td style="text-align:right;"> 528018 </td>
+   <td style="text-align:left;"> FALSE </td>
+   <td style="text-align:left;"> 8b </td>
+   <td style="text-align:left;"> Being so fidgety or restless that you have been moving around a lot more than usual </td>
+   <td style="text-align:left;"> 6b </td>
+   <td style="text-align:left;"> Feeling that you have let yourself or your family down </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 9 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:left;"> right </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:left;"> Feeling that you have let yourself or your family down </td>
+   <td style="text-align:right;"> 6595 </td>
+   <td style="text-align:right;"> 536633 </td>
+   <td style="text-align:left;"> FALSE </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> Little interest or pleasure in doing things </td>
+   <td style="text-align:left;"> 6b </td>
+   <td style="text-align:left;"> Feeling that you have let yourself or your family down </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 15 </td>
+   <td style="text-align:left;"> skip </td>
+   <td style="text-align:right;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:right;"> 3515 </td>
+   <td style="text-align:right;"> 542161 </td>
+   <td style="text-align:left;"> TRUE </td>
+   <td style="text-align:left;"> 5a </td>
+   <td style="text-align:left;"> Poor appetite </td>
+   <td style="text-align:left;"> 9b </td>
+   <td style="text-align:left;"> Thoughts of hurting yourself in some way </td>
+  </tr>
+</tbody>
+</table>
+</div>
+</body></html>

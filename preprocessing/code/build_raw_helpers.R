@@ -48,9 +48,10 @@ tbody tr:hover { background: #eef4fb; }
 "
 
 # Wraps a head-of-data preview (scrollable when wide, with class/values meta-rows under the
-# header) into one styled HTML file, matching data-type-validation-<name>-raw.html.
+# header) into one styled HTML file, matching data-type-validation-<name>-<suffix>.html.
 # freetext_cols names columns with genuinely open-ended text (no possible-values list shown).
-write_data_validation_report <- function(df, dictionary, name, freetext_cols = character()) {
+# suffix defaults to "raw" for the raw-step call sites; pass "processed" for processed-step reports.
+write_data_validation_report <- function(df, dictionary, name, freetext_cols = character(), suffix = "raw") {
   class_values  <- describe_class_row(df)
   values_values <- describe_values_row(df, freetext_cols)
   class_row  <- paste0("<tr class=\"meta-row\">",
@@ -71,5 +72,5 @@ write_data_validation_report <- function(df, dictionary, name, freetext_cols = c
     "<div class=\"scroll-x\">", head_table_html, "</div>",
     "</body></html>"
   )
-  writeLines(report_html, file.path(output_dir, paste0("data-type-validation-", name, "-raw.html")))
+  writeLines(report_html, file.path(output_dir, paste0("data-type-validation-", name, "-", suffix, ".html")))
 }

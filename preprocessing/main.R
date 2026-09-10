@@ -42,6 +42,11 @@ source(file.path(code_dir, "build_cbcu_quizz_raw.R"))
 source(file.path(code_dir, "build_phq9_raw.R"))
 source(file.path(code_dir, "build_feedback_raw.R"))
 
+# 3b. Build processed PHQ9 data: add phq9_sum (row-wise total, NA if any item is
+# missing) to phq9_results, no exclusions, write data/processed/phq9_results.csv
+# and data-type-validation-phq9-processed.html.
+source(file.path(code_dir, "build_processed_phq9.R"))
+
 # 4. Build demographics raw: exclude returned participants, drop the
 # completion code column, write demographics.csv to data/raw/, and write
 # data-type-validation-demographics-raw.html.

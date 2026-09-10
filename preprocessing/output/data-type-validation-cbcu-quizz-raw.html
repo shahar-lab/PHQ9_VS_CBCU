@@ -1,0 +1,150 @@
+<html><head><meta charset="UTF-8">
+<title>Data type validation: cbcu-quizz</title>
+<style>
+body { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+       max-width: 1100px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+h1 { border-bottom: 2px solid #333; padding-bottom: 0.3rem; }
+h2 { margin-top: 2rem; color: #333; }
+table { border-collapse: collapse; margin: 0.5rem 0 1.5rem; font-size: 0.9rem; }
+th, td { border: 1px solid #ddd; padding: 4px 10px; text-align: left; white-space: nowrap; }
+thead th { background: #333; color: #fff; position: sticky; top: 0; }
+tbody tr:nth-child(even) { background: #f6f6f6; }
+tbody tr:hover { background: #eef4fb; }
+.scroll-x { overflow-x: auto; border: 1px solid #ddd; margin-bottom: 1.5rem; }
+.scroll-x table { margin: 0; border: none; }
+.meta-row { background: #e2e6ea !important; font-style: italic; }
+</style></head><body>
+<h1>Data type validation: cbcu-quizz</h1>
+<h2>Head of data (first 10 rows)</h2>
+<div class="scroll-x">
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> prolific_id </th>
+   <th style="text-align:right;"> completion_time </th>
+   <th style="text-align:right;"> time_elapsed </th>
+   <th style="text-align:left;"> time </th>
+   <th style="text-align:left;"> quiz_question_num </th>
+   <th style="text-align:left;"> quiz_attempt_num </th>
+   <th style="text-align:left;"> selected_option_index </th>
+   <th style="text-align:left;"> selected_option_text </th>
+   <th style="text-align:left;"> correct </th>
+  </tr>
+ </thead>
+<tbody>
+<tr class="meta-row"><td>factor</td><td>numeric</td><td>numeric</td><td>factor</td><td>character</td><td>character</td><td>character</td><td>character</td><td>logical</td></tr>
+<tr class="meta-row"><td>11 distinct values</td><td>[2799 to 94772]</td><td>[70229 to 1143417]</td><td>time1, time2</td><td>1, 2, 3, 4, 5, 6</td><td>1, 2</td><td>0, 1, 2, 3</td><td>9 distinct values</td><td>FALSE, TRUE</td></tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:right;"> 12060 </td>
+   <td style="text-align:right;"> 294237 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> Click on the problem that bothered you more in the last two weeks. </td>
+   <td style="text-align:left;"> TRUE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:right;"> 11416 </td>
+   <td style="text-align:right;"> 305660 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 0 </td>
+   <td style="text-align:left;"> Try your best to choose the one that bothered you slightly more. </td>
+   <td style="text-align:left;"> TRUE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:right;"> 8402 </td>
+   <td style="text-align:right;"> 314069 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 0 </td>
+   <td style="text-align:left;"> Only when you are absolutely sure neither problem affected you at all in the last two weeks. </td>
+   <td style="text-align:left;"> TRUE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:right;"> 9444 </td>
+   <td style="text-align:right;"> 323517 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:left;"> 4 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 0 </td>
+   <td style="text-align:left;"> You must stay on this screen without switching to other tabs or windows. </td>
+   <td style="text-align:left;"> TRUE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:right;"> 9861 </td>
+   <td style="text-align:right;"> 333384 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:left;"> 5 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 0 </td>
+   <td style="text-align:left;"> No, there is no time limit, so you should take your time to carefully reflect on each screen. </td>
+   <td style="text-align:left;"> TRUE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:right;"> 4531 </td>
+   <td style="text-align:right;"> 337920 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:left;"> 6 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> Three breaks, giving you a chance to pause between the four parts of the task. </td>
+   <td style="text-align:left;"> TRUE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a0c5f6a4974d3dfbeb467ae </td>
+   <td style="text-align:right;"> 16826 </td>
+   <td style="text-align:right;"> 679651 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 0 </td>
+   <td style="text-align:left;"> Click on the problem that bothered you more in the last two weeks. </td>
+   <td style="text-align:left;"> TRUE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a0c5f6a4974d3dfbeb467ae </td>
+   <td style="text-align:right;"> 19383 </td>
+   <td style="text-align:right;"> 699035 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> Try your best to choose the one that bothered you slightly more. </td>
+   <td style="text-align:left;"> TRUE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a0c5f6a4974d3dfbeb467ae </td>
+   <td style="text-align:right;"> 9352 </td>
+   <td style="text-align:right;"> 708388 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 0 </td>
+   <td style="text-align:left;"> Only when you are absolutely sure neither problem affected you at all in the last two weeks. </td>
+   <td style="text-align:left;"> TRUE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a0c5f6a4974d3dfbeb467ae </td>
+   <td style="text-align:right;"> 37117 </td>
+   <td style="text-align:right;"> 745506 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:left;"> 4 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> You must stay on this screen without switching to other tabs or windows. </td>
+   <td style="text-align:left;"> TRUE </td>
+  </tr>
+</tbody>
+</table>
+</div>
+</body></html>
