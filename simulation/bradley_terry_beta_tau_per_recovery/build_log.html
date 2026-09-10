@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Build Log: bradley_terry_beta_tau_per Parameter Recovery</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif; max-width: 860px; margin: 40px auto; padding: 0 20px; line-height: 1.55; color: #1a1a1a; }
+  h1 { font-size: 1.6em; border-bottom: 2px solid #333; padding-bottom: 8px; }
+  h2 { font-size: 1.25em; margin-top: 2em; border-bottom: 1px solid #ccc; padding-bottom: 4px; }
+  h3 { font-size: 1.05em; margin-top: 1.4em; }
+  code, pre { font-family: "SF Mono", Consolas, Menlo, monospace; font-size: 0.9em; }
+  pre { background: #f5f5f5; padding: 10px 14px; border-radius: 6px; overflow-x: auto; }
+  code { background: #f0f0f0; padding: 1px 5px; border-radius: 3px; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; vertical-align: top; }
+  th { background: #f5f5f5; }
+  .pass { color: #1a7f37; font-weight: 600; }
+  .fail { color: #b62324; font-weight: 600; }
+  .meta { color: #555; font-size: 0.92em; }
+  .assumed { background: #fff8e1; border-left: 3px solid #e0a800; padding: 8px 12px; margin: 0.8em 0; }
+  ul { padding-left: 1.3em; }
+</style>
+</head>
+<body>
+
+<h1>Build Log: Parameter Recovery for <code>bradley_terry_beta_tau_per</code></h1>
+<p class="meta">Built 2026-09-10 via the ShaharLab Malka / Sharon / Tomer pipeline (Code Writer + Code Reviewer subagents). This document records how <code>simulation/bradley_terry_beta_tau_per_recovery/</code> came to be, for future reference.</p>
+
+<h2>Why this study exists</h2>
+<p>
+<code>bradley_terry_beta_tau_per.R</code> (generative code) and <code>bradley_terry_beta_tau_per.stan</code>
+(fitting model) already existed in <code>models/</code>, but no parameter recovery study had been run for this
+model &mdash; unlike its siblings <code>bradley_terry_beta</code> and <code>bradley_terry_beta_tau</code>, each
+of which has a matching <code>simulation/&lt;model&gt;_recovery/</code> folder. This was confirmed by checking
+for that folder before starting; it did not exist.
+</p>
+
+<h2>Approved specification</h2>
+<table>
+<tr><th>Design</th><td>20 simulated subjects &times; 100 trials each, 15-item pool (CBC-U), 2 items offered per trial</td></tr>
+<tr><th>Ground truth</th><td>Group-level hyperparameters fixed at specific values (see "Post-build change" below); per-subject <code>beta</code>, <code>tau</code>, <code>key_decay</code>, <code>rho</code>, <code>u</code> drawn from those, matching the hierarchical structure exactly</td></tr>
+<tr><th>Simulation wiring</th><td><code>sim.block()</code> (unmodified) looped over 20 subjects in the recovery pipeline; combined Stan-ready data assembled there, including <code>first_trial_in_block</code></td></tr>
+<tr><th>Fit</th><td>cmdstanr, 4 chains, 1000 warmup / 1000 sampling</td></tr>
+<tr><th>Compare</th><td>Recovered (posterior mean) vs. true for every free parameter and hyperparameter</td></tr>
+<tr><th>Repetition</th><td>Single simulate &rarr; fit &rarr; compare run</td></tr>
+</table>
+
+<h2>Output produced</h2>
+<pre>simulation/bradley_terry_beta_tau_per_recovery/
+├── main.R
+├── summary.md                  (pre-run design notebook)
+├── build_log.html              (this file)
+└── code/
+    ├── simulated_data.R        (ground truth + sim.block() loop + Stan data assembly)
+    ├── fit_model.R             (cmdstanr fit)
+    ├── recover_compare.R       (recovered vs. true extraction)
+    ├── plot_u_recovery.R
+    ├── plot_beta_recovery.R
+    ├── plot_tau_recovery.R
+    ├── plot_key_decay_recovery.R
+    ├── plot_rho_recovery.R
+    └── plot_group_recovery.R   (8 group-level hyperparameters, faceted)</pre>
+
+<h2>Review history</h2>
+<p>Every round below is a Code Writer build/fix followed by a Code Reviewer pass. The lab's dispatch protocol caps automated rounds at three; this job needed more, so rounds 4&ndash;7 were run with explicit user sign-off at each continuation point rather than looping unattended.</p>
+
+<table>
+<tr><th>Round</th><th>Verdict</th><th>Finding / Fix</th></tr>
+<tr><td>1</td><td class="fail">FAIL</td><td>Two issues found on first build (details generated inline as <code>REVIEW</code> tags in <code>main.R</code>, <code>code/simulate_and_fit.R</code>, <code>code/recover_compare.R</code>) &mdash; resolved in round 2.</td></tr>
+<tr><td>2</td><td class="fail">FAIL</td><td>One new issue surfaced on fresh full re-check after the round-1 fixes. The Writer's round-2 revision also split the original <code>simulate_and_fit.R</code> into <code>simulated_data.R</code> + <code>fit_model.R</code>, but left the original file behind, emptied and unreferenced; the orchestrator deleted this dead file before re-review.</td></tr>
+<tr><td>3</td><td class="fail">FAIL</td><td>Writer added the required group-level hyperparameter comparison (8 hyperparameters: <code>mu_log_beta</code>, <code>sigma_log_beta</code>, <code>mu_tau</code>, <code>sigma_tau</code>, <code>mu_logit_key_decay</code>, <code>sigma_key_decay</code>, <code>mu_rho</code>, <code>sigma_rho</code>) as one combined scatter plot, colour-coded by variable &mdash; an <code>ASSUMED</code> decision since the spec didn't dictate whether to combine or split these 8. Reviewer flagged that forcing shared axis limits / <code>coord_equal</code> across variables of very different natural scales (e.g. <code>exponential(2)</code>-scaled sigmas near zero vs. <code>normal(0,2)</code>-scaled mus) was invalid.</td></tr>
+<tr><td>4</td><td class="fail">FAIL</td><td>Fixed via <code>facet_wrap(~variable, scales = "free")</code>, giving each hyperparameter its own facet/axes. New finding: facets were missing the required explicit four-tick-mark axis breaks.</td></tr>
+<tr><td>5</td><td class="fail">FAIL</td><td>Four-tick breaks added per facet via a <code>four_breaks()</code> helper. New finding: the per-facet Pearson-r/label computation used <code>lapply</code>/<code>do.call(rbind, ...)</code> without clear necessity (coding-rules discourage <code>apply</code>-family use absent a clear need), and left a dead unused <code>lims</code> variable in that block.</td></tr>
+<tr><td>6</td><td class="fail">FAIL</td><td>Replaced with a straight-line <code>dplyr::group_by() |&gt; summarise()</code> pipe (orchestrator edit, reviewer-verified). This surfaced the deeper, real issue: <code>facet_wrap(scales = "free")</code> lets each facet's x and y ranges diverge <em>independently</em>, which breaks the meaning of the slope-1 diagonal reference line (true vs. recovered should be directly comparable within a facet). <code>coord_equal()</code> alone only fixes the aspect ratio, not the actual range.</td></tr>
+<tr><td>7</td><td class="pass">PASS</td><td>Fixed by anchoring each facet's x and y to an identical, padded <code>[min, max]</code> range via invisible <code>geom_blank()</code> points (covering both true and recovered values per variable) &mdash; forcing square, matched ranges per facet while keeping facets independent from each other, with no new package dependency. Reviewer confirmed the mechanism actually achieves this and found no further issues.</td></tr>
+</table>
+
+<div class="assumed">
+<strong>ASSUMED decisions surfaced during the build</strong> (specification was silent, agent made a defensible default; carried forward without further objection):
+<ul>
+<li>The 8 group-level hyperparameters are shown on one combined, faceted scatter plot (colour-coded by variable) rather than as 8 separate plot files, since the spec said "one scatter plot per parameter" without specifying whether group-level hyperparameters count individually or as a set.</li>
+<li>Because those 8 hyperparameters are not co-scaled, per-facet trend lines, per-facet Pearson r, and per-facet axis ranges are computed independently per variable rather than pooled across all 8.</li>
+</ul>
+</div>
+
+<h2>Post-build changes</h2>
+<p>Changes made after the review loop closed, outside the Writer/Reviewer process (direct edits, at the user's request):</p>
+<table>
+<tr><th>Date</th><th>Change</th></tr>
+<tr><td>2026-09-10</td><td><code>main.R</code> line 23 (<code>source(.../simulated_data.R)</code>) errored on first run because <code>artifacts_dir</code> and <code>output_dir</code> did not exist on disk yet &mdash; <code>saveRDS()</code> inside <code>simulated_data.R</code> needs the target folder to already exist. Fixed by adding <code>dir.create(artifacts_dir, showWarnings = FALSE)</code> and <code>dir.create(output_dir, showWarnings = FALSE)</code> to <code>main.R</code> right after those paths are defined.</td></tr>
+<tr><td>2026-09-10</td><td>Group-level hyperparameters switched from randomly sampled (drawn fresh from the Stan model's own priors on every run) to fixed values, at the user's request, so the same ground truth is used every run. Chosen within each prior's plausible range (not at the tails):
+<ul>
+<li><code>mu_log_beta = 0.5</code>, <code>sigma_log_beta = 0.3</code> &mdash; per-subject <code>beta</code> (choice sensitivity) centered around <code>exp(0.5) &asymp; 1.65</code> with modest spread</li>
+<li><code>mu_tau = 0</code>, <code>sigma_tau = 1</code> &mdash; per-subject <code>tau</code> (burden/no-choice threshold) centered at 0</li>
+<li><code>mu_logit_key_decay = 1</code>, <code>sigma_key_decay = 0.5</code> &mdash; per-subject <code>key_decay</code> centered around <code>plogis(1) &asymp; 0.73</code> (a meaningful, non-trivial decay rate, not near 0 or 1)</li>
+<li><code>mu_rho = 1</code>, <code>sigma_rho = 0.5</code> &mdash; per-subject <code>rho</code> (perseveration bump) clearly positive and non-trivial</li>
+</ul>
+Updated in <code>code/simulated_data.R</code> and <code>summary.md</code>.</td></tr>
+<tr><td>2026-09-10</td><td>First actual run hit a runtime error in <code>code/plot_group_recovery.R</code>: <code>summarise(range_val = range_pad(...))</code> failed because <code>range_pad()</code> returns 2 values (min and max) per group, and <code>dplyr::summarise()</code> requires exactly 1 row per group per column. Fixed by switching that call from <code>summarise()</code> to <code>reframe()</code>, which allows multi-row-per-group output; the surrounding logic (per-facet square anchor points via <code>geom_blank()</code>) is otherwise unchanged.</td></tr>
+<tr><td>2026-09-10</td><td>Second runtime error in the same file: <code>facet_wrap(~variable, scales = "free")</code> combined with <code>coord_equal()</code> is not supported by ggplot2 &mdash; a fixed aspect ratio cannot coexist with per-facet free scales, and always errors (<code>"facet_wrap() can't use free scales with coord_cartesian() with a fixed ratio argument"</code>). This was missed in review since the plot was never actually rendered before sign-off. Fixed by removing <code>coord_equal()</code>; the <code>geom_blank()</code> anchor points still force each facet's x and y to share an identical <code>[min, max]</code> range (the property that actually matters for the diagonal reference line), independent of panel aspect ratio.</td></tr>
+<tr><td>2026-09-10</td><td>After a real run, the group-level plot turned out to be visually misleading even though it rendered correctly: with only 1 true/1 recovered point per facet, the old <code>range_pad()</code> zoomed each facet's axes to just <code>c(true_val, recovered_val)</code>, so every facet auto-scaled to its own recovery error &mdash; a 6% miss (<code>mu_log_beta</code>: true 0.50, recovered 0.53) and a much larger miss (<code>sigma_rho</code>: true &asymp;0.50, recovered &asymp;0.14) both ended up looking similarly far from the diagonal, since each facet's zoom level was different. Fixed by anchoring each facet's range to the true value's own scale instead &mdash; <code>[min(0, true_val), max(0, true_val)]</code> padded by half the true value's magnitude &mdash; so distance from the diagonal now reflects actual recovery error consistently across all 8 hyperparameters, not each facet's self-relative zoom.</td></tr>
+</table>
+
+<h2>How to run it</h2>
+<p>Open and source <code>main.R</code>. First run compiles the Stan model (can take a minute), then samples with 4 chains. After running, check <code>fit$diagnostic_summary()</code> in the console for divergences, treedepth hits, low E-BFMI, or Rhat &gt; 1.01 before trusting the recovery plots in <code>output/</code>. Fill in <code>summary.md</code>'s "Findings / Summary" section with what you observe.</p>
+
+</body>
+</html>
+
