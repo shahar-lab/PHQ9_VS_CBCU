@@ -14,12 +14,12 @@ trial_exclusions <- tibble::tibble(
 #### PER PARTICIPANT AFTER EXCLUSION: RETAINED N_TRIALS + BREAKDOWN OF % EXCLUDED ####
 
 original_trial_counts <- after_participant_exclusions |>
-  dplyr::count(prolific_pid, study_session, name = "n_trials_original")
+  dplyr::count(prolific_pid, time, name = "n_trials_original")
 
 trial_reason <- after_participant_exclusions |>
   dplyr::mutate(
     reason = dplyr::case_when(
-      is.na(rt) | is.na(chosen_side)  ~ "missing",
+      is.na(rt) | is.na(choice)       ~ "missing",
       rt < rt_fast_cutoff_ms          ~ "fast",
       rt > rt_slow_cutoff_ms          ~ "slow",
       TRUE                            ~ "kept"
@@ -27,7 +27,7 @@ trial_reason <- after_participant_exclusions |>
   )
 
 per_participant_after_exclusion <- trial_reason |>
-  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::group_by(prolific_pid, time) |>
   dplyr::summarise(
     n_trials = sum(reason == "kept"),
     pct_excluded_missing = 100 * mean(reason == "missing"),
@@ -35,14 +35,14 @@ per_participant_after_exclusion <- trial_reason |>
     pct_excluded_slow    = 100 * mean(reason == "slow"),
     .groups = "drop"
   ) |>
-  dplyr::left_join(original_trial_counts, by = c("prolific_pid", "study_session")) |>
+  dplyr::left_join(original_trial_counts, by = c("prolific_pid", "time")) |>
   dplyr::mutate(
     pct_excluded_total = round(pct_excluded_missing + pct_excluded_fast + pct_excluded_slow, 1),
     pct_excluded_missing = round(pct_excluded_missing, 1),
     pct_excluded_fast    = round(pct_excluded_fast, 1),
     pct_excluded_slow    = round(pct_excluded_slow, 1)
   ) |>
-  dplyr::select(prolific_pid, study_session, n_trials,
+  dplyr::select(prolific_pid, time, n_trials,
                 pct_excluded_total, pct_excluded_missing, pct_excluded_fast, pct_excluded_slow)
 
 #### APPEND TO MARKDOWN REPORT ####

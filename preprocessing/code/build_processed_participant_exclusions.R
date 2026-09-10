@@ -1,7 +1,7 @@
 #### CRITERION 1: MISSING A SESSION ####
 
 sessions_present <- pairwise |>
-  dplyr::distinct(prolific_pid, study_session) |>
+  dplyr::distinct(prolific_pid, time) |>
   dplyr::count(prolific_pid, name = "n_sessions")
 
 missing_session_pids <- sessions_present |>
@@ -19,9 +19,9 @@ window_exit_pids <- window_departure_table |>
 
 would_exclude_rate <- pairwise |>
   dplyr::mutate(
-    would_exclude = is.na(rt) | is.na(chosen_side) | rt < rt_fast_cutoff_ms | rt > rt_slow_cutoff_ms
+    would_exclude = is.na(rt) | is.na(choice) | rt < rt_fast_cutoff_ms | rt > rt_slow_cutoff_ms
   ) |>
-  dplyr::group_by(prolific_pid, study_session) |>
+  dplyr::group_by(prolific_pid, time) |>
   dplyr::summarise(pct_would_exclude = 100 * mean(would_exclude), .groups = "drop")
 
 high_exclusion_rate_pids <- would_exclude_rate |>

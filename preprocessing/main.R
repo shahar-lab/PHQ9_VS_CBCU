@@ -23,28 +23,28 @@ options(knitr.kable.NA = "")
 
 
 
-#### EXECUTE PIPELINE ####
+#### COLLECTED DATA ####
 
-# Running this script alone rebuilds data/raw/ and preprocessing/output/ from
-# data/collected/, reading data/collected/ as read-only.
-
-# 1. Read collected data: row-bind every CSV in first_wave/ and second_wave/,
-# reconcile the session-id column name, and tag each row with study_session.
+# 1. Read and row-bind collected CSVs, tag each row with study_session.
 source(file.path(code_dir, "read_collected.R"))
 
-# 2. Describe collected data as it arrived: participant/session counts and
-# per-participant completeness, written to collected-data-structure-report.md.
+# 2. Describe collected data as it arrived -> summary-collected-data.md/.html.
 source(file.path(code_dir, "describe_collected.R"))
 
-# 3. Build raw data: split the long-format collected log into the four tidy
-# CSVs (cbcu_results, cbcu_quizz, phq9_results, feedback), apply type
-# coercion, write them to data/raw/, and write raw-data-structure-report.md
-# (one section per output CSV).
-source(file.path(code_dir, "build_raw.R"))
+#### RAW DATA ####
+
+# 3. Build raw data: split the long-format collected log into tidy CSVs, apply
+# type coercion, write each to data/raw/, and write each a
+# data-type-validation-<name>-raw.html (head of data + numeric/categorical/dictionary).
+source(file.path(code_dir, "build_raw_helpers.R"))
+source(file.path(code_dir, "build_cbcu_raw.R"))
+source(file.path(code_dir, "build_cbcu_quizz_raw.R"))
+source(file.path(code_dir, "build_phq9_raw.R"))
+source(file.path(code_dir, "build_feedback_raw.R"))
 
 # 4. Build demographics raw: exclude returned participants, drop the
-# completion code column, write demographics.csv to data/raw/, and add its
-# section to raw-data-structure-report.md.
+# completion code column, write demographics.csv to data/raw/, and write
+# data-type-validation-demographics-raw.html.
 source(file.path(code_dir, "build_demographics_raw.R"))
 
 # 5. Exploratory QA report on CBCU pairwise raw data: RT plots, outlier/skip/
