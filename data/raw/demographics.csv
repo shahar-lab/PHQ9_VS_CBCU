@@ -1,12 +1,12 @@
-prolific_id,Total approvals,Age,Sex,Ethnicity simplified,Country of birth,Country of residence,Nationality,Language,Student status,Employment status,Authenticity check: Bots
-6a26623dba3ca97e10bd6e4a,1955,41,Male,White,United States,United States,United States,English,No,Full-Time,N/A
-6a0b57dda1f2bbc0f2c1398b,2406,28,Male,Black,Nigeria,United States,United States,English,Yes,Part-Time,N/A
-67798278a28708e32bf4b451,1767,52,Male,White,United Kingdom,United Kingdom,United Kingdom,English,No,Full-Time,N/A
-66b588a4b3e0e55fc74390b3,151,23,Female,White,United States,United States,United States,English,Yes,Unemployed (and job seeking),N/A
-5d50692435e3af0001f05a15,3657,53,Male,White,United Kingdom,United Kingdom,United Kingdom,English,No,"Not in paid work (e.g. homemaker', 'retired or disabled)",N/A
-69d60b821c7fcd0fae5faf58,132,22,Female,Black,United States,South Africa,South Africa,English,Yes,Full-Time,N/A
-6946d43d6e37a8ebea7882bd,804,28,Female,Black,United States,United States,United States,English,No,Unemployed (and job seeking),N/A
-6a0c5f6a4974d3dfbeb467ae,325,35,Male,Black,Nigeria,Canada,Canada,English,No,Part-Time,N/A
-69f0b7ddbaaead7656414805,1318,37,Male,White,United Kingdom,United Kingdom,United Kingdom,English,No,Full-Time,N/A
-6a241cc77b290774b3626f62,900,58,Male,Black,United Kingdom,United Kingdom,United Kingdom,English,No,Full-Time,N/A
-6a25badf2f95439c4b79d399,258,23,Female,White,United Kingdom,United Kingdom,United Kingdom,English,Yes,Other,NA
+prolific_id,Total approvals,Age,Sex,Ethnicity simplified,Country of birth,Country of residence,Nationality,Student status,Employment status,Authenticity check: Bots
+6a26623dba3ca97e10bd6e4a,1955,41,Male,White,United States,United States,United States,No,Full-Time,N/A
+6a0b57dda1f2bbc0f2c1398b,2406,28,Male,Black,Nigeria,United States,United States,Yes,Part-Time,N/A
+67798278a28708e32bf4b451,1767,52,Male,White,United Kingdom,United Kingdom,United Kingdom,No,Full-Time,N/A
+66b588a4b3e0e55fc74390b3,151,23,Female,White,United States,United States,United States,Yes,Unemployed (and job seeking),N/A
+5d50692435e3af0001f05a15,3657,53,Male,White,United Kingdom,United Kingdom,United Kingdom,No,"Not in paid work (e.g. homemaker', 'retired or disabled)",N/A
+69d60b821c7fcd0fae5faf58,132,22,Female,Black,United States,South Africa,South Africa,Yes,Full-Time,N/A
+6946d43d6e37a8ebea7882bd,804,28,Female,Black,United States,United States,United States,No,Unemployed (and job seeking),N/A
+6a0c5f6a4974d3dfbeb467ae,325,35,Male,Black,Nigeria,Canada,Canada,No,Part-Time,N/A
+69f0b7ddbaaead7656414805,1318,37,Male,White,United Kingdom,United Kingdom,United Kingdom,No,Full-Time,N/A
+6a241cc77b290774b3626f62,900,58,Male,Black,United Kingdom,United Kingdom,United Kingdom,No,Full-Time,N/A
+6a25badf2f95439c4b79d399,258,23,Female,White,United Kingdom,United Kingdom,United Kingdom,Yes,Other,NA

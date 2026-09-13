@@ -25,23 +25,37 @@ participant_exclusions <- tibble::tibble(
     pct_omitted = round(100 * n_omitted / n_starting, 1)
   )
 
-#### WRITE MARKDOWN REPORT (STARTS THE FILE) ####
+#### WRITE HTML REPORT (STARTS THE FILE) ####
 
-report_lines <- c(
-  "# Raw-to-processed report", "",
-  "Built by `preprocessing/code/build_processed_participant_exclusions.R` and",
-  "`build_processed_trial_exclusions.R`. Participant criteria run first, then trial",
-  "criteria on the participants that remain.", "",
-  "**Note:** the four participant criteria below are independent checks evaluated",
+report_css <- "
+body { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+       max-width: 1100px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+h1 { border-bottom: 2px solid #333; padding-bottom: 0.3rem; }
+h2 { margin-top: 2rem; color: #333; }
+table { border-collapse: collapse; margin: 0.5rem 0 1.5rem; font-size: 0.9rem; }
+th, td { border: 1px solid #ddd; padding: 4px 10px; text-align: left; white-space: nowrap; }
+thead th, tr:has(> th) { background: #333; color: #fff; }
+tbody tr:nth-child(even) { background: #f6f6f6; }
+tbody tr:hover { background: #eef4fb; }
+"
+
+report_html <- c(
+  "<html><head><meta charset=\"UTF-8\"><title>Raw-to-processed report</title>",
+  paste0("<style>", report_css, "</style></head><body>"),
+  "<h1>Raw-to-processed report</h1>",
+  "<p>Built by <code>preprocessing/code/build_processed_participant_exclusions.R</code> and",
+  "<code>build_processed_trial_exclusions.R</code>. Participant criteria run first, then trial",
+  "criteria on the participants that remain.</p>",
+  "<p><strong>Note:</strong> the four participant criteria below are independent checks evaluated",
   "per-session (not a sequential cascade) — a participant tripping any one of them is",
-  "excluded entirely, and may trip more than one, so `n_omitted` counts can overlap across",
+  "excluded entirely, and may trip more than one, so <code>n_omitted</code> counts can overlap across",
   "rows and will not sum to the total number of participants excluded. See the excluded-",
-  "participants list below for the full per-participant reason set.", "",
-  "## Participant exclusions (counts in participants)", "",
-  knitr::kable(participant_exclusions, format = "pipe"), "",
-  "## Excluded participants", "",
-  knitr::kable(excluded_participants, format = "pipe")
+  "participants list below for the full per-participant reason set.</p>",
+  "<h2>Participant exclusions (counts in participants)</h2>",
+  knitr::kable(participant_exclusions, format = "html"),
+  "<h2>Excluded participants</h2>",
+  knitr::kable(excluded_participants, format = "html")
 )
 
-report_path <- file.path(output_dir, "processed_related_reports", "raw-to-processed-report.md")
-writeLines(report_lines, report_path)
+report_path <- file.path(output_dir, "processed_related_reports", "raw-to-processed-report.html")
+writeLines(report_html, report_path)

@@ -13,7 +13,7 @@ demographics_raw <- demographics_collected |>
   dplyr::filter(Status != "RETURNED") |>
   dplyr::select(-`Completion code`, -Status, -`Submission id`,
                 -`Custom study tncs accepted at`, -`Started at`, -`Completed at`,
-                -`Reviewed at`, -`Archived at`, -`Time taken`) |>
+                -`Reviewed at`, -`Archived at`, -`Time taken`, -Language) |>
   dplyr::rename(prolific_id = `Participant id`) |>
   dplyr::mutate(
     prolific_id             = factor(prolific_id),
@@ -42,7 +42,6 @@ demographics_dictionary <- tibble::tribble(
   "Country of birth",               "factor",    "self-reported country of birth",
   "Country of residence",           "factor",    "self-reported country of residence",
   "Nationality",                    "factor",    "self-reported nationality",
-  "Language",                       "character", "self-reported first language",
   "Student status",                 "factor",    "self-reported student status",
   "Employment status",              "factor",    "self-reported employment status",
   "Authenticity check: Bots",       "character", "Prolific bot-authenticity check result"

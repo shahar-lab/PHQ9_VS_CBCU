@@ -45,19 +45,20 @@ per_participant_after_exclusion <- trial_reason |>
   dplyr::select(prolific_id, time, n_trials,
                 pct_excluded_total, pct_excluded_missing, pct_excluded_fast, pct_excluded_slow)
 
-#### APPEND TO MARKDOWN REPORT ####
+#### APPEND TO HTML REPORT (FINISHES THE FILE) ####
 
-report_lines <- c(
-  "", "## Trial exclusions (counts in observations)", "",
-  knitr::kable(trial_exclusions, format = "pipe"), "",
-  paste0("**Final: ", format(nrow(cbcu_results_processed), big.mark = ","),
+report_html_append <- c(
+  "<h2>Trial exclusions (counts in observations)</h2>",
+  knitr::kable(trial_exclusions, format = "html"),
+  paste0("<p><strong>Final: ", format(nrow(cbcu_results_processed), big.mark = ","),
          " observations across ", dplyr::n_distinct(cbcu_results_processed$prolific_id),
-         " participants.**"), "",
-  "## Per participant after exclusion", "",
-  "Percentages are of that session's original pairwise trial count, and",
-  "`pct_excluded_missing` + `pct_excluded_fast` + `pct_excluded_slow` = `pct_excluded_total`.", "",
-  knitr::kable(per_participant_after_exclusion, format = "pipe")
+         " participants.</strong></p>"),
+  "<h2>Per participant after exclusion</h2>",
+  "<p>Percentages are of that session's original pairwise trial count, and",
+  "<code>pct_excluded_missing</code> + <code>pct_excluded_fast</code> + <code>pct_excluded_slow</code> = <code>pct_excluded_total</code>.</p>",
+  knitr::kable(per_participant_after_exclusion, format = "html"),
+  "</body></html>"
 )
 
-report_path <- file.path(output_dir, "processed_related_reports", "raw-to-processed-report.md")
-write(report_lines, file = report_path, append = TRUE, sep = "\n")
+report_path <- file.path(output_dir, "processed_related_reports", "raw-to-processed-report.html")
+write(report_html_append, file = report_path, append = TRUE, sep = "\n")

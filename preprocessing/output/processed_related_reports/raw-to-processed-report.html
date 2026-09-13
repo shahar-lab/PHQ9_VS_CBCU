@@ -1,0 +1,296 @@
+<html><head><meta charset="UTF-8"><title>Raw-to-processed report</title>
+<style>
+body { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+       max-width: 1100px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+h1 { border-bottom: 2px solid #333; padding-bottom: 0.3rem; }
+h2 { margin-top: 2rem; color: #333; }
+table { border-collapse: collapse; margin: 0.5rem 0 1.5rem; font-size: 0.9rem; }
+th, td { border: 1px solid #ddd; padding: 4px 10px; text-align: left; white-space: nowrap; }
+thead th, tr:has(> th) { background: #333; color: #fff; }
+tbody tr:nth-child(even) { background: #f6f6f6; }
+tbody tr:hover { background: #eef4fb; }
+</style></head><body>
+<h1>Raw-to-processed report</h1>
+<p>Built by <code>preprocessing/code/build_processed_participant_exclusions.R</code> and
+<code>build_processed_trial_exclusions.R</code>. Participant criteria run first, then trial
+criteria on the participants that remain.</p>
+<p><strong>Note:</strong> the four participant criteria below are independent checks evaluated
+per-session (not a sequential cascade) — a participant tripping any one of them is
+excluded entirely, and may trip more than one, so <code>n_omitted</code> counts can overlap across
+rows and will not sum to the total number of participants excluded. See the excluded-
+participants list below for the full per-participant reason set.</p>
+<h2>Participant exclusions (counts in participants)</h2>
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> criterion </th>
+   <th style="text-align:right;"> n_omitted </th>
+   <th style="text-align:right;"> n_remaining </th>
+   <th style="text-align:right;"> pct_omitted </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Starting point (all participants) </td>
+   <td style="text-align:right;">  </td>
+   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Missing a session </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:right;"> 9.1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Too many window exits (n_departures &gt; 2 in either session) </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 10 </td>
+   <td style="text-align:right;"> 9.1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Too many trials would be excluded (&gt;40% in either session) </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;"> 0.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Quiz comprehension (&gt;=3 of 6 questions needed a retry, either session) </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 11 </td>
+   <td style="text-align:right;"> 0.0 </td>
+  </tr>
+</tbody>
+</table>
+<h2>Excluded participants</h2>
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> prolific_id </th>
+   <th style="text-align:left;"> reasons </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> 6946d43d6e37a8ebea7882bd </td>
+   <td style="text-align:left;"> window_exits </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a0b57dda1f2bbc0f2c1398b </td>
+   <td style="text-align:left;"> missing_session </td>
+  </tr>
+</tbody>
+</table>
+<h2>Trial exclusions (counts in observations)</h2>
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> criterion </th>
+   <th style="text-align:right;"> n_omitted </th>
+   <th style="text-align:right;"> n_remaining </th>
+   <th style="text-align:right;"> pct_omitted </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Starting point (after participant exclusions) </td>
+   <td style="text-align:right;">  </td>
+   <td style="text-align:right;"> 1890 </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> No response recorded </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1890 </td>
+   <td style="text-align:right;"> 0.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> RT under 200ms or over 10000ms </td>
+   <td style="text-align:right;"> 130 </td>
+   <td style="text-align:right;"> 1760 </td>
+   <td style="text-align:right;"> 6.9 </td>
+  </tr>
+</tbody>
+</table>
+<p><strong>Final: 1,760 observations across 9 participants.</strong></p>
+<h2>Per participant after exclusion</h2>
+<p>Percentages are of that session's original pairwise trial count, and
+<code>pct_excluded_missing</code> + <code>pct_excluded_fast</code> + <code>pct_excluded_slow</code> = <code>pct_excluded_total</code>.</p>
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> prolific_id </th>
+   <th style="text-align:left;"> time </th>
+   <th style="text-align:right;"> n_trials </th>
+   <th style="text-align:right;"> pct_excluded_total </th>
+   <th style="text-align:right;"> pct_excluded_missing </th>
+   <th style="text-align:right;"> pct_excluded_fast </th>
+   <th style="text-align:right;"> pct_excluded_slow </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> 5d50692435e3af0001f05a15 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 99 </td>
+   <td style="text-align:right;"> 5.7 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 5.7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 5d50692435e3af0001f05a15 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 104 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 66b588a4b3e0e55fc74390b3 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 92 </td>
+   <td style="text-align:right;"> 12.4 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 12.4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 66b588a4b3e0e55fc74390b3 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 104 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 67798278a28708e32bf4b451 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 105 </td>
+   <td style="text-align:right;"> 0.0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 67798278a28708e32bf4b451 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 105 </td>
+   <td style="text-align:right;"> 0.0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 99 </td>
+   <td style="text-align:right;"> 5.7 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 5.7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 102 </td>
+   <td style="text-align:right;"> 2.9 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 2.9 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69f0b7ddbaaead7656414805 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 104 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69f0b7ddbaaead7656414805 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 104 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a0c5f6a4974d3dfbeb467ae </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 94 </td>
+   <td style="text-align:right;"> 10.5 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 10.5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a0c5f6a4974d3dfbeb467ae </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 75 </td>
+   <td style="text-align:right;"> 28.6 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 28.6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a241cc77b290774b3626f62 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 102 </td>
+   <td style="text-align:right;"> 2.9 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 2.9 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a241cc77b290774b3626f62 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 102 </td>
+   <td style="text-align:right;"> 2.9 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 2.9 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a25badf2f95439c4b79d399 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 100 </td>
+   <td style="text-align:right;"> 4.8 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 4.8 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a25badf2f95439c4b79d399 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 101 </td>
+   <td style="text-align:right;"> 3.8 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 3.8 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a26623dba3ca97e10bd6e4a </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 83 </td>
+   <td style="text-align:right;"> 21.0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 21.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a26623dba3ca97e10bd6e4a </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 85 </td>
+   <td style="text-align:right;"> 19.0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 19.0 </td>
+  </tr>
+</tbody>
+</table>
+</body></html>
