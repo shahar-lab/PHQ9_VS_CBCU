@@ -72,5 +72,7 @@ write_data_validation_report <- function(df, dictionary, name, freetext_cols = c
     "<div class=\"scroll-x\">", head_table_html, "</div>",
     "</body></html>"
   )
-  writeLines(report_html, file.path(output_dir, paste0("data-type-validation-", name, "-", suffix, ".html")))
+  suffix_dir <- file.path(output_dir, paste0(suffix, "_related_reports"))
+  if (!dir.exists(suffix_dir)) dir.create(suffix_dir, recursive = TRUE, showWarnings = FALSE)
+  writeLines(report_html, file.path(suffix_dir, paste0("data-type-validation-", name, "-", suffix, ".html")))
 }

@@ -43,5 +43,5 @@ report_lines <- c(
   knitr::kable(excluded_participants, format = "pipe")
 )
 
-report_path <- file.path(output_dir, "raw-to-processed-report.md")
+report_path <- file.path(output_dir, "processed_related_reports", "raw-to-processed-report.md")
 writeLines(report_lines, report_path)

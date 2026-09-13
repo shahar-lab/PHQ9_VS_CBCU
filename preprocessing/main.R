@@ -18,6 +18,16 @@ if (!dir.exists(output_dir))    dir.create(output_dir, recursive = TRUE)
 if (!dir.exists(raw_dir))       dir.create(raw_dir, recursive = TRUE)
 if (!dir.exists(processed_dir)) dir.create(processed_dir, recursive = TRUE)
 
+# Subfolders for the reports reorganized out of the flat output_dir (the raw_related_reports
+# variant is created lazily by write_data_validation_report(); collected_related_reports is
+# used by describe_collected.R; processed_related_reports is shared by write_data_validation_report()
+# (processed-suffix calls) and both raw-to-processed markdown report scripts).
+collected_related_reports_dir <- file.path(output_dir, "collected_related_reports")
+if (!dir.exists(collected_related_reports_dir)) dir.create(collected_related_reports_dir, recursive = TRUE)
+
+processed_related_reports_dir <- file.path(output_dir, "processed_related_reports")
+if (!dir.exists(processed_related_reports_dir)) dir.create(processed_related_reports_dir, recursive = TRUE)
+
 # Renders empty report cells as blanks rather than "NA".
 options(knitr.kable.NA = "")
 

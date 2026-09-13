@@ -1,6 +1,6 @@
 #### WRITE MULTI-PAGE PDF ####
 
-grDevices::pdf(file.path(output_dir, "raw_data_qa_report.pdf"), width = 10, height = 8, bg = "white")
+grDevices::pdf(file.path(output_dir, "raw_related_reports", "raw_data_qa_report.pdf"), width = 10, height = 8, bg = "white")
 
 print(p_rt_by_trial)
 print(p_rt_hist)

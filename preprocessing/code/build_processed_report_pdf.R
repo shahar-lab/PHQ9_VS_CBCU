@@ -11,7 +11,7 @@ overall_summary <- tibble::tibble(
 
 #### WRITE MULTI-PAGE PDF (mirrors raw_data_qa_report.R's render_table_page pattern) ####
 
-grDevices::pdf(file.path(output_dir, "raw_to_processed_report.pdf"), width = 10, height = 8, bg = "white")
+grDevices::pdf(file.path(output_dir, "processed_related_reports", "raw_to_processed_report.pdf"), width = 10, height = 8, bg = "white")
 
 render_table_page(excluded_participants, "Excluded participants and reasons")
 render_table_page(per_participant_after_exclusion,

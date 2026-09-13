@@ -223,7 +223,7 @@ collected_report_lines <- c(
   "## Demographics per participant", "",
   knitr::kable(demographics_table, format = "pipe")
 )
-writeLines(collected_report_lines, file.path(output_dir, "summary-collected-data.md"))
+writeLines(collected_report_lines, file.path(output_dir, "collected_related_reports", "summary-collected-data.md"))
 
 #### WRITE COLLECTED-DATA STRUCTURE REPORT (html) ####
 
@@ -250,4 +250,4 @@ collected_report_html <- c(
   "<h2>Demographics per participant</h2>", knitr::kable(demographics_table, format = "html"),
   "</body></html>"
 )
-writeLines(collected_report_html, file.path(output_dir, "summary-collected-data.html"))
+writeLines(collected_report_html, file.path(output_dir, "collected_related_reports", "summary-collected-data.html"))

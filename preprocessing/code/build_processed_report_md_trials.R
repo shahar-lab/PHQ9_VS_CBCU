@@ -59,5 +59,5 @@ report_lines <- c(
   knitr::kable(per_participant_after_exclusion, format = "pipe")
 )
 
-report_path <- file.path(output_dir, "raw-to-processed-report.md")
+report_path <- file.path(output_dir, "processed_related_reports", "raw-to-processed-report.md")
 write(report_lines, file = report_path, append = TRUE, sep = "\n")
