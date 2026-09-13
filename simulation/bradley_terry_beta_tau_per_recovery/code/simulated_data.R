@@ -47,6 +47,16 @@ df <- bind_rows(sim_list)
 # Stan's categorical_logit needs an integer-coded choice (1 = A, 2 = B, 3 = None),
 # not the "choice" factor returned by sim.block(). first_trial_in_block flags each
 # subject's first trial so the Stan model's key_value running pass resets per subject.
+# true_beta/true_tau/true_key_decay/true_rho are joined per subject so the saved CSV
+# carries each row's generating parameters alongside its trial data.
+true_params_by_subject <- tibble(
+  subject   = 1:N_subjects,
+  true_beta = true_beta,
+  true_tau  = true_tau,
+  true_key_decay = true_key_decay,
+  true_rho  = true_rho
+)
+
 df <- df |>
   mutate(
     choice_int = case_when(
@@ -55,7 +65,8 @@ df <- df |>
       choice == "None" ~ 3L
     ),
     first_trial_in_block = as.integer(trial == 1)
-  )
+  ) |>
+  left_join(true_params_by_subject, by = "subject")
 
 stan_data <- list(
   N_trials             = nrow(df),
