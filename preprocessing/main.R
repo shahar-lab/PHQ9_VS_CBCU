@@ -28,8 +28,12 @@ options(knitr.kable.NA = "")
 # 1. Read and row-bind collected CSVs, tag each row with time.
 source(file.path(code_dir, "read_collected.R"))
 
+
+
 # 2. Describe collected data as it arrived -> summary-collected-data.md/.html.
 source(file.path(code_dir, "describe_collected.R"))
+
+
 
 #### RAW DATA ####
 
@@ -74,3 +78,4 @@ source(file.path(code_dir, "build_processed_report_pdf.R"))
 # participant-exclusion statistics computed from the pipeline's own objects,
 # rendered as a single-page PDF to preprocessing/output/.
 source(file.path(code_dir, "build_data_treatment_paragraph.R"))
+
