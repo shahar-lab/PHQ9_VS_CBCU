@@ -16,19 +16,24 @@ estimates a single ICC posterior directly.
 
 ### Generative model (per subject)
 
-* Fixed, literature-grounded variance components (not swept, not re-drawn per iteration):
-  * `sigma_e = 1.8` (within-subject / measurement SD) -- matches the directly-reported SEM
-    (1.83) from a Hebrew PHQ-9 validation study (general population, ICC(2,1) = 0.81;
-    medRxiv 2021.07.13.21260485).
-  * `sigma_0 = 3.57` (between-subject SD) -- derived as `sqrt(4.0^2 - 1.8^2) ≈ 3.57` so that
-    total variance matches the general-population total SD (~4.0) reported in Kocalevent,
-    Hinz & Brähler (2013, *General Hospital Psychiatry* 35(5):551-555, German nationally
-    representative sample, N = 5,018; PubMed 23664569).
-  * `mean_phq9 = 3.75` (population mean) -- roughly the midpoint of the literature's
-    3.5-4.0 range for general-population PHQ9 totals.
-  * Implied ICC: `sigma_0^2 / (sigma_0^2 + sigma_e^2) ≈ 0.80`, consistent with the
-    published ICC ≈ 0.81-0.82 in the source study above, and cross-checked against a 2025
-    meta-analysis reporting pooled PHQ-9 test-retest reliability of 0.82 (PMC11977096).
+* Fixed variance components (not swept, not re-drawn per iteration), originally derived
+  from the PHQ-9 literature and subsequently adjusted by the PI (see below):
+  * `sigma_e = 2` (within-subject / measurement SD) -- PI-adjusted from the original
+    literature-derived value of 1.8 (itself matching the directly-reported SEM of 1.83
+    from a Hebrew PHQ-9 validation study; general population, ICC(2,1) = 0.81; medRxiv
+    2021.07.13.21260485).
+  * `sigma_0 = 3.5` (between-subject SD) -- PI-adjusted from the original literature-derived
+    value of 3.57 (itself derived as `sqrt(4.0^2 - 1.8^2) ≈ 3.57` so that total variance
+    matched the general-population total SD (~4.0) reported in Kocalevent, Hinz & Brähler
+    (2013, *General Hospital Psychiatry* 35(5):551-555, German nationally representative
+    sample, N = 5,018; PubMed 23664569).
+  * `mean_phq9 = 3.75` (population mean) -- unchanged, roughly the midpoint of the
+    literature's 3.5-4.0 range for general-population PHQ9 totals.
+  * Implied ICC with the current values: `sigma_0^2 / (sigma_0^2 + sigma_e^2) =
+    3.5^2 / (3.5^2 + 2^2) ≈ 0.754`, close to but slightly below the original
+    literature-implied value of ≈ 0.80 and the directly reported ICC ≈ 0.81-0.82 in the
+    source study above (cross-checked against a 2025 meta-analysis reporting pooled
+    PHQ-9 test-retest reliability of 0.82, PMC11977096).
 * Per subject: `subject_intercept ~ Normal(mean_phq9, sigma_0)`, one draw per subject.
 * Unlike the item-level ICC sibling, there is no item dimension here: `y` is the PHQ9
   **total score** (`phq9_sum`, 0-27 range) directly, not an item response. Long format,
