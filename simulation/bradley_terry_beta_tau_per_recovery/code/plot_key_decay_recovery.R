@@ -23,7 +23,7 @@ p_key_decay <- ggplot(plot_df, aes(x = true_val, y = recovered_val)) +
   coord_equal(xlim = shared_limits, ylim = shared_limits, clip = "off") +
   theme_minimal(base_size = 13) +
   theme(panel.grid.minor = element_blank()) +
-  labs(x = "True key_decay", y = "Recovered key_decay")
+  labs(x = expression("True " * gamma), y = "Recovered key_decay")
 
 ggsave(file.path(output_dir, "key_decay_recovery.pdf"), plot = p_key_decay, width = 10, height = 8, bg = "white")
 ggsave(file.path(output_dir, "key_decay_recovery.png"), plot = p_key_decay, width = 10, height = 8, dpi = 300, bg = "white")

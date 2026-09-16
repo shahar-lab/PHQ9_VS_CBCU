@@ -2,7 +2,7 @@
 
 N_subjects <- 20
 N_options  <- 15
-N_trials   <- 100
+N_trials   <- 105
 
 # Group-level hyperparameters fixed at specific values within each prior's plausible
 # range (bradley_terry_beta_tau_per.stan, model block), rather than drawn from the priors.
