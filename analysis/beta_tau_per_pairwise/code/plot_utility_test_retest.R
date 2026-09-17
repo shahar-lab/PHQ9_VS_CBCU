@@ -16,7 +16,7 @@ shared_limits <- range(c(df_utility_wide$u_time1, df_utility_wide$u_time2), na.r
 axis_breaks   <- seq(shared_limits[1], shared_limits[2], length.out = 4)
 pearson_r     <- cor(df_utility_wide$u_time1, df_utility_wide$u_time2, method = "pearson")
 
-p <- ggplot(df_utility_wide, aes(x = u_time1, y = u_time2)) +
+p_utility_retest <- ggplot(df_utility_wide, aes(x = u_time1, y = u_time2)) +
   geom_point(colour = "#4477AA", alpha = 0.75, size = 2) +
   geom_smooth(method = "lm", se = FALSE, colour = "#EE6677", linewidth = 0.8) +
   geom_abline(slope = 1, intercept = 0, linetype = "dashed", colour = "grey60") +
@@ -38,6 +38,6 @@ plot_name <- "utility_test_retest_scatter"
 
 ggsave(
   file.path(output_dir, paste0(plot_name, ".png")),
-  plot = p,
+  plot = p_utility_retest,
   width = 10, height = 8, dpi = 300, bg = "white"
 )

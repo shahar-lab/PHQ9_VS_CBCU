@@ -48,6 +48,8 @@ plot_utility_vs_scalar <- function(df, wave, scalar_param_name, scalar_param_lab
     plot = p,
     width = 10, height = 8, dpi = 300, bg = "white"
   )
+
+  p
 }
 
 plot_scalar_vs_scalar <- function(df, wave, x_param_name, x_param_label, y_param_name, y_param_label, plot_name) {
@@ -87,12 +89,14 @@ plot_scalar_vs_scalar <- function(df, wave, x_param_name, x_param_label, y_param
     plot = p,
     width = 10, height = 8, dpi = 300, bg = "white"
   )
+
+  p
 }
 
-plot_utility_vs_scalar(df_participant_parameters, "time1", "tau", "tau", "u_vs_tau_time1")
-plot_utility_vs_scalar(df_participant_parameters, "time2", "tau", "tau", "u_vs_tau_time2")
-plot_utility_vs_scalar(df_participant_parameters, "time1", "beta", "beta", "u_vs_beta_time1")
-plot_utility_vs_scalar(df_participant_parameters, "time2", "beta", "beta", "u_vs_beta_time2")
+p_u_vs_tau_time1  <- plot_utility_vs_scalar(df_participant_parameters, "time1", "tau", "tau", "u_vs_tau_time1")
+p_u_vs_tau_time2  <- plot_utility_vs_scalar(df_participant_parameters, "time2", "tau", "tau", "u_vs_tau_time2")
+p_u_vs_beta_time1 <- plot_utility_vs_scalar(df_participant_parameters, "time1", "beta", "beta", "u_vs_beta_time1")
+p_u_vs_beta_time2 <- plot_utility_vs_scalar(df_participant_parameters, "time2", "beta", "beta", "u_vs_beta_time2")
 
-plot_scalar_vs_scalar(df_participant_parameters, "time1", "beta", "beta", "tau", "tau", "beta_vs_tau_time1")
-plot_scalar_vs_scalar(df_participant_parameters, "time2", "beta", "beta", "tau", "tau", "beta_vs_tau_time2")
+p_beta_vs_tau_time1 <- plot_scalar_vs_scalar(df_participant_parameters, "time1", "beta", "beta", "tau", "tau", "beta_vs_tau_time1")
+p_beta_vs_tau_time2 <- plot_scalar_vs_scalar(df_participant_parameters, "time2", "beta", "beta", "tau", "tau", "beta_vs_tau_time2")

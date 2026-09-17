@@ -40,20 +40,22 @@ plot_param_test_retest <- function(df, param_name, param_label) {
     plot = p,
     width = 10, height = 8, dpi = 300, bg = "white"
   )
+
+  p
 }
 
-plot_param_test_retest(df_participant_parameters, "tau", "tau")
-plot_param_test_retest(df_participant_parameters, "beta", "beta")
-plot_param_test_retest(df_participant_parameters, "key_decay", "key decay")
-plot_param_test_retest(df_participant_parameters, "rho", "rho")
+p_tau_retest       <- plot_param_test_retest(df_participant_parameters, "tau", "tau")
+p_beta_retest      <- plot_param_test_retest(df_participant_parameters, "beta", "beta")
+p_key_decay_retest <- plot_param_test_retest(df_participant_parameters, "key_decay", "key decay")
+p_rho_retest       <- plot_param_test_retest(df_participant_parameters, "rho", "rho")
 
-plot_param_test_retest(df_participant_parameters, "phq9_sum", "PHQ9 sum")
-plot_param_test_retest(df_participant_parameters, "phq9_1", "PHQ9 item 1")
-plot_param_test_retest(df_participant_parameters, "phq9_2", "PHQ9 item 2")
-plot_param_test_retest(df_participant_parameters, "phq9_3", "PHQ9 item 3")
-plot_param_test_retest(df_participant_parameters, "phq9_4", "PHQ9 item 4")
-plot_param_test_retest(df_participant_parameters, "phq9_5", "PHQ9 item 5")
-plot_param_test_retest(df_participant_parameters, "phq9_6", "PHQ9 item 6")
-plot_param_test_retest(df_participant_parameters, "phq9_7", "PHQ9 item 7")
-plot_param_test_retest(df_participant_parameters, "phq9_8", "PHQ9 item 8")
-plot_param_test_retest(df_participant_parameters, "phq9_9", "PHQ9 item 9")
+p_phq9_sum_retest <- plot_param_test_retest(df_participant_parameters, "phq9_sum", "PHQ9 sum")
+p_phq9_1_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_1", "PHQ9 item 1")
+p_phq9_2_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_2", "PHQ9 item 2")
+p_phq9_3_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_3", "PHQ9 item 3")
+p_phq9_4_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_4", "PHQ9 item 4")
+p_phq9_5_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_5", "PHQ9 item 5")
+p_phq9_6_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_6", "PHQ9 item 6")
+p_phq9_7_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_7", "PHQ9 item 7")
+p_phq9_8_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_8", "PHQ9 item 8")
+p_phq9_9_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_9", "PHQ9 item 9")
