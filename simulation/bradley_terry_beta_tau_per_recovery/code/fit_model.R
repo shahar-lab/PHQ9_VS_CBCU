@@ -6,8 +6,8 @@ fit <- model$sample(
   data            = stan_data,
   chains          = 4,
   parallel_chains = 4,
-  iter_warmup     = 1000,
-  iter_sampling   = 1000,
+  iter_warmup     = 3000,
+  iter_sampling   = 2000,
   refresh         = 500
 )
 

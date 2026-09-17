@@ -1,6 +1,6 @@
 #### GENERATE TRUE PARAMETERS ####
 
-N_subjects <- 20
+N_subjects <- 200
 N_options  <- 15
 N_trials   <- 105
 
