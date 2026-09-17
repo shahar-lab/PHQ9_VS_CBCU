@@ -16,7 +16,7 @@ format_min_sec <- function(seconds) {
 
 #### DESCRIBE: PER PARTICIPANT (WINDOW EXITS) ####
 
-# ASSUMED[same window-departure definition as raw_data_qa_tables_window_departure.R]: a
+# ASSUMED[window-departure definition]: a
 # "departure" is the start of a contiguous run of non-"ok" window_status rows per
 # participant/session, using row order within `collected` as the timeline; NA window_status
 # is treated as "ok" (no departure logged), and window_left_ms is summed only over away rows.
@@ -234,4 +234,4 @@ collected_report_html <- c(
   "<h2>Demographics per participant</h2>", knitr::kable(demographics_table, format = "html"),
   "</body></html>"
 )
-writeLines(collected_report_html, file.path(reports_collected_dir, "02_summary-collected-data.html"))
+writeLines(collected_report_html, file.path(output_collected_dir, "02_summary-collected-data.html"))

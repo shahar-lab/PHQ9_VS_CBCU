@@ -85,6 +85,6 @@ write_data_validation_report <- function(df, dictionary, name, freetext_cols = c
     "</body></html>"
   )
   prefix <- if (is.null(step)) "" else paste0(step, "_")
-  report_dir <- if (identical(suffix, "processed")) reports_processed_dir else reports_raw_dir
+  report_dir <- if (identical(suffix, "processed")) output_processed_dir else output_raw_dir
   writeLines(report_html, file.path(report_dir, paste0(prefix, "data-type-validation-", name, "-", suffix, ".html")))
 }

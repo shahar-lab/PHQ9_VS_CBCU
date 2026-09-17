@@ -1,0 +1,3 @@
+# Data treatment
+
+*Data treatment. During data preprocessing we excluded 1 participant who did not complete both sessions. We then excluded participants who left the study window more than 2 times, or for more than 30 seconds in total, during PHQ-9 or CBCU on either session (0 participants excluded). From the remaining CBCU observations we omitted trials with a missing RT or choice, or with an RT under 0.5 s or over 15 s (88 trials, 4.2% of remaining trials). We then excluded 1 participant for whom that trial omission exceeded 15% of trials in either session. This resulted in 1,825 CBCU trials across 9 participants (mean 202.78 trials per participant).*

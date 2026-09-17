@@ -1,4 +1,4 @@
-# reads: data/raw/cbcu_results.csv · writes: reports-raw/14_cbcu_rt_by_trial_interactive.html + companion dependency directory
+# reads: data/raw/cbcu_results.csv · writes: output/raw/09_cbcu_rt_by_trial_interactive.html + companion dependency directory
 
 #### PLOT INTERACTIVE RAW CBCU RT BY TRIAL ####
 
@@ -196,7 +196,7 @@ interactive_cbcu_rt_table <- htmltools::tags$div(
 )
 
 interactive_cbcu_rt_javascript <- paste(
-  readLines(file.path(code_dir, "14_cbcu_rt_by_trial_interactive.js"), warn = FALSE),
+  readLines(file.path(code_dir, "09_cbcu_rt_by_trial_interactive.js"), warn = FALSE),
   collapse = "\n"
 )
 
@@ -214,12 +214,12 @@ interactive_cbcu_rt_widget <- interactive_cbcu_rt_widget |>
   )
 
 interactive_cbcu_rt_html_path <- file.path(
-  reports_raw_dir,
-  "14_cbcu_rt_by_trial_interactive.html"
+  output_raw_dir,
+  "09_cbcu_rt_by_trial_interactive.html"
 )
 interactive_cbcu_rt_dependency_dir <- file.path(
-  reports_raw_dir,
-  "14_cbcu_rt_by_trial_interactive_files"
+  output_raw_dir,
+  "09_cbcu_rt_by_trial_interactive_files"
 )
 
 htmlwidgets::saveWidget(
