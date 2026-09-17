@@ -207,6 +207,20 @@ after fitting and added as columns to that outcome's results table (`max_rhat`,
 `n_divergent` in `sweep_results_cbcu` / `sweep_results_phq9`) -- a single set of
 convergence columns per table, since each table holds only one outcome's fits.
 
-## 3. Findings / Summary
+## 3. Priors
+
+Defined in `code/run_sweep.R` (passed into `brm(..., prior = priors)` inside
+`code/fit_and_extract.R`) — this model is fit via **brms**, not a hand-written Stan file,
+so priors are `brms::prior()` calls rather than a `model {}` block. Two separate prior
+sets exist, one per outcome (CBCU utilities, PHQ9 items), since each outcome has its own
+generative scale.
+
+| Parameter | CBCU prior | PHQ9 prior | Justification |
+|---|---|---|---|
+| `Intercept` | Normal(0, 1) | Normal(1.5, 1) | Weakly informative, centered at each outcome's own known generative `grand_mean` (0 for CBCU's standardized scale, 1.5 for PHQ9's 0–3 item midpoint) — mirrors both single-random-effect sibling studies' practice of matching the prior's center to the data's known generative center. |
+| `sd` (group = `subject`) | Cauchy(0, 1) | Cauchy(0, 1) | Given separately per group rather than one shared `class = "sd"` prior, since subject and item variances are expected to differ in scale (especially for PHQ9: `sigma_subject ≈ 1.17` vs `sigma_item = 0.4`), so each group's posterior can be shaped independently. |
+| `sd` (group = `item`) | Cauchy(0, 1) | Cauchy(0, 1) | Same rationale as the subject-group `sd` prior above — kept separate so the item variance component isn't forced to share a prior with the (typically larger) subject variance component. |
+
+## 4. Findings / Summary
 
 * (Leave this section blank until both sweeps have been run and results reviewed).

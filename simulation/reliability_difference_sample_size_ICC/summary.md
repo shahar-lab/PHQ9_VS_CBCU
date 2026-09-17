@@ -101,6 +101,20 @@ and added as columns to the results table (`cbcu_max_rhat`, `cbcu_n_divergent`,
 `phq9_max_rhat`, `phq9_n_divergent` in `sweep_results`), rather than produced as
 per-fit diagnostic files.
 
-## 3. Findings / Summary
+## 3. Priors
+
+Defined in `code/run_sweep.R` (passed into `brm(..., prior = priors)` inside
+`code/fit_and_extract.R`) — fit via **brms**, not a hand-written Stan file. Unlike the
+`reliability_sample_size_subject_item_crossed` sibling, only ONE prior set exists here:
+the same `priors` object is reused for both the CBCU fit and the PHQ9 fit within each
+replicate (`fit_and_extract(cbcu_df, phq9_df, priors)`), rather than a separate prior set
+per outcome.
+
+| Parameter | Prior | Justification |
+|---|---|---|
+| `Intercept` | Normal(0, 1) | The simulated data is centered at 0 by construction (both `subject_intercept` and the residual are zero-mean for both tasks), so a weakly-informative prior centered at 0 matches the known scale without pre-judging the estimate. |
+| `sd` (shared, `class = "sd"`) | Cauchy(0, 1) | A standard weakly-informative half-Cauchy for the random-intercept SD (brms truncates to positive values automatically), applied via one shared `class = "sd"` prior since this model has only one random effect (the subject intercept) — heavy-tailed enough to not overly constrain between-subject variability. No `b` (fixed-slope) or `cor` prior is needed: there is no fixed-effect predictor and no random slope in `y ~ 1 + (1 \| subject)`. |
+
+## 4. Findings / Summary
 
 * (Leave this section blank until the sweep has been run and results reviewed).

@@ -44,6 +44,28 @@ Bradley-Terry table by `(prolific_id, time)`.
 population; a `prolific_id` present in `phq9_results.csv` but absent from the CBCU
 table is not added as a new row (not a full join).
 
-## 3. Findings / Summary
+## 3. Priors
+
+Defined in `models/bradley_terry_beta_tau_per/bradley_terry_beta_tau_per.stan`, `model {}`
+block (not in `code/fit_model.R`, which only calls `model$sample()` on the already-compiled
+Stan model).
+
+| Parameter | Prior | Justification (from the .stan file) |
+|---|---|---|
+| `mu_log_beta` | Normal(0, 2) | Group-level mean on the log-beta scale; not otherwise commented in the model file. |
+| `sigma_log_beta` | Exponential(2) | Group-level SD on the log-beta scale; not otherwise commented in the model file. |
+| `beta` (subject) | Lognormal(`mu_log_beta`, `sigma_log_beta`) | Lognormal keeps subject-level choice sensitivity strictly positive. |
+| `mu_tau` | Normal(0, 2) | Group-level mean for the burden-threshold parameter; not otherwise commented. |
+| `sigma_tau` | Exponential(2) | Group-level SD for `tau`; not otherwise commented. |
+| `tau` (subject) | Normal(`mu_tau`, `sigma_tau`) | `tau` is left unconstrained (no lower/upper bound in `parameters {}`). |
+| `mu_logit_key_decay` | Normal(0, 1.5) | `# ASSUMED[no scale given]` in the .stan file: logistic-transformed decay with a normal hyperprior on the logit scale, matching how `tau` is handled unconstrained — no scale for `key_decay` was specified elsewhere, so this was the model author's choice. |
+| `sigma_key_decay` | Exponential(2) | Group-level SD on the logit scale for `key_decay`; not otherwise commented. |
+| `logit_key_decay` (subject) | Normal(`mu_logit_key_decay`, `sigma_key_decay`) | Transformed via `inv_logit()` in `transformed parameters {}` so subject-level `key_decay` is constrained to (0, 1). |
+| `mu_rho` | Normal(0, 2) | Group-level mean for the perseveration weight `rho`; not otherwise commented. |
+| `sigma_rho` | Exponential(2) | Group-level SD for `rho`; not otherwise commented. |
+| `rho` (subject) | Normal(`mu_rho`, `sigma_rho`) | `rho` is left unconstrained, like `tau`. |
+| `u_raw` (utilities) | Normal(0, 1) | Commented in the .stan file as a "weak prior... to provide initial geometry before transformation" — `u_raw` is later standardized per subject to mean 0 / SD 1 in `transformed parameters {}` to produce `u_matrix`, so this prior only shapes the initial (unconstrained) geometry, not the final utility scale. |
+
+## 4. Findings / Summary
 
 * (Leave this section blank until the model is completely fitted and evaluated).
