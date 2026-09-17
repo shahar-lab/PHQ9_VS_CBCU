@@ -1,6 +1,17 @@
-# reads: exclusion review objects and count tables · writes: raw_outputs/exclusion.md
+# reads: artifacts/09_raw_window_review.rds, artifacts/10_raw_trial_review.rds, artifacts/11_raw_exclusion_counts.rds · writes: reports-processed/exclusion.md
 
-#### WRITE RAW EXCLUSION REPORT ####
+#### WRITE EXCLUSION REPORT ####
+
+raw_window_review <- readRDS(file.path(artifacts_dir, "09_raw_window_review.rds"))
+raw_trial_review <- readRDS(file.path(artifacts_dir, "10_raw_trial_review.rds"))
+raw_exclusion_counts <- readRDS(file.path(artifacts_dir, "11_raw_exclusion_counts.rds"))
+
+review_excluded_participants <- raw_window_review$review_excluded_participants
+review_surviving_pids <- raw_window_review$review_surviving_pids
+review_trial_window_rows <- raw_trial_review$review_trial_window_rows
+review_trials_after_window <- raw_trial_review$review_trials_after_window
+participant_exclusion_counts <- raw_exclusion_counts$participant_exclusion_counts
+trial_exclusion_counts <- raw_exclusion_counts$trial_exclusion_counts
 
 participant_detail_lines <- if (nrow(review_excluded_participants) == 0) {
   "No participants were excluded."
@@ -23,10 +34,10 @@ trial_detail_lines <- if (nrow(review_trial_window_rows) == 0) {
 }
 
 report_lines <- c(
-  "# Raw-data exclusion review", "",
-  "This is a review-only report. Participant criteria are evaluated first;",
-  "trial criteria are then evaluated only among participants who survive",
-  "participant screening. No raw or processed dataset is altered.", "",
+  "# Exclusion review", "",
+  "This report belongs to the processed-data stage. Participant criteria are",
+  "evaluated first; trial criteria are then evaluated only among participants",
+  "who survive participant screening. `data/raw/` is not altered.", "",
   "## Criteria", "",
   paste0(
     "1. Retain participants only when both time1 and time2 contain exactly ",
@@ -57,4 +68,4 @@ report_lines <- c(
   )
 )
 
-writeLines(report_lines, file.path(raw_output_dir, "exclusion.md"))
+writeLines(report_lines, file.path(reports_processed_dir, "exclusion.md"))

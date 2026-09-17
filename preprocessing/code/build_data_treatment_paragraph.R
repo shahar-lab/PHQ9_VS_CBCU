@@ -76,7 +76,7 @@ paragraph_text <- paste(sentence_rt, sentence_participants, sentence_sample, sen
 
 #### RENDER PDF ####
 
-grDevices::pdf(file.path(processed_output_dir, "data_treatment_paragraph.pdf"), width = 10, height = 8, bg = "white")
+grDevices::pdf(file.path(reports_processed_dir, "data_treatment_paragraph.pdf"), width = 10, height = 8, bg = "white")
 
 grid::grid.newpage()
 grid::grid.text("Data treatment", x = 0.05, y = 0.9, just = "left",

@@ -57,5 +57,5 @@ report_html <- c(
   knitr::kable(excluded_participants, format = "html")
 )
 
-report_path <- file.path(processed_output_dir, "raw-to-processed-report.html")
+report_path <- file.path(reports_processed_dir, "raw-to-processed-report.html")
 writeLines(report_html, report_path)

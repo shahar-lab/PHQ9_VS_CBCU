@@ -1,6 +1,10 @@
-# reads: cbcu_results, phq9_results, collected · writes: participant review objects in memory
+# reads: data/raw/cbcu_results.csv, data/raw/phq9_results.csv, artifacts/time_levels.rds · writes: artifacts/08_raw_participant_review.rds
 
 #### REVIEW RAW PARTICIPANT EXCLUSIONS ####
+
+cbcu_results <- read_csv(file.path(raw_dir, "cbcu_results.csv"), show_col_types = FALSE)
+phq9_results <- read_csv(file.path(raw_dir, "phq9_results.csv"), show_col_types = FALSE)
+time_levels  <- readRDS(file.path(artifacts_dir, "time_levels.rds"))
 
 phq_item_cols <- paste0("phq9_", seq_len(required_phq_responses))
 
@@ -57,4 +61,13 @@ incomplete_participant_details <- participant_completeness |>
 complete_review_pids <- setdiff(
   all_review_pids,
   incomplete_participant_details$prolific_id
+)
+
+saveRDS(
+  list(
+    all_review_pids = all_review_pids,
+    incomplete_participant_details = incomplete_participant_details,
+    complete_review_pids = complete_review_pids
+  ),
+  file.path(artifacts_dir, "08_raw_participant_review.rds")
 )

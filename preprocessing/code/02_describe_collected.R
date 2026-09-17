@@ -234,4 +234,4 @@ collected_report_html <- c(
   "<h2>Demographics per participant</h2>", knitr::kable(demographics_table, format = "html"),
   "</body></html>"
 )
-writeLines(collected_report_html, file.path(collected_output_dir, "02_summary-collected-data.html"))
+writeLines(collected_report_html, file.path(reports_collected_dir, "02_summary-collected-data.html"))

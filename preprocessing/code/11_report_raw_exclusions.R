@@ -1,6 +1,19 @@
-# reads: raw exclusion review objects · writes: exclusion count tables in memory
+# reads: artifacts/08_raw_participant_review.rds, artifacts/09_raw_window_review.rds, artifacts/10_raw_trial_review.rds · writes: artifacts/11_raw_exclusion_counts.rds
 
 #### PREPARE RAW EXCLUSION COUNTS ####
+
+raw_participant_review <- readRDS(file.path(artifacts_dir, "08_raw_participant_review.rds"))
+raw_window_review <- readRDS(file.path(artifacts_dir, "09_raw_window_review.rds"))
+raw_trial_review <- readRDS(file.path(artifacts_dir, "10_raw_trial_review.rds"))
+
+all_review_pids <- raw_participant_review$all_review_pids
+complete_review_pids <- raw_participant_review$complete_review_pids
+incomplete_participant_details <- raw_participant_review$incomplete_participant_details
+window_excluded_participant_details <- raw_window_review$window_excluded_participant_details
+review_surviving_pids <- raw_window_review$review_surviving_pids
+review_trial_pool <- raw_trial_review$review_trial_pool
+review_trial_window_rows <- raw_trial_review$review_trial_window_rows
+review_trials_after_window <- raw_trial_review$review_trials_after_window
 
 participant_exclusion_counts <- tibble::tibble(
   criterion = c(
@@ -47,3 +60,11 @@ trial_exclusion_counts <- tibble::tibble(
   dplyr::mutate(
     pct_omitted = round(100 * n_omitted / dplyr::lag(n_remaining), 1)
   )
+
+saveRDS(
+  list(
+    participant_exclusion_counts = participant_exclusion_counts,
+    trial_exclusion_counts = trial_exclusion_counts
+  ),
+  file.path(artifacts_dir, "11_raw_exclusion_counts.rds")
+)

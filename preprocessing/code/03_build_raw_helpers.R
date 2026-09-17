@@ -1,6 +1,9 @@
+# reads: artifacts/collected.rds · writes: artifacts/collected.rds, artifacts/time_levels.rds
+
 #### CLEAN COMMON COLUMNS ####
 
 # Values that only look like data become proper NA before any coercion.
+collected <- readRDS(file.path(artifacts_dir, "collected.rds"))
 collected <- collected |>
   dplyr::mutate(dplyr::across(dplyr::everything(), ~ dplyr::na_if(.x, "NA"))) |>
   dplyr::mutate(dplyr::across(dplyr::everything(), ~ dplyr::na_if(.x, "")))
@@ -10,6 +13,9 @@ common_cols <- c("participant_id", "session", "prolific_id", "rt", "time_elapsed
 # ASSUMED[no criterion given]: time coded as factor with levels
 # c("time1", "time2"), matching prolific_id's factor treatment.
 time_levels <- c("time1", "time2")
+
+saveRDS(collected, file.path(artifacts_dir, "collected.rds"))
+saveRDS(time_levels, file.path(artifacts_dir, "time_levels.rds"))
 
 #### DESCRIBE: PER-COLUMN CLASS/VALUES ROWS (shared across raw datasets) ####
 
@@ -79,6 +85,6 @@ write_data_validation_report <- function(df, dictionary, name, freetext_cols = c
     "</body></html>"
   )
   prefix <- if (is.null(step)) "" else paste0(step, "_")
-  report_dir <- if (identical(suffix, "processed")) processed_output_dir else raw_output_dir
+  report_dir <- if (identical(suffix, "processed")) reports_processed_dir else reports_raw_dir
   writeLines(report_html, file.path(report_dir, paste0(prefix, "data-type-validation-", name, "-", suffix, ".html")))
 }

@@ -1,3 +1,5 @@
+# reads: data/collected · writes: artifacts/collected.rds, artifacts/demographics_collected.rds
+
 #### READ COLLECTED DATA ####
 
 # One CSV per participant per wave; read every CSV present in each wave folder
@@ -28,3 +30,6 @@ demographics_file <- list.files(collected_dir, pattern = "^prolific_demographic_
 
 demographics_collected <- demographics_file |>
   read_csv(col_types = cols(.default = "c"))
+
+saveRDS(collected, file.path(artifacts_dir, "collected.rds"))
+saveRDS(demographics_collected, file.path(artifacts_dir, "demographics_collected.rds"))

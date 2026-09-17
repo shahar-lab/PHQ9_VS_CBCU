@@ -1,31 +1,34 @@
 Plan Card
 
 JOB
-Add a two-panel raw CBCU RT cutoff-count figure
+Add sliders, a participant dropdown, and labeled y-axis ticks to the interactive RT HTML
 FOLDER
 preprocessing/ (repair)
 
 Job Card
 
 JOB
-Add a two-panel raw CBCU RT cutoff-count figure
+Add sliders, a participant dropdown, and labeled y-axis ticks to the interactive RT HTML
 
 FOLDER
 preprocessing/ (repair)
 
 ROUTED READS
-- 02-analysis/visualization/standards/PANEL_TAGGING_STANDARD.md
-- 02-analysis/visualization/standards/EXPORT_STANDARD.md
+- visualization/plot-types/plot-scatter.md
+- visualization/standards/COLOR_STANDARD.md
 
 CHECKS
+- x and y columns
+- Same-scale or different
+- Colour mapping
+- Trend-line band or line alone
+- Single figure or composite
 
 SPECIFICATION
-- Use CBCU trials only, from the raw cbcu_results object already built by the preprocessing pipeline.
-- Exclude trials with missing RT from all counts.
-- Panel A uses lower RT limits from 0 through 1000 milliseconds in steps of 50 milliseconds and plots the cumulative number of trials with RT less than or equal to each limit.
-- Panel B uses upper RT limits from 5 through 10 seconds in steps of 1 second and plots the cumulative number of trials with RT greater than or equal to each limit.
-- The y-axis in both panels is the number of CBCU trials.
-- Combine the panels into one figure with panel tags.
-- Export the combined figure to preprocessing/output/raw_outputs/ as both PDF and PNG.
-- Add a separate numbered script under preprocessing/code/ and source it from preprocessing/main.R after the existing raw CBCU figure scripts.
-- Do not modify the raw or processed datasets.
+- Keep trial vs RT (ms), different scales, participant colour, linear trend without a band, Pearson r.
+- Keep the four numeric boxes and add a slider for each, synced, spanning 0 to maximum complete RT.
+- Add a dropdown above the scatter: All participants plus one option per prolific_id.
+- Selecting one participant shows only that participant's points; All shows everyone.
+- Y-axis always shows labeled ticks; the displayed min and max are the first and last ticks; four ticks total.
+- Keep the count table and sidecar HTML export.
+- Do not change script 13 or any dataset.

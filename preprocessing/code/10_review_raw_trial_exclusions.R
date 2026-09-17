@@ -1,6 +1,11 @@
-# reads: collected, cbcu_results, review_surviving_pids · writes: raw trial review objects in memory
+# reads: artifacts/09_raw_window_review.rds, artifacts/collected.rds, data/raw/cbcu_results.csv · writes: artifacts/10_raw_trial_review.rds
 
 #### REVIEW RAW TRIAL EXCLUSIONS ####
+
+raw_window_review <- readRDS(file.path(artifacts_dir, "09_raw_window_review.rds"))
+review_surviving_pids <- raw_window_review$review_surviving_pids
+collected <- readRDS(file.path(artifacts_dir, "collected.rds"))
+cbcu_results <- read_csv(file.path(raw_dir, "cbcu_results.csv"), show_col_types = FALSE)
 
 review_trial_pool <- cbcu_results |>
   dplyr::mutate(
@@ -53,3 +58,12 @@ review_trials_after_window <- review_trial_pool |>
     review_trial_window_rows,
     by = c("prolific_id", "time", "trial")
   )
+
+saveRDS(
+  list(
+    review_trial_pool = review_trial_pool,
+    review_trial_window_rows = review_trial_window_rows,
+    review_trials_after_window = review_trials_after_window
+  ),
+  file.path(artifacts_dir, "10_raw_trial_review.rds")
+)
