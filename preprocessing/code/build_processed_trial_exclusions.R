@@ -10,7 +10,7 @@ after_fast_rt  <- after_missing               |> dplyr::filter(rt >= rt_fast_cut
 after_slow_rt  <- after_fast_rt               |> dplyr::filter(rt <= rt_slow_cutoff_ms)
 
 # raw_cbcu_results_cols: authoritative column set from data/raw/cbcu_results.csv (built in
-# build_cbcu_raw.R), so the processed CSV matches it exactly — dropping `pairwise`'s derived
+# 04_build_cbcu_raw.R), so the processed CSV matches it exactly — dropping `pairwise`'s derived
 # `subject_session` column.
 raw_cbcu_results_cols <- c("prolific_id", "time", "block", "trial",
                             "item_number_left", "item_number_right",

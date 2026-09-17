@@ -60,5 +60,5 @@ report_html_append <- c(
   "</body></html>"
 )
 
-report_path <- file.path(output_dir, "processed_related_reports", "raw-to-processed-report.html")
+report_path <- file.path(processed_output_dir, "raw-to-processed-report.html")
 write(report_html_append, file = report_path, append = TRUE, sep = "\n")

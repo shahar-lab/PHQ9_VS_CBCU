@@ -1,0 +1,583 @@
+<html><head><meta charset="UTF-8">
+<title>Data type validation: phq9</title>
+<style>
+body { font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+       max-width: 1100px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+h1 { border-bottom: 2px solid #333; padding-bottom: 0.3rem; }
+h2 { margin-top: 2rem; color: #333; }
+table { border-collapse: separate; border-spacing: 0; margin: 0.5rem 0 1.5rem; font-size: 0.9rem; }
+th, td { border: 1px solid #ddd; padding: 4px 10px; text-align: left; white-space: nowrap; }
+tbody tr:nth-child(even) { background: #f6f6f6; }
+tbody tr:hover { background: #eef4fb; }
+.scroll-x { overflow: auto; max-height: 20rem; border: 1px solid #ddd; margin-bottom: 1.5rem; }
+.scroll-x table { margin: 0; border: none; }
+.scroll-x thead th,
+.scroll-x thead td { position: sticky; z-index: 3; }
+.scroll-x thead tr:nth-child(1) th { top: 0; background: #333; color: #fff; }
+.scroll-x thead tr:nth-child(2) td { top: 2em; background: #e2e6ea; }
+.scroll-x thead tr:nth-child(3) td { top: 4em; background: #e2e6ea; }
+.meta-row { background: #e2e6ea !important; font-style: italic; }
+</style></head><body>
+<h1>Data type validation: phq9</h1>
+<h2>Data (21 rows)</h2>
+<div class="scroll-x">
+<table>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> prolific_id </th>
+   <th style="text-align:left;"> completion_time </th>
+   <th style="text-align:left;"> time </th>
+   <th style="text-align:right;"> phq9_1 </th>
+   <th style="text-align:right;"> phq9_2 </th>
+   <th style="text-align:right;"> phq9_3 </th>
+   <th style="text-align:right;"> phq9_4 </th>
+   <th style="text-align:right;"> phq9_5 </th>
+   <th style="text-align:right;"> phq9_6 </th>
+   <th style="text-align:right;"> phq9_7 </th>
+   <th style="text-align:right;"> phq9_8 </th>
+   <th style="text-align:right;"> phq9_9 </th>
+   <th style="text-align:left;"> phq9_1_label </th>
+   <th style="text-align:left;"> phq9_2_label </th>
+   <th style="text-align:left;"> phq9_3_label </th>
+   <th style="text-align:left;"> phq9_4_label </th>
+   <th style="text-align:left;"> phq9_5_label </th>
+   <th style="text-align:left;"> phq9_6_label </th>
+   <th style="text-align:left;"> phq9_7_label </th>
+   <th style="text-align:left;"> phq9_8_label </th>
+   <th style="text-align:left;"> phq9_9_label </th>
+   <th style="text-align:right;"> attn_check_score </th>
+   <th style="text-align:left;"> attn_check_label </th>
+  </tr>
+ <tr class="meta-row"><td>factor</td><td>hms</td><td>factor</td><td>numeric</td><td>numeric</td><td>numeric</td><td>numeric</td><td>numeric</td><td>numeric</td><td>numeric</td><td>numeric</td><td>numeric</td><td>ordered</td><td>ordered</td><td>ordered</td><td>ordered</td><td>ordered</td><td>ordered</td><td>ordered</td><td>ordered</td><td>ordered</td><td>numeric</td><td>ordered</td></tr>
+<tr class="meta-row"><td>11 distinct values</td><td>21 distinct values</td><td>time1, time2</td><td>[0 to 1]</td><td>[0 to 1]</td><td>[0 to 3]</td><td>[0 to 3]</td><td>[0 to 3]</td><td>[0 to 3]</td><td>[0 to 2]</td><td>[0 to 1]</td><td>[0 to 0]</td><td>Not at all, Several days</td><td>Not at all, Several days</td><td>More than half the days, Nearly every day, Not at all, Several days</td><td>More than half the days, Nearly every day, Not at all, Several days</td><td>More than half the days, Nearly every day, Not at all, Several days</td><td>Nearly every day, Not at all, Several days</td><td>More than half the days, Not at all, Several days</td><td>Not at all, Several days</td><td>Not at all</td><td>[0 to 0]</td><td>Not at all</td></tr>
+</thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:left;"> 00:00:45.347 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> More than half the days </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a0c5f6a4974d3dfbeb467ae </td>
+   <td style="text-align:left;"> 00:04:42.047 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a26623dba3ca97e10bd6e4a </td>
+   <td style="text-align:left;"> 00:00:53.468 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a0b57dda1f2bbc0f2c1398b </td>
+   <td style="text-align:left;"> 00:00:56.405 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a25badf2f95439c4b79d399 </td>
+   <td style="text-align:left;"> 00:00:50.935 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> More than half the days </td>
+   <td style="text-align:left;"> More than half the days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a241cc77b290774b3626f62 </td>
+   <td style="text-align:left;"> 00:01:33.711 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 5d50692435e3af0001f05a15 </td>
+   <td style="text-align:left;"> 00:01:06.159 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 67798278a28708e32bf4b451 </td>
+   <td style="text-align:left;"> 00:00:21.668 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69f0b7ddbaaead7656414805 </td>
+   <td style="text-align:left;"> 00:00:15.009 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6946d43d6e37a8ebea7882bd </td>
+   <td style="text-align:left;"> 00:01:14.771 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 66b588a4b3e0e55fc74390b3 </td>
+   <td style="text-align:left;"> 00:01:44.254 </td>
+   <td style="text-align:left;"> time1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Nearly every day </td>
+   <td style="text-align:left;"> Nearly every day </td>
+   <td style="text-align:left;"> Nearly every day </td>
+   <td style="text-align:left;"> Nearly every day </td>
+   <td style="text-align:left;"> More than half the days </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 5d50692435e3af0001f05a15 </td>
+   <td style="text-align:left;"> 00:00:51.883 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6946d43d6e37a8ebea7882bd </td>
+   <td style="text-align:left;"> 00:07:26.066 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 66b588a4b3e0e55fc74390b3 </td>
+   <td style="text-align:left;"> 00:02:44.520 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Nearly every day </td>
+   <td style="text-align:left;"> Nearly every day </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Nearly every day </td>
+   <td style="text-align:left;"> More than half the days </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a241cc77b290774b3626f62 </td>
+   <td style="text-align:left;"> 00:00:39.805 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 67798278a28708e32bf4b451 </td>
+   <td style="text-align:left;"> 00:00:31.345 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a0c5f6a4974d3dfbeb467ae </td>
+   <td style="text-align:left;"> 00:02:05.291 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
+   <td style="text-align:left;"> 00:00:33.018 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 2 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> More than half the days </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a25badf2f95439c4b79d399 </td>
+   <td style="text-align:left;"> 00:00:35.319 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a26623dba3ca97e10bd6e4a </td>
+   <td style="text-align:left;"> 00:01:25.999 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Several days </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69f0b7ddbaaead7656414805 </td>
+   <td style="text-align:left;"> 00:00:12.724 </td>
+   <td style="text-align:left;"> time2 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:left;"> Not at all </td>
+   <td style="text-align:right;"> 0 </td>
+   <td style="text-align:left;"> Not at all </td>
+  </tr>
+</tbody>
+</table>
+</div>
+</body></html>
