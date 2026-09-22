@@ -24,3 +24,15 @@ saveRDS(
   list(u = df_u_recovery, beta = df_beta_recovery),
   file.path(artifacts_dir, "recovery_comparison.rds")
 )
+
+group_recovery <- fit$summary() |>
+  filter(variable %in% c("mu_log_beta", "sigma_log_beta")) |>
+  transmute(
+    variable,
+    true_value = c(mu_log_beta, sigma_log_beta)[match(
+      variable, c("mu_log_beta", "sigma_log_beta")
+    )],
+    recovered_value = mean
+  )
+
+saveRDS(group_recovery, file.path(artifacts_dir, "group_recovery.rds"))

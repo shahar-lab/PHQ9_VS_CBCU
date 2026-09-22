@@ -16,10 +16,6 @@ p_group <- ggplot(plot_df, aes(x = value, y = 0)) +
     data = stats_df, aes(xintercept = med_val, colour = "Posterior median"),
     linetype = "dashed", linewidth = 0.4
   ) +
-  geom_vline(
-    data = stats_df, aes(xintercept = sample_stat, colour = "Sample statistic (subjects)"),
-    linetype = "dashed", linewidth = 0.4
-  ) +
   geom_text(
     data = stats_df,
     aes(x = med_val, y = Inf,
@@ -28,11 +24,7 @@ p_group <- ggplot(plot_df, aes(x = value, y = 0)) +
   ) +
   geom_blank(data = anchor_df, aes(x = value, y = 0)) +
   facet_wrap(~variable, scales = "free_x") +
-  scale_colour_manual(values = c(
-    "True value"                   = "#EE6677",
-    "Posterior median"             = "grey65",
-    "Sample statistic (subjects)"  = "#4477AA"
-  )) +
+  scale_colour_manual(values = c("True value" = "#EE6677", "Posterior median" = "grey65")) +
   theme_minimal(base_size = 13) +
   theme(
     panel.grid           = element_blank(),
