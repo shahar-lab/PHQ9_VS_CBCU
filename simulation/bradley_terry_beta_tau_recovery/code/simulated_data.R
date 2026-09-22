@@ -1,8 +1,8 @@
 #### GENERATE TRUE PARAMETERS ####
 
-N_subjects <- 20
+N_subjects <- 100
 N_options  <- 15
-N_trials   <- 200
+N_trials   <- 105
 
 mu_log_beta    <- 0.5
 sigma_log_beta <- 1

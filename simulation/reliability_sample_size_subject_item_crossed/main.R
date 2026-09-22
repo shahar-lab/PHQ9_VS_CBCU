@@ -5,7 +5,7 @@ rm(list = ls())
 library(here)
 library(tidyverse)
 library(brms)
-library(ggdist)a
+library(ggdist)
 library(cmdstanr)
 library(posterior)
 

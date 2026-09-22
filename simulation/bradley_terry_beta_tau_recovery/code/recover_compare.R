@@ -26,6 +26,17 @@ tau_recovery <- draws_summary |>
             true_value      = true_tau[subject],
             recovered_value = mean)
 
+group_recovery <- draws_summary |>
+  filter(variable %in% c("mu_log_beta", "sigma_log_beta", "mu_tau", "sigma_tau")) |>
+  transmute(
+    variable,
+    true_value = c(mu_log_beta, sigma_log_beta, mu_tau, sigma_tau)[match(
+      variable, c("mu_log_beta", "sigma_log_beta", "mu_tau", "sigma_tau")
+    )],
+    recovered_value = mean
+  )
+
 saveRDS(u_recovery, file.path(artifacts_dir, "u_recovery.rds"))
 saveRDS(beta_recovery, file.path(artifacts_dir, "beta_recovery.rds"))
 saveRDS(tau_recovery, file.path(artifacts_dir, "tau_recovery.rds"))
+saveRDS(group_recovery, file.path(artifacts_dir, "group_recovery.rds"))
