@@ -1,11 +1,8 @@
 #### PREP GROUP-LEVEL POSTERIOR DRAWS ####
 
-group_vars <- c(
-  "mu_log_beta", "sigma_log_beta", "mu_tau", "sigma_tau",
-  "mu_logit_key_decay", "sigma_key_decay", "mu_rho", "sigma_rho"
-)
+group_vars <- c("mu_log_beta", "sigma_log_beta", "mu_tau", "sigma_tau", "mu_rho", "sigma_rho")
 
-group_fit <- readRDS(file.path(artifacts_dir, "bt_beta_tau_per_fit.rds"))
+group_fit <- readRDS(file.path(artifacts_dir, "bt_beta_tau_rho_fit.rds"))
 
 draws_df <- group_fit$draws(variables = group_vars) |>
   posterior::as_draws_df()
@@ -20,10 +17,9 @@ true_df <- group_recovery |>
 
 # Sample statistic computed directly from the individual subjects' true draws,
 # a third reference point alongside the true hyperparameter and the posterior
-# median: sample mean for the four mean panels, sample SD for the four SD
-# panels. mu_log_beta/sigma_log_beta are on the log scale and mu_logit_key_decay
-# is on the logit scale, so they compare against mean/sd of log(true_beta) and
-# qlogis(true_key_decay), not the raw values.
+# median: sample mean for the three mean panels, sample SD for the three SD
+# panels. mu_log_beta/sigma_log_beta are on the log scale, so they compare
+# against mean/sd of log(true_beta), not raw true_beta.
 sample_stat_df <- tibble(
   variable    = factor(group_vars, levels = group_vars),
   sample_stat = c(
@@ -31,8 +27,6 @@ sample_stat_df <- tibble(
     sd(log(true_beta)),
     mean(true_tau),
     sd(true_tau),
-    mean(qlogis(true_key_decay)),
-    sd(qlogis(true_key_decay)),
     mean(true_rho),
     sd(true_rho)
   )

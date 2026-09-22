@@ -27,16 +27,7 @@ p_group <- ggplot(plot_df, aes(x = value, y = 0)) +
     inherit.aes = FALSE, hjust = -0.05, vjust = 1.4, size = 3, colour = "grey40"
   ) +
   geom_blank(data = anchor_df, aes(x = value, y = 0)) +
-  facet_wrap(~variable, scales = "free_x", labeller = as_labeller(c(
-    mu_log_beta         = "mu_log_beta",
-    sigma_log_beta      = "sigma_log_beta",
-    mu_tau              = "mu_tau",
-    sigma_tau           = "sigma_tau",
-    mu_logit_key_decay  = "mu_logit_gamma",
-    sigma_key_decay     = "sigma_gamma",
-    mu_rho              = "mu_rho",
-    sigma_rho           = "sigma_rho"
-  ))) +
+  facet_wrap(~variable, scales = "free_x") +
   scale_colour_manual(values = c(
     "True value"                   = "#EE6677",
     "Posterior median"             = "grey65",
