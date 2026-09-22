@@ -6,9 +6,6 @@ library(here)
 library(tidyverse)
 library(jsonlite)
 library(hms)
-library(plotly)
-library(htmlwidgets)
-library(htmltools)
 library(knitr)
 
 project_root            <- here::here()
@@ -63,9 +60,6 @@ source(file.path(code_dir, "06_build_phq9_raw.R"))
 source(file.path(code_dir, "07_build_feedback_raw.R"))
 source(file.path(code_dir, "08_build_demographics_raw.R"))
 
-# Plot every raw CBCU RT against trial number. Raw data are not filtered here.
-source(file.path(code_dir, "09_plot_raw_cbcu_rt_by_trial_interactive.R"))
-
 #### PROCESSED DATA ####
 
 # Exclude participants who did not have both sessions (time1 and time2).
@@ -77,15 +71,9 @@ window_exit_max    <- 2
 max_window_left_ms <- 30000
 source(file.path(code_dir, "11_exclude_participants_window.R"))
 
-# Exclude trials with NA, RT quicker than 0.5 seconds, or RT slower than 15 seconds.
-rt_min_ms <- 500
-rt_max_ms <- 15000
+# Exclude trials with no recorded RT or choice (no response). RT is kept
+# exploratory only -- no RT-based cutoff is applied.
 source(file.path(code_dir, "12_exclude_trials_rt.R"))
-
-# Exclude participants for whom that trial exclusion took more than 15% of
-# their trials on either time1 or time2.
-max_trial_exclusion_pct <- 15
-source(file.path(code_dir, "13_exclude_participants_trial_rate.R"))
 
 # Write surviving CBCU trials and PHQ rows to data/processed/.
 source(file.path(code_dir, "14_write_processed_data.R"))

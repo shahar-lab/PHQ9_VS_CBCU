@@ -1,21 +1,16 @@
 # reads: artifacts/10_after_both_sessions.rds, artifacts/11_after_window_exits.rds,
-#        artifacts/12_after_rt_bounds.rds, artifacts/13_after_trial_rate.rds,
-#        data/raw/demographics.csv
+#        artifacts/12_after_rt_bounds.rds, data/raw/demographics.csv
 # writes: output/processed/15_participants_excerpt.md,
 #         output/processed/15_data_treatment_excerpt.md
 
 #### WRITE MANUSCRIPT EXCERPTS ####
 
-if (!exists("window_exit_max"))         window_exit_max         <- 2
-if (!exists("max_window_left_ms"))      max_window_left_ms      <- 30000
-if (!exists("rt_min_ms"))               rt_min_ms               <- 500
-if (!exists("rt_max_ms"))               rt_max_ms               <- 15000
-if (!exists("max_trial_exclusion_pct")) max_trial_exclusion_pct <- 15
+if (!exists("window_exit_max"))    window_exit_max    <- 2
+if (!exists("max_window_left_ms")) max_window_left_ms <- 30000
 
 step10 <- readRDS(file.path(artifacts_dir, "10_after_both_sessions.rds"))
 step11 <- readRDS(file.path(artifacts_dir, "11_after_window_exits.rds"))
 step12 <- readRDS(file.path(artifacts_dir, "12_after_rt_bounds.rds"))
-step13 <- readRDS(file.path(artifacts_dir, "13_after_trial_rate.rds"))
 demographics <- read_csv(file.path(raw_dir, "demographics.csv"), show_col_types = FALSE)
 
 n_recruited    <- length(step10$all_pids)
@@ -24,14 +19,13 @@ n_window       <- length(step11$after_both_sessions_pids) - length(step11$after_
 n_trials_in    <- nrow(step12$after_window_cbcu)
 n_trials_out   <- n_trials_in - nrow(step12$after_rt_bounds)
 pct_trials_out <- round(100 * n_trials_out / n_trials_in, 1)
-n_high_rate    <- length(step13$after_window_exits_pids) - length(step13$after_trial_rate_pids)
-n_final        <- length(step13$after_trial_rate_pids)
-n_final_trials <- nrow(step13$after_trial_rate_cbcu)
+n_final        <- length(step12$after_window_exits_pids)
+n_final_trials <- nrow(step12$after_rt_bounds)
 mean_trials    <- round(n_final_trials / n_final, 2)
 
 final_demo <- demographics |>
   mutate(prolific_id = as.character(prolific_id)) |>
-  filter(prolific_id %in% step13$after_trial_rate_pids)
+  filter(prolific_id %in% step12$after_window_exits_pids)
 
 n_female <- sum(final_demo$Sex == "Female", na.rm = TRUE)
 n_male   <- sum(final_demo$Sex == "Male", na.rm = TRUE)
@@ -60,13 +54,10 @@ data_treatment_excerpt <- paste0(
   max_window_left_ms / 1000,
   " seconds in total, during PHQ-9 or CBCU on either session (",
   participants_people(n_window), " excluded). From the remaining CBCU ",
-  "observations we omitted trials with a missing RT or choice, or with an RT ",
-  "under ", rt_min_ms / 1000, " s or over ", rt_max_ms / 1000, " s (",
+  "observations we omitted trials with a missing RT or choice (",
   format(n_trials_out, big.mark = ","), " trials, ", pct_trials_out,
-  "% of remaining trials). We then excluded ",
-  participants_people(n_high_rate),
-  " for whom that trial omission exceeded ", max_trial_exclusion_pct,
-  "% of trials in either session. This resulted in ",
+  "% of remaining trials). No RT-based trial or participant exclusion was ",
+  "applied; RT was examined only descriptively. This resulted in ",
   format(n_final_trials, big.mark = ","), " CBCU trials across ", n_final,
   " participants (mean ", mean_trials, " trials per participant).*"
 )
