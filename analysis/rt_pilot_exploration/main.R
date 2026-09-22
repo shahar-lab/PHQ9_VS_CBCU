@@ -4,6 +4,7 @@ rm(list = ls())
 
 library(here)
 library(tidyverse)
+library(knitr)
 
 # here::here() anchors to the .Rproj root regardless of the working directory,
 # so paths resolve identically on any machine without setwd() gymnastics.
@@ -31,3 +32,6 @@ source(file.path(code_dir, "plot_rt_distribution.R"))
 
 # 3. Plot RT by trial presentation order (reuses in-memory df, saves to output/)
 source(file.path(code_dir, "plot_rt_by_trial.R"))
+
+# 4. Summarise RT (mean, median, min, max; reuses in-memory df, saves to artifacts/)
+source(file.path(code_dir, "summarise_rt.R"))
