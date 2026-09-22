@@ -1,0 +1,106 @@
+trial_index,phase_trial_num,rt,left_item_number,left_item_text,right_item_number,right_item_text,chosen_side,chosen_item_number,chosen_item_text,skipped
+29,1,4740,9a,Thoughts that you would be better off dead,3a,Trouble falling or staying asleep,right,3a,Trouble falling or staying asleep,FALSE
+31,2,5541,6a,Feeling bad about yourself or that you are a failure,1,Little interest or pleasure in doing things,left,6a,Feeling bad about yourself or that you are a failure,FALSE
+33,3,2669,7,Trouble concentrating,8b,Being so fidgety or restless that you have been moving around a lot more than usual,left,7,Trouble concentrating,FALSE
+35,4,7671,9b,Thoughts of hurting yourself in some way,8a,Moving or speaking slowly that other people could have noticed,skip,NA,NA,TRUE
+37,5,2381,4,Feeling tired or having little energy,1,Little interest or pleasure in doing things,left,4,Feeling tired or having little energy,FALSE
+39,6,1926,2b,Feeling hopeless,1,Little interest or pleasure in doing things,right,1,Little interest or pleasure in doing things,FALSE
+41,7,6094,6b,Feeling that you have let yourself or your family down,5a,Poor appetite,skip,NA,NA,TRUE
+43,8,3374,1,Little interest or pleasure in doing things,6b,Feeling that you have let yourself or your family down,left,1,Little interest or pleasure in doing things,FALSE
+45,9,3301,4,Feeling tired or having little energy,7,Trouble concentrating,left,4,Feeling tired or having little energy,FALSE
+47,10,6347,3b,Sleeping too much,9a,Thoughts that you would be better off dead,skip,NA,NA,TRUE
+49,11,1980,7,Trouble concentrating,9a,Thoughts that you would be better off dead,left,7,Trouble concentrating,FALSE
+51,12,2309,3b,Sleeping too much,4,Feeling tired or having little energy,right,4,Feeling tired or having little energy,FALSE
+53,13,3182,5b,Overeating,1,Little interest or pleasure in doing things,right,1,Little interest or pleasure in doing things,FALSE
+55,14,7254,9a,Thoughts that you would be better off dead,8b,Being so fidgety or restless that you have been moving around a lot more than usual,right,8b,Being so fidgety or restless that you have been moving around a lot more than usual,FALSE
+57,15,3813,6b,Feeling that you have let yourself or your family down,9a,Thoughts that you would be better off dead,skip,NA,NA,TRUE
+59,16,3165,6a,Feeling bad about yourself or that you are a failure,8a,Moving or speaking slowly that other people could have noticed,left,6a,Feeling bad about yourself or that you are a failure,FALSE
+61,17,6101,8b,Being so fidgety or restless that you have been moving around a lot more than usual,2a,Feeling down or depressed,right,2a,Feeling down or depressed,FALSE
+63,18,2904,7,Trouble concentrating,9b,Thoughts of hurting yourself in some way,left,7,Trouble concentrating,FALSE
+65,19,3138,6b,Feeling that you have let yourself or your family down,3a,Trouble falling or staying asleep,right,3a,Trouble falling or staying asleep,FALSE
+67,20,4150,7,Trouble concentrating,2b,Feeling hopeless,left,7,Trouble concentrating,FALSE
+69,21,4992,8b,Being so fidgety or restless that you have been moving around a lot more than usual,6a,Feeling bad about yourself or that you are a failure,left,8b,Being so fidgety or restless that you have been moving around a lot more than usual,FALSE
+71,22,2350,2a,Feeling down or depressed,1,Little interest or pleasure in doing things,left,2a,Feeling down or depressed,FALSE
+73,23,3444,4,Feeling tired or having little energy,9a,Thoughts that you would be better off dead,left,4,Feeling tired or having little energy,FALSE
+75,24,3263,8a,Moving or speaking slowly that other people could have noticed,9a,Thoughts that you would be better off dead,left,8a,Moving or speaking slowly that other people could have noticed,FALSE
+77,25,9566,8a,Moving or speaking slowly that other people could have noticed,3a,Trouble falling or staying asleep,right,3a,Trouble falling or staying asleep,FALSE
+79,26,4194,2b,Feeling hopeless,3a,Trouble falling or staying asleep,right,3a,Trouble falling or staying asleep,FALSE
+82,27,12019,6a,Feeling bad about yourself or that you are a failure,3a,Trouble falling or staying asleep,right,3a,Trouble falling or staying asleep,FALSE
+84,28,2820,5b,Overeating,2a,Feeling down or depressed,right,2a,Feeling down or depressed,FALSE
+86,29,1612,7,Trouble concentrating,2a,Feeling down or depressed,right,2a,Feeling down or depressed,FALSE
+88,30,5410,9b,Thoughts of hurting yourself in some way,6a,Feeling bad about yourself or that you are a failure,right,6a,Feeling bad about yourself or that you are a failure,FALSE
+90,31,5755,2b,Feeling hopeless,4,Feeling tired or having little energy,right,4,Feeling tired or having little energy,FALSE
+92,32,3404,9b,Thoughts of hurting yourself in some way,5b,Overeating,skip,NA,NA,TRUE
+94,33,4894,6b,Feeling that you have let yourself or your family down,8b,Being so fidgety or restless that you have been moving around a lot more than usual,right,8b,Being so fidgety or restless that you have been moving around a lot more than usual,FALSE
+96,34,3104,2b,Feeling hopeless,5b,Overeating,left,2b,Feeling hopeless,FALSE
+98,35,3487,2b,Feeling hopeless,5a,Poor appetite,left,2b,Feeling hopeless,FALSE
+100,36,2284,8b,Being so fidgety or restless that you have been moving around a lot more than usual,5a,Poor appetite,left,8b,Being so fidgety or restless that you have been moving around a lot more than usual,FALSE
+102,37,3732,8a,Moving or speaking slowly that other people could have noticed,3b,Sleeping too much,skip,NA,NA,TRUE
+104,38,3303,8a,Moving or speaking slowly that other people could have noticed,5b,Overeating,right,5b,Overeating,FALSE
+106,39,2865,2a,Feeling down or depressed,2b,Feeling hopeless,left,2a,Feeling down or depressed,FALSE
+108,40,3932,8a,Moving or speaking slowly that other people could have noticed,4,Feeling tired or having little energy,right,4,Feeling tired or having little energy,FALSE
+110,41,4726,3b,Sleeping too much,1,Little interest or pleasure in doing things,right,1,Little interest or pleasure in doing things,FALSE
+112,42,4412,2a,Feeling down or depressed,4,Feeling tired or having little energy,left,2a,Feeling down or depressed,FALSE
+114,43,3850,9a,Thoughts that you would be better off dead,5a,Poor appetite,skip,NA,NA,TRUE
+116,44,1737,2a,Feeling down or depressed,6b,Feeling that you have let yourself or your family down,left,2a,Feeling down or depressed,FALSE
+118,45,4361,6b,Feeling that you have let yourself or your family down,7,Trouble concentrating,right,7,Trouble concentrating,FALSE
+120,46,5313,3a,Trouble falling or staying asleep,9b,Thoughts of hurting yourself in some way,left,3a,Trouble falling or staying asleep,FALSE
+122,47,4524,8a,Moving or speaking slowly that other people could have noticed,6b,Feeling that you have let yourself or your family down,left,8a,Moving or speaking slowly that other people could have noticed,FALSE
+124,48,6794,9b,Thoughts of hurting yourself in some way,3b,Sleeping too much,skip,NA,NA,TRUE
+126,49,7108,1,Little interest or pleasure in doing things,8b,Being so fidgety or restless that you have been moving around a lot more than usual,left,1,Little interest or pleasure in doing things,FALSE
+128,50,3263,5b,Overeating,6b,Feeling that you have let yourself or your family down,skip,NA,NA,TRUE
+130,51,2883,8a,Moving or speaking slowly that other people could have noticed,7,Trouble concentrating,right,7,Trouble concentrating,FALSE
+132,52,3524,2b,Feeling hopeless,6b,Feeling that you have let yourself or your family down,left,2b,Feeling hopeless,FALSE
+135,53,2022,2a,Feeling down or depressed,8a,Moving or speaking slowly that other people could have noticed,left,2a,Feeling down or depressed,FALSE
+137,54,3301,3a,Trouble falling or staying asleep,4,Feeling tired or having little energy,right,4,Feeling tired or having little energy,FALSE
+139,55,2298,8b,Being so fidgety or restless that you have been moving around a lot more than usual,8a,Moving or speaking slowly that other people could have noticed,left,8b,Being so fidgety or restless that you have been moving around a lot more than usual,FALSE
+141,56,5247,3b,Sleeping too much,8b,Being so fidgety or restless that you have been moving around a lot more than usual,right,8b,Being so fidgety or restless that you have been moving around a lot more than usual,FALSE
+143,57,2325,4,Feeling tired or having little energy,8b,Being so fidgety or restless that you have been moving around a lot more than usual,left,4,Feeling tired or having little energy,FALSE
+145,58,1640,2a,Feeling down or depressed,3a,Trouble falling or staying asleep,left,2a,Feeling down or depressed,FALSE
+147,59,2373,2a,Feeling down or depressed,9a,Thoughts that you would be better off dead,left,2a,Feeling down or depressed,FALSE
+149,60,2645,4,Feeling tired or having little energy,9b,Thoughts of hurting yourself in some way,left,4,Feeling tired or having little energy,FALSE
+151,61,3637,6b,Feeling that you have let yourself or your family down,9b,Thoughts of hurting yourself in some way,left,6b,Feeling that you have let yourself or your family down,FALSE
+153,62,1758,7,Trouble concentrating,1,Little interest or pleasure in doing things,right,1,Little interest or pleasure in doing things,FALSE
+155,63,6429,5b,Overeating,4,Feeling tired or having little energy,right,4,Feeling tired or having little energy,FALSE
+157,64,3109,5b,Overeating,3b,Sleeping too much,left,5b,Overeating,FALSE
+159,65,6733,9a,Thoughts that you would be better off dead,2b,Feeling hopeless,right,2b,Feeling hopeless,FALSE
+161,66,6553,3b,Sleeping too much,6a,Feeling bad about yourself or that you are a failure,right,6a,Feeling bad about yourself or that you are a failure,FALSE
+163,67,2085,5b,Overeating,8b,Being so fidgety or restless that you have been moving around a lot more than usual,right,8b,Being so fidgety or restless that you have been moving around a lot more than usual,FALSE
+165,68,3470,1,Little interest or pleasure in doing things,5a,Poor appetite,left,1,Little interest or pleasure in doing things,FALSE
+167,69,3354,8a,Moving or speaking slowly that other people could have noticed,2b,Feeling hopeless,right,2b,Feeling hopeless,FALSE
+169,70,2660,3b,Sleeping too much,3a,Trouble falling or staying asleep,right,3a,Trouble falling or staying asleep,FALSE
+171,71,3139,7,Trouble concentrating,6a,Feeling bad about yourself or that you are a failure,right,6a,Feeling bad about yourself or that you are a failure,FALSE
+173,72,3406,5a,Poor appetite,5b,Overeating,skip,NA,NA,TRUE
+175,73,1968,6a,Feeling bad about yourself or that you are a failure,5b,Overeating,left,6a,Feeling bad about yourself or that you are a failure,FALSE
+177,74,1734,3a,Trouble falling or staying asleep,1,Little interest or pleasure in doing things,right,1,Little interest or pleasure in doing things,FALSE
+179,75,3545,2b,Feeling hopeless,6a,Feeling bad about yourself or that you are a failure,right,6a,Feeling bad about yourself or that you are a failure,FALSE
+181,76,5285,5a,Poor appetite,3b,Sleeping too much,skip,NA,NA,TRUE
+183,77,4256,9a,Thoughts that you would be better off dead,1,Little interest or pleasure in doing things,right,1,Little interest or pleasure in doing things,FALSE
+185,78,1396,5b,Overeating,7,Trouble concentrating,right,7,Trouble concentrating,FALSE
+188,79,2509,4,Feeling tired or having little energy,6b,Feeling that you have let yourself or your family down,left,4,Feeling tired or having little energy,FALSE
+190,80,3268,8b,Being so fidgety or restless that you have been moving around a lot more than usual,2b,Feeling hopeless,right,2b,Feeling hopeless,FALSE
+192,81,2230,6a,Feeling bad about yourself or that you are a failure,9a,Thoughts that you would be better off dead,left,6a,Feeling bad about yourself or that you are a failure,FALSE
+194,82,2541,2b,Feeling hopeless,9b,Thoughts of hurting yourself in some way,left,2b,Feeling hopeless,FALSE
+196,83,4238,8a,Moving or speaking slowly that other people could have noticed,5a,Poor appetite,skip,NA,NA,TRUE
+198,84,4031,2a,Feeling down or depressed,6a,Feeling bad about yourself or that you are a failure,left,2a,Feeling down or depressed,FALSE
+200,85,2344,7,Trouble concentrating,5a,Poor appetite,left,7,Trouble concentrating,FALSE
+202,86,2956,5a,Poor appetite,2a,Feeling down or depressed,right,2a,Feeling down or depressed,FALSE
+204,87,2573,3b,Sleeping too much,6b,Feeling that you have let yourself or your family down,right,6b,Feeling that you have let yourself or your family down,FALSE
+206,88,4262,9b,Thoughts of hurting yourself in some way,9a,Thoughts that you would be better off dead,skip,NA,NA,TRUE
+208,89,2349,3a,Trouble falling or staying asleep,5a,Poor appetite,left,3a,Trouble falling or staying asleep,FALSE
+210,90,1716,9b,Thoughts of hurting yourself in some way,1,Little interest or pleasure in doing things,right,1,Little interest or pleasure in doing things,FALSE
+212,91,2110,5b,Overeating,3a,Trouble falling or staying asleep,right,3a,Trouble falling or staying asleep,FALSE
+214,92,7284,3a,Trouble falling or staying asleep,8b,Being so fidgety or restless that you have been moving around a lot more than usual,right,8b,Being so fidgety or restless that you have been moving around a lot more than usual,FALSE
+216,93,5555,9a,Thoughts that you would be better off dead,5b,Overeating,right,5b,Overeating,FALSE
+218,94,3847,6a,Feeling bad about yourself or that you are a failure,6b,Feeling that you have let yourself or your family down,left,6a,Feeling bad about yourself or that you are a failure,FALSE
+220,95,4399,3b,Sleeping too much,7,Trouble concentrating,right,7,Trouble concentrating,FALSE
+222,96,2286,3b,Sleeping too much,2a,Feeling down or depressed,right,2a,Feeling down or depressed,FALSE
+224,97,3987,8a,Moving or speaking slowly that other people could have noticed,1,Little interest or pleasure in doing things,right,1,Little interest or pleasure in doing things,FALSE
+226,98,1655,2a,Feeling down or depressed,9b,Thoughts of hurting yourself in some way,left,2a,Feeling down or depressed,FALSE
+228,99,1505,3b,Sleeping too much,2b,Feeling hopeless,right,2b,Feeling hopeless,FALSE
+230,100,3237,8b,Being so fidgety or restless that you have been moving around a lot more than usual,9b,Thoughts of hurting yourself in some way,left,8b,Being so fidgety or restless that you have been moving around a lot more than usual,FALSE
+232,101,1996,9b,Thoughts of hurting yourself in some way,5a,Poor appetite,skip,NA,NA,TRUE
+234,102,1583,7,Trouble concentrating,3a,Trouble falling or staying asleep,left,7,Trouble concentrating,FALSE
+236,103,1792,6a,Feeling bad about yourself or that you are a failure,5a,Poor appetite,left,6a,Feeling bad about yourself or that you are a failure,FALSE
+238,104,2032,5a,Poor appetite,4,Feeling tired or having little energy,right,4,Feeling tired or having little energy,FALSE
+240,105,7425,6a,Feeling bad about yourself or that you are a failure,4,Feeling tired or having little energy,left,6a,Feeling bad about yourself or that you are a failure,FALSE

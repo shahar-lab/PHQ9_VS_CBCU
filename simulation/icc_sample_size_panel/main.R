@@ -8,7 +8,7 @@ library(patchwork)
 
 # here::here() anchors to the .Rproj root regardless of the working directory,
 # so paths resolve identically on any machine without setwd() gymnastics.
-project_root <- here::here()
+project_root <- haere::here()
 code_dir     <- file.path(project_root, "simulation", "icc_sample_size_panel", "code")
 output_dir   <- file.path(project_root, "simulation", "icc_sample_size_panel", "output")
 
@@ -25,3 +25,4 @@ if (!dir.exists(output_dir))    dir.create(output_dir, recursive = TRUE)
 #### EXECUTE PIPELINE ####
 
 source(file.path(code_dir, "plot_panel.R"))
+
