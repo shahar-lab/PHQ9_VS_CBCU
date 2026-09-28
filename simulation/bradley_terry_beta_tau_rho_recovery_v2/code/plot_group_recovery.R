@@ -41,8 +41,7 @@ p_group <- ggplot(plot_df, aes(x = value, y = 0)) +
     axis.ticks.y         = element_blank(),
     axis.line.y          = element_blank(),
     axis.line.x          = element_line(colour = "grey30"),
-    legend.position      = c(1, 0.95),
-    legend.justification = c("right", "top"),
+    legend.position      = "bottom",
     legend.background    = element_blank(),
     legend.key           = element_blank()
   ) +
