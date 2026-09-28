@@ -12,8 +12,8 @@ mu_tau             <- 0
 sigma_tau          <- 1
 mu_logit_key_decay <- 1
 sigma_key_decay    <- 0.5
-mu_rho             <- 1
-sigma_rho          <- 0.5
+mu_rho             <- 0
+sigma_rho          <- 0.75
 
 # Per-subject true utilities: raw draws standardized per subject (mean 0, sd 1),
 # matching the u_matrix hard constraint in the Stan model.
