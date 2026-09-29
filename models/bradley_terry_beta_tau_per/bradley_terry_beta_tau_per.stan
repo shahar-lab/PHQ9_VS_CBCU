@@ -44,15 +44,18 @@ parameters {
   real mu_log_beta;
   real<lower=0> sigma_log_beta;
 
-  // Subject-level betas
-  vector<lower=0>[N_subjects] beta;
+  // Subject-level betas, non-centered raw parameter: standard normal,
+  // scaled and shifted (then exponentiated) in transformed parameters to
+  // build beta.
+  vector[N_subjects] beta_raw;
 
   // Group-level tau (Burden Threshold) parameters
   real mu_tau;
   real<lower=0> sigma_tau;
 
-  // Subject-level taus
-  vector[N_subjects] tau;
+  // Subject-level taus, non-centered raw parameter: standard normal,
+  // scaled and shifted in transformed parameters to build tau.
+  vector[N_subjects] tau_raw;
 
   // NEW: Group-level key_decay parameters, on the logit scale so the
   // per-subject decay factor is constrained to (0, 1) and cannot flip sign.
@@ -63,23 +66,37 @@ parameters {
 
   // Subject-level key_decay, non-centered raw parameter: standard normal,
   // scaled and shifted in transformed parameters to build logit_key_decay.
-  vector[N_subjects] z_key_decay;
+  vector[N_subjects] key_decay_raw;
 
   // NEW: Group-level rho parameters, unconstrained like tau
   real mu_rho;
   real<lower=0> sigma_rho;
 
-  // Subject-level rho
-  vector[N_subjects] rho;
+  // Subject-level rho, non-centered raw parameter: standard normal,
+  // scaled and shifted in transformed parameters to build rho.
+  vector[N_subjects] rho_raw;
 }
 
 transformed parameters {
   // Constrained utilities
   matrix[N_subjects, N_options] u_matrix;
 
+  // Non-centered reconstruction of the subject-level beta from the raw
+  // standard-normal beta_raw and the group-level location/scale, on the log
+  // scale so beta itself stays positive.
+  vector<lower=0>[N_subjects] beta = exp(mu_log_beta + sigma_log_beta * beta_raw);
+
+  // Non-centered reconstruction of the subject-level tau from the raw
+  // standard-normal tau_raw and the group-level location/scale.
+  vector[N_subjects] tau = mu_tau + sigma_tau * tau_raw;
+
+  // Non-centered reconstruction of the subject-level rho from the raw
+  // standard-normal rho_raw and the group-level location/scale.
+  vector[N_subjects] rho = mu_rho + sigma_rho * rho_raw;
+
   // Non-centered reconstruction of the subject-level logit_key_decay from the
-  // raw standard-normal z_key_decay and the group-level location/scale.
-  vector[N_subjects] logit_key_decay = mu_logit_key_decay + sigma_key_decay * z_key_decay;
+  // raw standard-normal key_decay_raw and the group-level location/scale.
+  vector[N_subjects] logit_key_decay = mu_logit_key_decay + sigma_key_decay * key_decay_raw;
 
   // Subject-level decay factor, constrained to (0, 1)
   vector<lower=0, upper=1>[N_subjects] key_decay = inv_logit(logit_key_decay);
@@ -121,27 +138,33 @@ transformed parameters {
 }
 
 model {
-  // Hierarchical priors for beta
+  // Hierarchical priors for beta, non-centered: beta_raw carries the
+  // std_normal() prior, beta is built from it in transformed parameters as
+  // exp(mu_log_beta + sigma_log_beta * beta_raw).
   mu_log_beta ~ normal(0, 2);
   sigma_log_beta ~ exponential(2);
-  beta ~ lognormal(mu_log_beta, sigma_log_beta);
+  beta_raw ~ std_normal();
 
-  // Hierarchical priors for tau
+  // Hierarchical priors for tau, non-centered: tau_raw carries the
+  // std_normal() prior, tau is built from it in transformed parameters as
+  // mu_tau + sigma_tau * tau_raw.
   mu_tau ~ normal(0, 2);
   sigma_tau ~ exponential(2);
-  tau ~ normal(mu_tau, sigma_tau);
+  tau_raw ~ std_normal();
 
   // NEW: Hierarchical priors for key_decay (logit scale), non-centered:
-  // z_key_decay carries the std_normal() prior, logit_key_decay is built from
-  // it in transformed parameters as mu_logit_key_decay + sigma_key_decay * z_key_decay.
+  // key_decay_raw carries the std_normal() prior, logit_key_decay is built from
+  // it in transformed parameters as mu_logit_key_decay + sigma_key_decay * key_decay_raw.
   mu_logit_key_decay ~ normal(0, 2.5);
   sigma_key_decay ~ exponential(1);
-  z_key_decay ~ normal(0, 1);
+  key_decay_raw ~ std_normal();
 
-  // NEW: Hierarchical priors for rho
+  // NEW: Hierarchical priors for rho, non-centered: rho_raw carries the
+  // std_normal() prior, rho is built from it in transformed parameters as
+  // mu_rho + sigma_rho * rho_raw.
   mu_rho ~ normal(0, 2);
   sigma_rho ~ exponential(2);
-  rho ~ normal(mu_rho, sigma_rho);
+  rho_raw ~ std_normal();
 
   // Weak prior on u_raw to provide initial geometry before transformation
   to_vector(u_raw) ~ normal(0, 1);
