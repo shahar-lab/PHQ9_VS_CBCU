@@ -11,7 +11,7 @@ sigma_log_beta     <- 0.3
 mu_tau             <- 0
 sigma_tau          <- 1
 mu_logit_key_decay <- 0
-sigma_key_decay    <- 0.75
+sigma_key_decay    <- 1.5
 mu_rho             <- 0
 sigma_rho          <- 0.75
 

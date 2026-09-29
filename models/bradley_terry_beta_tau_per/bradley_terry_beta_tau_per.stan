@@ -61,8 +61,9 @@ parameters {
   real mu_logit_key_decay;
   real<lower=0> sigma_key_decay;
 
-  // Subject-level key_decay, raw (logit scale)
-  vector[N_subjects] logit_key_decay;
+  // Subject-level key_decay, non-centered raw parameter: standard normal,
+  // scaled and shifted in transformed parameters to build logit_key_decay.
+  vector[N_subjects] z_key_decay;
 
   // NEW: Group-level rho parameters, unconstrained like tau
   real mu_rho;
@@ -75,6 +76,10 @@ parameters {
 transformed parameters {
   // Constrained utilities
   matrix[N_subjects, N_options] u_matrix;
+
+  // Non-centered reconstruction of the subject-level logit_key_decay from the
+  // raw standard-normal z_key_decay and the group-level location/scale.
+  vector[N_subjects] logit_key_decay = mu_logit_key_decay + sigma_key_decay * z_key_decay;
 
   // Subject-level decay factor, constrained to (0, 1)
   vector<lower=0, upper=1>[N_subjects] key_decay = inv_logit(logit_key_decay);
@@ -126,10 +131,12 @@ model {
   sigma_tau ~ exponential(2);
   tau ~ normal(mu_tau, sigma_tau);
 
-  // NEW: Hierarchical priors for key_decay (logit scale)
-  mu_logit_key_decay ~ normal(0, 1.5);
-  sigma_key_decay ~ exponential(2);
-  logit_key_decay ~ normal(mu_logit_key_decay, sigma_key_decay);
+  // NEW: Hierarchical priors for key_decay (logit scale), non-centered:
+  // z_key_decay carries the std_normal() prior, logit_key_decay is built from
+  // it in transformed parameters as mu_logit_key_decay + sigma_key_decay * z_key_decay.
+  mu_logit_key_decay ~ normal(0, 2.5);
+  sigma_key_decay ~ exponential(1);
+  z_key_decay ~ normal(0, 1);
 
   // NEW: Hierarchical priors for rho
   mu_rho ~ normal(0, 2);
