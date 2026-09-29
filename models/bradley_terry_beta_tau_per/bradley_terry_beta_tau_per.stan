@@ -103,14 +103,14 @@ transformed parameters {
       key_value = rep_vector(0, 3);
     }
 
-    // Decay before this trial's choice is evaluated
-    key_value = key_value * key_decay[subject_index[t]];
 
     key_contrib[t, 1] = key_value[1];
     key_contrib[t, 2] = key_value[2];
     key_contrib[t, 3] = key_value[3];
 
     // Update only the chosen slot, carries into this subject's next trial
+    // Decay before this trial's choice is evaluated
+    key_value = key_value * key_decay[subject_index[t]];
     key_value[choice[t]] += rho[subject_index[t]];
   }
 }
