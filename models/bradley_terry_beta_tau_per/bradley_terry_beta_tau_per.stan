@@ -8,14 +8,9 @@
 // parameters and added elementwise into the same 3-way decoupled Softmax as the
 // base model.
 //
-// ASSUMED[no within-subject trial-order field given]: first_trial_in_block makes
-// subject boundaries explicit and checkable from the data itself (it flags each
-// subject's first trial), resolving the earlier lack of any way to verify where
-// one subject's trials end and the next begin. What remains assumed is the order
-// of trials WITHIN a subject's block: trials between two resets are assumed to be
-// in their experienced chronological order (as bradley_terry_beta_tau_per.R's
-// sim.block() produces them), since first_trial_in_block marks only where a
-// block starts, not the internal order of the trials inside it.
+// ASSUMED: trials between two first_trial_in_block resets are in their experienced
+// chronological order (as bradley_terry_beta_tau_per.R's sim.block() produces them) —
+// the flag marks only where a subject's block starts, not the internal trial order.
 
 data {
   int<lower=1> N_trials;     // Total number of trials
@@ -29,10 +24,7 @@ data {
   // Choice tracks 3 possible states (1 = A, 2 = B, 3 = None)
   array[N_trials] int<lower=1, upper=3> choice;
 
-  // NEW: Explicit block-start flag, 1 on the first trial belonging to each
-  // subject (in the order trials appear in the arrays), 0 otherwise. Lets the
-  // key_value running pass in transformed parameters reset per subject with a
-  // single flat loop instead of an implicit subject-grouping scan.
+  // 1 on each subject's first trial; resets key_value per subject below.
   array[N_trials] int<lower=0, upper=1> first_trial_in_block;
 }
 
@@ -43,71 +35,40 @@ parameters {
   // Group-level beta parameters
   real mu_log_beta;
   real<lower=0> sigma_log_beta;
-
-  // Subject-level betas, non-centered raw parameter: standard normal,
-  // scaled and shifted (then exponentiated) in transformed parameters to
-  // build beta.
-  vector[N_subjects] beta_raw;
+  vector[N_subjects] beta_raw;   // non-centered raw term -> beta
 
   // Group-level tau (Burden Threshold) parameters
   real mu_tau;
   real<lower=0> sigma_tau;
+  vector[N_subjects] tau_raw;    // non-centered raw term -> tau
 
-  // Subject-level taus, non-centered raw parameter: standard normal,
-  // scaled and shifted in transformed parameters to build tau.
-  vector[N_subjects] tau_raw;
-
-  // NEW: Group-level key_decay parameters, on the logit scale so the
-  // per-subject decay factor is constrained to (0, 1) and cannot flip sign.
-  // ASSUMED[no scale given]: logistic-transformed decay, normal hyperprior on
-  // the logit scale, matching how tau is handled unconstrained.
+  // Group-level key_decay parameters (logit scale, so decay stays in (0,1))
   real mu_logit_key_decay;
   real<lower=0> sigma_key_decay;
+  vector[N_subjects] key_decay_raw;   // non-centered raw term -> key_decay
 
-  // Subject-level key_decay, non-centered raw parameter: standard normal,
-  // scaled and shifted in transformed parameters to build logit_key_decay.
-  vector[N_subjects] key_decay_raw;
-
-  // NEW: Group-level rho parameters, unconstrained like tau
+  // Group-level rho parameters
   real mu_rho;
   real<lower=0> sigma_rho;
-
-  // Subject-level rho, non-centered raw parameter: standard normal,
-  // scaled and shifted in transformed parameters to build rho.
-  vector[N_subjects] rho_raw;
+  vector[N_subjects] rho_raw;    // non-centered raw term -> rho
 }
 
 transformed parameters {
   // Constrained utilities
   matrix[N_subjects, N_options] u_matrix;
 
-  // Non-centered reconstruction of the subject-level beta from the raw
-  // standard-normal beta_raw and the group-level location/scale, on the log
-  // scale so beta itself stays positive.
+  // Non-centered reconstructions (raw std-normal * scale + location)
   vector<lower=0>[N_subjects] beta = exp(mu_log_beta + sigma_log_beta * beta_raw);
-
-  // Non-centered reconstruction of the subject-level tau from the raw
-  // standard-normal tau_raw and the group-level location/scale.
   vector[N_subjects] tau = mu_tau + sigma_tau * tau_raw;
-
-  // Non-centered reconstruction of the subject-level rho from the raw
-  // standard-normal rho_raw and the group-level location/scale.
   vector[N_subjects] rho = mu_rho + sigma_rho * rho_raw;
-
-  // Non-centered reconstruction of the subject-level logit_key_decay from the
-  // raw standard-normal key_decay_raw and the group-level location/scale.
   vector[N_subjects] logit_key_decay = mu_logit_key_decay + sigma_key_decay * key_decay_raw;
-
-  // Subject-level decay factor, constrained to (0, 1)
   vector<lower=0, upper=1>[N_subjects] key_decay = inv_logit(logit_key_decay);
 
-  // NEW: Deterministic per-trial key_value contribution, one row per trial,
-  // one column per outcome slot (1 = A, 2 = B, 3 = None). Reconstructed by a
-  // single flat running pass over all trials, reset at each subject's
-  // first_trial_in_block flag instead of a per-subject nested scan.
+  // Per-trial perseveration contribution (1 = A, 2 = B, 3 = None), reconstructed
+  // via a single flat pass over all trials, reset at each subject's block start.
   matrix[N_trials, 3] key_contrib;
 
-  // Hard constraint: Force mean = 0 and variance = 1 for each subject
+  // Force mean = 0, sd = 1 per subject
   for (i in 1:N_subjects) {
     real mu_u = mean(to_vector(u_raw[i, ]));
     real sd_u = sd(to_vector(u_raw[i, ]));
@@ -115,9 +76,7 @@ transformed parameters {
     u_matrix[i, ] = (u_raw[i, ] - mu_u) / sd_u;
   }
 
-  // key_value is declared outside the loop so it carries forward across
-  // trials, and is reset to zero whenever first_trial_in_block flags a new
-  // subject's block start.
+  // Carries forward across trials; reset to zero at each subject's block start.
   vector[3] key_value;
 
   for (t in 1:N_trials) {
@@ -130,38 +89,26 @@ transformed parameters {
     key_contrib[t, 2] = key_value[2];
     key_contrib[t, 3] = key_value[3];
 
-    // Update only the chosen slot, carries into this subject's next trial
-    // Decay before this trial's choice is evaluated
+    // Decay before this trial's choice, then bump the chosen slot
     key_value = key_value * key_decay[subject_index[t]];
     key_value[choice[t]] += rho[subject_index[t]];
   }
 }
 
 model {
-  // Hierarchical priors for beta, non-centered: beta_raw carries the
-  // std_normal() prior, beta is built from it in transformed parameters as
-  // exp(mu_log_beta + sigma_log_beta * beta_raw).
+  // Hierarchical priors, all non-centered (raw ~ std_normal(), scaled/shifted above)
   mu_log_beta ~ normal(0, 2);
   sigma_log_beta ~ exponential(2);
   beta_raw ~ std_normal();
 
-  // Hierarchical priors for tau, non-centered: tau_raw carries the
-  // std_normal() prior, tau is built from it in transformed parameters as
-  // mu_tau + sigma_tau * tau_raw.
   mu_tau ~ normal(0, 2);
   sigma_tau ~ exponential(2);
   tau_raw ~ std_normal();
 
-  // NEW: Hierarchical priors for key_decay (logit scale), non-centered:
-  // key_decay_raw carries the std_normal() prior, logit_key_decay is built from
-  // it in transformed parameters as mu_logit_key_decay + sigma_key_decay * key_decay_raw.
   mu_logit_key_decay ~ normal(0, 2.5);
   sigma_key_decay ~ exponential(1);
   key_decay_raw ~ std_normal();
 
-  // NEW: Hierarchical priors for rho, non-centered: rho_raw carries the
-  // std_normal() prior, rho is built from it in transformed parameters as
-  // mu_rho + sigma_rho * rho_raw.
   mu_rho ~ normal(0, 2);
   sigma_rho ~ exponential(2);
   rho_raw ~ std_normal();
