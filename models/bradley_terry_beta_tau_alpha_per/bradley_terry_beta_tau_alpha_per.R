@@ -64,12 +64,6 @@ sim.block <- function(subject, u, beta, tau, alpha_per, rho, cfg){
 
     is_choice_A <- as.numeric(choice_num == 1)
 
-    # Update the key values for the NEXT trial: the chosen slot moves toward 1,
-    # each unchosen slot moves toward 0
-    key_target <- c(0, 0, 0)
-    key_target[choice_num] <- 1
-    key_value <- key_value + alpha_per * (key_target - key_value)
-
     df <- rbind(
       df,
       data.frame(
@@ -88,14 +82,15 @@ sim.block <- function(subject, u, beta, tau, alpha_per, rho, cfg){
         # Key values that affected THIS trial
         key_contrib_A = key_contrib[1],
         key_contrib_B = key_contrib[2],
-        key_contrib_None = key_contrib[3],
-
-        # Updated values carried into the NEXT trial
-        key_value_A = key_value[1],
-        key_value_B = key_value[2],
-        key_value_None = key_value[3]
+        key_contrib_None = key_contrib[3]
       )
     )
+
+    # Update the key values for the NEXT trial (after saving this trial's row):
+    # the chosen slot moves toward 1, each unchosen slot moves toward 0
+    key_target <- c(0, 0, 0)
+    key_target[choice_num] <- 1
+    key_value <- key_value + alpha_per * (key_target - key_value)
   }
 
   return(df)

@@ -95,8 +95,8 @@ transformed parameters {
 
     // After the choice: chosen slot moves toward 1, each unchosen slot toward 0
     for (k in 1:3) {
-      real target = (k == choice[t]) ? 1.0 : 0.0;
-      key_value[k] += alpha_per[subject_index[t]] * (target - key_value[k]);
+      real key_target = (k == choice[t]) ? 1.0 : 0.0;
+      key_value[k] += alpha_per[subject_index[t]] * (key_target - key_value[k]);
     }
   }
 }
