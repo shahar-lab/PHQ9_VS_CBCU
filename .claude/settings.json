@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"C:\\\\Program Files\\\\R\" -Directory -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName; Get-ChildItem \"$env:LOCALAPPDATA\\\\Programs\\\\R\" -Directory -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName)",
+      "Bash('/c/Program Files/R/R-4.4.3/bin/Rscript.exe' -e 'for \\(f in c\\(\"u\",\"beta\",\"tau\",\"key_decay\",\"rho\"\\)\\) {x<-readRDS\\(sprintf\\(\"artifacts/%s_recovery.rds\",f\\)\\); cat\\(f, sprintf\\(\"%.4f\", cor\\(x$true_value,x$recovered_value\\)\\),\"\\\\n\"\\)}')"
+    ]
+  }
+}
