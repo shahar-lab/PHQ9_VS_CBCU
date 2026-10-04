@@ -10,11 +10,15 @@ threshold (tau), and the per-outcome perseveration parameters (key_decay, rho) f
 3-way (A / B / None) choice data with trial-to-trial perseveration dynamics?
 
 ## 2. Design
-* N_subjects = 20, N_options = 15, N_trials per subject = 105 (2100 trials total).
+* N_subjects = 200, N_options = 15, N_trials per subject = 105 (21,000 trials total).
 * Ground-truth group-level hyperparameters fixed at specific values within each prior's
   plausible range (bradley_terry_beta_tau_per.stan, model block), rather than drawn from
   the priors: `mu_log_beta = 0.5`, `sigma_log_beta = 0.3`, `mu_tau = 0`, `sigma_tau = 1`,
-  `mu_logit_key_decay = 1`, `sigma_key_decay = 0.5`, `mu_rho = 1`, `sigma_rho = 0.5`.
+  `mu_logit_key_decay = 0`, `sigma_key_decay = 1.5`, `mu_rho = 0`, `sigma_rho = 1.5`
+  (`sigma_rho` doubled from 0.75 to 1.5 on 2026-10-01 to test recovery of larger between-subject
+  variability in rho).
+* Model priors (non-centered): means `normal(0, 2)` (`mu_logit_key_decay` `normal(0, 2.5)`),
+  sigmas `exponential(2)` (`sigma_key_decay` `exponential(1)`), raw terms `std_normal()`.
 * Per-subject true parameters drawn from those hyperparameters, matching the Stan model exactly:
   `beta ~ lognormal(mu_log_beta, sigma_log_beta)`, `tau ~ normal(mu_tau, sigma_tau)`,
   `key_decay = inv_logit(logit_key_decay)` with `logit_key_decay ~ normal(mu_logit_key_decay, sigma_key_decay)`,
@@ -26,10 +30,13 @@ threshold (tau), and the per-outcome perseveration parameters (key_decay, rho) f
   `code/simulated_data.R`); choice factor (A/B/None) recoded to integer 1/2/3 for Stan's
   `categorical_logit`. `first_trial_in_block` is set to 1 on each subject's first trial in the
   combined trial ordering so the Stan model's key_value running pass resets per subject.
-* Fit via cmdstanr: 4 chains, parallel_chains = 4, iter_warmup = 1000, iter_sampling = 1000.
+* Fit via cmdstanr: 4 chains, parallel_chains = 4, iter_warmup = 3000, iter_sampling = 2000.
 * Single simulate -> fit -> compare run (not repeated across multiple simulated datasets).
 
 ## 3. Findings / Summary
+(Findings for the current design above are pending the next run.)
+
+### Earlier run (superseded: N_subjects = 20, mu_logit_key_decay = 1, sigma_key_decay = 0.5, mu_rho = 1, sigma_rho = 0.5, 1000 warmup / 1000 sampling, centered parameterization)
 Recovery was good across individual- and group-level parameters. Posterior means correlated
 with true generating values as follows: u (utilities) r = .84 (n = 300 subject-option pairs),
 beta r = .80, tau r = .83, key_decay r = .71, rho r = .73 (all n = 20 subjects).
