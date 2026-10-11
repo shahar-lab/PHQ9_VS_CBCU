@@ -5,6 +5,8 @@ rm(list = ls())
 library(here)
 library(tidyverse)
 library(patchwork)
+library(grid)
+library(gridExtra)
 
 project_root  <- here::here()
 code_dir      <- file.path(project_root, "analysis", "rt_claude_exploration", "code")
@@ -45,3 +47,6 @@ source(file.path(code_dir, "05_metrics_table.R"))
 
 # 6. RT as a function of trial
 source(file.path(code_dir, "06_plot_rt_by_trial.R"))
+
+# 7. PDF report with the cleaning details, figure and tables
+source(file.path(code_dir, "07_write_report_pdf.R"))

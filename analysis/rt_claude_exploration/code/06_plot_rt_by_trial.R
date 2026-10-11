@@ -9,8 +9,10 @@ line_colour  <- "#EE6677"
 x_breaks     <- c(1, 36, 70, 105)
 y_breaks     <- seq(0, rt_axis_cap, length.out = 4)
 
+df_cap <- df |> group_by(agent) |> summarise(n_above_cap = sum(rt > rt_axis_cap), n_trials = n())
 cat("Trials above the RT axis cap (", rt_axis_cap, "ms ):\n")
-print(df |> group_by(agent) |> summarise(n_above_cap = sum(rt > rt_axis_cap), n_trials = n()))
+print(df_cap)
+saveRDS(df_cap, file.path(artifacts_dir, "df_rt_cap.rds"))
 
 df_claude <- filter(df, agent == "Claude")
 df_human  <- filter(df, agent == "Human")
@@ -54,6 +56,8 @@ p_final <- (p_claude | p_human) +
   plot_layout(guides = "collect") +
   plot_annotation(tag_levels = "A") &
   theme(plot.tag = element_text(face = "bold", size = 14), legend.position = "bottom")
+
+saveRDS(p_final, file.path(artifacts_dir, "p_rt_by_trial.rds"))
 
 plot_name <- "06_rt_by_trial"
 

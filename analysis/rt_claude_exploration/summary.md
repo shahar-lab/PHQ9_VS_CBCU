@@ -21,6 +21,7 @@
 
 ## 3. Outputs
 * `output/05_transitivity_consistency.csv`: one row per participant-session (Claude and humans).
+* `output/07_report.pdf`: three-page report with the cleaning details (row types kept and dropped, checks passed, RT cap counts), the RT figure, and the transitivity and consistency table with the human range next to Claude.
 * `output/06_rt_by_trial.{pdf,png}`: A: Claude, RT against trial with a LOESS line and band; B: humans, one thin LOESS line per session and a pooled line. Skipped trials are hollow points. Participants are labelled H01-H10, no Prolific IDs.
 
 ## 4. Findings / Summary

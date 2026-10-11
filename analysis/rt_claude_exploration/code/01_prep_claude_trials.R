@@ -8,6 +8,13 @@ df_raw <- read_csv(claude_file, col_types = cols(.default = col_character()))
 cat("Raw rows:", nrow(df_raw), "\n")
 print(table(df_raw$trial_type, df_raw$phase, useNA = "ifany"))
 
+df_row_types <- df_raw |>
+  count(trial_type, phase) |>
+  mutate(
+    phase = replace_na(phase, "(none)"),
+    kept  = trial_type == "html-button-response" & phase == "pairwise"
+  )
+
 # Keep only the choice rows; ITI, instruction, quiz, break, PHQ-9, text and system rows are dropped
 df <- df_raw |>
   filter(trial_type == "html-button-response", phase == "pairwise") |>
@@ -54,3 +61,7 @@ df_claude <- df |>
   select(agent, unit, trial, left_item, right_item, choice, chosen_item, rt, skipped)
 
 saveRDS(df_claude, file.path(artifacts_dir, "df_claude_trials.rds"))
+saveRDS(
+  list(n_raw = nrow(df_raw), n_kept = nrow(df_claude), row_types = df_row_types),
+  file.path(artifacts_dir, "cleaning_summary.rds")
+)
