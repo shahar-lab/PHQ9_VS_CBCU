@@ -44,12 +44,12 @@ plot_rt_dots <- function(df_panel, panel_name) {
 
   ggplot(df_circles, aes(x = x, y = y, group = dot)) +
     geom_polygon(fill = "gray50", colour = "gray30", linewidth = 0.2) +
-    scale_x_continuous(breaks = rt_breaks) +
+    scale_x_continuous(breaks = rt_breaks, labels = \(x) paste0(x / 1000, "k")) +
     scale_y_continuous(name = "Count", breaks = count_ticks) +
     coord_fixed(ratio = bin_width, xlim = c(0, rt_axis_cap), ylim = c(0, max_stack_units / bin_width), expand = FALSE) +
     theme_minimal(base_size = 9) +
     theme(panel.grid.minor = element_blank()) +
-    labs(x = sprintf("RT (ms)\nbin %d ms, %d hidden", bin_width, n_hidden),
+    labs(x = sprintf("RT (ms, k = 1000)\nbin %d ms, %d hidden", bin_width, n_hidden),
          subtitle = panel_name)
 }
 
@@ -57,7 +57,7 @@ claude_panels <- sort(unique(filter(df, agent == "Claude")$panel))
 panel_names   <- c(claude_panels, sort(setdiff(unique(df$panel), claude_panels)))
 plots <- map(panel_names, \(panel_name) plot_rt_dots(filter(df, panel == panel_name), panel_name))
 
-p_final <- wrap_plots(plots, ncol = 3) +
+p_final <- wrap_plots(plots, ncol = ceiling(sqrt(length(plots)))) +
   plot_annotation(tag_levels = "A") &
   theme(plot.tag = element_text(face = "bold", size = 14))
 

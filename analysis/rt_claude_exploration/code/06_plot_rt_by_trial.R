@@ -57,7 +57,8 @@ p_human <- ggplot(df_human, aes(x = trial, y = rt)) +
   panel_theme +
   labs(x = "Trial (presentation order)", y = "RT (ms)", subtitle = "Humans (thin: sessions)")
 
-p_final <- wrap_plots(c(claude_panels, list(p_human)), nrow = 1) +
+all_panels <- c(claude_panels, list(p_human))
+p_final <- wrap_plots(all_panels, ncol = ceiling(sqrt(length(all_panels)))) +
   plot_layout(guides = "collect") +
   plot_annotation(tag_levels = "A") &
   theme(plot.tag = element_text(face = "bold", size = 14), legend.position = "bottom")

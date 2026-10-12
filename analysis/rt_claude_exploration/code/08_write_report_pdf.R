@@ -76,13 +76,17 @@ grid.arrange(
 
 # Page 2: RT by trial
 print(p_rt_by_trial)
-grid.text(paste("A, B: Claude runs 1 and 2, RT (ms) against presentation order, LOESS line with band; hollow points are skipped trials.",
-                "C: human sessions, one thin LOESS line per session, pooled line in rose.", sep = "\n"),
+n_claude <- nrow(cleaning)
+grid.text(paste(sprintf("%s: Claude runs, RT (ms) against presentation order, LOESS line with band; hollow points are skipped trials.",
+                        paste0("A-", LETTERS[n_claude])),
+                sprintf("%s: human sessions, one thin LOESS line per session, pooled line in rose.", LETTERS[n_claude + 1]),
+                sep = "\n"),
           x = 0.05, y = 0.12, hjust = 0, just = "top", gp = gpar(fontsize = 9))
 
 # Page 3: RT distributions
 print(p_rt_distribution)
-grid.text(paste("A, B: Claude runs 1 and 2. C-L: each human participant (both sessions pooled). Dot histograms of RT (ms),",
+grid.text(paste(sprintf("A-%s: Claude runs. %s-%s: each human participant (both sessions pooled). Dot histograms of RT (ms),",
+                        LETTERS[n_claude], LETTERS[n_claude + 1], LETTERS[n_claude + 10]),
                 "same x-axis in every panel, cut at 15,000 ms; 'hidden' = trials above the cap (not removed).",
                 sep = "\n"),
           x = 0.05, y = 0.08, hjust = 0, just = "top", gp = gpar(fontsize = 9))

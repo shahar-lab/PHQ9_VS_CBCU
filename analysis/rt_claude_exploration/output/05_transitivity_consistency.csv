@@ -1,6 +1,7 @@
 unit,agent,n_decided,skip_rate,n_decided_triples,n_cyclic,cycle_rate,min_contradictions
 Claude_run1,Claude,98,0.067,375,0,0,0
 Claude_run2,Claude,102,0.029,418,0,0,0
+Claude_run3,Claude,95,0.095,345,0,0,0
 H01_time1,Human,99,0.057,385,1,0.003,1
 H01_time2,Human,99,0.057,385,0,0,0
 H02_time1,Human,104,0.01,442,10,0.023,4
