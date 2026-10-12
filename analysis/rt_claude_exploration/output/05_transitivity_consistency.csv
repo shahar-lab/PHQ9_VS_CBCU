@@ -1,5 +1,6 @@
 unit,agent,n_decided,skip_rate,n_decided_triples,n_cyclic,cycle_rate,kendall_zeta,min_contradictions,contradiction_share
-Claude,Claude,98,0.067,375,0,0,1,0,0
+Claude_run1,Claude,98,0.067,375,0,0,1,0,0
+Claude_run2,Claude,102,0.029,418,0,0,1,0,0
 H01_time1,Human,99,0.057,385,1,0.003,0.992,1,0.01
 H01_time2,Human,99,0.057,385,0,0,1,0,0
 H02_time1,Human,104,0.01,442,10,0.023,0.926,4,0.038

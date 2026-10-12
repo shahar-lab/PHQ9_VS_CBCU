@@ -10,8 +10,8 @@
 * The Bradley-Terry model is not fitted: with one session of 105 pairs over 15 items, beta and the utilities are poorly identified without the group level.
 
 ## 2. Variables
-* **Data (exception, approved by the researcher):** Claude's raw session CSV `PHQ9_pairwise_*.csv` is read directly from this folder, bypassing preprocessing. The human reference is `data/processed/cbcu.csv` (10 participants x 2 sessions x 105 trials, already cleaned by preprocessing).
-* **Cleaning of Claude's file:** only the 105 choice rows are kept (`trial_type == "html-button-response"`, `phase == "pairwise"`). Dropped: 105 ITI rows, instruction, quiz, break, PHQ-9, free-text, feedback, fullscreen and session-start rows. Checks that stop the script if they fail: exactly 105 rows, trial order 1-105 without duplicates, no repeated pair, no missing RT, `window_status` "ok" on every row, choice values valid, skip matches `skipped`, chosen item matches the chosen side.
+* **Data (exception, approved by the researcher):** Claude's raw session CSVs `PHQ9_pairwise_*.csv` are read directly from this folder, bypassing preprocessing. Each file is one Claude run (run 1 = 2026-10-09, run 2 = 2026-10-12, ordered by file name); a new CSV added to the folder becomes the next run when `main.R` is rerun. The human reference is `data/processed/cbcu.csv` (10 participants x 2 sessions x 105 trials, already cleaned by preprocessing).
+* **Cleaning of each Claude file:** only the 105 choice rows are kept (`trial_type == "html-button-response"`, `phase == "pairwise"`). Dropped: 105 ITI rows, instruction, quiz, break, PHQ-9, free-text, feedback, fullscreen and session-start rows. Checks that stop the script if they fail: exactly 105 rows, trial order 1-105 without duplicates, no repeated pair, no missing RT, `window_status` "ok" on every row, choice values valid, skip matches `skipped`, chosen item matches the chosen side.
 * **RT:** `rt_from_stim_ms` (Claude) and `rt` (humans), in ms. No RT outliers removed; the plot axis is capped at 15,000 ms and the trials above it are counted and printed (Claude 0, humans 87).
 * **Items:** the 15 PHQ-9 sub-item labels (`1`, `2a`, ..., `9b`) in both datasets.
 * **Skip trials:** kept in the RT plot (hollow points), ignored for transitivity and consistency; the skip rate is reported.
@@ -21,7 +21,8 @@
 
 ## 3. Outputs
 * `output/05_transitivity_consistency.csv`: one row per participant-session (Claude and humans).
-* `output/07_report.pdf`: three-page report with the cleaning details (row types kept and dropped, checks passed, RT cap counts), the RT figure, and the transitivity and consistency table with the human range next to Claude.
+* `output/07_rt_distribution.{pdf,png}`: dot histograms of RT, one panel per Claude run (A, B) and one per human participant (C-L, both sessions pooled), same x-axis (0-15,000 ms, trials above the cap hidden and counted under each panel). ASSUMED: dots are drawn as exact circles with a true count axis instead of `geom_dots()`, because the installed ggdist (3.3.3) does not return bin ids from `ggplot_build()`, so the lab's count-axis recipe cannot be applied. The bin width (ms) is chosen per panel as the largest from 1000 to 100 ms whose tallest stack fits a square panel, and is printed under each panel.
+* `output/08_report.pdf`: four-page report with the cleaning details (row types kept and dropped, checks passed, RT cap counts), the RT-by-trial figure, the RT distributions, and the transitivity and consistency table with the human range next to Claude.
 * `output/06_rt_by_trial.{pdf,png}`: A: Claude, RT against trial with a LOESS line and band; B: humans, one thin LOESS line per session and a pooled line. Skipped trials are hollow points. Participants are labelled H01-H10, no Prolific IDs.
 
 ## 4. Findings / Summary

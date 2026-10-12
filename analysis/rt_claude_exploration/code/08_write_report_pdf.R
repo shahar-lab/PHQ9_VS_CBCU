@@ -1,14 +1,19 @@
 #### WRITE REPORT PDF ####
 # reads: artifacts/cleaning_summary.rds, df_rt_cap.rds, df_metrics.rds, p_rt_by_trial.rds
-# writes: output/07_report.pdf
+# writes: output/08_report.pdf
 
 cleaning <- readRDS(file.path(artifacts_dir, "cleaning_summary.rds"))
 df_cap   <- readRDS(file.path(artifacts_dir, "df_rt_cap.rds"))
 df_metrics  <- readRDS(file.path(artifacts_dir, "df_metrics.rds"))
 p_rt_by_trial <- readRDS(file.path(artifacts_dir, "p_rt_by_trial.rds"))
+p_rt_distribution <- readRDS(file.path(artifacts_dir, "p_rt_distribution.rds"))
 
-df_row_types <- cleaning$row_types |>
+# The row types are the same in every run, so the table shows run 1; counts per run go in the text
+df_row_types <- cleaning$row_types[[1]] |>
   transmute(trial_type, phase, rows = n, kept = if_else(kept, "KEPT", "dropped"))
+
+run_lines <- sprintf("  Claude run %d (%s): %d raw rows, %d choice rows kept",
+                     cleaning$run, cleaning$file, cleaning$n_raw, cleaning$n_kept)
 
 df_human_range <- df_metrics |>
   filter(agent == "Human") |>
@@ -23,8 +28,9 @@ df_human_range <- df_metrics |>
 
 df_claude_row <- df_metrics |>
   filter(agent == "Claude") |>
-  select(skip_rate, cycle_rate, kendall_zeta, contradiction_share) |>
-  pivot_longer(everything(), names_to = "measure", values_to = "claude")
+  select(unit, skip_rate, cycle_rate, kendall_zeta, contradiction_share) |>
+  pivot_longer(-unit, names_to = "measure") |>
+  pivot_wider(names_from = unit, values_from = value)
 df_human_range <- left_join(df_human_range, df_claude_row, by = "measure")
 
 df_table <- df_metrics |>
@@ -42,18 +48,19 @@ cap_text <- df_cap |>
   mutate(label = sprintf("%s: %d of %d trials above %d ms", agent, n_above_cap, n_trials, rt_axis_cap)) |>
   pull(label)
 
-pdf(file.path(output_dir, "07_report.pdf"), width = 8.5, height = 11)
+pdf(file.path(output_dir, "08_report.pdf"), width = 8.5, height = 11)
 
 # Page 1: data and cleaning
 grid.arrange(
-  textGrob("Claude's session: RT by trial, transitivity and consistency",
+  textGrob("Claude's sessions: RT by trial, transitivity and consistency",
            gp = gpar(fontsize = 15, fontface = "bold")),
   text_block(c(
-    "Data. Claude's raw session CSV (read directly, bypassing preprocessing) and the human",
+    "Data. Claude's raw session CSVs (read directly, bypassing preprocessing) and the human",
     "pilot reference from data/processed/cbcu.csv (10 participants x 2 sessions x 105 trials).",
     "",
-    sprintf("Claude's file: %d raw rows, %d choice rows kept. Only rows with trial_type", cleaning$n_raw, cleaning$n_kept),
-    "html-button-response and phase pairwise are kept; all other rows are dropped:")),
+    run_lines,
+    "Only rows with trial_type html-button-response and phase pairwise are kept; all other",
+    "rows are dropped (row types of run 1 shown; run 2 has the same structure):")),
   small_table(df_row_types),
   text_block(c(
     "Checks that passed (the script stops if any fails): exactly 105 choice rows; trial order",
@@ -69,11 +76,18 @@ grid.arrange(
 
 # Page 2: RT by trial
 print(p_rt_by_trial)
-grid.text(paste("A: Claude, RT (ms) against presentation order, LOESS line with band; hollow points are skipped trials.",
-                "B: human sessions, one thin LOESS line per session, pooled line in rose.", sep = "\n"),
+grid.text(paste("A, B: Claude runs 1 and 2, RT (ms) against presentation order, LOESS line with band; hollow points are skipped trials.",
+                "C: human sessions, one thin LOESS line per session, pooled line in rose.", sep = "\n"),
           x = 0.05, y = 0.12, hjust = 0, just = "top", gp = gpar(fontsize = 9))
 
-# Page 3: metrics
+# Page 3: RT distributions
+print(p_rt_distribution)
+grid.text(paste("A, B: Claude runs 1 and 2. C-L: each human participant (both sessions pooled). Dot histograms of RT (ms),",
+                "same x-axis in every panel, cut at 15,000 ms; 'hidden' = trials above the cap (not removed).",
+                sep = "\n"),
+          x = 0.05, y = 0.08, hjust = 0, just = "top", gp = gpar(fontsize = 9))
+
+# Page 4: metrics
 grid.arrange(
   textGrob("Transitivity and consistency", gp = gpar(fontsize = 15, fontface = "bold")),
   text_block(c(

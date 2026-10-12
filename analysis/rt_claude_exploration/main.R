@@ -48,5 +48,8 @@ source(file.path(code_dir, "05_metrics_table.R"))
 # 6. RT as a function of trial
 source(file.path(code_dir, "06_plot_rt_by_trial.R"))
 
-# 7. PDF report with the cleaning details, figure and tables
-source(file.path(code_dir, "07_write_report_pdf.R"))
+# 7. RT distributions: Claude and each human participant (dot histograms)
+source(file.path(code_dir, "07_plot_rt_distribution.R"))
+
+# 8. PDF report with the cleaning details, figures and tables
+source(file.path(code_dir, "08_write_report_pdf.R"))
