@@ -15,9 +15,16 @@
 * **RT:** `rt_from_stim_ms` (Claude) and `rt` (humans), in ms. No RT outliers removed; the plot axis is capped at 15,000 ms and the trials above it are counted and printed (Claude 0, humans 87).
 * **Items:** the 15 PHQ-9 sub-item labels (`1`, `2a`, ..., `9b`) in both datasets.
 * **Skip trials:** kept in the RT plot (hollow points), ignored for transitivity and consistency; the skip rate is reported.
-* **Transitivity:** a cycle is three items with A over B, B over C and C over A. Per participant-session: number of triples with all three pairs decided, number of cyclic triples, cycle rate, and Kendall's coefficient of consistence `1 - cycle_rate / max_cycle_rate` (max rate for 15 items = 140 / 455). ASSUMED: the coefficient is applied to decided triples when skips leave the tournament incomplete.
-* **Consistency (model-free noise):** the minimum number of choices that contradict any single ranking of the 15 items (exact, by dynamic programming over subsets), divided by the number of decided trials. Which optimal ranking is picked does not change this share, so no tie-break is needed.
-* **Reference:** every statistic is also computed for the 20 human participant-sessions. A participant who skipped (almost) every trial has too few decided triples for stable rates (e.g. one participant skipped all trials and gets NaN).
+* **Columns of the table `output/05_transitivity_consistency.csv`** (one row per participant-session; skip trials are ignored for transitivity and consistency):
+  * `unit`: one participant in one session. `Claude_run1`, `Claude_run2` are Claude's two sessions; `H01_time1` is human participant 1 in session 1.
+  * `agent`: "Claude" or "Human".
+  * `n_decided`: trials, out of 105, where an item was actually chosen (left or right, not skip).
+  * `skip_rate`: share of the 105 trials answered with "neither bothered me" (skip).
+  * `n_decided_triples`: a triple is a group of three items (A, B, C). With 15 items there are 455 (15 x 14 x 13 = 2,730 ordered ways, divided by 6 because the order does not matter). A triple can only be checked if all three of its pairs (A vs B, B vs C, A vs C) were decided; this is how many could be checked.
+  * `n_cyclic`: how many of those triples are circular: A chosen over B, B over C, but C over A. No single order of the three items explains these choices, so each one is a violation of transitivity.
+  * `cycle_rate`: `n_cyclic / n_decided_triples`, the share of the checkable triples that are circular. 0 = perfectly consistent (transitive); higher = more contradictions. Example: H06 in session 2 skipped nothing, 62 of 455 triples were circular, so 62 / 455 = 0.136. A random chooser is around 0.25. Skipped pairs shrink the denominator, so a participant with many skips is judged on few triples (e.g. about 12 for H03) and the value is less reliable.
+  * `min_contradictions`: the fewest choices that go against the best single ranking of the 15 items (found exactly, by dynamic programming over subsets). 0 means one ranking explains every choice; a higher number means noisier choices (the model-free counterpart of beta). Example: H06 in session 2 has 13. NA when the participant made no decided choice.
+* **Reference:** every statistic is also computed for the 20 human participant-sessions. `cycle_rate` and `min_contradictions` are NA for H08, who skipped every trial.
 
 ## 3. Outputs
 * `output/05_transitivity_consistency.csv`: one row per participant-session (Claude and humans).

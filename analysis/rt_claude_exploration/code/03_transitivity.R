@@ -9,9 +9,6 @@ triple_a      <- triples[, 1]
 triple_b      <- triples[, 2]
 triple_c      <- triples[, 3]
 
-# Largest possible cyclic share of triples in a complete tournament of n_items (n odd)
-max_cycle_rate <- ((n_items^3 - n_items) / 24) / choose(n_items, 3)
-
 units          <- unique(df_trials$unit)
 wins_by_unit   <- vector("list", length(units)) |> setNames(units)
 df_transitivity <- tibble()
@@ -47,8 +44,7 @@ for (unit_name in units) {
     skip_rate         = mean(df_unit$choice == "skip"),
     n_decided_triples = n_decided_triples,
     n_cyclic          = n_cyclic,
-    cycle_rate        = cycle_rate,
-    kendall_zeta      = 1 - cycle_rate / max_cycle_rate
+    cycle_rate        = cycle_rate
   ))
 }
 

@@ -33,8 +33,4 @@ for (unit_name in names(wins_by_unit)) {
   ))
 }
 
-df_consistency <- df_consistency |>
-  left_join(select(df_transitivity, unit, n_decided), by = "unit") |>
-  mutate(contradiction_share = min_contradictions / n_decided)
-
 saveRDS(df_consistency, file.path(artifacts_dir, "df_consistency.rds"))
