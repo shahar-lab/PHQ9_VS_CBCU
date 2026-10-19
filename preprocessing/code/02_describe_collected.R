@@ -1,10 +1,12 @@
 #### DESCRIBE: ROWS AND HOUSEKEEPING ####
 
 row_summary_collected <- tibble::tibble(
-  metric = c("Participants", "Sessions (time1)", "Sessions (time2)"),
+  metric = c("Participants", "Sessions (time1)", "Sessions (time2)", "Both sessions"),
   value  = c(dplyr::n_distinct(collected$prolific_id),
              dplyr::n_distinct(collected$prolific_id[collected$time == "time1"]),
-             dplyr::n_distinct(collected$prolific_id[collected$time == "time2"]))
+             dplyr::n_distinct(collected$prolific_id[collected$time == "time2"]),
+             dplyr::n_distinct(intersect(collected$prolific_id[collected$time == "time1"],
+                                         collected$prolific_id[collected$time == "time2"])))
 )
 
 #### DESCRIBE: FORMAT SECONDS AS min:sec (shared by the PHQ9 and CBCU tables) ####
@@ -214,7 +216,7 @@ h1 { border-bottom: 2px solid #333; padding-bottom: 0.3rem; }
 h2 { margin-top: 2rem; color: #333; }
 table { border-collapse: collapse; margin: 0.5rem 0 1.5rem; font-size: 0.9rem; }
 th, td { border: 1px solid #ddd; padding: 4px 10px; text-align: left; white-space: nowrap; }
-thead th, tr:has(> th) { background: #333; color: #fff; }
+th { background: #333; color: #fff; }
 tbody tr:nth-child(even) { background: #f6f6f6; }
 tbody tr:hover { background: #eef4fb; }
 "
