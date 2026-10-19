@@ -80,7 +80,11 @@ source(file.path(code_dir, "11_exclude_participants_window.R"))
 # exploratory only -- no RT-based cutoff is applied.
 source(file.path(code_dir, "12_exclude_trials_rt.R"))
 
-# Write surviving CBCU trials and PHQ rows to data/processed/.
+# Write demographics of the surviving participants to data/processed/. Not an exclusion
+# criterion; raw demographics keep everyone.
+source(file.path(code_dir, "13_write_processed_demographics.R"))
+
+# Write surviving CBCU trials, PHQ rows and feedback to data/processed/.
 source(file.path(code_dir, "14_write_processed_data.R"))
 
 # Write manuscript Participants and Data treatment excerpts from the exclusion

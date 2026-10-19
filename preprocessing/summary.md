@@ -10,7 +10,7 @@
 3. Split the long log into tidy raw tables (CBCU, quiz, PHQ9, feedback) and build demographics from the Qualtrics exports (always excluded: preview rows, blank or "test" ids, ids in `test_prolific_ids`; first submission kept per id; the exports are then joined by `prolific_id` in a temporary block to remove once demographics arrive in one file). Write a data-type-validation HTML per table. Raw tables keep every observation.
 4. CBCU `time_elapsed` is overwritten in raw: per session (`prolific_id` × `time`), time zero is the onset of the first pairwise trial (`jsPsych time_elapsed − rt`). Each row is that trial’s own onset minus time zero, stored as `hms`. Trial 1 is `00:00:00`. Block is assigned on the native jsPsych clock before this overwrite.
 5. Processed exclusions, one criterion per sourced script; `output/processed/exclusion.md` lists each step with how many started, were excluded, and remain.
-6. Write surviving CBCU and PHQ rows to `data/processed/cbcu.csv` and `data/processed/phq.csv`.
+6. Write surviving CBCU, PHQ and feedback rows to `data/processed/cbcu.csv`, `phq.csv` and `feedback.csv`, and the demographics of the surviving participants to `data/processed/demographics.csv` (a filter, not an exclusion criterion; raw demographics keep everyone).
 7. Manuscript excerpts: `output/processed/15_participants_excerpt.md` and `output/processed/15_data_treatment_excerpt.md`.
 
 ## Reports

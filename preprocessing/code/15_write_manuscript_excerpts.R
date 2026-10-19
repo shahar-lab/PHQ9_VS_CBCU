@@ -1,5 +1,5 @@
 # reads: artifacts/10_after_both_sessions.rds, artifacts/11_after_window_exits.rds,
-#        artifacts/12_after_rt_bounds.rds, data/raw/demographics.csv
+#        artifacts/12_after_rt_bounds.rds, data/processed/demographics.csv
 # writes: output/processed/15_participants_excerpt.md,
 #         output/processed/15_data_treatment_excerpt.md
 
@@ -11,7 +11,7 @@ if (!exists("max_window_left_ms")) max_window_left_ms <- 30000
 step10 <- readRDS(file.path(artifacts_dir, "10_after_both_sessions.rds"))
 step11 <- readRDS(file.path(artifacts_dir, "11_after_window_exits.rds"))
 step12 <- readRDS(file.path(artifacts_dir, "12_after_rt_bounds.rds"))
-demographics <- read_csv(file.path(raw_dir, "demographics.csv"), show_col_types = FALSE)
+demographics <- read_csv(file.path(processed_dir, "demographics.csv"), show_col_types = FALSE)
 
 n_recruited    <- length(step10$all_pids)
 n_missing      <- n_recruited - length(step10$after_both_sessions_pids)
