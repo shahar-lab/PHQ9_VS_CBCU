@@ -39,7 +39,7 @@ phq9_results_dictionary <- tibble::tribble(
   ~column,               ~class,      ~meaning,
   "prolific_id",         "factor",    "Prolific participant ID (stable across sessions; the participant identity key). Levels = Prolific IDs present in the data, no fixed reference.",
   "completion_time",     "hms",       "time from PHQ9 grid presentation to submit, as hms. One row per session (the whole matrix); no item-wise RT. Equal to jsPsych rt / time_to_submit_ms, which start at stimulus onset.",
-  "time",                "factor",    "time1 = first_wave, time2 = second_wave. Levels: time1 (reference), time2.",
+  "time",                "factor",    "time1 = session 1, time2 = session 2. Levels: time1 (reference), time2.",
   "phq9_1...phq9_9",     "numeric", "PHQ9 item scores, items 1-9",
   "phq9_1_label...phq9_9_label", "ordered factor", "PHQ9 item response labels, items 1-9. Levels: Not at all (reference) < Several days < More than half the days < Nearly every day.",
   "attn_check_score",    "numeric",   "attention check item score",

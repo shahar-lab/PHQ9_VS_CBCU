@@ -68,7 +68,7 @@ readr::write_csv(cbcu_results, file.path(raw_dir, "cbcu_results.csv"), na = "NA"
 cbcu_results_dictionary <- tibble::tribble(
   ~column,              ~class,      ~meaning,
   "prolific_id",        "factor",    "Prolific participant ID (the participant identity key). Levels = Prolific IDs present in the data, no fixed reference.",
-  "time",               "factor",    "time1 = first_wave, time2 = second_wave. Levels: time1 (reference), time2.",
+  "time",               "factor",    "time1 = session 1, time2 = session 2. Levels: time1 (reference), time2.",
   "block",              "numeric",   "block 1-4 within the session, counted from how many of the 3 phase2_break pauses occurred before this trial",
   "trial",              "numeric",   "trial number within the pairwise phase",
   "item_number_left",   "numeric",   "left-side item's CBCU number 1-15, one per distinct PHQ9 sub-item (order: 1, 2a, 2b, 3a, 3b, 4, 5a, 5b, 6a, 6b, 7, 8a, 8b, 9a, 9b; see item_phq9_left/item_text_left at the end of the file for its PHQ9 code and text)",

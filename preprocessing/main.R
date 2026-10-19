@@ -50,6 +50,11 @@ source(file.path(code_dir, "02_describe_collected.R"))
 
 #### RAW DATA ####
 
+# Lab test accounts that completed the Qualtrics surveys. Rows with these Prolific ids are
+# always excluded from the demographics (preview rows and rows whose id is blank or
+# "test" are always excluded too).
+test_prolific_ids <- c("66549346ec4d58a06e597b1a")
+
 # 3. Build raw data: split the long-format collected log into tidy CSVs, apply
 # type coercion, write each to data/raw/, and write each a numbered
 # NN_data-type-validation-<name>-raw.html under output/raw/.

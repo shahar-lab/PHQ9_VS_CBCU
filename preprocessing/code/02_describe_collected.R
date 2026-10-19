@@ -197,17 +197,13 @@ cbcu_table_html <- c(
   "</table>"
 )
 
-#### DESCRIBE: DEMOGRAPHICS (Prolific export) ####
+#### DESCRIBE: DEMOGRAPHICS (Qualtrics exports) ####
 
-# One row per participant, no session split (Prolific demographics are collected once).
-# ASSUMED[not explicitly listed]: `demographics_collected` (the raw Prolific export, read in
-# 01_read_collected.R) still carries `Participant id`; renamed locally here to match the
-# prolific_id naming used everywhere else in this report.
-demographics_table <- demographics_collected |>
-  dplyr::rename(prolific_id = `Participant id`) |>
-  dplyr::select(prolific_id, Age, Sex, `Ethnicity simplified`,
-                `Country of residence`, `Student status`, `Employment status`) |>
-  dplyr::arrange(prolific_id)
+# One row per export file: how many response rows (previews and tests included) arrived.
+demographics_table <- tibble::tibble(
+  file = names(demographics_collected),
+  rows = purrr::map_int(demographics_collected, nrow)
+)
 
 #### WRITE COLLECTED-DATA STRUCTURE REPORT (html) ####
 
@@ -231,7 +227,7 @@ collected_report_html <- c(
   "<h2>Overview</h2>", overview_table_html,
   "<h2>PHQ9</h2>", phq9_table_html,
   "<h2>CBCU</h2>", cbcu_table_html,
-  "<h2>Demographics per participant</h2>", knitr::kable(demographics_table, format = "html"),
+  "<h2>Demographics exports</h2>", knitr::kable(demographics_table, format = "html"),
   "</body></html>"
 )
 writeLines(collected_report_html, file.path(output_collected_dir, "02_summary-collected-data.html"))

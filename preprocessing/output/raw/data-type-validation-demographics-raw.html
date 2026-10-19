@@ -19,169 +19,1219 @@ tbody tr:hover { background: #eef4fb; }
 .meta-row { background: #e2e6ea !important; font-style: italic; }
 </style></head><body>
 <h1>Data type validation: demographics</h1>
-<h2>Data (11 rows)</h2>
+<h2>Data (66 rows)</h2>
 <div class="scroll-x">
 <table>
  <thead>
   <tr>
    <th style="text-align:left;"> prolific_id </th>
-   <th style="text-align:right;"> Total approvals </th>
-   <th style="text-align:right;"> Age </th>
-   <th style="text-align:left;"> Sex </th>
-   <th style="text-align:left;"> Ethnicity simplified </th>
-   <th style="text-align:left;"> Country of birth </th>
-   <th style="text-align:left;"> Country of residence </th>
-   <th style="text-align:left;"> Nationality </th>
-   <th style="text-align:left;"> Student status </th>
-   <th style="text-align:left;"> Employment status </th>
-   <th style="text-align:left;"> Authenticity check: Bots </th>
+   <th style="text-align:left;"> ai_check </th>
+   <th style="text-align:left;"> gender </th>
+   <th style="text-align:left;"> sex </th>
+   <th style="text-align:right;"> age </th>
+   <th style="text-align:left;"> country_of_birth </th>
+   <th style="text-align:left;"> country_of_residence </th>
+   <th style="text-align:left;"> marital_status </th>
+   <th style="text-align:left;"> ethnicity </th>
+   <th style="text-align:left;"> student </th>
+   <th style="text-align:left;"> education </th>
+   <th style="text-align:left;"> employment_status </th>
+   <th style="text-align:left;"> hand </th>
+   <th style="text-align:left;"> depression_diagnosis </th>
+   <th style="text-align:left;"> medication </th>
+   <th style="text-align:right;"> ladder_rung </th>
   </tr>
- <tr class="meta-row"><td>factor</td><td>numeric</td><td>numeric</td><td>factor</td><td>factor</td><td>factor</td><td>factor</td><td>factor</td><td>factor</td><td>factor</td><td>character</td></tr>
-<tr class="meta-row"><td>11 distinct values</td><td>[132 to 3657]</td><td>[22 to 58]</td><td>Female, Male</td><td>Black, White</td><td>Nigeria, United Kingdom, United States</td><td>Canada, South Africa, United Kingdom, United States</td><td>Canada, South Africa, United Kingdom, United States</td><td>No, Yes</td><td>Full-Time, Not in paid work (e.g. homemaker', 'retired or disabled), Other, Part-Time, Unemployed (and job seeking)</td><td>N/A</td></tr>
+ <tr class="meta-row"><td>factor</td><td>character</td><td>factor</td><td>factor</td><td>integer</td><td>factor</td><td>factor</td><td>factor</td><td>factor</td><td>factor</td><td>factor</td><td>factor</td><td>factor</td><td>factor</td><td>factor</td><td>integer</td></tr>
+<tr class="meta-row"><td>66 distinct values</td><td></td><td>Man, Non-binary / third gender, Prefer not to say, Woman</td><td>Female, Male</td><td>[20 to 80]</td><td>11 distinct values</td><td>10 distinct values</td><td>Divorced, Married, Separated, single, never married, Widowed</td><td>American Indian or Alaska Native, Asian, Black or African American, Multiracial / Mixed, other, White</td><td>No, Yes</td><td>Associate degree, Bachelor's degree, Doctoral degree, High school graduate, Master's degree, Some college but no degree</td><td>Disabled, Employed full time, Employed part time, Retired, Unemployed looking for work</td><td>Ambidextrous, Left, Right</td><td>No, Prefer not to say, Yes</td><td>No, never, Prefer not to answer, Yes, currently, Yes, in the past (but not currently)</td><td>[1 to 8]</td></tr>
 </thead>
 <tbody>
   <tr>
-   <td style="text-align:left;"> 6a26623dba3ca97e10bd6e4a </td>
-   <td style="text-align:right;"> 1955 </td>
-   <td style="text-align:right;"> 41 </td>
-   <td style="text-align:left;"> Male </td>
-   <td style="text-align:left;"> White </td>
-   <td style="text-align:left;"> United States </td>
-   <td style="text-align:left;"> United States </td>
-   <td style="text-align:left;"> United States </td>
-   <td style="text-align:left;"> No </td>
-   <td style="text-align:left;"> Full-Time </td>
-   <td style="text-align:left;"> N/A </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> 6a0b57dda1f2bbc0f2c1398b </td>
-   <td style="text-align:right;"> 2406 </td>
-   <td style="text-align:right;"> 28 </td>
-   <td style="text-align:left;"> Male </td>
-   <td style="text-align:left;"> Black </td>
-   <td style="text-align:left;"> Nigeria </td>
-   <td style="text-align:left;"> United States </td>
-   <td style="text-align:left;"> United States </td>
-   <td style="text-align:left;"> Yes </td>
-   <td style="text-align:left;"> Part-Time </td>
-   <td style="text-align:left;"> N/A </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> 67798278a28708e32bf4b451 </td>
-   <td style="text-align:right;"> 1767 </td>
-   <td style="text-align:right;"> 52 </td>
-   <td style="text-align:left;"> Male </td>
-   <td style="text-align:left;"> White </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> No </td>
-   <td style="text-align:left;"> Full-Time </td>
-   <td style="text-align:left;"> N/A </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> 66b588a4b3e0e55fc74390b3 </td>
-   <td style="text-align:right;"> 151 </td>
-   <td style="text-align:right;"> 23 </td>
+   <td style="text-align:left;"> 5689916dd3d6a7000aa1cbf0 </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
    <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 32 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> single, never married </td>
    <td style="text-align:left;"> White </td>
-   <td style="text-align:left;"> United States </td>
-   <td style="text-align:left;"> United States </td>
-   <td style="text-align:left;"> United States </td>
-   <td style="text-align:left;"> Yes </td>
-   <td style="text-align:left;"> Unemployed (and job seeking) </td>
-   <td style="text-align:left;"> N/A </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Some college but no degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 6 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> 5d50692435e3af0001f05a15 </td>
-   <td style="text-align:right;"> 3657 </td>
+   <td style="text-align:left;"> 56d84fd94a9be1000553c1d7 </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 33 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Doctoral degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 59b19a277f6c84000151c001 </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 65 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> High school graduate </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 5a47473899311d0001df550e </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 43 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Some college but no degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Yes, currently </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 5bd2a0799afb5b00015be460 </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
    <td style="text-align:right;"> 53 </td>
-   <td style="text-align:left;"> Male </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
    <td style="text-align:left;"> White </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> United Kingdom </td>
    <td style="text-align:left;"> No </td>
-   <td style="text-align:left;"> Not in paid work (e.g. homemaker', 'retired or disabled) </td>
-   <td style="text-align:left;"> N/A </td>
+   <td style="text-align:left;"> Some college but no degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 3 </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> 69d60b821c7fcd0fae5faf58 </td>
-   <td style="text-align:right;"> 132 </td>
-   <td style="text-align:right;"> 22 </td>
+   <td style="text-align:left;"> 5e0f26b63ccda26295505f0d </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
    <td style="text-align:left;"> Female </td>
-   <td style="text-align:left;"> Black </td>
-   <td style="text-align:left;"> United States </td>
-   <td style="text-align:left;"> South Africa </td>
-   <td style="text-align:left;"> South Africa </td>
+   <td style="text-align:right;"> 56 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Divorced </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Retired </td>
+   <td style="text-align:left;"> Left </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 5ea4cebb8944a8495280db42 </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 30 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> High school graduate </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 5ec96e3609117f0a67231842 </td>
+   <td style="text-align:left;"> I am a human. </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 55 </td>
+   <td style="text-align:left;"> Ireland </td>
+   <td style="text-align:left;"> Ireland </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 5f0cba80665294690790e03c </td>
+   <td style="text-align:left;"> I am a human. </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 41 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> Black or African American </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Some college but no degree </td>
+   <td style="text-align:left;"> Disabled </td>
+   <td style="text-align:left;"> Right </td>
    <td style="text-align:left;"> Yes </td>
-   <td style="text-align:left;"> Full-Time </td>
-   <td style="text-align:left;"> N/A </td>
+   <td style="text-align:left;"> Yes, in the past (but not currently) </td>
+   <td style="text-align:right;">  </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> 6946d43d6e37a8ebea7882bd </td>
-   <td style="text-align:right;"> 804 </td>
-   <td style="text-align:right;"> 28 </td>
+   <td style="text-align:left;"> 5f57be602095072bb238a7ab </td>
+   <td style="text-align:left;"> i am human </td>
+   <td style="text-align:left;"> Woman </td>
    <td style="text-align:left;"> Female </td>
-   <td style="text-align:left;"> Black </td>
-   <td style="text-align:left;"> United States </td>
-   <td style="text-align:left;"> United States </td>
-   <td style="text-align:left;"> United States </td>
-   <td style="text-align:left;"> No </td>
-   <td style="text-align:left;"> Unemployed (and job seeking) </td>
-   <td style="text-align:left;"> N/A </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> 6a0c5f6a4974d3dfbeb467ae </td>
-   <td style="text-align:right;"> 325 </td>
-   <td style="text-align:right;"> 35 </td>
-   <td style="text-align:left;"> Male </td>
-   <td style="text-align:left;"> Black </td>
-   <td style="text-align:left;"> Nigeria </td>
-   <td style="text-align:left;"> Canada </td>
-   <td style="text-align:left;"> Canada </td>
-   <td style="text-align:left;"> No </td>
-   <td style="text-align:left;"> Part-Time </td>
-   <td style="text-align:left;"> N/A </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> 69f0b7ddbaaead7656414805 </td>
-   <td style="text-align:right;"> 1318 </td>
-   <td style="text-align:right;"> 37 </td>
-   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 50 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Widowed </td>
    <td style="text-align:left;"> White </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> United Kingdom </td>
    <td style="text-align:left;"> No </td>
-   <td style="text-align:left;"> Full-Time </td>
-   <td style="text-align:left;"> N/A </td>
+   <td style="text-align:left;"> Some college but no degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> 6a241cc77b290774b3626f62 </td>
-   <td style="text-align:right;"> 900 </td>
-   <td style="text-align:right;"> 58 </td>
+   <td style="text-align:left;"> 5fb25a7e5960a87fb627c12b </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Man </td>
    <td style="text-align:left;"> Male </td>
-   <td style="text-align:left;"> Black </td>
+   <td style="text-align:right;"> 80 </td>
    <td style="text-align:left;"> United Kingdom </td>
    <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
    <td style="text-align:left;"> No </td>
-   <td style="text-align:left;"> Full-Time </td>
-   <td style="text-align:left;"> N/A </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Retired </td>
+   <td style="text-align:left;"> Left </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> 6a25badf2f95439c4b79d399 </td>
-   <td style="text-align:right;"> 258 </td>
+   <td style="text-align:left;"> 6009606726f80266d809bf9a </td>
+   <td style="text-align:left;"> I am a human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 27 </td>
+   <td style="text-align:left;"> Singapore </td>
+   <td style="text-align:left;"> South Korea </td>
+   <td style="text-align:left;"> Separated </td>
+   <td style="text-align:left;"> Asian </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 602cf4568083d86318913385 </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 32 </td>
+   <td style="text-align:left;"> South Africa </td>
+   <td style="text-align:left;"> South Africa </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> Black or African American </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Associate degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6064fef22d11e88491d1ac57 </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 41 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 60a252db049918aa001fe65a </td>
+   <td style="text-align:left;"> i am human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 44 </td>
+   <td style="text-align:left;"> Zimbabwe </td>
+   <td style="text-align:left;"> South Africa </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> Black or African American </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 60accd3d6f3f272083a2f14f </td>
+   <td style="text-align:left;"> I'm human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 34 </td>
+   <td style="text-align:left;"> South Africa </td>
+   <td style="text-align:left;"> South Africa </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> Black or African American </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Associate degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 60fd1724be388fa301b32497 </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 31 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Unemployed looking for work </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 629f470832dba055c9d39800 </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
    <td style="text-align:right;"> 23 </td>
-   <td style="text-align:left;"> Female </td>
-   <td style="text-align:left;"> White </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> United Kingdom </td>
-   <td style="text-align:left;"> Yes </td>
-   <td style="text-align:left;"> Other </td>
    <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> High school graduate </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 632222532c12ab0ab7ca00bd </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Prefer not to say </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 33 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> High school graduate </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Left </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 63f93b47bb0c1a1aca131480 </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 56 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6544ff9e0fb2eaaf83e2de5c </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 64 </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> Divorced </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Yes, currently </td>
+   <td style="text-align:right;"> 8 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 65465ad50fb5c91a7da03f86 </td>
+   <td style="text-align:left;"> I am human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 32 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6658d66a5e45cac0aaeb54de </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 35 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Master's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6673eea04e15d2d270aa7ff8 </td>
+   <td style="text-align:left;"> I am human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 66 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Some college but no degree </td>
+   <td style="text-align:left;"> Retired </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 667eba97a530c308f48c8846 </td>
+   <td style="text-align:left;"> I'm a human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 30 </td>
+   <td style="text-align:left;"> Canada </td>
+   <td style="text-align:left;"> Canada </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> Asian </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Master's degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Yes, in the past (but not currently) </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 66a1561d05457dd7ec9cd3a8 </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 55 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> Multiracial / Mixed </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Master's degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 66acd0f41a177db1483aaa33 </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 49 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 66d31a1b0515fe747830bab9 </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 62 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> High school graduate </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 66d5e128d49faf318dd776ec </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 31 </td>
+   <td style="text-align:left;"> Canada </td>
+   <td style="text-align:left;"> Canada </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> Black or African American </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 66dd661dd80c9cc1df616f8a </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 54 </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Yes, currently </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 675733d2009c6e901b6af017 </td>
+   <td style="text-align:left;"> what? what do you want me to do, dance in a damn box. Give more instruciton on how to prove i am a fucking human' </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 38 </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> American Indian or Alaska Native </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> High school graduate </td>
+   <td style="text-align:left;"> Unemployed looking for work </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Yes, in the past (but not currently) </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 676055469b245b53e81358d0 </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 22 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Unemployed looking for work </td>
+   <td style="text-align:left;"> Left </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 676ed6c97f59dba5a786886d </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 44 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Master's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 67803b5508f3d995ef13696b </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 57 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Left </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 67acde79313292059de8a627 </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 35 </td>
+   <td style="text-align:left;"> Canada </td>
+   <td style="text-align:left;"> Canada </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> Black or African American </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Yes, in the past (but not currently) </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 67c0dafd6e94e9833dbe9524 </td>
+   <td style="text-align:left;"> I am a human! </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 62 </td>
+   <td style="text-align:left;"> Canada </td>
+   <td style="text-align:left;"> Canada </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Retired </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 67e0870d582edce0a2764d1f </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 29 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> Black or African American </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Yes, in the past (but not currently) </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 691cd0a261d7064af0b96599 </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 22 </td>
+   <td style="text-align:left;"> Canada </td>
+   <td style="text-align:left;"> Canada </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6991e46740117ca6ef90cd7c </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 27 </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> Black or African American </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69ad388b63979c96dc085507 </td>
+   <td style="text-align:left;"> I am human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 38 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Netherlands </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Master's degree </td>
+   <td style="text-align:left;"> Unemployed looking for work </td>
+   <td style="text-align:left;"> Ambidextrous </td>
+   <td style="text-align:left;"> Prefer not to say </td>
+   <td style="text-align:left;"> Prefer not to answer </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69bfa90568c64f3e06f1a32e </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 50 </td>
+   <td style="text-align:left;"> Canada </td>
+   <td style="text-align:left;"> Canada </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d6a275b26596eac5478f13 </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 31 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> Black or African American </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69d8eab7b04ea057a65bdb4d </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 32 </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> High school graduate </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69f061c18bcd97022e700b95 </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 51 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> Asian </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Unemployed looking for work </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69f0eddb8814c802224f8bad </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 38 </td>
+   <td style="text-align:left;"> Canada </td>
+   <td style="text-align:left;"> Canada </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Unemployed looking for work </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69f7666c2ce1f93d57e39940 </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 31 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Left </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Yes, currently </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69fa27f897bf4caf2d505098 </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 20 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Some college but no degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 69fcb1ce92f721e53752ed1e </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 42 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a012c1cbb725fe5329c2720 </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 44 </td>
+   <td style="text-align:left;"> Australia </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> High school graduate </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Left </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a02ed5bd6acf52c07ab46fa </td>
+   <td style="text-align:left;"> i am human, last time i checked </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 40 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Some college but no degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Yes, in the past (but not currently) </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a0489167a4c2f99c148aae3 </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 32 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Master's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a04a94d6915ae8637f94c84 </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 33 </td>
+   <td style="text-align:left;"> Nigeria </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> Black or African American </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a0adfcc9de2f1c28b0db58b </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 27 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Master's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Yes, in the past (but not currently) </td>
+   <td style="text-align:right;"> 4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a0b2bdbea2d151e845c3e38 </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 53 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Separated </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Some college but no degree </td>
+   <td style="text-align:left;"> Retired </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Yes, in the past (but not currently) </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a0da93c7800f8ed95424872 </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 63 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Widowed </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Retired </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a0f2dadb58effc3dd06ad4a </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 27 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> Asian </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Master's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a11344dfa807a229abd5f83 </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 35 </td>
+   <td style="text-align:left;"> Australia </td>
+   <td style="text-align:left;"> Australia </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> Black or African American </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a16aef4b4417bcc99faa34e </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 29 </td>
+   <td style="text-align:left;"> New Zealand </td>
+   <td style="text-align:left;"> New Zealand </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> other </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Master's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Left </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a19a092d1e2eb2e4b072554 </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 29 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> Multiracial / Mixed </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a1dfa3eaef836ebd308886e </td>
+   <td style="text-align:left;"> 6a1dfa3eaef836ebd308886e </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 51 </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Yes, in the past (but not currently) </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a26311766436b2345c944e1 </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 31 </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> Black or African American </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Master's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Left </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Yes, currently </td>
+   <td style="text-align:right;"> 6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a271c0daa928450f32c7507 </td>
+   <td style="text-align:left;"> I am human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 34 </td>
+   <td style="text-align:left;"> Ireland </td>
+   <td style="text-align:left;"> Ireland </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> Black or African American </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a440175a490cecb1f3c27ec </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 25 </td>
+   <td style="text-align:left;"> Nigeria </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> Black or African American </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Master's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a55022ac3162a7be7ddadd5 </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Non-binary / third gender </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 62 </td>
+   <td style="text-align:left;"> Australia </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> Married </td>
+   <td style="text-align:left;"> White </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Some college but no degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Yes, currently </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6a60b46470225b338d131c3f </td>
+   <td style="text-align:left;"> Human </td>
+   <td style="text-align:left;"> Woman </td>
+   <td style="text-align:left;"> Female </td>
+   <td style="text-align:right;"> 25 </td>
+   <td style="text-align:left;"> India </td>
+   <td style="text-align:left;"> India </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> Asian </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed part time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> No, never </td>
+   <td style="text-align:right;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6abaf85abba07e29bf4ee3d9 </td>
+   <td style="text-align:left;"> human </td>
+   <td style="text-align:left;"> Man </td>
+   <td style="text-align:left;"> Male </td>
+   <td style="text-align:right;"> 23 </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> single, never married </td>
+   <td style="text-align:left;"> Black or African American </td>
+   <td style="text-align:left;"> No </td>
+   <td style="text-align:left;"> Bachelor's degree </td>
+   <td style="text-align:left;"> Employed full time </td>
+   <td style="text-align:left;"> Right </td>
+   <td style="text-align:left;"> Yes </td>
+   <td style="text-align:left;"> Yes, currently </td>
+   <td style="text-align:right;">  </td>
   </tr>
 </tbody>
 </table>

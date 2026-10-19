@@ -27,12 +27,12 @@ final_demo <- demographics |>
   mutate(prolific_id = as.character(prolific_id)) |>
   filter(prolific_id %in% step12$after_window_exits_pids)
 
-n_female <- sum(final_demo$Sex == "Female", na.rm = TRUE)
-n_male   <- sum(final_demo$Sex == "Male", na.rm = TRUE)
-age_mean <- round(mean(final_demo$Age, na.rm = TRUE), 1)
-age_sd   <- round(sd(final_demo$Age, na.rm = TRUE), 1)
-age_min  <- min(final_demo$Age, na.rm = TRUE)
-age_max  <- max(final_demo$Age, na.rm = TRUE)
+n_female <- sum(final_demo$sex == "Female", na.rm = TRUE)
+n_male   <- sum(final_demo$sex == "Male", na.rm = TRUE)
+age_mean <- round(mean(final_demo$age, na.rm = TRUE), 1)
+age_sd   <- round(sd(final_demo$age, na.rm = TRUE), 1)
+age_min  <- min(final_demo$age, na.rm = TRUE)
+age_max  <- max(final_demo$age, na.rm = TRUE)
 
 participants_people <- function(n) {
   if (n == 1) "1 participant" else paste0(n, " participants")

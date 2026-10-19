@@ -27,7 +27,7 @@ readr::write_csv(feedback, file.path(raw_dir, "feedback.csv"), na = "NA")
 feedback_dictionary <- tibble::tribble(
   ~column,                   ~class,      ~meaning,
   "prolific_id",             "factor",    "Prolific participant ID (stable across sessions; the participant identity key). Levels = Prolific IDs present in the data, no fixed reference.",
-  "time",                    "factor",    "time1 = first_wave, time2 = second_wave. Levels: time1 (reference), time2.",
+  "time",                    "factor",    "time1 = session 1, time2 = session 2. Levels: time1 (reference), time2.",
   "task_understanding_text", "character", "parsed free-text task-understanding response (asked before the quiz)",
   "feedback_text_response",  "character", "parsed free-text end-of-study feedback (how the participant felt during the experiment)"
 )

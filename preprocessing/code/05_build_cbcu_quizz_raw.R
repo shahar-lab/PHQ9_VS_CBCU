@@ -45,7 +45,7 @@ cbcu_quizz_dictionary <- tibble::tribble(
   "prolific_id",           "factor",    "Prolific participant ID (stable across sessions; the participant identity key). Levels = Prolific IDs present in the data, no fixed reference.",
   "rt",                    "numeric",   "RT from this quiz item's onset to the response, ms.",
   "time_elapsed",          "hms",       "elapsed time from the onset of the first quiz item in this session (prolific_id × time), as hms. Onset = jsPsych time_elapsed − rt; time zero is the onset of the first presentation of the first quiz item (lowest quiz_question_num, then lowest quiz_attempt_num). That item is 00:00:00. NA if this row's jsPsych time_elapsed or rt is missing.",
-  "time",                  "factor",    "time1 = first_wave, time2 = second_wave. Levels: time1 (reference), time2.",
+  "time",                  "factor",    "time1 = session 1, time2 = session 2. Levels: time1 (reference), time2.",
   "quiz_question_num",     "character", "quiz question number, 1-6",
   "quiz_attempt_num",      "character", "attempt number for that question",
   "selected_option_index", "character", "index of selected quiz option",

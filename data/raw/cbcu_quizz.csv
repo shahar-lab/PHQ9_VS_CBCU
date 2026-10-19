@@ -1,130 +1,459 @@
 prolific_id,rt,time_elapsed,time,quiz_question_num,quiz_attempt_num,selected_option_index,selected_option_text,correct
-69d60b821c7fcd0fae5faf58,12060,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
-69d60b821c7fcd0fae5faf58,11416,00:00:12.067,time1,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
-69d60b821c7fcd0fae5faf58,8402,00:00:23.490,time1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-69d60b821c7fcd0fae5faf58,9444,00:00:31.896,time1,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
-69d60b821c7fcd0fae5faf58,9861,00:00:41.346,time1,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-69d60b821c7fcd0fae5faf58,4531,00:00:51.212,time1,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-6a0c5f6a4974d3dfbeb467ae,16826,00:00:00.000,time1,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
-6a0c5f6a4974d3dfbeb467ae,19383,00:00:16.827,time1,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
-6a0c5f6a4974d3dfbeb467ae,9352,00:00:36.211,time1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-6a0c5f6a4974d3dfbeb467ae,37117,00:00:45.564,time1,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
-6a0c5f6a4974d3dfbeb467ae,16084,00:01:22.682,time1,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-6a0c5f6a4974d3dfbeb467ae,8812,00:01:38.767,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-6a26623dba3ca97e10bd6e4a,16609,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
-6a26623dba3ca97e10bd6e4a,15998,00:00:16.613,time1,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
-6a26623dba3ca97e10bd6e4a,14102,00:00:32.616,time1,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-6a26623dba3ca97e10bd6e4a,28039,00:00:46.722,time1,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
-6a26623dba3ca97e10bd6e4a,22310,00:01:14.764,time1,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-6a26623dba3ca97e10bd6e4a,8580,00:01:37.078,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-6a0b57dda1f2bbc0f2c1398b,27252,00:00:00.000,time1,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
-6a0b57dda1f2bbc0f2c1398b,22702,00:00:27.256,time1,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
-6a0b57dda1f2bbc0f2c1398b,22339,00:00:49.962,time1,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-6a0b57dda1f2bbc0f2c1398b,20902,00:01:12.304,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
-6a0b57dda1f2bbc0f2c1398b,33196,00:01:33.208,time1,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-6a0b57dda1f2bbc0f2c1398b,17865,00:02:06.408,time1,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-6a25badf2f95439c4b79d399,8974,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
-6a25badf2f95439c4b79d399,7986,00:00:08.975,time1,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
-6a25badf2f95439c4b79d399,6591,00:00:16.962,time1,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-6a25badf2f95439c4b79d399,10179,00:00:23.554,time1,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
-6a25badf2f95439c4b79d399,8525,00:00:33.735,time1,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-6a25badf2f95439c4b79d399,19400,00:00:42.261,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-6a241cc77b290774b3626f62,33140,00:00:00.000,time1,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
-6a241cc77b290774b3626f62,21934,00:00:33.144,time1,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
-6a241cc77b290774b3626f62,18718,00:00:55.080,time1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-6a241cc77b290774b3626f62,19957,00:01:13.801,time1,4,1,0,You must complete all 105 screens in a row without taking any breaks.,FALSE
-6a241cc77b290774b3626f62,20030,00:01:33.762,time1,4,2,2,You must stay on this screen without switching to other tabs or windows.,TRUE
-6a241cc77b290774b3626f62,55243,00:01:53.794,time1,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-6a241cc77b290774b3626f62,41493,00:02:49.040,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-5d50692435e3af0001f05a15,10366,00:00:00.000,time1,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
-5d50692435e3af0001f05a15,14047,00:00:10.366,time1,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
-5d50692435e3af0001f05a15,14471,00:00:24.414,time1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-5d50692435e3af0001f05a15,13503,00:00:38.886,time1,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
-5d50692435e3af0001f05a15,16007,00:00:52.390,time1,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-5d50692435e3af0001f05a15,10223,00:01:08.398,time1,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-67798278a28708e32bf4b451,9687,00:00:00.000,time1,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
-67798278a28708e32bf4b451,8703,00:00:09.688,time1,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
-67798278a28708e32bf4b451,4927,00:00:18.391,time1,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-67798278a28708e32bf4b451,7655,00:00:23.320,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
-67798278a28708e32bf4b451,6919,00:00:30.976,time1,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-67798278a28708e32bf4b451,2799,00:00:37.896,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-69f0b7ddbaaead7656414805,7699,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
-69f0b7ddbaaead7656414805,9583,00:00:07.701,time1,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
-69f0b7ddbaaead7656414805,6477,00:00:17.286,time1,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-69f0b7ddbaaead7656414805,10402,00:00:23.802,time1,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
-69f0b7ddbaaead7656414805,6783,00:00:34.206,time1,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-69f0b7ddbaaead7656414805,5316,00:00:40.991,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-6946d43d6e37a8ebea7882bd,23027,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
-6946d43d6e37a8ebea7882bd,16942,00:00:23.028,time1,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
-6946d43d6e37a8ebea7882bd,11352,00:00:39.971,time1,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-6946d43d6e37a8ebea7882bd,13505,00:00:51.325,time1,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
-6946d43d6e37a8ebea7882bd,12199,00:01:04.831,time1,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-6946d43d6e37a8ebea7882bd,11989,00:01:17.031,time1,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-66b588a4b3e0e55fc74390b3,9726,00:00:00.000,time1,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
-66b588a4b3e0e55fc74390b3,7757,00:00:09.729,time1,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
-66b588a4b3e0e55fc74390b3,12402,00:00:17.488,time1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-66b588a4b3e0e55fc74390b3,15943,00:00:29.892,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
-66b588a4b3e0e55fc74390b3,9360,00:00:45.836,time1,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-66b588a4b3e0e55fc74390b3,5494,00:00:55.198,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-5d50692435e3af0001f05a15,7342,00:00:00.000,time2,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
-5d50692435e3af0001f05a15,7934,00:00:07.344,time2,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
-5d50692435e3af0001f05a15,15414,00:00:15.280,time2,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-5d50692435e3af0001f05a15,12495,00:00:30.695,time2,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
-5d50692435e3af0001f05a15,11679,00:00:43.191,time2,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-5d50692435e3af0001f05a15,7655,00:00:54.871,time2,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-6946d43d6e37a8ebea7882bd,22634,00:00:00.000,time2,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
-6946d43d6e37a8ebea7882bd,26471,00:00:22.634,time2,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
-6946d43d6e37a8ebea7882bd,13377,00:00:49.107,time2,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-6946d43d6e37a8ebea7882bd,20381,00:01:02.485,time2,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
-6946d43d6e37a8ebea7882bd,14818,00:01:22.867,time2,5,1,1,"No, but you are expected to answer as fast as possible without thinking too much.",FALSE
-6946d43d6e37a8ebea7882bd,4545,00:01:37.686,time2,5,2,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-6946d43d6e37a8ebea7882bd,19893,00:01:42.233,time2,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-66b588a4b3e0e55fc74390b3,7437,00:00:00.000,time2,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
-66b588a4b3e0e55fc74390b3,8016,00:00:07.439,time2,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
-66b588a4b3e0e55fc74390b3,6040,00:00:15.457,time2,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-66b588a4b3e0e55fc74390b3,6385,00:00:21.500,time2,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
-66b588a4b3e0e55fc74390b3,4971,00:00:27.886,time2,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-66b588a4b3e0e55fc74390b3,7784,00:00:32.861,time2,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-6a241cc77b290774b3626f62,31914,00:00:00.000,time2,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
-6a241cc77b290774b3626f62,45111,00:00:31.917,time2,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
-6a241cc77b290774b3626f62,46044,00:01:17.031,time2,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-6a241cc77b290774b3626f62,53656,00:02:03.081,time2,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
-6a241cc77b290774b3626f62,25460,00:02:56.740,time2,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-6a241cc77b290774b3626f62,21581,00:03:22.204,time2,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-67798278a28708e32bf4b451,8393,00:00:00.000,time2,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
-67798278a28708e32bf4b451,12046,00:00:08.395,time2,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
-67798278a28708e32bf4b451,9440,00:00:20.443,time2,3,1,2,If you have not experienced either problem in your entire life.,FALSE
-67798278a28708e32bf4b451,3031,00:00:29.885,time2,3,2,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-67798278a28708e32bf4b451,7946,00:00:32.919,time2,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
-67798278a28708e32bf4b451,6144,00:00:40.867,time2,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-67798278a28708e32bf4b451,4654,00:00:47.014,time2,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-6a0c5f6a4974d3dfbeb467ae,62849,00:00:00.000,time2,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
-6a0c5f6a4974d3dfbeb467ae,33656,00:01:02.850,time2,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
-6a0c5f6a4974d3dfbeb467ae,32257,00:01:36.507,time2,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-6a0c5f6a4974d3dfbeb467ae,27682,00:02:08.765,time2,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
-6a0c5f6a4974d3dfbeb467ae,30140,00:02:36.448,time2,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-6a0c5f6a4974d3dfbeb467ae,29913,00:03:06.589,time2,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-69d60b821c7fcd0fae5faf58,8898,00:00:00.000,time2,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
-69d60b821c7fcd0fae5faf58,10095,00:00:08.907,time2,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
-69d60b821c7fcd0fae5faf58,9041,00:00:19.018,time2,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-69d60b821c7fcd0fae5faf58,9026,00:00:28.066,time2,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
-69d60b821c7fcd0fae5faf58,13304,00:00:37.104,time2,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-69d60b821c7fcd0fae5faf58,5834,00:00:50.421,time2,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-6a25badf2f95439c4b79d399,5411,00:00:00.000,time2,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
-6a25badf2f95439c4b79d399,4226,00:00:05.412,time2,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
-6a25badf2f95439c4b79d399,6893,00:00:09.639,time2,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-6a25badf2f95439c4b79d399,7759,00:00:16.534,time2,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
-6a25badf2f95439c4b79d399,7243,00:00:24.294,time2,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-6a25badf2f95439c4b79d399,8759,00:00:31.539,time2,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-6a26623dba3ca97e10bd6e4a,94772,00:00:00.000,time2,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
-6a26623dba3ca97e10bd6e4a,15303,00:01:34.775,time2,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
-6a26623dba3ca97e10bd6e4a,11951,00:01:50.082,time2,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-6a26623dba3ca97e10bd6e4a,47233,00:02:02.037,time2,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
-6a26623dba3ca97e10bd6e4a,22151,00:02:49.275,time2,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-6a26623dba3ca97e10bd6e4a,27442,00:03:11.430,time2,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
-69f0b7ddbaaead7656414805,7354,00:00:00.000,time2,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
-69f0b7ddbaaead7656414805,4596,00:00:07.355,time2,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
-69f0b7ddbaaead7656414805,8457,00:00:11.953,time2,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
-69f0b7ddbaaead7656414805,6259,00:00:20.411,time2,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
-69f0b7ddbaaead7656414805,4809,00:00:26.672,time2,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
-69f0b7ddbaaead7656414805,6562,00:00:31.483,time2,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+632222532c12ab0ab7ca00bd,7103,00:00:00.000,time1,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+632222532c12ab0ab7ca00bd,13135,00:00:07.106,time1,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
+632222532c12ab0ab7ca00bd,6499,00:00:20.243,time1,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+632222532c12ab0ab7ca00bd,10577,00:00:26.744,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+632222532c12ab0ab7ca00bd,7849,00:00:37.322,time1,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+632222532c12ab0ab7ca00bd,5035,00:00:45.173,time1,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+65465ad50fb5c91a7da03f86,14890,00:00:00.000,time1,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+65465ad50fb5c91a7da03f86,21336,00:00:14.894,time1,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
+65465ad50fb5c91a7da03f86,10631,00:00:36.233,time1,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+65465ad50fb5c91a7da03f86,18508,00:00:46.867,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+65465ad50fb5c91a7da03f86,20348,00:01:05.377,time1,5,1,0,"No, but you are expected to answer as fast as possible without thinking too much.",FALSE
+65465ad50fb5c91a7da03f86,14005,00:01:25.728,time1,5,2,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+65465ad50fb5c91a7da03f86,11945,00:01:39.737,time1,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+667eba97a530c308f48c8846,9765,00:00:00.000,time1,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+667eba97a530c308f48c8846,6646,00:00:09.766,time1,2,1,3,"Click the ""Neither bothered me"" button.",FALSE
+667eba97a530c308f48c8846,2255,00:00:16.413,time1,2,2,0,Try your best to choose the one that bothered you slightly more.,TRUE
+667eba97a530c308f48c8846,4479,00:00:18.670,time1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+667eba97a530c308f48c8846,9390,00:00:23.151,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+667eba97a530c308f48c8846,7077,00:00:32.543,time1,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+667eba97a530c308f48c8846,3975,00:00:39.622,time1,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+69fcb1ce92f721e53752ed1e,4445,00:00:00.000,time1,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+69fcb1ce92f721e53752ed1e,6017,00:00:04.448,time1,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+69fcb1ce92f721e53752ed1e,3712,00:00:10.467,time1,3,1,2,Whenever it is too difficult to decide between the two problems.,FALSE
+69fcb1ce92f721e53752ed1e,2485,00:00:14.182,time1,3,2,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+69fcb1ce92f721e53752ed1e,5906,00:00:16.671,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+69fcb1ce92f721e53752ed1e,4865,00:00:22.580,time1,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+69fcb1ce92f721e53752ed1e,4850,00:00:27.448,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+69f0eddb8814c802224f8bad,12810,00:00:00.000,time1,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+69f0eddb8814c802224f8bad,7445,00:00:12.811,time1,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+69f0eddb8814c802224f8bad,7501,00:00:20.257,time1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+69f0eddb8814c802224f8bad,10489,00:00:27.759,time1,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
+69f0eddb8814c802224f8bad,8232,00:00:38.250,time1,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+69f0eddb8814c802224f8bad,12885,00:00:46.483,time1,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+676ed6c97f59dba5a786886d,3910,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+676ed6c97f59dba5a786886d,6736,00:00:03.912,time1,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+676ed6c97f59dba5a786886d,3847,00:00:10.649,time1,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+676ed6c97f59dba5a786886d,8178,00:00:14.497,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+676ed6c97f59dba5a786886d,9070,00:00:22.676,time1,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+676ed6c97f59dba5a786886d,2288,00:00:31.747,time1,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a0b2bdbea2d151e845c3e38,9093,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a0b2bdbea2d151e845c3e38,10950,00:00:09.095,time1,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
+6a0b2bdbea2d151e845c3e38,9933,00:00:20.052,time1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a0b2bdbea2d151e845c3e38,8152,00:00:29.987,time1,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a0b2bdbea2d151e845c3e38,10000,00:00:38.141,time1,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a0b2bdbea2d151e845c3e38,11221,00:00:48.146,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6991e46740117ca6ef90cd7c,18177,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+6991e46740117ca6ef90cd7c,23884,00:00:18.247,time1,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+6991e46740117ca6ef90cd7c,39031,00:00:42.164,time1,3,1,1,If you have not experienced either problem in your entire life.,FALSE
+6991e46740117ca6ef90cd7c,31051,00:01:21.213,time1,3,2,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6991e46740117ca6ef90cd7c,18716,00:01:52.266,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+6991e46740117ca6ef90cd7c,14161,00:02:10.986,time1,5,1,2,"Yes, you have exactly 20 minutes to finish the entire task, so you must work very quickly.",FALSE
+6991e46740117ca6ef90cd7c,3622,00:02:25.155,time1,5,2,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6991e46740117ca6ef90cd7c,12746,00:02:28.779,time1,6,1,0,You must take a break after every single screen.,FALSE
+6991e46740117ca6ef90cd7c,6157,00:02:41.530,time1,6,2,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+5f57be602095072bb238a7ab,2794,00:00:00.000,time1,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+5f57be602095072bb238a7ab,3872,00:00:02.795,time1,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
+5f57be602095072bb238a7ab,4287,00:00:06.669,time1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+5f57be602095072bb238a7ab,4913,00:00:10.957,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+5f57be602095072bb238a7ab,2918,00:00:15.871,time1,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+5f57be602095072bb238a7ab,3792,00:00:18.790,time1,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a26311766436b2345c944e1,22347,00:00:00.000,time1,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a26311766436b2345c944e1,25775,00:00:22.348,time1,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
+6a26311766436b2345c944e1,21747,00:00:48.125,time1,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a26311766436b2345c944e1,24832,00:01:09.873,time1,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a26311766436b2345c944e1,60730,00:01:34.706,time1,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a26311766436b2345c944e1,34913,00:02:35.437,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+56d84fd94a9be1000553c1d7,3766,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+56d84fd94a9be1000553c1d7,5625,00:00:03.767,time1,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+56d84fd94a9be1000553c1d7,6440,00:00:09.393,time1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+56d84fd94a9be1000553c1d7,6279,00:00:15.835,time1,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+56d84fd94a9be1000553c1d7,4923,00:00:22.115,time1,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+56d84fd94a9be1000553c1d7,1874,00:00:27.039,time1,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+67e0870d582edce0a2764d1f,10613,00:00:00.000,time1,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
+67e0870d582edce0a2764d1f,5046,00:00:10.615,time1,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+67e0870d582edce0a2764d1f,12920,00:00:15.663,time1,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+67e0870d582edce0a2764d1f,12102,00:00:28.585,time1,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+67e0870d582edce0a2764d1f,9921,00:00:40.689,time1,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+67e0870d582edce0a2764d1f,7414,00:00:50.612,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+66d5e128d49faf318dd776ec,16286,00:00:00.000,time1,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
+66d5e128d49faf318dd776ec,18305,00:00:16.287,time1,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+66d5e128d49faf318dd776ec,13813,00:00:34.592,time1,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+66d5e128d49faf318dd776ec,12030,00:00:48.406,time1,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
+66d5e128d49faf318dd776ec,15123,00:01:00.437,time1,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+66d5e128d49faf318dd776ec,6864,00:01:15.561,time1,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+5ec96e3609117f0a67231842,5964,00:00:00.000,time1,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+5ec96e3609117f0a67231842,7446,00:00:05.966,time1,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+5ec96e3609117f0a67231842,3934,00:00:13.414,time1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+5ec96e3609117f0a67231842,7245,00:00:17.351,time1,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
+5ec96e3609117f0a67231842,5639,00:00:24.598,time1,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+5ec96e3609117f0a67231842,5597,00:00:30.239,time1,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a60b46470225b338d131c3f,11464,00:00:00.000,time1,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a60b46470225b338d131c3f,23941,00:00:11.466,time1,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+6a60b46470225b338d131c3f,13854,00:00:35.408,time1,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a60b46470225b338d131c3f,13014,00:00:49.263,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a60b46470225b338d131c3f,49562,00:01:02.279,time1,5,1,2,"No, but you are expected to answer as fast as possible without thinking too much.",FALSE
+6a60b46470225b338d131c3f,3824,00:01:51.843,time1,5,2,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a60b46470225b338d131c3f,9527,00:01:55.667,time1,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a1dfa3eaef836ebd308886e,204,00:00:00.000,time1,1,1,1,Click on the problem that you think affects most people.,FALSE
+6a1dfa3eaef836ebd308886e,8383,00:00:00.208,time1,1,2,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a1dfa3eaef836ebd308886e,6196,00:00:08.596,time1,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
+6a1dfa3eaef836ebd308886e,2741,00:00:14.795,time1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a1dfa3eaef836ebd308886e,4970,00:00:17.539,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a1dfa3eaef836ebd308886e,4955,00:00:22.513,time1,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a1dfa3eaef836ebd308886e,4927,00:00:27.471,time1,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+5e0f26b63ccda26295505f0d,9990,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+5e0f26b63ccda26295505f0d,6578,00:00:09.992,time1,2,1,1,"Click the ""Neither bothered me"" button.",FALSE
+5e0f26b63ccda26295505f0d,4028,00:00:16.573,time1,2,2,0,Try your best to choose the one that bothered you slightly more.,TRUE
+5e0f26b63ccda26295505f0d,14889,00:00:20.604,time1,3,1,3,Whenever it is too difficult to decide between the two problems.,FALSE
+5e0f26b63ccda26295505f0d,2843,00:00:35.495,time1,3,2,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+5e0f26b63ccda26295505f0d,22098,00:00:38.340,time1,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+5e0f26b63ccda26295505f0d,11094,00:01:00.441,time1,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+5e0f26b63ccda26295505f0d,2967,00:01:11.538,time1,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6673eea04e15d2d270aa7ff8,13185,00:00:00.000,time1,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+6673eea04e15d2d270aa7ff8,8009,00:00:13.189,time1,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
+6673eea04e15d2d270aa7ff8,5945,00:00:21.203,time1,3,1,2,If you have not experienced either problem in your entire life.,FALSE
+6673eea04e15d2d270aa7ff8,5212,00:00:27.152,time1,3,2,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6673eea04e15d2d270aa7ff8,9490,00:00:32.367,time1,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+6673eea04e15d2d270aa7ff8,14170,00:00:41.862,time1,5,1,2,"No, but you are expected to answer as fast as possible without thinking too much.",FALSE
+6673eea04e15d2d270aa7ff8,2923,00:00:56.035,time1,5,2,0,"Yes, you have exactly 20 minutes to finish the entire task, so you must work very quickly.",FALSE
+6673eea04e15d2d270aa7ff8,4131,00:00:58.962,time1,5,3,1,"Yes, the screen will automatically skip to the next pair if you don't answer within a few seconds.",FALSE
+6673eea04e15d2d270aa7ff8,8131,00:01:03.097,time1,5,4,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6673eea04e15d2d270aa7ff8,3570,00:01:11.231,time1,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+5ea4cebb8944a8495280db42,5691,00:00:00.000,time1,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
+5ea4cebb8944a8495280db42,9400,00:00:05.693,time1,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
+5ea4cebb8944a8495280db42,6170,00:00:15.095,time1,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+5ea4cebb8944a8495280db42,4973,00:00:21.267,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+5ea4cebb8944a8495280db42,9292,00:00:26.242,time1,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+5ea4cebb8944a8495280db42,7104,00:00:35.535,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a04a94d6915ae8637f94c84,15928,00:00:00.000,time1,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a04a94d6915ae8637f94c84,16036,00:00:15.929,time1,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
+6a04a94d6915ae8637f94c84,13387,00:00:31.966,time1,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a04a94d6915ae8637f94c84,13368,00:00:45.355,time1,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a04a94d6915ae8637f94c84,30692,00:00:58.724,time1,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a04a94d6915ae8637f94c84,6809,00:01:29.416,time1,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6544ff9e0fb2eaaf83e2de5c,12349,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+6544ff9e0fb2eaaf83e2de5c,7398,00:00:12.351,time1,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+6544ff9e0fb2eaaf83e2de5c,14433,00:00:19.750,time1,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6544ff9e0fb2eaaf83e2de5c,31964,00:00:34.185,time1,4,1,2,You must finish the entire task in under 20 minutes before time runs out.,FALSE
+6544ff9e0fb2eaaf83e2de5c,2065,00:01:06.150,time1,4,2,0,You must stay on this screen without switching to other tabs or windows.,TRUE
+6544ff9e0fb2eaaf83e2de5c,12699,00:01:08.217,time1,5,1,0,"No, but you are expected to answer as fast as possible without thinking too much.",FALSE
+6544ff9e0fb2eaaf83e2de5c,5914,00:01:20.918,time1,5,2,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6544ff9e0fb2eaaf83e2de5c,4432,00:01:26.834,time1,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+63f93b47bb0c1a1aca131480,35299,00:00:00.000,time1,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
+63f93b47bb0c1a1aca131480,19054,00:00:35.300,time1,2,1,3,"Click the ""Neither bothered me"" button.",FALSE
+63f93b47bb0c1a1aca131480,7774,00:00:54.356,time1,2,2,2,Try your best to choose the one that bothered you slightly more.,TRUE
+63f93b47bb0c1a1aca131480,7997,00:01:02.131,time1,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+63f93b47bb0c1a1aca131480,9985,00:01:10.130,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+63f93b47bb0c1a1aca131480,8637,00:01:20.116,time1,5,1,0,"Yes, you have exactly 20 minutes to finish the entire task, so you must work very quickly.",FALSE
+63f93b47bb0c1a1aca131480,4104,00:01:28.755,time1,5,2,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+63f93b47bb0c1a1aca131480,4068,00:01:32.861,time1,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+66dd661dd80c9cc1df616f8a,7644,00:00:00.000,time1,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+66dd661dd80c9cc1df616f8a,5927,00:00:07.644,time1,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
+66dd661dd80c9cc1df616f8a,8813,00:00:13.572,time1,3,1,1,If you have not experienced either problem in your entire life.,FALSE
+66dd661dd80c9cc1df616f8a,5943,00:00:22.386,time1,3,2,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+66dd661dd80c9cc1df616f8a,16895,00:00:28.331,time1,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+66dd661dd80c9cc1df616f8a,12247,00:00:45.227,time1,5,1,3,"No, but you are expected to answer as fast as possible without thinking too much.",FALSE
+66dd661dd80c9cc1df616f8a,3282,00:00:57.476,time1,5,2,2,"Yes, the screen will automatically skip to the next pair if you don't answer within a few seconds.",FALSE
+66dd661dd80c9cc1df616f8a,5196,00:01:00.760,time1,5,3,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+66dd661dd80c9cc1df616f8a,6377,00:01:05.956,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+602cf4568083d86318913385,35824,00:00:00.000,time1,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+602cf4568083d86318913385,41879,00:00:35.827,time1,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+602cf4568083d86318913385,19126,00:01:17.707,time1,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+602cf4568083d86318913385,21682,00:01:36.834,time1,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
+602cf4568083d86318913385,17808,00:01:58.518,time1,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+602cf4568083d86318913385,27328,00:02:16.327,time1,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+5689916dd3d6a7000aa1cbf0,4621,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+5689916dd3d6a7000aa1cbf0,4881,00:00:04.624,time1,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
+5689916dd3d6a7000aa1cbf0,6548,00:00:09.507,time1,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+5689916dd3d6a7000aa1cbf0,5448,00:00:16.058,time1,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+5689916dd3d6a7000aa1cbf0,5865,00:00:21.508,time1,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+5689916dd3d6a7000aa1cbf0,3948,00:00:27.376,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a0adfcc9de2f1c28b0db58b,5144,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a0adfcc9de2f1c28b0db58b,5950,00:00:05.145,time1,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
+6a0adfcc9de2f1c28b0db58b,6747,00:00:11.096,time1,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a0adfcc9de2f1c28b0db58b,11749,00:00:17.845,time1,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a0adfcc9de2f1c28b0db58b,8882,00:00:29.595,time1,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a0adfcc9de2f1c28b0db58b,3415,00:00:38.479,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a19a092d1e2eb2e4b072554,4691,00:00:00.000,time1,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a19a092d1e2eb2e4b072554,7486,00:00:04.692,time1,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
+6a19a092d1e2eb2e4b072554,8337,00:00:12.180,time1,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a19a092d1e2eb2e4b072554,5206,00:00:20.518,time1,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a19a092d1e2eb2e4b072554,4064,00:00:25.726,time1,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a19a092d1e2eb2e4b072554,3465,00:00:29.792,time1,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+69ad388b63979c96dc085507,9867,00:00:00.000,time1,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+69ad388b63979c96dc085507,9429,00:00:09.868,time1,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+69ad388b63979c96dc085507,20297,00:00:19.298,time1,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+69ad388b63979c96dc085507,9561,00:00:39.596,time1,4,1,0,You must complete all 105 screens in a row without taking any breaks.,FALSE
+69ad388b63979c96dc085507,5697,00:00:49.158,time1,4,2,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+69ad388b63979c96dc085507,11459,00:00:54.856,time1,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+69ad388b63979c96dc085507,4125,00:01:06.316,time1,6,1,2,One break exactly in the middle of the task.,FALSE
+69ad388b63979c96dc085507,5345,00:01:10.442,time1,6,2,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+5bd2a0799afb5b00015be460,7548,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+5bd2a0799afb5b00015be460,5610,00:00:07.550,time1,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
+5bd2a0799afb5b00015be460,6814,00:00:13.163,time1,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+5bd2a0799afb5b00015be460,3410,00:00:19.982,time1,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
+5bd2a0799afb5b00015be460,6698,00:00:23.395,time1,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+5bd2a0799afb5b00015be460,3280,00:00:30.096,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a0da93c7800f8ed95424872,5445,00:00:00.000,time1,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a0da93c7800f8ed95424872,5657,00:00:05.445,time1,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
+6a0da93c7800f8ed95424872,6318,00:00:11.103,time1,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a0da93c7800f8ed95424872,7009,00:00:17.422,time1,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a0da93c7800f8ed95424872,7965,00:00:24.432,time1,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a0da93c7800f8ed95424872,4252,00:00:32.398,time1,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a55022ac3162a7be7ddadd5,5851,00:00:00.000,time1,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a55022ac3162a7be7ddadd5,4487,00:00:05.852,time1,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+6a55022ac3162a7be7ddadd5,7287,00:00:10.340,time1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a55022ac3162a7be7ddadd5,5447,00:00:17.628,time1,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a55022ac3162a7be7ddadd5,6007,00:00:23.076,time1,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a55022ac3162a7be7ddadd5,7007,00:00:29.084,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+69f7666c2ce1f93d57e39940,6760,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+69f7666c2ce1f93d57e39940,5598,00:00:06.762,time1,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+69f7666c2ce1f93d57e39940,3543,00:00:12.361,time1,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+69f7666c2ce1f93d57e39940,7455,00:00:15.905,time1,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+69f7666c2ce1f93d57e39940,6374,00:00:23.361,time1,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+69f7666c2ce1f93d57e39940,3563,00:00:29.737,time1,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+5a47473899311d0001df550e,3043,00:00:00.000,time1,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+5a47473899311d0001df550e,8837,00:00:03.044,time1,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+5a47473899311d0001df550e,4243,00:00:11.881,time1,3,1,2,If you have not experienced either problem in your entire life.,FALSE
+5a47473899311d0001df550e,3544,00:00:16.125,time1,3,2,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+5a47473899311d0001df550e,5249,00:00:19.670,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+5a47473899311d0001df550e,5310,00:00:24.917,time1,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+5a47473899311d0001df550e,3631,00:00:30.227,time1,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+60a252db049918aa001fe65a,11274,00:00:00.000,time1,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+60a252db049918aa001fe65a,6268,00:00:11.280,time1,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
+60a252db049918aa001fe65a,10671,00:00:17.553,time1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+60a252db049918aa001fe65a,16649,00:00:28.228,time1,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+60a252db049918aa001fe65a,18832,00:00:44.880,time1,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+60a252db049918aa001fe65a,12867,00:01:03.714,time1,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+69f061c18bcd97022e700b95,9005,00:00:00.000,time1,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+69f061c18bcd97022e700b95,8360,00:00:09.007,time1,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
+69f061c18bcd97022e700b95,8627,00:00:17.369,time1,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+69f061c18bcd97022e700b95,14746,00:00:25.999,time1,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
+69f061c18bcd97022e700b95,17613,00:00:40.749,time1,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+69f061c18bcd97022e700b95,5613,00:00:58.365,time1,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6009606726f80266d809bf9a,15547,00:00:00.000,time1,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+6009606726f80266d809bf9a,14679,00:00:15.548,time1,2,1,0,"Click the ""Neither bothered me"" button.",FALSE
+6009606726f80266d809bf9a,5806,00:00:30.228,time1,2,2,2,Try your best to choose the one that bothered you slightly more.,TRUE
+6009606726f80266d809bf9a,22294,00:00:36.036,time1,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6009606726f80266d809bf9a,14111,00:00:58.332,time1,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+6009606726f80266d809bf9a,31061,00:01:12.445,time1,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6009606726f80266d809bf9a,25517,00:01:43.509,time1,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a02ed5bd6acf52c07ab46fa,4388,00:00:00.000,time1,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a02ed5bd6acf52c07ab46fa,3773,00:00:04.389,time1,2,1,3,"Click the ""Neither bothered me"" button.",FALSE
+6a02ed5bd6acf52c07ab46fa,3517,00:00:08.163,time1,2,2,2,Try your best to choose the one that bothered you slightly more.,TRUE
+6a02ed5bd6acf52c07ab46fa,3261,00:00:11.681,time1,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a02ed5bd6acf52c07ab46fa,3707,00:00:14.943,time1,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a02ed5bd6acf52c07ab46fa,4600,00:00:18.651,time1,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a02ed5bd6acf52c07ab46fa,2587,00:00:23.252,time1,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+67c0dafd6e94e9833dbe9524,10066,00:00:00.000,time1,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+67c0dafd6e94e9833dbe9524,4161,00:00:10.068,time1,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
+67c0dafd6e94e9833dbe9524,10458,00:00:14.230,time1,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+67c0dafd6e94e9833dbe9524,14994,00:00:24.689,time1,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+67c0dafd6e94e9833dbe9524,17950,00:00:39.685,time1,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+67c0dafd6e94e9833dbe9524,5617,00:00:57.637,time1,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+66d31a1b0515fe747830bab9,10786,00:00:00.000,time1,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
+66d31a1b0515fe747830bab9,15435,00:00:10.790,time1,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
+66d31a1b0515fe747830bab9,9068,00:00:26.230,time1,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+66d31a1b0515fe747830bab9,169588,00:00:35.301,time1,4,1,1,You must complete all 105 screens in a row without taking any breaks.,FALSE
+66d31a1b0515fe747830bab9,17068,00:03:24.894,time1,4,2,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+66d31a1b0515fe747830bab9,112323,00:03:41.966,time1,5,1,0,"No, but you are expected to answer as fast as possible without thinking too much.",FALSE
+66d31a1b0515fe747830bab9,5460,00:05:34.293,time1,5,2,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+66d31a1b0515fe747830bab9,117148,00:05:39.757,time1,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6673eea04e15d2d270aa7ff8,14907,00:00:00.000,time2,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
+6673eea04e15d2d270aa7ff8,13971,00:00:14.912,time2,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+6673eea04e15d2d270aa7ff8,8304,00:00:28.887,time2,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6673eea04e15d2d270aa7ff8,12204,00:00:37.194,time2,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+6673eea04e15d2d270aa7ff8,11973,00:00:49.402,time2,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6673eea04e15d2d270aa7ff8,6558,00:01:01.379,time2,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+66d31a1b0515fe747830bab9,10559,00:00:00.000,time2,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
+66d31a1b0515fe747830bab9,8975,00:00:10.560,time2,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
+66d31a1b0515fe747830bab9,14559,00:00:19.536,time2,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+66d31a1b0515fe747830bab9,9783,00:00:34.096,time2,4,1,0,You must complete all 105 screens in a row without taking any breaks.,FALSE
+66d31a1b0515fe747830bab9,2015,00:00:43.880,time2,4,2,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+66d31a1b0515fe747830bab9,5703,00:00:45.896,time2,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+66d31a1b0515fe747830bab9,4495,00:00:51.600,time2,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+5ea4cebb8944a8495280db42,7723,00:00:00.000,time2,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+5ea4cebb8944a8495280db42,26306,00:00:07.724,time2,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+5ea4cebb8944a8495280db42,4939,00:00:34.031,time2,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+5ea4cebb8944a8495280db42,28876,00:00:38.972,time2,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+5ea4cebb8944a8495280db42,5793,00:01:07.849,time2,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+5ea4cebb8944a8495280db42,3356,00:01:13.644,time2,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+66d5e128d49faf318dd776ec,16139,00:00:00.000,time2,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+66d5e128d49faf318dd776ec,14065,00:00:16.141,time2,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+66d5e128d49faf318dd776ec,16510,00:00:30.206,time2,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+66d5e128d49faf318dd776ec,16959,00:00:46.717,time2,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+66d5e128d49faf318dd776ec,15646,00:01:03.677,time2,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+66d5e128d49faf318dd776ec,12520,00:01:19.324,time2,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+632222532c12ab0ab7ca00bd,23726,00:00:00.000,time2,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+632222532c12ab0ab7ca00bd,10472,00:00:23.728,time2,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
+632222532c12ab0ab7ca00bd,6738,00:00:34.202,time2,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+632222532c12ab0ab7ca00bd,12152,00:00:40.942,time2,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+632222532c12ab0ab7ca00bd,17777,00:00:53.096,time2,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+632222532c12ab0ab7ca00bd,3714,00:01:10.876,time2,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+602cf4568083d86318913385,62085,00:00:00.000,time2,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+602cf4568083d86318913385,21070,00:01:02.087,time2,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+602cf4568083d86318913385,27424,00:01:23.159,time2,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+602cf4568083d86318913385,15828,00:01:50.586,time2,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+602cf4568083d86318913385,14225,00:02:06.416,time2,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+602cf4568083d86318913385,41990,00:02:20.646,time2,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+67e0870d582edce0a2764d1f,4899,00:00:00.000,time2,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+67e0870d582edce0a2764d1f,4932,00:00:04.901,time2,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
+67e0870d582edce0a2764d1f,9869,00:00:09.834,time2,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+67e0870d582edce0a2764d1f,4085,00:00:19.705,time2,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+67e0870d582edce0a2764d1f,4281,00:00:23.792,time2,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+67e0870d582edce0a2764d1f,4220,00:00:28.075,time2,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+691cd0a261d7064af0b96599,3864,00:00:00.000,time2,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+691cd0a261d7064af0b96599,5865,00:00:03.865,time2,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+691cd0a261d7064af0b96599,3848,00:00:09.732,time2,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+691cd0a261d7064af0b96599,4549,00:00:13.581,time2,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
+691cd0a261d7064af0b96599,11648,00:00:18.132,time2,5,1,2,"No, but you are expected to answer as fast as possible without thinking too much.",FALSE
+691cd0a261d7064af0b96599,2498,00:00:29.782,time2,5,2,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+691cd0a261d7064af0b96599,4082,00:00:32.282,time2,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a1dfa3eaef836ebd308886e,7019,00:00:00.000,time2,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a1dfa3eaef836ebd308886e,5571,00:00:07.026,time2,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+6a1dfa3eaef836ebd308886e,5863,00:00:12.603,time2,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a1dfa3eaef836ebd308886e,11148,00:00:18.474,time2,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a1dfa3eaef836ebd308886e,6869,00:00:29.630,time2,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a1dfa3eaef836ebd308886e,3845,00:00:36.507,time2,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a26311766436b2345c944e1,33304,00:00:00.000,time2,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a26311766436b2345c944e1,34774,00:00:33.305,time2,2,1,2,"Click the ""Neither bothered me"" button.",FALSE
+6a26311766436b2345c944e1,6734,00:01:08.080,time2,2,2,3,Try your best to choose the one that bothered you slightly more.,TRUE
+6a26311766436b2345c944e1,11683,00:01:14.816,time2,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a26311766436b2345c944e1,11562,00:01:26.500,time2,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a26311766436b2345c944e1,19206,00:01:38.063,time2,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a26311766436b2345c944e1,15846,00:01:57.271,time2,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+69f7666c2ce1f93d57e39940,6413,00:00:00.000,time2,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
+69f7666c2ce1f93d57e39940,6060,00:00:06.414,time2,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+69f7666c2ce1f93d57e39940,3693,00:00:12.476,time2,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+69f7666c2ce1f93d57e39940,5792,00:00:16.172,time2,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+69f7666c2ce1f93d57e39940,5377,00:00:21.968,time2,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+69f7666c2ce1f93d57e39940,2635,00:00:27.347,time2,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a04a94d6915ae8637f94c84,13247,00:00:00.000,time2,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a04a94d6915ae8637f94c84,17083,00:00:13.248,time2,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+6a04a94d6915ae8637f94c84,15009,00:00:30.332,time2,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a04a94d6915ae8637f94c84,26738,00:00:45.346,time2,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a04a94d6915ae8637f94c84,15911,00:01:12.086,time2,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a04a94d6915ae8637f94c84,8689,00:01:27.998,time2,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a0da93c7800f8ed95424872,5141,00:00:00.000,time2,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a0da93c7800f8ed95424872,10356,00:00:05.142,time2,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+6a0da93c7800f8ed95424872,8141,00:00:15.499,time2,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a0da93c7800f8ed95424872,8000,00:00:23.641,time2,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a0da93c7800f8ed95424872,4857,00:00:31.642,time2,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a0da93c7800f8ed95424872,4267,00:00:36.500,time2,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+5689916dd3d6a7000aa1cbf0,5074,00:00:00.000,time2,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+5689916dd3d6a7000aa1cbf0,4831,00:00:05.077,time2,2,1,0,"Click the ""Neither bothered me"" button.",FALSE
+5689916dd3d6a7000aa1cbf0,2014,00:00:09.910,time2,2,2,1,Try your best to choose the one that bothered you slightly more.,TRUE
+5689916dd3d6a7000aa1cbf0,6898,00:00:11.927,time2,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+5689916dd3d6a7000aa1cbf0,15115,00:00:18.828,time2,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+5689916dd3d6a7000aa1cbf0,8782,00:00:33.945,time2,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+5689916dd3d6a7000aa1cbf0,1964,00:00:42.729,time2,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+69ad388b63979c96dc085507,9541,00:00:00.000,time2,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+69ad388b63979c96dc085507,7139,00:00:09.543,time2,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+69ad388b63979c96dc085507,6133,00:00:16.682,time2,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+69ad388b63979c96dc085507,11963,00:00:22.816,time2,4,1,0,You must finish the entire task in under 20 minutes before time runs out.,FALSE
+69ad388b63979c96dc085507,2887,00:00:34.780,time2,4,2,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+69ad388b63979c96dc085507,12263,00:00:37.668,time2,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+69ad388b63979c96dc085507,3273,00:00:49.932,time2,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a02ed5bd6acf52c07ab46fa,5276,00:00:00.000,time2,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a02ed5bd6acf52c07ab46fa,4553,00:00:05.277,time2,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
+6a02ed5bd6acf52c07ab46fa,3115,00:00:09.831,time2,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a02ed5bd6acf52c07ab46fa,6704,00:00:12.948,time2,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a02ed5bd6acf52c07ab46fa,5437,00:00:19.653,time2,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a02ed5bd6acf52c07ab46fa,2764,00:00:25.091,time2,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6991e46740117ca6ef90cd7c,9531,00:00:00.000,time2,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+6991e46740117ca6ef90cd7c,7633,00:00:09.537,time2,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+6991e46740117ca6ef90cd7c,6221,00:00:17.182,time2,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6991e46740117ca6ef90cd7c,15409,00:00:23.407,time2,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
+6991e46740117ca6ef90cd7c,10453,00:00:38.824,time2,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6991e46740117ca6ef90cd7c,14563,00:00:49.293,time2,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a0adfcc9de2f1c28b0db58b,2828,00:00:00.000,time2,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a0adfcc9de2f1c28b0db58b,4514,00:00:02.829,time2,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+6a0adfcc9de2f1c28b0db58b,6099,00:00:07.344,time2,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a0adfcc9de2f1c28b0db58b,7316,00:00:13.444,time2,4,1,0,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a0adfcc9de2f1c28b0db58b,3798,00:00:20.762,time2,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a0adfcc9de2f1c28b0db58b,3581,00:00:24.563,time2,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+5a47473899311d0001df550e,4726,00:00:00.000,time2,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+5a47473899311d0001df550e,3831,00:00:04.726,time2,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
+5a47473899311d0001df550e,3271,00:00:08.558,time2,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+5a47473899311d0001df550e,4585,00:00:11.830,time2,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+5a47473899311d0001df550e,8363,00:00:16.416,time2,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+5a47473899311d0001df550e,2642,00:00:24.780,time2,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+65465ad50fb5c91a7da03f86,13107,00:00:00.000,time2,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+65465ad50fb5c91a7da03f86,10073,00:00:13.111,time2,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+65465ad50fb5c91a7da03f86,11249,00:00:23.188,time2,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+65465ad50fb5c91a7da03f86,14623,00:00:34.441,time2,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+65465ad50fb5c91a7da03f86,10866,00:00:49.067,time2,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+65465ad50fb5c91a7da03f86,5474,00:00:59.938,time2,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6544ff9e0fb2eaaf83e2de5c,5147,00:00:00.000,time2,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+6544ff9e0fb2eaaf83e2de5c,9064,00:00:05.149,time2,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+6544ff9e0fb2eaaf83e2de5c,7315,00:00:14.215,time2,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6544ff9e0fb2eaaf83e2de5c,7265,00:00:21.532,time2,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+6544ff9e0fb2eaaf83e2de5c,5315,00:00:28.798,time2,5,1,2,"No, but you are expected to answer as fast as possible without thinking too much.",FALSE
+6544ff9e0fb2eaaf83e2de5c,1398,00:00:34.115,time2,5,2,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6544ff9e0fb2eaaf83e2de5c,2716,00:00:35.514,time2,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a0b2bdbea2d151e845c3e38,7715,00:00:00.000,time2,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a0b2bdbea2d151e845c3e38,9539,00:00:07.717,time2,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+6a0b2bdbea2d151e845c3e38,11220,00:00:17.258,time2,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a0b2bdbea2d151e845c3e38,6649,00:00:28.479,time2,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a0b2bdbea2d151e845c3e38,9579,00:00:35.131,time2,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a0b2bdbea2d151e845c3e38,4503,00:00:44.712,time2,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6abaf85abba07e29bf4ee3d9,10535,00:00:00.000,time2,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
+6abaf85abba07e29bf4ee3d9,9631,00:00:10.536,time2,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
+6abaf85abba07e29bf4ee3d9,5551,00:00:20.168,time2,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6abaf85abba07e29bf4ee3d9,20951,00:00:25.720,time2,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+6abaf85abba07e29bf4ee3d9,11063,00:00:46.672,time2,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6abaf85abba07e29bf4ee3d9,5127,00:00:57.736,time2,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a19a092d1e2eb2e4b072554,8139,00:00:00.000,time2,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a19a092d1e2eb2e4b072554,5835,00:00:08.140,time2,2,1,1,Try your best to choose the one that bothered you slightly more.,TRUE
+6a19a092d1e2eb2e4b072554,8251,00:00:13.963,time2,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a19a092d1e2eb2e4b072554,11467,00:00:22.216,time2,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a19a092d1e2eb2e4b072554,15492,00:00:33.685,time2,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a19a092d1e2eb2e4b072554,3116,00:00:49.178,time2,6,1,0,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+6a55022ac3162a7be7ddadd5,5774,00:00:00.000,time2,1,1,0,Click on the problem that bothered you more in the last two weeks.,TRUE
+6a55022ac3162a7be7ddadd5,8562,00:00:05.776,time2,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+6a55022ac3162a7be7ddadd5,6632,00:00:14.340,time2,3,1,1,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+6a55022ac3162a7be7ddadd5,4946,00:00:20.974,time2,4,1,1,You must stay on this screen without switching to other tabs or windows.,TRUE
+6a55022ac3162a7be7ddadd5,4477,00:00:25.921,time2,5,1,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+6a55022ac3162a7be7ddadd5,3546,00:00:30.399,time2,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+69f0eddb8814c802224f8bad,17617,00:00:00.000,time2,1,1,1,Click on the problem that bothered you more in the last two weeks.,TRUE
+69f0eddb8814c802224f8bad,7986,00:00:17.618,time2,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+69f0eddb8814c802224f8bad,13532,00:00:25.605,time2,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+69f0eddb8814c802224f8bad,8917,00:00:39.139,time2,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+69f0eddb8814c802224f8bad,8021,00:00:48.057,time2,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+69f0eddb8814c802224f8bad,12327,00:00:56.078,time2,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+60a252db049918aa001fe65a,10152,00:00:00.000,time2,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
+60a252db049918aa001fe65a,14612,00:00:10.155,time2,2,1,2,Try your best to choose the one that bothered you slightly more.,TRUE
+60a252db049918aa001fe65a,8775,00:00:24.770,time2,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+60a252db049918aa001fe65a,11645,00:00:33.548,time2,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+60a252db049918aa001fe65a,10510,00:00:45.195,time2,5,1,3,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+60a252db049918aa001fe65a,7545,00:00:55.711,time2,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+63f93b47bb0c1a1aca131480,13919,00:00:00.000,time2,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
+63f93b47bb0c1a1aca131480,13562,00:00:13.922,time2,2,1,2,"Click the ""Neither bothered me"" button.",FALSE
+63f93b47bb0c1a1aca131480,4087,00:00:27.485,time2,2,2,1,Try your best to choose the one that bothered you slightly more.,TRUE
+63f93b47bb0c1a1aca131480,7149,00:00:31.574,time2,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+63f93b47bb0c1a1aca131480,8494,00:00:38.725,time2,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+63f93b47bb0c1a1aca131480,12359,00:00:47.221,time2,5,1,1,"No, but you are expected to answer as fast as possible without thinking too much.",FALSE
+63f93b47bb0c1a1aca131480,4100,00:00:59.580,time2,5,2,0,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+63f93b47bb0c1a1aca131480,5465,00:01:03.681,time2,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+69f061c18bcd97022e700b95,7849,00:00:00.000,time2,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+69f061c18bcd97022e700b95,6309,00:00:07.851,time2,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+69f061c18bcd97022e700b95,9626,00:00:14.162,time2,3,1,2,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+69f061c18bcd97022e700b95,11129,00:00:23.789,time2,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+69f061c18bcd97022e700b95,40835,00:00:34.919,time2,5,1,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+69f061c18bcd97022e700b95,3951,00:01:15.756,time2,6,1,2,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+676ed6c97f59dba5a786886d,3214,00:00:00.000,time2,1,1,3,Click on the problem that bothered you more in the last two weeks.,TRUE
+676ed6c97f59dba5a786886d,3067,00:00:03.216,time2,2,1,0,Try your best to choose the one that bothered you slightly more.,TRUE
+676ed6c97f59dba5a786886d,3255,00:00:06.285,time2,3,1,3,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+676ed6c97f59dba5a786886d,5236,00:00:09.541,time2,4,1,2,You must stay on this screen without switching to other tabs or windows.,TRUE
+676ed6c97f59dba5a786886d,8432,00:00:14.779,time2,5,1,2,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+676ed6c97f59dba5a786886d,2219,00:00:23.213,time2,6,1,3,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
+5bd2a0799afb5b00015be460,5487,00:00:00.000,time2,1,1,2,Click on the problem that bothered you more in the last two weeks.,TRUE
+5bd2a0799afb5b00015be460,4940,00:00:05.494,time2,2,1,3,Try your best to choose the one that bothered you slightly more.,TRUE
+5bd2a0799afb5b00015be460,7744,00:00:10.444,time2,3,1,0,Only when you are absolutely sure neither problem affected you at all in the last two weeks.,TRUE
+5bd2a0799afb5b00015be460,6858,00:00:18.195,time2,4,1,3,You must stay on this screen without switching to other tabs or windows.,TRUE
+5bd2a0799afb5b00015be460,8314,00:00:25.059,time2,5,1,3,"No, but you are expected to answer as fast as possible without thinking too much.",FALSE
+5bd2a0799afb5b00015be460,3488,00:00:33.383,time2,5,2,2,"Yes, you have exactly 20 minutes to finish the entire task, so you must work very quickly.",FALSE
+5bd2a0799afb5b00015be460,2726,00:00:36.878,time2,5,3,1,"No, there is no time limit, so you should take your time to carefully reflect on each screen.",TRUE
+5bd2a0799afb5b00015be460,3263,00:00:39.610,time2,6,1,1,"Three breaks, giving you a chance to pause between the four parts of the task.",TRUE
