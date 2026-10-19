@@ -1,6 +1,6 @@
 # Analysis Notebook: beta_tau_per_pairwise
 
-**Model:** `models/bradley_terry_beta_tau_per/bradley_terry_beta_tau_per.stan` (Bradley-Terry utilities + burden threshold `tau` + per-outcome perseveration `key_decay`/`rho`), fit to `data/processed/cbcu_results.csv`.
+**Model:** `models/bradley_terry_beta_tau_per/bradley_terry_beta_tau_per.stan` (Bradley-Terry utilities + burden threshold `tau` + per-outcome perseveration `key_decay`/`rho`), fit to `data/processed/cbcu.csv`.
 **Date Created:** 2026-09-15
 
 ## 1. Hypotheses

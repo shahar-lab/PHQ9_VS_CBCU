@@ -9,8 +9,10 @@ feedback     <- read_csv(file.path(raw_dir, "feedback.csv"), show_col_types = FA
 
 cbcu <- step12$after_rt_bounds
 
+# phq9_sum: total of the nine PHQ9 items (attention check excluded).
 phq <- phq9_results |>
   mutate(prolific_id = as.character(prolific_id)) |>
+  mutate(phq9_sum = rowSums(pick(phq9_1:phq9_9))) |>
   filter(prolific_id %in% step12$after_window_exits_pids)
 
 # Feedback is kept for the surviving participants only, like the PHQ rows.

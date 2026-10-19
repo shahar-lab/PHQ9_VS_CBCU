@@ -1,6 +1,6 @@
 #### PREPARE STAN DATA (ONE LIST PER WAVE) ####
 
-df_cbcu <- read_csv(file.path(data_path, "cbcu_results.csv"), show_col_types = FALSE)
+df_cbcu <- read_csv(file.path(data_path, "cbcu.csv"), show_col_types = FALSE)
 
 # Stan's categorical_logit choice coding: 1 = A (left), 2 = B (right), 3 = None (skip).
 df_cbcu <- df_cbcu |>
