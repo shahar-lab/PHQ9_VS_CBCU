@@ -2,7 +2,9 @@
 
 df_participant_parameters <- read_csv(file.path(artifacts_dir, "participant_parameters.csv"), show_col_types = FALSE)
 
-plot_param_test_retest <- function(df, param_name, param_label) {
+# item_scale = TRUE is for PHQ9 items: fixed 0-3 axes with whole-number ticks, and each dot
+# sized and labelled by how many participants share that (time 1, time 2) pair.
+plot_param_test_retest <- function(df, param_name, param_label, item_scale = FALSE) {
 
   df_param_wide <- df |>
     select(prolific_id, time, value = all_of(param_name)) |>
@@ -11,12 +13,17 @@ plot_param_test_retest <- function(df, param_name, param_label) {
 
   stopifnot(length(df_param_wide$value_time1) == length(df_param_wide$value_time2))
 
-  shared_limits <- range(c(df_param_wide$value_time1, df_param_wide$value_time2), na.rm = TRUE)
-  axis_breaks   <- seq(shared_limits[1], shared_limits[2], length.out = 4)
+  shared_limits <- if (item_scale) c(0, 3) else range(c(df_param_wide$value_time1, df_param_wide$value_time2), na.rm = TRUE)
+  axis_breaks   <- if (item_scale) 0:3 else seq(shared_limits[1], shared_limits[2], length.out = 4)
+  df_counts     <- count(df_param_wide, value_time1, value_time2)
   pearson_r     <- cor(df_param_wide$value_time1, df_param_wide$value_time2, method = "pearson")
 
   p <- ggplot(df_param_wide, aes(x = value_time1, y = value_time2)) +
-    geom_point(colour = "#4477AA", alpha = 0.75, size = 2) +
+    {if (item_scale) list(
+      geom_point(data = df_counts, aes(size = n), colour = "#4477AA", alpha = 0.75),
+      geom_text(data = df_counts, aes(label = n), vjust = -1.6, size = 3.5, colour = "grey30"),
+      scale_size_area(max_size = 9, guide = "none")
+    ) else geom_point(colour = "#4477AA", alpha = 0.75, size = 2)} +
     geom_smooth(method = "lm", se = FALSE, colour = "#EE6677", linewidth = 0.8) +
     geom_abline(slope = 1, intercept = 0, linetype = "dashed", colour = "grey60") +
     annotate(
@@ -50,12 +57,12 @@ p_key_decay_retest <- plot_param_test_retest(df_participant_parameters, "key_dec
 p_rho_retest       <- plot_param_test_retest(df_participant_parameters, "rho", "rho")
 
 p_phq9_sum_retest <- plot_param_test_retest(df_participant_parameters, "phq9_sum", "PHQ9 sum")
-p_phq9_1_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_1", "PHQ9 item 1")
-p_phq9_2_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_2", "PHQ9 item 2")
-p_phq9_3_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_3", "PHQ9 item 3")
-p_phq9_4_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_4", "PHQ9 item 4")
-p_phq9_5_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_5", "PHQ9 item 5")
-p_phq9_6_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_6", "PHQ9 item 6")
-p_phq9_7_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_7", "PHQ9 item 7")
-p_phq9_8_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_8", "PHQ9 item 8")
-p_phq9_9_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_9", "PHQ9 item 9")
+p_phq9_1_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_1", "PHQ9 item 1", item_scale = TRUE)
+p_phq9_2_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_2", "PHQ9 item 2", item_scale = TRUE)
+p_phq9_3_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_3", "PHQ9 item 3", item_scale = TRUE)
+p_phq9_4_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_4", "PHQ9 item 4", item_scale = TRUE)
+p_phq9_5_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_5", "PHQ9 item 5", item_scale = TRUE)
+p_phq9_6_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_6", "PHQ9 item 6", item_scale = TRUE)
+p_phq9_7_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_7", "PHQ9 item 7", item_scale = TRUE)
+p_phq9_8_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_8", "PHQ9 item 8", item_scale = TRUE)
+p_phq9_9_retest   <- plot_param_test_retest(df_participant_parameters, "phq9_9", "PHQ9 item 9", item_scale = TRUE)
