@@ -3,8 +3,8 @@
 
 #### EXCLUDE TRIALS: NA RT OR CHOICE (NO RESPONSE RECORDED) ####
 
-# RT is kept exploratory only (see output/raw/09_cbcu_rt_by_trial_interactive.html
-# and the RT pilot exploration analyses) -- no RT-based cutoff is applied here.
+# RT is kept exploratory only (see the RT pilot exploration analyses) -- no RT-based
+# cutoff is applied here.
 # Trials are only dropped when no response was recorded at all.
 
 step11 <- readRDS(file.path(artifacts_dir, "11_after_window_exits.rds"))

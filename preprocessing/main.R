@@ -87,6 +87,9 @@ source(file.path(code_dir, "13_write_processed_demographics.R"))
 # Write surviving CBCU trials, PHQ rows and feedback to data/processed/.
 source(file.path(code_dir, "14_write_processed_data.R"))
 
+# Write the number of quiz errors per surviving participant (reported only, no exclusion).
+source(file.path(code_dir, "16_write_processed_quiz_errors.R"))
+
 # Write manuscript Participants and Data treatment excerpts from the exclusion
 # cascade counts.
 source(file.path(code_dir, "15_write_manuscript_excerpts.R"))
