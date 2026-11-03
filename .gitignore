@@ -1,1 +1,2 @@
 *.rds
+preprocessing/artifacts/collected.csv
