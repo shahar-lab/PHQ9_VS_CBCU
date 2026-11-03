@@ -1,57 +1,397 @@
 prolific_id,completion_time,time,phq9_1,phq9_2,phq9_3,phq9_4,phq9_5,phq9_6,phq9_7,phq9_8,phq9_9,phq9_1_label,phq9_2_label,phq9_3_label,phq9_4_label,phq9_5_label,phq9_6_label,phq9_7_label,phq9_8_label,phq9_9_label,attn_check_score,attn_check_label,phq9_sum
 632222532c12ab0ab7ca00bd,00:00:20,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+594ee0aa7095f80001da4c4e,00:00:24,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+699ad28882624b23f9713908,00:00:34,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+5ba292385301b80001c71ba2,00:00:28,time1,0,0,1,0,0,0,1,0,0,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,2
+628781515f29a0394e23b15b,00:00:14,time1,0,0,1,0,0,0,0,0,0,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
+699fcf6ce8e60730dbfc92ac,00:00:34,time1,0,0,2,1,2,0,0,0,0,Not at all,Not at all,More than half the days,Several days,More than half the days,Not at all,Not at all,Not at all,Not at all,0,Not at all,5
+699f83cc468a2f1781f00c12,00:00:32,time1,0,0,1,0,1,0,0,0,0,Not at all,Not at all,Several days,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+678e883a9ac653bfb7ff5f1f,00:00:49,time1,1,1,1,1,1,0,0,1,0,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,Several days,Not at all,0,Not at all,6
+69fb3666fb8ef17497b9514e,00:00:34,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+663127d07fb81f5532bcfdad,00:00:48,time1,0,0,2,1,0,0,0,0,0,Not at all,Not at all,More than half the days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+6a0493b0ba30180995ebd884,00:00:24,time1,2,2,0,2,2,2,2,1,0,More than half the days,More than half the days,Not at all,More than half the days,More than half the days,More than half the days,More than half the days,Several days,Not at all,0,Not at all,13
+66019f5e10adbe524f2a844a,00:00:26,time1,0,0,0,1,0,0,0,0,0,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
+6a135d0137a8ad16f2590393,00:00:33,time1,0,0,0,1,0,0,0,0,0,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
+6a00d96b190db7e5ec67cb89,00:00:16,time1,0,0,1,1,0,0,0,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+665937686712e30718aac2f7,00:00:38,time1,1,1,1,0,1,1,0,0,1,Several days,Several days,Several days,Not at all,Several days,Several days,Not at all,Not at all,Several days,0,Not at all,6
+6a083fbf1cdeeaccf2e04d99,00:00:48,time1,1,1,2,2,0,0,0,0,0,Several days,Several days,More than half the days,More than half the days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,6
 65465ad50fb5c91a7da03f86,00:00:24,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+67dc7c814cd5af9421e0476a,00:00:24,time1,0,0,1,1,0,0,0,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+61656042f505fd7fa53e8628,00:00:44,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+6a24075160115784d45503dd,00:00:18,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+6997699bfa8589e80145918b,00:00:31,time1,0,0,1,1,2,1,1,0,0,Not at all,Not at all,Several days,Several days,More than half the days,Several days,Several days,Not at all,Not at all,0,Not at all,6
+6694fb732a72150ebef2c8e4,00:00:11,time1,0,0,0,0,1,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
+6ac246359c0580372ea7d6b7,00:01:49,time1,1,1,1,1,1,0,0,0,0,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,5
+5992af75c825cf0001d7d94c,00:00:19,time1,0,0,0,1,0,0,0,0,0,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
+5bf7be3abd1fd30001aa5498,00:00:30,time1,0,0,2,1,1,0,0,0,0,Not at all,Not at all,More than half the days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,4
 69f0eddb8814c802224f8bad,00:01:00,time1,1,0,0,2,2,1,0,0,0,Several days,Not at all,Not at all,More than half the days,More than half the days,Several days,Not at all,Not at all,Not at all,0,Not at all,6
+6a0e225c055ed1c21f3b90d8,00:01:05,time1,0,0,0,1,0,1,0,0,0,Not at all,Not at all,Not at all,Several days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,2
+6a1712c057793e3bfe739de8,00:00:43,time1,2,2,1,3,1,1,2,1,0,More than half the days,More than half the days,Several days,Nearly every day,Several days,Several days,More than half the days,Several days,Not at all,0,Not at all,13
+6a0ec8830dd532d62cde8232,00:00:36,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+6a1f029546cb342499d058e0,00:01:30,time1,0,0,1,0,1,0,0,0,0,Not at all,Not at all,Several days,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+680d5891d72bc74e45fb87f1,00:00:42,time1,2,2,3,2,1,0,2,0,0,More than half the days,More than half the days,Nearly every day,More than half the days,Several days,Not at all,More than half the days,Not at all,Not at all,0,Not at all,12
+60dfa6a5a12413b99195c3de,00:00:28,time1,2,2,1,3,2,2,3,0,2,More than half the days,More than half the days,Several days,Nearly every day,More than half the days,More than half the days,Nearly every day,Not at all,More than half the days,0,Not at all,17
+6a1081e8c16f66fe9595bcaa,00:00:34,time1,2,1,1,2,2,2,2,2,0,More than half the days,Several days,Several days,More than half the days,More than half the days,More than half the days,More than half the days,More than half the days,Not at all,0,Not at all,14
+6a04e558839eb469fa443cab,00:00:34,time1,2,3,2,3,0,2,1,0,1,More than half the days,Nearly every day,More than half the days,Nearly every day,Not at all,More than half the days,Several days,Not at all,Several days,0,Not at all,14
 676ed6c97f59dba5a786886d,00:00:10,time1,0,0,0,1,0,0,0,0,0,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
+60656a924c99543d12555b86,00:00:48,time1,3,3,2,2,1,3,2,0,0,Nearly every day,Nearly every day,More than half the days,More than half the days,Several days,Nearly every day,More than half the days,Not at all,Not at all,0,Not at all,16
+5e95a177eaa3cb0177ef6cc9,00:00:37,time1,0,0,2,1,1,0,1,0,0,Not at all,Not at all,More than half the days,Several days,Several days,Not at all,Several days,Not at all,Not at all,0,Not at all,5
+6783ebc2e89b75d66d952f41,00:00:24,time1,0,0,2,2,1,0,1,0,0,Not at all,Not at all,More than half the days,More than half the days,Several days,Not at all,Several days,Not at all,Not at all,0,Not at all,6
+571a1295c97ad400123ab3bd,00:00:35,time1,2,1,1,2,0,1,0,0,0,More than half the days,Several days,Several days,More than half the days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,7
 6a0b2bdbea2d151e845c3e38,00:00:32,time1,0,0,3,3,1,0,2,0,0,Not at all,Not at all,Nearly every day,Nearly every day,Several days,Not at all,More than half the days,Not at all,Not at all,0,Not at all,9
+663b638be7226d4e3fcc255f,00:01:11,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+5a0a057c80acd80001047392,00:00:23,time1,1,1,2,2,0,1,0,0,1,Several days,Several days,More than half the days,More than half the days,Not at all,Several days,Not at all,Not at all,Several days,0,Not at all,8
+69f226b2032dea50182cbd55,00:00:20,time1,1,1,1,2,1,0,0,0,0,Several days,Several days,Several days,More than half the days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,6
+69fce3ef0b9da8b3ad46eedd,00:00:32,time1,1,1,2,3,2,1,1,0,0,Several days,Several days,More than half the days,Nearly every day,More than half the days,Several days,Several days,Not at all,Not at all,0,Not at all,11
 6991e46740117ca6ef90cd7c,00:03:06,time1,1,0,1,1,0,1,1,0,0,Several days,Not at all,Several days,Several days,Not at all,Several days,Several days,Not at all,Not at all,0,Not at all,5
+69f9b0426f86f9ab7020710f,00:00:19,time1,1,2,1,3,1,3,1,0,1,Several days,More than half the days,Several days,Nearly every day,Several days,Nearly every day,Several days,Not at all,Several days,0,Not at all,13
+544e94c4fdf99b50bd30726c,00:00:24,time1,1,1,3,2,2,2,3,0,1,Several days,Several days,Nearly every day,More than half the days,More than half the days,More than half the days,Nearly every day,Not at all,Several days,0,Not at all,15
+6978d224639f15b0bf444a8f,00:00:25,time1,1,2,0,0,1,0,2,1,0,Several days,More than half the days,Not at all,Not at all,Several days,Not at all,More than half the days,Several days,Not at all,0,Not at all,7
+5e3723a2c0b2896ad554be73,00:00:20,time1,0,0,0,0,1,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
+6266a4e5846e1e41812a0432,00:00:29,time1,0,0,1,1,0,0,0,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+6a1d9d56cfece324378b6731,00:00:29,time1,1,1,2,2,1,1,1,0,0,Several days,Several days,More than half the days,More than half the days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,9
+610d4df86c4abc6b5ced6fa0,00:00:29,time1,0,1,1,1,1,1,1,0,0,Not at all,Several days,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,6
+6ad913a46985891a10f64be7,00:00:50,time1,1,1,3,1,0,1,0,0,0,Several days,Several days,Nearly every day,Several days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,7
+6a1f148617273ff995df88a0,00:00:47,time1,1,2,2,2,2,1,0,0,0,Several days,More than half the days,More than half the days,More than half the days,More than half the days,Several days,Not at all,Not at all,Not at all,0,Not at all,10
 67e0870d582edce0a2764d1f,00:00:48,time1,3,3,3,3,0,2,1,0,2,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Not at all,More than half the days,Several days,Not at all,More than half the days,0,Not at all,17
+69ac80d0bad16bd0877001c0,00:01:12,time1,1,2,2,1,2,2,0,1,1,Several days,More than half the days,More than half the days,Several days,More than half the days,More than half the days,Not at all,Several days,Several days,0,Not at all,12
+6abcc3fd0abc8028e910789f,00:01:39,time1,0,1,1,1,0,0,1,0,0,Not at all,Several days,Several days,Several days,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,4
 66d5e128d49faf318dd776ec,00:00:52,time1,0,0,1,1,0,0,1,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,3
+69ea32838e63a8af3d4ed1ae,00:00:15,time1,1,1,1,1,2,1,1,0,0,Several days,Several days,Several days,Several days,More than half the days,Several days,Several days,Not at all,Not at all,0,Not at all,8
+59cb95053306be000195be2e,00:00:22,time1,1,1,0,2,0,2,1,0,0,Several days,Several days,Not at all,More than half the days,Not at all,More than half the days,Several days,Not at all,Not at all,0,Not at all,7
+66986ab71f2b54203f26ad32,00:00:13,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+699f262fc20cdd6f59a2f6c2,00:01:30,time1,1,1,0,2,1,1,0,0,0,Several days,Several days,Not at all,More than half the days,Several days,Several days,Not at all,Not at all,Not at all,0,Not at all,6
+63f7c60b1e096c2df51e3071,00:00:13,time1,0,0,0,1,0,0,0,0,0,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
 6a1dfa3eaef836ebd308886e,00:00:26,time1,1,0,2,3,0,0,2,0,0,Several days,Not at all,More than half the days,Nearly every day,Not at all,Not at all,More than half the days,Not at all,Not at all,0,Not at all,8
+6a03092916c4774734733954,00:00:31,time1,2,1,2,1,1,3,2,0,3,More than half the days,Several days,More than half the days,Several days,Several days,Nearly every day,More than half the days,Not at all,Nearly every day,0,Not at all,15
+6a1f8098dda9c21e70c672cb,00:00:59,time1,1,0,0,0,1,0,0,0,0,Several days,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+6913757aae0da25ca51bdb7b,00:00:41,time1,1,1,1,2,2,1,1,0,0,Several days,Several days,Several days,More than half the days,More than half the days,Several days,Several days,Not at all,Not at all,0,Not at all,9
+5fc3eb06c7a6322c11395528,00:00:31,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+601129f77e0c21000b0c408a,00:00:56,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
 6673eea04e15d2d270aa7ff8,00:00:32,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+6a0211f66d13da71cb35f782,00:00:31,time1,1,1,2,1,1,0,1,2,0,Several days,Several days,More than half the days,Several days,Several days,Not at all,Several days,More than half the days,Not at all,0,Not at all,9
+5d68c8aa40524c00189e8ac2,00:00:19,time1,0,1,0,3,0,0,0,0,0,Not at all,Several days,Not at all,Nearly every day,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,4
+668a19f1edd91f3ef0a55fe2,00:00:51,time1,1,0,0,1,1,1,1,0,0,Several days,Not at all,Not at all,Several days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,5
+69f7e812b1abc5db9b1d0eac,00:00:48,time1,0,0,0,1,1,0,2,0,0,Not at all,Not at all,Not at all,Several days,Several days,Not at all,More than half the days,Not at all,Not at all,0,Not at all,4
+6a1c278d31944f546d54e1b5,00:01:02,time1,0,0,1,1,1,0,0,0,0,Not at all,Not at all,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+55ecd6ff748092000daa9f5f,00:00:19,time1,1,1,0,1,0,1,1,0,0,Several days,Several days,Not at all,Several days,Not at all,Several days,Several days,Not at all,Not at all,0,Not at all,5
+5f8214581a35f532cee9ea52,00:00:34,time1,3,3,3,3,3,3,2,1,2,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,More than half the days,Several days,More than half the days,0,Not at all,23
+5b01842bc573030001c345e0,00:00:26,time1,1,1,2,1,1,1,1,0,1,Several days,Several days,More than half the days,Several days,Several days,Several days,Several days,Not at all,Several days,0,Not at all,9
+69f586544b0395e639960cd5,00:00:45,time1,0,2,1,2,3,2,3,0,1,Not at all,More than half the days,Several days,More than half the days,Nearly every day,More than half the days,Nearly every day,Not at all,Several days,0,Not at all,14
 5ea4cebb8944a8495280db42,00:00:19,time1,2,1,2,2,1,0,3,0,0,More than half the days,Several days,More than half the days,More than half the days,Several days,Not at all,Nearly every day,Not at all,Not at all,0,Not at all,11
 6a04a94d6915ae8637f94c84,00:01:13,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+69fda5324f331e76e20c603b,00:00:32,time1,0,0,2,1,2,1,0,0,0,Not at all,Not at all,More than half the days,Several days,More than half the days,Several days,Not at all,Not at all,Not at all,0,Not at all,6
+671538a99972f78921900da7,00:00:43,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+6a1759a83da9f4ed875b332d,00:01:03,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+69ffc3bf55fd97a76c8122f4,00:00:29,time1,1,1,0,0,0,1,1,1,0,Several days,Several days,Not at all,Not at all,Not at all,Several days,Several days,Several days,Not at all,0,Not at all,5
+6a22c3eb4725e325fd168a95,00:00:23,time1,1,0,1,1,1,0,1,0,0,Several days,Not at all,Several days,Several days,Several days,Not at all,Several days,Not at all,Not at all,0,Not at all,5
+67798247d6fc9e510470baef,00:00:27,time1,0,0,1,1,1,0,0,0,0,Not at all,Not at all,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+67684dd84deabe73a9da9353,00:02:43,time1,0,1,0,1,0,0,0,0,0,Not at all,Several days,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+6697dd57c4db95eac07db01a,00:00:26,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+69d68fef496b299d4cd8e08d,00:00:36,time1,2,3,3,3,3,3,3,3,1,More than half the days,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Several days,0,Not at all,24
+6668c9df1d76dc85e0f95d40,00:01:01,time1,1,1,1,1,0,2,1,0,0,Several days,Several days,Several days,Several days,Not at all,More than half the days,Several days,Not at all,Not at all,0,Not at all,7
+677d87faabcf1e93c8c18c5e,00:00:43,time1,0,0,1,2,2,0,1,0,0,Not at all,Not at all,Several days,More than half the days,More than half the days,Not at all,Several days,Not at all,Not at all,0,Not at all,6
+6a08cbfafd1950ac6e92a7b4,00:00:43,time1,1,1,1,2,0,1,1,0,1,Several days,Several days,Several days,More than half the days,Not at all,Several days,Several days,Not at all,Several days,0,Not at all,8
+6a01b82647e5dd21cd05d8ee,00:00:29,time1,1,1,1,2,0,0,0,0,0,Several days,Several days,Several days,More than half the days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,5
+6a205d8176898540335bb525,00:04:52,time1,1,1,1,1,1,1,0,0,0,Several days,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,Not at all,0,Not at all,6
+6a057f4144808bd931bf3671,00:00:32,time1,1,1,0,1,0,1,1,0,0,Several days,Several days,Not at all,Several days,Not at all,Several days,Several days,Not at all,Not at all,0,Not at all,5
+67a66096bc5b99e5261aefc5,00:00:24,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+696f07b53e3b99a786a261b0,00:00:36,time1,1,0,3,3,3,1,1,0,0,Several days,Not at all,Nearly every day,Nearly every day,Nearly every day,Several days,Several days,Not at all,Not at all,0,Not at all,12
 6544ff9e0fb2eaaf83e2de5c,00:00:32,time1,0,1,1,0,0,0,0,0,0,Not at all,Several days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+69f76b21cab3bf4a9db3b459,00:01:06,time1,0,1,1,1,0,1,0,0,0,Not at all,Several days,Several days,Several days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,4
+69acf8eb3eee6cc60d19a248,00:00:35,time1,3,3,3,3,2,2,1,1,1,Nearly every day,Nearly every day,Nearly every day,Nearly every day,More than half the days,More than half the days,Several days,Several days,Several days,0,Not at all,19
+6aca37cf2b9a5b9049437587,00:00:12,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+6152d75634b966697b09920f,00:00:55,time1,1,0,1,3,1,2,3,0,0,Several days,Not at all,Several days,Nearly every day,Several days,More than half the days,Nearly every day,Not at all,Not at all,0,Not at all,11
+5fb8c5a8bf771b29040065ac,00:01:26,time1,0,0,1,1,1,1,1,0,0,Not at all,Not at all,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,5
+55d39f64da14d7001295375a,00:00:14,time1,2,2,3,3,3,1,1,0,0,More than half the days,More than half the days,Nearly every day,Nearly every day,Nearly every day,Several days,Several days,Not at all,Not at all,0,Not at all,15
+5e78a08318ee0e41e1bc6a1a,00:00:35,time1,0,0,1,1,2,0,1,0,0,Not at all,Not at all,Several days,Several days,More than half the days,Not at all,Several days,Not at all,Not at all,0,Not at all,5
+6a106b5d33b08b727cb82c65,00:00:29,time1,2,1,0,3,2,1,1,1,1,More than half the days,Several days,Not at all,Nearly every day,More than half the days,Several days,Several days,Several days,Several days,0,Not at all,12
+54dfac92fdf99b4b6b6595d9,00:00:17,time1,0,0,1,1,0,1,0,0,0,Not at all,Not at all,Several days,Several days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,3
+6a07658dda0017a86f04f995,00:01:32,time1,1,1,0,1,0,0,1,0,0,Several days,Several days,Not at all,Several days,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,4
+66b9c3a3e93996ce7d285665,00:01:44,time1,0,0,0,0,0,1,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,1
 63f93b47bb0c1a1aca131480,00:00:15,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+69f86a04fe802de5002bb70b,00:00:23,time1,1,1,1,1,1,1,1,0,0,Several days,Several days,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,7
+5e909d6c5321c13abee11725,00:00:11,time1,1,1,1,0,0,0,0,0,0,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+69e847860ae7104bac856107,00:00:39,time1,2,1,2,2,1,1,2,0,0,More than half the days,Several days,More than half the days,More than half the days,Several days,Several days,More than half the days,Not at all,Not at all,0,Not at all,11
+6a10ce25b3fadfdaca9d1914,00:01:05,time1,1,1,0,1,0,0,0,1,0,Several days,Several days,Not at all,Several days,Not at all,Not at all,Not at all,Several days,Not at all,0,Not at all,4
+69a6f31da8afde8854c002a8,00:00:41,time1,1,0,3,3,2,0,2,1,0,Several days,Not at all,Nearly every day,Nearly every day,More than half the days,Not at all,More than half the days,Several days,Not at all,0,Not at all,12
+69cb608f3d31d3d72fbff88d,00:00:50,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+6727c56a4838a57961ee3822,00:00:39,time1,1,2,3,3,3,2,1,0,2,Several days,More than half the days,Nearly every day,Nearly every day,Nearly every day,More than half the days,Several days,Not at all,More than half the days,0,Not at all,17
+69d64b03e9555165634639ab,00:00:40,time1,0,0,1,0,0,0,0,0,0,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
+60de09f7dc5304e0c0f19485,00:00:23,time1,1,2,3,3,3,3,1,0,0,Several days,More than half the days,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Several days,Not at all,Not at all,0,Not at all,16
+6a16ea99c41f24c9371f4d00,00:00:51,time1,1,1,0,1,1,1,1,0,0,Several days,Several days,Not at all,Several days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,6
+5efa33c4e9f4160ffd817db9,00:00:23,time1,1,1,3,1,0,3,0,0,0,Several days,Several days,Nearly every day,Several days,Not at all,Nearly every day,Not at all,Not at all,Not at all,0,Not at all,9
+5c27db7f00942400019a0c11,00:00:42,time1,0,1,0,2,1,1,2,0,0,Not at all,Several days,Not at all,More than half the days,Several days,Several days,More than half the days,Not at all,Not at all,0,Not at all,7
+69f8f3101505e3f57a832438,00:00:47,time1,2,0,2,2,0,0,0,0,0,More than half the days,Not at all,More than half the days,More than half the days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,6
+611870a41de777ae15971e9d,00:00:33,time1,2,2,2,3,3,3,2,1,3,More than half the days,More than half the days,More than half the days,Nearly every day,Nearly every day,Nearly every day,More than half the days,Several days,Nearly every day,0,Not at all,21
+6a01c4c8248651c0157c76c5,00:00:12,time1,0,0,1,1,0,0,0,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+5eeb32c541b66f01379faff7,00:00:19,time1,3,3,3,3,2,3,3,0,2,Nearly every day,Nearly every day,Nearly every day,Nearly every day,More than half the days,Nearly every day,Nearly every day,Not at all,More than half the days,0,Not at all,22
 602cf4568083d86318913385,00:01:46,time1,1,0,2,3,3,0,3,2,0,Several days,Not at all,More than half the days,Nearly every day,Nearly every day,Not at all,Nearly every day,More than half the days,Not at all,0,Not at all,14
+676f730d7b956c6dc4eb2102,00:01:14,time1,2,1,2,3,2,3,0,3,2,More than half the days,Several days,More than half the days,Nearly every day,More than half the days,Nearly every day,Not at all,Nearly every day,More than half the days,0,Not at all,18
+69bd43b3638c297e98b9f8df,00:00:59,time1,1,1,2,1,2,1,0,1,2,Several days,Several days,More than half the days,Several days,More than half the days,Several days,Not at all,Several days,More than half the days,0,Not at all,11
+63ed4ffc9e011d70035477c5,00:00:47,time1,1,2,0,0,0,1,0,0,0,Several days,More than half the days,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,4
+697bb32b513ce5aec5c6cf3d,00:00:51,time1,1,1,3,3,0,1,2,0,0,Several days,Several days,Nearly every day,Nearly every day,Not at all,Several days,More than half the days,Not at all,Not at all,0,Not at all,11
+6743c8da977b0d274dad1fc2,00:00:07,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+6a10ae0279804a41e4d06468,00:01:34,time1,0,0,0,1,1,0,0,0,0,Not at all,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+5c7dd22debc24800018e7ca0,00:00:28,time1,0,0,0,1,0,0,1,0,0,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,2
+6aba90db34c1abb2b977ceee,00:01:31,time1,2,1,2,3,2,1,3,1,2,More than half the days,Several days,More than half the days,Nearly every day,More than half the days,Several days,Nearly every day,Several days,More than half the days,0,Not at all,17
+5e85f278c880ee1edb7e96ee,00:00:17,time1,1,1,0,1,0,0,0,0,0,Several days,Several days,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+5ecd36302b4d3c05d4cc1ba2,00:00:11,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+6a04b80e14874cdbefac323f,00:00:13,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+6a235cbdc5836f4cd80e70bb,00:01:12,time1,1,1,3,2,3,1,2,1,0,Several days,Several days,Nearly every day,More than half the days,Nearly every day,Several days,More than half the days,Several days,Not at all,0,Not at all,14
 5689916dd3d6a7000aa1cbf0,00:00:22,time1,1,0,1,1,1,0,1,0,0,Several days,Not at all,Several days,Several days,Several days,Not at all,Several days,Not at all,Not at all,0,Not at all,5
+63d7b72765ddb017724e78d3,00:00:37,time1,1,3,3,3,1,2,2,2,0,Several days,Nearly every day,Nearly every day,Nearly every day,Several days,More than half the days,More than half the days,More than half the days,Not at all,0,Not at all,17
+6080359b7e55e8dbf21a225e,00:00:24,time1,0,0,1,1,0,0,1,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,3
+696ec8093bbc311f3f2b3f16,00:00:28,time1,1,0,0,1,0,0,1,0,0,Several days,Not at all,Not at all,Several days,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,3
+69b0c18da5fae9eb6f4a1fe4,00:00:42,time1,1,2,1,1,1,0,0,0,0,Several days,More than half the days,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,6
 6a0adfcc9de2f1c28b0db58b,00:00:21,time1,0,0,1,1,1,0,0,0,0,Not at all,Not at all,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+67ca1243e7c4d398474fc95d,00:00:31,time1,1,1,1,2,1,1,1,0,0,Several days,Several days,Several days,More than half the days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,8
+67698c3573d3cbf6add78578,00:01:01,time1,2,1,0,1,0,2,0,0,1,More than half the days,Several days,Not at all,Several days,Not at all,More than half the days,Not at all,Not at all,Several days,0,Not at all,7
+66c24e9899628532dd846326,00:00:25,time1,1,1,1,2,1,0,0,0,0,Several days,Several days,Several days,More than half the days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,6
 6a19a092d1e2eb2e4b072554,00:00:27,time1,0,0,0,1,1,1,1,0,0,Not at all,Not at all,Not at all,Several days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,4
+6a119f8ef53d50d8dfd81fbf,00:00:26,time1,2,3,1,2,3,2,2,0,2,More than half the days,Nearly every day,Several days,More than half the days,Nearly every day,More than half the days,More than half the days,Not at all,More than half the days,0,Not at all,17
+6ac6adce08f75ef062967577,00:00:49,time1,0,0,1,0,0,0,0,0,0,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
 69ad388b63979c96dc085507,00:00:47,time1,1,1,2,2,1,1,1,0,0,Several days,Several days,More than half the days,More than half the days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,9
 5bd2a0799afb5b00015be460,00:00:15,time1,0,0,1,2,0,1,0,0,0,Not at all,Not at all,Several days,More than half the days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,4
 6a0da93c7800f8ed95424872,00:00:38,time1,0,0,1,0,0,0,0,0,0,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
 6a55022ac3162a7be7ddadd5,00:00:38,time1,1,1,0,2,2,2,0,0,0,Several days,Several days,Not at all,More than half the days,More than half the days,More than half the days,Not at all,Not at all,Not at all,0,Not at all,8
+63af557b3d4f219c3226b7d6,00:00:21,time1,1,1,0,3,0,0,0,0,0,Several days,Several days,Not at all,Nearly every day,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,5
+697d24efb667eda3edf789ca,00:00:40,time1,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+5e0b3d5dbf3d4e3868abc3ea,00:01:07,time1,2,2,1,2,0,1,1,2,0,More than half the days,More than half the days,Several days,More than half the days,Not at all,Several days,Several days,More than half the days,Not at all,0,Not at all,11
+63ed0392b8b24c34aaf26310,00:00:27,time1,2,1,2,3,3,3,1,0,0,More than half the days,Several days,More than half the days,Nearly every day,Nearly every day,Nearly every day,Several days,Not at all,Not at all,0,Not at all,15
+69e91fe037d0abdb091c2c05,00:01:08,time1,1,1,2,3,2,3,3,0,1,Several days,Several days,More than half the days,Nearly every day,More than half the days,Nearly every day,Nearly every day,Not at all,Several days,0,Not at all,16
+6658beae5669d166e3c15990,00:00:21,time1,3,2,3,3,2,3,2,2,3,Nearly every day,More than half the days,Nearly every day,Nearly every day,More than half the days,Nearly every day,More than half the days,More than half the days,Nearly every day,0,Not at all,23
 69f7666c2ce1f93d57e39940,00:00:30,time1,1,2,1,2,1,1,1,0,0,Several days,More than half the days,Several days,More than half the days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,9
-5a47473899311d0001df550e,00:00:20,time1,0,1,2,2,1,0,1,0,0,Not at all,Several days,More than half the days,More than half the days,Several days,Not at all,Several days,Not at all,Not at all,0,Not at all,7
+6a4ccfc6206d45c1fa7837fe,00:00:51,time1,1,2,1,3,1,3,1,1,0,Several days,More than half the days,Several days,Nearly every day,Several days,Nearly every day,Several days,Several days,Not at all,0,Not at all,13
+61fa936e5719bc09cb834cbe,00:00:22,time1,0,0,0,1,0,0,0,0,0,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
+60b932147633bf0dd446941e,00:00:49,time1,2,2,2,2,2,2,1,2,1,More than half the days,More than half the days,More than half the days,More than half the days,More than half the days,More than half the days,Several days,More than half the days,Several days,0,Not at all,16
+6a5f448dea24d9eb0cf2c204,00:00:46,time1,1,0,1,1,1,0,0,0,0,Several days,Not at all,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,4
+60c329e4a31bf9f8b6c87b3d,00:00:57,time1,1,0,3,2,2,0,0,1,0,Several days,Not at all,Nearly every day,More than half the days,More than half the days,Not at all,Not at all,Several days,Not at all,0,Not at all,9
+6150224c57e32a81a27ccb5a,00:00:34,time1,1,1,0,1,1,2,2,0,0,Several days,Several days,Not at all,Several days,Several days,More than half the days,More than half the days,Not at all,Not at all,0,Not at all,8
+5f0c5efb791e025b52cb48b1,00:00:10,time1,3,3,3,3,3,3,3,3,3,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,0,Not at all,27
+656c8118ba4ac7120453cbc1,00:00:23,time1,1,1,1,2,1,1,1,0,1,Several days,Several days,Several days,More than half the days,Several days,Several days,Several days,Not at all,Several days,0,Not at all,9
+5be9784e18a71d0001317761,00:00:32,time1,2,1,3,2,2,1,3,3,2,More than half the days,Several days,Nearly every day,More than half the days,More than half the days,Several days,Nearly every day,Nearly every day,More than half the days,0,Not at all,19
+63614d513d6883f562b0ff79,00:00:21,time1,2,3,3,3,3,3,1,0,1,More than half the days,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Several days,Not at all,Several days,0,Not at all,19
+6054ce9cd4e5c96ab84e9113,00:00:32,time1,1,1,0,1,0,0,0,0,0,Several days,Several days,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+6a19b14498b3d36bccc467cb,00:01:06,time1,2,0,2,2,0,0,0,0,0,More than half the days,Not at all,More than half the days,More than half the days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,6
+69f26759e2c3ed8a93c92ede,00:00:48,time1,1,0,2,1,1,0,1,0,0,Several days,Not at all,More than half the days,Several days,Several days,Not at all,Several days,Not at all,Not at all,0,Not at all,6
+5f933255e25f2b0e6f794a54,00:00:15,time1,3,3,3,3,0,2,2,2,0,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Not at all,More than half the days,More than half the days,More than half the days,Not at all,0,Not at all,18
+69fb31c7fd922d9f38394582,00:00:29,time1,0,0,1,1,0,1,0,0,0,Not at all,Not at all,Several days,Several days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,3
+60719da557d8241609b26e83,00:01:35,time1,0,0,0,0,0,0,1,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,1
 60a252db049918aa001fe65a,00:00:48,time1,1,1,2,1,3,1,0,0,0,Several days,Several days,More than half the days,Several days,Nearly every day,Several days,Not at all,Not at all,Not at all,0,Not at all,9
+6680071d60b3642bcf5dad37,00:01:36,time1,1,0,1,2,3,1,1,0,0,Several days,Not at all,Several days,More than half the days,Nearly every day,Several days,Several days,Not at all,Not at all,0,Not at all,9
+6151556ef73ba765c7ff55f6,00:00:19,time1,0,1,2,1,0,0,0,0,0,Not at all,Several days,More than half the days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,4
 69f061c18bcd97022e700b95,00:00:40,time1,0,1,0,1,0,0,1,0,0,Not at all,Several days,Not at all,Several days,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,3
+67e43d3171f3338caa047245,00:00:21,time1,0,0,1,1,1,0,2,0,0,Not at all,Not at all,Several days,Several days,Several days,Not at all,More than half the days,Not at all,Not at all,0,Not at all,5
 6a02ed5bd6acf52c07ab46fa,00:00:43,time1,1,0,1,1,1,0,0,0,0,Several days,Not at all,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,4
+697171911e8c97f9701b29f0,00:00:18,time1,0,0,0,1,0,0,1,1,0,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,Several days,Several days,Not at all,0,Not at all,3
+67383e65d99b84de45a85c28,00:01:49,time1,0,0,0,0,0,0,1,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,1
+6a1c948e11c0dcbff51b9083,00:00:27,time1,3,3,3,3,2,3,1,1,3,Nearly every day,Nearly every day,Nearly every day,Nearly every day,More than half the days,Nearly every day,Several days,Several days,Nearly every day,0,Not at all,22
+608f68107d9ea28c690af9d2,00:00:46,time1,1,0,2,2,3,1,1,0,0,Several days,Not at all,More than half the days,More than half the days,Nearly every day,Several days,Several days,Not at all,Not at all,0,Not at all,10
+60b78dc1eb46833a5c6b1235,00:00:41,time1,1,0,1,1,3,1,0,0,0,Several days,Not at all,Several days,Several days,Nearly every day,Several days,Not at all,Not at all,Not at all,0,Not at all,7
+6a216f571e7c4467c10b734b,00:00:45,time1,0,0,1,1,0,0,0,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+6a082b5b68b0948671bfa8d5,00:00:42,time1,3,3,3,3,3,2,2,0,1,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,More than half the days,More than half the days,Not at all,Several days,0,Not at all,20
 66d31a1b0515fe747830bab9,00:00:22,time1,0,0,1,1,0,0,1,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,3
+6a1efce6eacd6a04721457bb,00:00:32,time1,0,0,0,2,0,0,0,0,0,Not at all,Not at all,Not at all,More than half the days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+6a19d9bdc85ad46cebd1ad1b,00:00:32,time1,0,1,3,2,1,1,0,0,0,Not at all,Several days,Nearly every day,More than half the days,Several days,Several days,Not at all,Not at all,Not at all,0,Not at all,8
+6a0b2d56064dcea1f84eaa94,00:00:36,time1,1,1,2,1,1,2,2,1,0,Several days,Several days,More than half the days,Several days,Several days,More than half the days,More than half the days,Several days,Not at all,0,Not at all,11
+5d1ba27e43fc40001e6bef4f,00:00:37,time1,1,1,1,3,1,0,1,0,0,Several days,Several days,Several days,Nearly every day,Several days,Not at all,Several days,Not at all,Not at all,0,Not at all,8
+6a1bec05fe75c61cdfc7acbc,00:01:13,time1,1,0,1,1,1,0,0,0,0,Several days,Not at all,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,4
+6a01c4c8248651c0157c76c5,00:00:11,time2,0,0,1,1,0,0,0,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+6a1bec05fe75c61cdfc7acbc,00:00:52,time2,1,1,1,1,1,0,1,1,0,Several days,Several days,Several days,Several days,Several days,Not at all,Several days,Several days,Not at all,0,Not at all,7
 6673eea04e15d2d270aa7ff8,00:00:22,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
 66d31a1b0515fe747830bab9,00:00:23,time2,0,0,1,1,0,0,1,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,3
 5ea4cebb8944a8495280db42,00:00:19,time2,2,2,3,3,1,0,2,1,0,More than half the days,More than half the days,Nearly every day,Nearly every day,Several days,Not at all,More than half the days,Several days,Not at all,0,Not at all,14
 66d5e128d49faf318dd776ec,00:00:42,time2,1,1,1,1,1,0,1,0,0,Several days,Several days,Several days,Several days,Several days,Not at all,Several days,Not at all,Not at all,0,Not at all,6
 632222532c12ab0ab7ca00bd,00:00:21,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+6a19d9bdc85ad46cebd1ad1b,00:00:21,time2,0,1,3,3,2,1,1,0,0,Not at all,Several days,Nearly every day,Nearly every day,More than half the days,Several days,Several days,Not at all,Not at all,0,Not at all,11
+5d68c8aa40524c00189e8ac2,00:01:22,time2,1,1,1,3,1,1,0,0,0,Several days,Several days,Several days,Nearly every day,Several days,Several days,Not at all,Not at all,Not at all,0,Not at all,8
+6a10ae0279804a41e4d06468,00:00:52,time2,0,0,1,1,1,0,0,0,0,Not at all,Not at all,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+5f8214581a35f532cee9ea52,00:00:28,time2,3,3,3,3,3,2,1,1,1,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,More than half the days,Several days,Several days,Several days,0,Not at all,20
+69d64b03e9555165634639ab,00:00:25,time2,1,1,1,1,0,0,0,0,0,Several days,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,4
+69d68fef496b299d4cd8e08d,00:00:37,time2,2,2,3,3,3,0,0,1,0,More than half the days,More than half the days,Nearly every day,Nearly every day,Nearly every day,Not at all,Not at all,Several days,Not at all,0,Not at all,14
+69f586544b0395e639960cd5,00:00:32,time2,1,2,0,2,3,2,3,0,1,Several days,More than half the days,Not at all,More than half the days,Nearly every day,More than half the days,Nearly every day,Not at all,Several days,0,Not at all,14
 602cf4568083d86318913385,00:01:36,time2,2,1,2,3,3,0,3,2,0,More than half the days,Several days,More than half the days,Nearly every day,Nearly every day,Not at all,Nearly every day,More than half the days,Not at all,0,Not at all,16
+6a0493b0ba30180995ebd884,00:00:23,time2,2,2,1,2,1,2,2,1,0,More than half the days,More than half the days,Several days,More than half the days,Several days,More than half the days,More than half the days,Several days,Not at all,0,Not at all,13
+6a19b14498b3d36bccc467cb,00:00:48,time2,2,0,1,1,0,2,0,1,0,More than half the days,Not at all,Several days,Several days,Not at all,More than half the days,Not at all,Several days,Not at all,0,Not at all,7
+66019f5e10adbe524f2a844a,00:00:41,time2,1,0,1,2,1,0,0,0,0,Several days,Not at all,Several days,More than half the days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,5
+5bf7be3abd1fd30001aa5498,00:00:40,time2,0,0,1,1,1,0,0,0,0,Not at all,Not at all,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+6668c9df1d76dc85e0f95d40,00:00:48,time2,2,2,1,1,0,1,0,0,0,More than half the days,More than half the days,Several days,Several days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,7
+60b932147633bf0dd446941e,00:00:32,time2,2,2,2,2,2,2,2,2,2,More than half the days,More than half the days,More than half the days,More than half the days,More than half the days,More than half the days,More than half the days,More than half the days,More than half the days,0,Not at all,18
+69ffc3bf55fd97a76c8122f4,00:05:09,time2,1,1,1,0,1,2,1,2,0,Several days,Several days,Several days,Not at all,Several days,More than half the days,Several days,More than half the days,Not at all,0,Not at all,9
+6a10ce25b3fadfdaca9d1914,00:00:35,time2,1,0,0,1,0,1,0,0,0,Several days,Not at all,Not at all,Several days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,3
+60719da557d8241609b26e83,00:00:33,time2,2,0,0,1,0,0,0,0,0,More than half the days,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+63ed0392b8b24c34aaf26310,00:00:28,time2,2,2,1,3,1,2,1,0,0,More than half the days,More than half the days,Several days,Nearly every day,Several days,More than half the days,Several days,Not at all,Not at all,0,Not at all,12
+6a119f8ef53d50d8dfd81fbf,00:00:25,time2,2,3,1,2,3,3,2,0,2,More than half the days,Nearly every day,Several days,More than half the days,Nearly every day,Nearly every day,More than half the days,Not at all,More than half the days,0,Not at all,18
 67e0870d582edce0a2764d1f,00:00:29,time2,2,3,2,2,0,2,1,0,2,More than half the days,Nearly every day,More than half the days,More than half the days,Not at all,More than half the days,Several days,Not at all,More than half the days,0,Not at all,14
+5a0a057c80acd80001047392,00:00:17,time2,1,1,2,1,0,1,0,0,1,Several days,Several days,More than half the days,Several days,Not at all,Several days,Not at all,Not at all,Several days,0,Not at all,7
+6783ebc2e89b75d66d952f41,00:00:36,time2,1,0,2,1,1,1,1,0,0,Several days,Not at all,More than half the days,Several days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,7
+69acf8eb3eee6cc60d19a248,00:00:19,time2,3,3,3,3,2,2,2,1,1,Nearly every day,Nearly every day,Nearly every day,Nearly every day,More than half the days,More than half the days,More than half the days,Several days,Several days,0,Not at all,20
+671538a99972f78921900da7,00:00:33,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+69a6f31da8afde8854c002a8,00:00:53,time2,2,1,3,2,2,1,2,0,0,More than half the days,Several days,Nearly every day,More than half the days,More than half the days,Several days,More than half the days,Not at all,Not at all,0,Not at all,13
 6a1dfa3eaef836ebd308886e,00:00:28,time2,1,0,2,2,0,0,2,1,0,Several days,Not at all,More than half the days,More than half the days,Not at all,Not at all,More than half the days,Several days,Not at all,0,Not at all,8
+5be9784e18a71d0001317761,00:00:27,time2,3,2,3,2,2,1,3,2,1,Nearly every day,More than half the days,Nearly every day,More than half the days,More than half the days,Several days,Nearly every day,More than half the days,Several days,0,Not at all,19
+6a106b5d33b08b727cb82c65,00:00:27,time2,2,1,1,1,1,1,1,0,0,More than half the days,Several days,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,8
+6a08cbfafd1950ac6e92a7b4,00:00:40,time2,1,1,2,1,2,1,1,0,1,Several days,Several days,More than half the days,Several days,More than half the days,Several days,Several days,Not at all,Several days,0,Not at all,10
+6abcc3fd0abc8028e910789f,00:01:07,time2,1,1,1,1,0,0,2,0,0,Several days,Several days,Several days,Several days,Not at all,Not at all,More than half the days,Not at all,Not at all,0,Not at all,6
+5c7dd22debc24800018e7ca0,00:00:25,time2,0,0,1,1,1,0,0,0,0,Not at all,Not at all,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+628781515f29a0394e23b15b,00:00:15,time2,0,0,1,0,0,0,1,0,0,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,2
+6a0b2d56064dcea1f84eaa94,00:00:20,time2,1,1,1,2,2,1,1,0,0,Several days,Several days,Several days,More than half the days,More than half the days,Several days,Several days,Not at all,Not at all,0,Not at all,9
+6a1712c057793e3bfe739de8,00:00:26,time2,3,2,2,3,1,2,3,1,0,Nearly every day,More than half the days,More than half the days,Nearly every day,Several days,More than half the days,Nearly every day,Several days,Not at all,0,Not at all,17
+69f7e812b1abc5db9b1d0eac,00:00:45,time2,3,2,0,1,1,1,2,0,0,Nearly every day,More than half the days,Not at all,Several days,Several days,Several days,More than half the days,Not at all,Not at all,0,Not at all,10
+5e85f278c880ee1edb7e96ee,00:00:58,time2,1,1,1,1,0,1,0,0,0,Several days,Several days,Several days,Several days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,5
+6080359b7e55e8dbf21a225e,00:00:16,time2,0,0,1,1,1,0,1,0,0,Not at all,Not at all,Several days,Several days,Several days,Not at all,Several days,Not at all,Not at all,0,Not at all,4
+6913757aae0da25ca51bdb7b,00:00:29,time2,1,1,1,2,2,1,1,0,0,Several days,Several days,Several days,More than half the days,More than half the days,Several days,Several days,Not at all,Not at all,0,Not at all,9
+663127d07fb81f5532bcfdad,00:00:26,time2,0,0,1,1,0,0,0,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
 69f7666c2ce1f93d57e39940,00:00:22,time2,2,1,1,2,2,1,2,0,0,More than half the days,Several days,Several days,More than half the days,More than half the days,Several days,More than half the days,Not at all,Not at all,0,Not at all,11
+6a0ec8830dd532d62cde8232,00:00:36,time2,1,1,1,1,0,0,0,0,0,Several days,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,4
+67dc7c814cd5af9421e0476a,00:00:22,time2,0,0,1,1,0,0,0,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+63d7b72765ddb017724e78d3,00:01:46,time2,1,2,2,2,0,2,1,1,0,Several days,More than half the days,More than half the days,More than half the days,Not at all,More than half the days,Several days,Several days,Not at all,0,Not at all,11
 6a04a94d6915ae8637f94c84,00:00:29,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+610d4df86c4abc6b5ced6fa0,00:00:22,time2,1,1,1,1,1,1,1,0,0,Several days,Several days,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,7
+66986ab71f2b54203f26ad32,00:00:21,time2,2,1,1,1,1,1,2,1,1,More than half the days,Several days,Several days,Several days,Several days,Several days,More than half the days,Several days,Several days,0,Not at all,11
+6aca37cf2b9a5b9049437587,00:00:21,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+663b638be7226d4e3fcc255f,00:00:43,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
 6a0da93c7800f8ed95424872,00:00:25,time2,0,0,1,1,1,0,0,0,0,Not at all,Not at all,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+69fda5324f331e76e20c603b,00:00:32,time2,1,1,2,2,2,1,1,1,0,Several days,Several days,More than half the days,More than half the days,More than half the days,Several days,Several days,Several days,Not at all,0,Not at all,11
+594ee0aa7095f80001da4c4e,00:00:25,time2,1,0,1,1,0,0,1,0,0,Several days,Not at all,Several days,Several days,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,4
+6743c8da977b0d274dad1fc2,00:00:27,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+6997699bfa8589e80145918b,00:00:20,time2,1,1,1,0,1,1,1,0,0,Several days,Several days,Several days,Not at all,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,6
 5689916dd3d6a7000aa1cbf0,00:00:40,time2,1,1,2,1,0,1,1,0,0,Several days,Several days,More than half the days,Several days,Not at all,Several days,Several days,Not at all,Not at all,0,Not at all,7
 69ad388b63979c96dc085507,00:00:43,time2,1,1,2,2,0,1,1,1,1,Several days,Several days,More than half the days,More than half the days,Not at all,Several days,Several days,Several days,Several days,0,Not at all,10
+6978d224639f15b0bf444a8f,00:00:25,time2,2,2,1,1,2,1,2,1,0,More than half the days,More than half the days,Several days,Several days,More than half the days,Several days,More than half the days,Several days,Not at all,0,Not at all,12
+6658beae5669d166e3c15990,00:00:28,time2,2,2,1,2,2,1,2,2,1,More than half the days,More than half the days,Several days,More than half the days,More than half the days,Several days,More than half the days,More than half the days,Several days,0,Not at all,15
+6ad913a46985891a10f64be7,00:00:29,time2,1,1,3,1,0,2,0,0,0,Several days,Several days,Nearly every day,Several days,Not at all,More than half the days,Not at all,Not at all,Not at all,0,Not at all,8
+6a1f029546cb342499d058e0,00:00:54,time2,1,0,1,0,1,0,0,0,0,Several days,Not at all,Several days,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+6a082b5b68b0948671bfa8d5,00:00:23,time2,3,3,3,3,3,2,2,0,1,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,More than half the days,More than half the days,Not at all,Several days,0,Not at all,20
+6a22c3eb4725e325fd168a95,00:00:19,time2,1,0,1,1,1,1,1,0,0,Several days,Not at all,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,6
+54dfac92fdf99b4b6b6595d9,00:00:32,time2,0,0,1,1,0,1,0,0,0,Not at all,Not at all,Several days,Several days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,3
+63af557b3d4f219c3226b7d6,00:00:14,time2,1,1,0,3,0,0,0,0,0,Several days,Several days,Not at all,Nearly every day,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,5
 6a02ed5bd6acf52c07ab46fa,00:00:21,time2,1,0,1,1,1,0,1,0,0,Several days,Not at all,Several days,Several days,Several days,Not at all,Several days,Not at all,Not at all,0,Not at all,5
+6a1759a83da9f4ed875b332d,00:00:30,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
 6991e46740117ca6ef90cd7c,00:01:40,time2,1,0,1,1,1,1,1,0,0,Several days,Not at all,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,6
+699f83cc468a2f1781f00c12,00:00:31,time2,0,0,1,0,0,0,0,0,0,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
+6a0e225c055ed1c21f3b90d8,00:01:25,time2,0,0,1,0,0,1,0,0,0,Not at all,Not at all,Several days,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,2
+6a1d9d56cfece324378b6731,00:00:40,time2,1,1,1,2,1,1,2,0,0,Several days,Several days,Several days,More than half the days,Several days,Several days,More than half the days,Not at all,Not at all,0,Not at all,9
+5ecd36302b4d3c05d4cc1ba2,00:00:11,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+5e0b3d5dbf3d4e3868abc3ea,00:01:09,time2,0,1,3,2,1,2,1,0,0,Not at all,Several days,Nearly every day,More than half the days,Several days,More than half the days,Several days,Not at all,Not at all,0,Not at all,10
+699ad28882624b23f9713908,00:00:18,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+680d5891d72bc74e45fb87f1,00:00:22,time2,2,1,3,3,0,0,2,0,0,More than half the days,Several days,Nearly every day,Nearly every day,Not at all,Not at all,More than half the days,Not at all,Not at all,0,Not at all,11
+676f730d7b956c6dc4eb2102,00:00:47,time2,2,3,2,1,2,2,3,2,2,More than half the days,Nearly every day,More than half the days,Several days,More than half the days,More than half the days,Nearly every day,More than half the days,More than half the days,0,Not at all,19
+66c24e9899628532dd846326,00:00:21,time2,1,1,1,2,1,2,2,0,1,Several days,Several days,Several days,More than half the days,Several days,More than half the days,More than half the days,Not at all,Several days,0,Not at all,11
+699f262fc20cdd6f59a2f6c2,00:00:41,time2,1,1,0,2,0,1,1,1,0,Several days,Several days,Not at all,More than half the days,Not at all,Several days,Several days,Several days,Not at all,0,Not at all,7
+6a5f448dea24d9eb0cf2c204,00:00:39,time2,1,0,1,1,1,0,1,1,0,Several days,Not at all,Several days,Several days,Several days,Not at all,Several days,Several days,Not at all,0,Not at all,6
+67ca1243e7c4d398474fc95d,00:01:25,time2,1,1,1,1,1,1,1,1,0,Several days,Several days,Several days,Several days,Several days,Several days,Several days,Several days,Not at all,0,Not at all,8
+69fb3666fb8ef17497b9514e,00:00:45,time2,0,0,0,1,1,1,0,0,0,Not at all,Not at all,Not at all,Several days,Several days,Several days,Not at all,Not at all,Not at all,0,Not at all,3
+69f26759e2c3ed8a93c92ede,00:00:42,time2,2,0,1,1,1,0,0,0,0,More than half the days,Not at all,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,5
 6a0adfcc9de2f1c28b0db58b,00:00:27,time2,1,0,1,1,1,0,1,0,0,Several days,Not at all,Several days,Several days,Several days,Not at all,Several days,Not at all,Not at all,0,Not at all,5
-5a47473899311d0001df550e,00:00:15,time2,1,1,2,2,2,0,1,0,0,Several days,Several days,More than half the days,More than half the days,More than half the days,Not at all,Several days,Not at all,Not at all,0,Not at all,9
+544e94c4fdf99b50bd30726c,00:00:19,time2,2,2,3,3,2,2,2,0,1,More than half the days,More than half the days,Nearly every day,Nearly every day,More than half the days,More than half the days,More than half the days,Not at all,Several days,0,Not at all,17
+5efa33c4e9f4160ffd817db9,00:00:23,time2,1,1,3,1,0,3,0,0,0,Several days,Several days,Nearly every day,Several days,Not at all,Nearly every day,Not at all,Not at all,Not at all,0,Not at all,9
+699fcf6ce8e60730dbfc92ac,00:00:42,time2,1,1,2,1,0,0,0,1,1,Several days,Several days,More than half the days,Several days,Not at all,Not at all,Not at all,Several days,Several days,0,Not at all,7
+601129f77e0c21000b0c408a,00:00:25,time2,1,1,1,1,0,1,1,0,0,Several days,Several days,Several days,Several days,Not at all,Several days,Several days,Not at all,Not at all,0,Not at all,6
+63614d513d6883f562b0ff79,00:00:28,time2,2,3,2,3,3,3,2,0,1,More than half the days,Nearly every day,More than half the days,Nearly every day,Nearly every day,Nearly every day,More than half the days,Not at all,Several days,0,Not at all,19
+611870a41de777ae15971e9d,00:00:32,time2,2,3,2,2,2,3,1,0,2,More than half the days,Nearly every day,More than half the days,More than half the days,More than half the days,Nearly every day,Several days,Not at all,More than half the days,0,Not at all,17
+5b01842bc573030001c345e0,00:00:32,time2,1,1,2,1,1,1,1,0,1,Several days,Several days,More than half the days,Several days,Several days,Several days,Several days,Not at all,Several days,0,Not at all,9
+6a24075160115784d45503dd,00:00:15,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+6a00d96b190db7e5ec67cb89,00:00:15,time2,0,0,1,1,0,0,0,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+6680071d60b3642bcf5dad37,00:00:57,time2,1,1,2,1,2,1,1,0,0,Several days,Several days,More than half the days,Several days,More than half the days,Several days,Several days,Not at all,Not at all,0,Not at all,9
+6727c56a4838a57961ee3822,00:00:25,time2,1,2,3,3,3,1,1,0,1,Several days,More than half the days,Nearly every day,Nearly every day,Nearly every day,Several days,Several days,Not at all,Several days,0,Not at all,15
+6a1f148617273ff995df88a0,00:00:15,time2,1,2,2,3,2,2,0,0,0,Several days,More than half the days,More than half the days,Nearly every day,More than half the days,More than half the days,Not at all,Not at all,Not at all,0,Not at all,12
+5f933255e25f2b0e6f794a54,00:00:26,time2,3,2,3,3,0,1,2,2,0,Nearly every day,More than half the days,Nearly every day,Nearly every day,Not at all,Several days,More than half the days,More than half the days,Not at all,0,Not at all,16
+6266a4e5846e1e41812a0432,00:00:17,time2,0,0,1,0,0,0,0,0,0,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
+60c329e4a31bf9f8b6c87b3d,00:00:31,time2,2,1,3,3,3,0,1,0,0,More than half the days,Several days,Nearly every day,Nearly every day,Nearly every day,Not at all,Several days,Not at all,Not at all,0,Not at all,13
+69f76b21cab3bf4a9db3b459,00:01:32,time2,2,1,2,2,0,1,0,0,0,More than half the days,Several days,More than half the days,More than half the days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,8
+678e883a9ac653bfb7ff5f1f,00:00:52,time2,1,1,1,1,1,1,1,0,0,Several days,Several days,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,7
+6ac246359c0580372ea7d6b7,00:03:11,time2,1,1,1,1,1,1,1,1,1,Several days,Several days,Several days,Several days,Several days,Several days,Several days,Several days,Several days,0,Not at all,9
+608f68107d9ea28c690af9d2,00:00:38,time2,2,1,3,2,2,1,1,0,0,More than half the days,Several days,Nearly every day,More than half the days,More than half the days,Several days,Several days,Not at all,Not at all,0,Not at all,12
+60b78dc1eb46833a5c6b1235,00:00:30,time2,1,0,0,1,3,2,0,0,0,Several days,Not at all,Not at all,Several days,Nearly every day,More than half the days,Not at all,Not at all,Not at all,0,Not at all,7
+60656a924c99543d12555b86,00:01:34,time2,2,3,3,3,3,2,2,1,0,More than half the days,Nearly every day,Nearly every day,Nearly every day,Nearly every day,More than half the days,More than half the days,Several days,Not at all,0,Not at all,19
+67e43d3171f3338caa047245,00:00:26,time2,1,0,2,2,1,1,3,0,0,Several days,Not at all,More than half the days,More than half the days,Several days,Several days,Nearly every day,Not at all,Not at all,0,Not at all,10
+6a135d0137a8ad16f2590393,00:00:51,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
 65465ad50fb5c91a7da03f86,00:00:17,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+60dfa6a5a12413b99195c3de,00:00:36,time2,2,3,0,2,0,3,2,0,3,More than half the days,Nearly every day,Not at all,More than half the days,Not at all,Nearly every day,More than half the days,Not at all,Nearly every day,0,Not at all,15
+69fb31c7fd922d9f38394582,00:01:18,time2,0,1,0,1,0,0,0,0,0,Not at all,Several days,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+6a083fbf1cdeeaccf2e04d99,00:00:25,time2,1,1,1,1,0,0,1,0,0,Several days,Several days,Several days,Several days,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,5
+6a0211f66d13da71cb35f782,00:00:22,time2,2,0,1,1,1,0,1,0,0,More than half the days,Not at all,Several days,Several days,Several days,Not at all,Several days,Not at all,Not at all,0,Not at all,6
+6a1c948e11c0dcbff51b9083,00:01:10,time2,3,3,3,3,2,3,1,1,3,Nearly every day,Nearly every day,Nearly every day,Nearly every day,More than half the days,Nearly every day,Several days,Several days,Nearly every day,0,Not at all,22
+69f226b2032dea50182cbd55,00:00:19,time2,0,0,2,2,2,0,0,0,0,Not at all,Not at all,More than half the days,More than half the days,More than half the days,Not at all,Not at all,Not at all,Not at all,0,Not at all,6
+55d39f64da14d7001295375a,00:00:19,time2,2,2,3,3,3,1,1,0,0,More than half the days,More than half the days,Nearly every day,Nearly every day,Nearly every day,Several days,Several days,Not at all,Not at all,0,Not at all,15
+696f07b53e3b99a786a261b0,00:01:59,time2,1,1,3,3,3,1,1,0,0,Several days,Several days,Nearly every day,Nearly every day,Nearly every day,Several days,Several days,Not at all,Not at all,0,Not at all,13
+6ac6adce08f75ef062967577,00:00:37,time2,0,0,1,0,0,0,0,0,0,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
 6544ff9e0fb2eaaf83e2de5c,00:00:13,time2,0,0,1,0,0,0,0,0,0,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
+6a1081e8c16f66fe9595bcaa,00:00:34,time2,2,1,2,3,1,2,2,1,0,More than half the days,Several days,More than half the days,Nearly every day,Several days,More than half the days,More than half the days,Several days,Not at all,0,Not at all,14
+67a66096bc5b99e5261aefc5,00:00:19,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+6a235cbdc5836f4cd80e70bb,00:00:27,time2,1,1,2,2,3,0,2,1,0,Several days,Several days,More than half the days,More than half the days,Nearly every day,Not at all,More than half the days,Several days,Not at all,0,Not at all,12
+59cb95053306be000195be2e,00:00:21,time2,1,2,0,2,0,0,0,0,0,Several days,More than half the days,Not at all,More than half the days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,5
+6a205d8176898540335bb525,00:01:01,time2,1,1,1,1,1,0,1,0,0,Several days,Several days,Several days,Several days,Several days,Not at all,Several days,Not at all,Not at all,0,Not at all,6
+61656042f505fd7fa53e8628,00:00:26,time2,0,0,0,0,0,0,1,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,1
 6a0b2bdbea2d151e845c3e38,00:00:24,time2,0,0,3,3,0,0,2,0,0,Not at all,Not at all,Nearly every day,Nearly every day,Not at all,Not at all,More than half the days,Not at all,Not at all,0,Not at all,8
+696ec8093bbc311f3f2b3f16,00:00:19,time2,1,0,0,1,0,0,1,0,0,Several days,Not at all,Not at all,Several days,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,3
+5fc3eb06c7a6322c11395528,00:00:17,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+6a057f4144808bd931bf3671,00:12:08,time2,1,1,0,3,0,0,2,0,0,Several days,Several days,Not at all,Nearly every day,Not at all,Not at all,More than half the days,Not at all,Not at all,0,Not at all,7
+6a16ea99c41f24c9371f4d00,00:00:34,time2,1,1,1,1,0,1,1,0,0,Several days,Several days,Several days,Several days,Not at all,Several days,Several days,Not at all,Not at all,0,Not at all,6
+63f7c60b1e096c2df51e3071,00:00:10,time2,0,0,1,0,0,0,0,0,0,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
+6aba90db34c1abb2b977ceee,00:01:45,time2,2,3,1,2,3,2,3,1,3,More than half the days,Nearly every day,Several days,More than half the days,Nearly every day,More than half the days,Nearly every day,Several days,Nearly every day,0,Not at all,20
+69f86a04fe802de5002bb70b,00:00:17,time2,1,1,1,1,1,1,1,0,0,Several days,Several days,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,7
+6a4ccfc6206d45c1fa7837fe,00:00:44,time2,1,1,2,3,1,3,1,1,0,Several days,Several days,More than half the days,Nearly every day,Several days,Nearly every day,Several days,Several days,Not at all,0,Not at all,13
+63ed4ffc9e011d70035477c5,00:00:55,time2,1,2,1,1,0,1,0,0,1,Several days,More than half the days,Several days,Several days,Not at all,Several days,Not at all,Not at all,Several days,0,Not at all,7
+668a19f1edd91f3ef0a55fe2,00:00:54,time2,1,1,1,1,1,0,0,0,0,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,5
+6a1f8098dda9c21e70c672cb,00:00:32,time2,1,0,1,1,1,0,0,0,0,Several days,Not at all,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,4
+67798247d6fc9e510470baef,00:00:18,time2,0,0,1,1,1,0,0,0,0,Not at all,Not at all,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+60de09f7dc5304e0c0f19485,00:00:27,time2,2,3,3,3,3,3,1,0,0,More than half the days,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Several days,Not at all,Not at all,0,Not at all,18
+69f8f3101505e3f57a832438,00:00:49,time2,2,2,2,1,0,2,0,0,0,More than half the days,More than half the days,More than half the days,Several days,Not at all,More than half the days,Not at all,Not at all,Not at all,0,Not at all,9
+656c8118ba4ac7120453cbc1,00:00:31,time2,2,1,3,3,0,1,1,0,0,More than half the days,Several days,Nearly every day,Nearly every day,Not at all,Several days,Several days,Not at all,Not at all,0,Not at all,11
 6a19a092d1e2eb2e4b072554,00:00:15,time2,0,0,0,1,0,1,1,0,0,Not at all,Not at all,Not at all,Several days,Not at all,Several days,Several days,Not at all,Not at all,0,Not at all,3
+69cb608f3d31d3d72fbff88d,00:00:35,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
 6a55022ac3162a7be7ddadd5,00:00:42,time2,1,1,1,2,0,1,0,0,0,Several days,Several days,Several days,More than half the days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,6
 69f0eddb8814c802224f8bad,00:00:41,time2,1,1,0,2,3,2,1,0,0,Several days,Several days,Not at all,More than half the days,Nearly every day,More than half the days,Several days,Not at all,Not at all,0,Not at all,10
+67684dd84deabe73a9da9353,00:01:05,time2,1,1,0,1,0,0,0,0,0,Several days,Several days,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+5e3723a2c0b2896ad554be73,00:00:17,time2,0,0,0,1,1,0,0,0,0,Not at all,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+5d1ba27e43fc40001e6bef4f,00:00:28,time2,1,1,1,3,1,0,1,0,0,Several days,Several days,Several days,Nearly every day,Several days,Not at all,Several days,Not at all,Not at all,0,Not at all,8
+6a03092916c4774734733954,00:00:36,time2,2,3,2,2,0,3,2,1,3,More than half the days,Nearly every day,More than half the days,More than half the days,Not at all,Nearly every day,More than half the days,Several days,Nearly every day,0,Not at all,18
+5992af75c825cf0001d7d94c,00:00:32,time2,0,0,1,1,0,0,0,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
+6694fb732a72150ebef2c8e4,00:00:09,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+697d24efb667eda3edf789ca,00:01:06,time2,0,0,0,1,0,0,0,0,0,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,1
+677d87faabcf1e93c8c18c5e,00:00:35,time2,0,1,2,2,2,1,1,0,0,Not at all,Several days,More than half the days,More than half the days,More than half the days,Several days,Several days,Not at all,Not at all,0,Not at all,9
+5e78a08318ee0e41e1bc6a1a,00:00:29,time2,1,0,1,1,2,0,1,0,0,Several days,Not at all,Several days,Several days,More than half the days,Not at all,Several days,Not at all,Not at all,0,Not at all,6
+6a07658dda0017a86f04f995,00:01:22,time2,1,0,2,2,0,1,1,0,0,Several days,Not at all,More than half the days,More than half the days,Not at all,Several days,Several days,Not at all,Not at all,0,Not at all,7
+69fce3ef0b9da8b3ad46eedd,00:00:32,time2,2,1,2,3,2,1,1,0,0,More than half the days,Several days,More than half the days,Nearly every day,More than half the days,Several days,Several days,Not at all,Not at all,0,Not at all,12
+6151556ef73ba765c7ff55f6,00:03:06,time2,1,1,1,1,0,1,0,0,0,Several days,Several days,Several days,Several days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,5
 60a252db049918aa001fe65a,00:00:54,time2,1,2,3,1,3,2,0,0,0,Several days,More than half the days,Nearly every day,Several days,Nearly every day,More than half the days,Not at all,Not at all,Not at all,0,Not at all,12
+5fb8c5a8bf771b29040065ac,00:14:56,time2,1,1,1,1,1,1,0,0,0,Several days,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,Not at all,0,Not at all,6
+5ba292385301b80001c71ba2,00:00:14,time2,0,0,1,1,0,0,1,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,3
+69bd43b3638c297e98b9f8df,00:00:20,time2,2,1,2,1,1,1,1,0,1,More than half the days,Several days,More than half the days,Several days,Several days,Several days,Several days,Not at all,Several days,0,Not at all,10
+571a1295c97ad400123ab3bd,00:00:33,time2,2,1,0,2,0,1,0,0,0,More than half the days,Several days,Not at all,More than half the days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,6
+67383e65d99b84de45a85c28,00:01:19,time2,1,0,0,1,1,0,0,1,0,Several days,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Several days,Not at all,0,Not at all,4
+5c27db7f00942400019a0c11,00:00:41,time2,1,1,0,1,1,1,1,0,0,Several days,Several days,Not at all,Several days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,6
+5eeb32c541b66f01379faff7,00:00:19,time2,3,3,3,3,3,3,3,2,3,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,More than half the days,Nearly every day,0,Not at all,26
+69ea32838e63a8af3d4ed1ae,00:00:14,time2,1,1,2,1,2,1,1,0,0,Several days,Several days,More than half the days,Several days,More than half the days,Several days,Several days,Not at all,Not at all,0,Not at all,9
+6a04b80e14874cdbefac323f,00:00:11,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+69e847860ae7104bac856107,00:00:34,time2,2,1,2,3,1,1,1,0,1,More than half the days,Several days,More than half the days,Nearly every day,Several days,Several days,Several days,Not at all,Several days,0,Not at all,12
+6a1c278d31944f546d54e1b5,00:00:50,time2,0,0,1,1,1,0,0,0,0,Not at all,Not at all,Several days,Several days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,3
+6a01b82647e5dd21cd05d8ee,00:00:20,time2,1,1,2,2,0,0,0,0,0,Several days,Several days,More than half the days,More than half the days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,6
+69e91fe037d0abdb091c2c05,00:00:57,time2,2,1,3,3,3,3,3,1,1,More than half the days,Several days,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Several days,Several days,0,Not at all,20
+6054ce9cd4e5c96ab84e9113,00:02:33,time2,1,1,0,3,0,0,0,0,0,Several days,Several days,Not at all,Nearly every day,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,5
+6a04e558839eb469fa443cab,00:00:26,time2,2,3,3,3,0,1,1,0,1,More than half the days,Nearly every day,Nearly every day,Nearly every day,Not at all,Several days,Several days,Not at all,Several days,0,Not at all,14
+697bb32b513ce5aec5c6cf3d,00:00:33,time2,1,1,3,3,2,1,3,0,0,Several days,Several days,Nearly every day,Nearly every day,More than half the days,Several days,Nearly every day,Not at all,Not at all,0,Not at all,14
+5f0c5efb791e025b52cb48b1,00:00:14,time2,3,3,3,3,3,3,3,3,2,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,Nearly every day,More than half the days,0,Not at all,26
 63f93b47bb0c1a1aca131480,00:00:13,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
+69b0c18da5fae9eb6f4a1fe4,00:00:32,time2,1,2,1,2,1,1,1,0,1,Several days,More than half the days,Several days,More than half the days,Several days,Several days,Several days,Not at all,Several days,0,Not at all,10
+66b9c3a3e93996ce7d285665,00:00:31,time2,0,1,0,0,0,1,1,0,0,Not at all,Several days,Not at all,Not at all,Not at all,Several days,Several days,Not at all,Not at all,0,Not at all,3
+67698c3573d3cbf6add78578,00:02:03,time2,1,1,0,1,0,1,1,0,1,Several days,Several days,Not at all,Several days,Not at all,Several days,Several days,Not at all,Several days,0,Not at all,6
+665937686712e30718aac2f7,00:01:00,time2,1,1,1,1,1,1,0,0,1,Several days,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,Several days,0,Not at all,7
+6152d75634b966697b09920f,00:00:44,time2,1,0,1,3,0,1,3,0,0,Several days,Not at all,Several days,Nearly every day,Not at all,Several days,Nearly every day,Not at all,Not at all,0,Not at all,9
+5e909d6c5321c13abee11725,00:00:19,time2,1,1,1,1,1,1,1,1,0,Several days,Several days,Several days,Several days,Several days,Several days,Several days,Several days,Not at all,0,Not at all,8
+6697dd57c4db95eac07db01a,00:00:23,time2,0,0,0,0,0,0,0,0,0,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,0
 69f061c18bcd97022e700b95,00:00:58,time2,0,1,2,1,3,1,2,0,0,Not at all,Several days,More than half the days,Several days,Nearly every day,Several days,More than half the days,Not at all,Not at all,0,Not at all,10
+6150224c57e32a81a27ccb5a,00:00:46,time2,1,1,1,2,1,2,1,0,0,Several days,Several days,Several days,More than half the days,Several days,More than half the days,Several days,Not at all,Not at all,0,Not at all,9
+69ac80d0bad16bd0877001c0,00:01:00,time2,1,1,2,1,2,1,1,0,1,Several days,Several days,More than half the days,Several days,More than half the days,Several days,Several days,Not at all,Several days,0,Not at all,10
+69f9b0426f86f9ab7020710f,00:00:21,time2,1,3,2,3,2,3,1,0,0,Several days,Nearly every day,More than half the days,Nearly every day,More than half the days,Nearly every day,Several days,Not at all,Not at all,0,Not at all,15
+6a1efce6eacd6a04721457bb,00:00:13,time2,0,0,1,1,0,0,0,0,0,Not at all,Not at all,Several days,Several days,Not at all,Not at all,Not at all,Not at all,Not at all,0,Not at all,2
 676ed6c97f59dba5a786886d,00:00:13,time2,0,1,1,1,0,1,0,0,0,Not at all,Several days,Several days,Several days,Not at all,Several days,Not at all,Not at all,Not at all,0,Not at all,4
 5bd2a0799afb5b00015be460,00:00:50,time2,0,0,1,2,1,0,0,0,0,Not at all,Not at all,Several days,More than half the days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,4
+55ecd6ff748092000daa9f5f,00:00:14,time2,1,1,1,1,1,1,1,0,0,Several days,Several days,Several days,Several days,Several days,Several days,Several days,Not at all,Not at all,0,Not at all,7
+697171911e8c97f9701b29f0,00:00:17,time2,0,0,0,1,1,0,1,1,0,Not at all,Not at all,Not at all,Several days,Several days,Not at all,Several days,Several days,Not at all,0,Not at all,4
+61fa936e5719bc09cb834cbe,00:00:20,time2,0,0,0,1,0,0,1,0,0,Not at all,Not at all,Not at all,Several days,Not at all,Not at all,Several days,Not at all,Not at all,0,Not at all,2
+6a216f571e7c4467c10b734b,00:01:16,time2,0,1,1,2,1,0,0,0,0,Not at all,Several days,Several days,More than half the days,Several days,Not at all,Not at all,Not at all,Not at all,0,Not at all,5
+5e95a177eaa3cb0177ef6cc9,00:00:45,time2,0,0,2,1,1,0,2,0,0,Not at all,Not at all,More than half the days,Several days,Several days,Not at all,More than half the days,Not at all,Not at all,0,Not at all,6

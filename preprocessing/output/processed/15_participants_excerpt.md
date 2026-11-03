@@ -1,3 +1,3 @@
 # Participants
 
-*Participants. 41 adults were recruited via Prolific and completed at least one session of an online two-session study. The final sample included 28 participants (15 female, 13 male; mean age 42.6 years, SD 13, range 27–66).*
+*Participants. 240 adults were recruited via Prolific and completed at least one session of an online two-session study. The final sample included 198 participants (111 female, 86 male; mean age 38.3 years, SD 11.4, range 19–66).*
