@@ -22,10 +22,10 @@ clean_qualtrics <- function(df, id_col, keep) {
     select(prolific_id = all_of(id_col), all_of(keep))
 }
 
-survey_file    <- "demographic survey.csv"
-macarthur_file <- names(demographics_collected) |> str_subset("^MacArthur")
+demographics_file <- "demographic data.csv"
 
-survey <- demographics_collected[[survey_file]] |>
+# Demographics and the MacArthur ladder now arrive in a single Qualtrics export.
+demographics_combined <- demographics_collected[[demographics_file]] |>
   clean_qualtrics("PROLIFIC_PID",
                   keep = c(ai_check = "AI", gender = "gender", sex = "sex",
                            age = "age_1", country_of_birth = "country of birth",
@@ -34,16 +34,7 @@ survey <- demographics_collected[[survey_file]] |>
                            student = "student", education = "education",
                            employment_status = "employment status", hand = "hand",
                            depression_diagnosis = "depression diagnosis",
-                           medication = "medication"))
-
-macarthur <- demographics_collected[[macarthur_file]] |>
-  clean_qualtrics("prolifc_id", keep = c(ladder_rung = "__js_ladder"))
-
-#### COMBINE EXPORTS INTO ONE DEMOGRAPHICS TABLE ####
-
-# TEMPORARY: the survey and the MacArthur ladder were collected as two separate
-# Qualtrics surveys. Remove this block once all demographics come in a single export.
-demographics_combined <- full_join(survey, macarthur, by = "prolific_id")
+                           medication = "medication", ladder_rung = "__js_ladder"))
 
 #### TYPE COERCION ####
 

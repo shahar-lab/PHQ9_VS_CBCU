@@ -1,4 +1,4 @@
-# reads: data/collected · writes: artifacts/collected.rds, artifacts/demographics_collected.rds
+# reads: data/collected · writes: artifacts/collected.rds/.csv, artifacts/demographics_collected.rds and per-export demographics_collected_*.csv
 
 #### READ COLLECTED DATA ####
 
@@ -17,19 +17,20 @@ read_session <- function(time_label) {
 # ASSUMED[not stated where the prolific_pid->prolific_id rename happens]: renamed here, on
 # `collected`, since every downstream build_*_raw.R and QA script reads this column via
 # common_cols/direct reference and expects it already named prolific_id.
-# session_id is NA in early files; NA means session_1, any other value is kept.
+# session_id is NA or a random code of letters/digits in session 1 files; anything that is
+# not exactly "session_2" is session_1.
 collected <- names(session_folders) |>
   map(read_session) |>
   list_rbind() |>
   rename(prolific_id = prolific_pid) |>
-  mutate(session_id = if_else(is.na(session_id), "session_1", session_id))
+  mutate(session_id = if_else(session_id %in% "session_2", "session_2", "session_1"))
 
 #### READ COLLECTED DEMOGRAPHICS (Qualtrics exports) ####
 
 # Qualtrics exports carry two extra header rows (question text, import ids) under the
 # column names; both are dropped from the data. Each export is kept as its own table,
 # named by its file.
-demographics_files <- list.files(collected_dir, pattern = "^(demographic survey|MacArthur).*\\.csv$",
+demographics_files <- list.files(collected_dir, pattern = "^demographic data.*\\.csv$",
                                  full.names = TRUE)
 
 demographics_collected <- demographics_files |>
@@ -38,3 +39,8 @@ demographics_collected <- demographics_files |>
 
 saveRDS(collected, file.path(artifacts_dir, "collected.rds"))
 saveRDS(demographics_collected, file.path(artifacts_dir, "demographics_collected.rds"))
+
+write_csv(collected, file.path(artifacts_dir, "collected.csv"))
+# one CSV per Qualtrics export, named after its source file
+walk2(demographics_collected, names(demographics_collected),
+      \(d, f) write_csv(d, file.path(artifacts_dir, paste0("demographics_collected_", f))))

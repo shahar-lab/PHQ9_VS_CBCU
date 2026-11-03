@@ -1,67 +1,297 @@
 prolific_id,ai_check,gender,sex,age,country_of_birth,country_of_residence,marital_status,ethnicity,student,education,employment_status,hand,depression_diagnosis,medication,ladder_rung
-5689916dd3d6a7000aa1cbf0,human,Woman,Female,32,United Kingdom,United Kingdom,"single, never married",White,No,Some college but no degree,Employed part time,Right,No,"No, never",6
-56d84fd94a9be1000553c1d7,Human,Woman,Female,33,United Kingdom,United Kingdom,"single, never married",White,No,Doctoral degree,Employed full time,Right,No,"No, never",NA
-59b19a277f6c84000151c001,human,Woman,Female,65,United Kingdom,United Kingdom,Married,White,No,High school graduate,Employed full time,Right,No,"No, never",NA
+544e94c4fdf99b50bd30726c,Human,Man,Male,55,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Unemployed not looking for work,Right,Yes,"Yes, currently",2
+54dfac92fdf99b4b6b6595d9,human,Man,Male,55,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed full time,Right,No,"Yes, in the past (but not currently)",6
+55d39f64da14d7001295375a,human,Woman,Female,44,United Kingdom,United Kingdom,"single, never married",White,No,Associate degree,Employed full time,Right,No,"Yes, in the past (but not currently)",4
+55ecd6ff748092000daa9f5f,I am a human,Man,Male,38,United States,United States,"single, never married",White,No,Bachelor's degree,Employed full time,Right,No,"No, never",5
+5689916dd3d6a7000aa1cbf0,human,Woman,Female,32,United Kingdom,United Kingdom,"single, never married",White,No,Some college but no degree,Employed part time,Right,No,"No, never",5
+569ab750af9ad7000b6407e1,I am a human.,Man,Male,51,New Zealand,New Zealand,"single, never married",other,No,Bachelor's degree,Employed part time,Left,Yes,"Yes, currently",4
+56d84fd94a9be1000553c1d7,Human,Woman,Female,33,United Kingdom,United Kingdom,"single, never married",White,No,Doctoral degree,Employed full time,Right,No,"No, never",6
+571a1295c97ad400123ab3bd,Human,Woman,Female,46,United Kingdom,United Kingdom,Married,White,No,Master's degree,Unemployed not looking for work,Right,No,"No, never",5
+571cd566e1d2ec0013a68b64,human,Woman,Female,55,United Kingdom,United Kingdom,Married,Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",8
+57b345d276b2ea0001c988bc,human,Woman,Female,46,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Unemployed not looking for work,Right,Yes,"Yes, in the past (but not currently)",3
+57d5593f8dcd2c00014bc55b,Human,Man,Male,45,United States,United States,"single, never married",White,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, currently",6
+594ee0aa7095f80001da4c4e,human,Woman,Female,51,United Kingdom,United Kingdom,Divorced,White,No,Bachelor's degree,Employed full time,Right,No,"Yes, in the past (but not currently)",6
+5992af75c825cf0001d7d94c,I am a human!,Woman,Female,57,United Kingdom,United Kingdom,Married,White,No,High school graduate,Employed full time,Right,No,"No, never",7
+59b19a277f6c84000151c001,human,Woman,Female,65,United Kingdom,United Kingdom,Married,White,No,High school graduate,Employed full time,Right,No,"No, never",5
+59cb95053306be000195be2e,human,Woman,Female,33,United Kingdom,United Kingdom,"single, never married",White,No,Some college but no degree,Unemployed not looking for work,Right,Prefer not to say,Prefer not to answer,4
+5a0a057c80acd80001047392,human,Woman,Female,57,United Kingdom,United Kingdom,Separated,White,No,Some college but no degree,Employed part time,Left,No,"No, never",3
 5a47473899311d0001df550e,human,Woman,Female,43,United Kingdom,United Kingdom,Married,White,No,Some college but no degree,Employed full time,Right,Yes,"Yes, currently",5
-5bd2a0799afb5b00015be460,human,Woman,Female,53,United Kingdom,United Kingdom,Married,White,No,Some college but no degree,Employed full time,Right,No,"No, never",3
-5e0f26b63ccda26295505f0d,human,Woman,Female,56,United Kingdom,United Kingdom,Divorced,White,No,Bachelor's degree,Retired,Left,No,"No, never",NA
+5a69d77a56585a0001633482,I'm human,Man,Male,48,United Kingdom,United Kingdom,"single, never married",White,No,High school graduate,Unemployed looking for work,Right,No,"No, never",2
+5b01842bc573030001c345e0,human,Man,Male,51,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, currently",7
+5ba292385301b80001c71ba2,human,Man,Male,53,United States,United States,"single, never married",White,No,Master's degree,Employed full time,Right,No,"No, never",7
+5ba81e70c2358e0001d27708,Human,Man,Male,31,United Kingdom,United Kingdom,"single, never married",White,No,Doctoral degree,Employed full time,Right,No,"No, never",4
+5bd2a0799afb5b00015be460,human,Woman,Female,53,United Kingdom,United Kingdom,Married,White,No,Some college but no degree,Employed full time,Right,No,"No, never",4
+5be9784e18a71d0001317761,Human,Man,Male,34,United Kingdom,United Kingdom,Married,White,Yes,Bachelor's degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",7
+5bf7be3abd1fd30001aa5498,human,Woman,Female,35,United Kingdom,United Kingdom,Separated,White,No,High school graduate,Employed part time,Right,No,"No, never",3
+5c27db7f00942400019a0c11,i am human,Man,Male,34,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Employed full time,Right,No,"No, never",6
+5c6b23a6076e4e0001292f53,Human,Woman,Female,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+5c7dd22debc24800018e7ca0,human,Man,Male,46,United Kingdom,United Kingdom,Married,White,Yes,Bachelor's degree,Employed full time,Right,No,"No, never",4
+5d1ba27e43fc40001e6bef4f,Human,Woman,Female,38,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed part time,Right,Yes,"Yes, currently",6
+5d23c74c557d52001c823711,Human.,Man,Male,29,United Kingdom,United Kingdom,"single, never married",Black or African American,No,Bachelor's degree,Unemployed not looking for work,Right,No,"No, never",4
+5d68c8aa40524c00189e8ac2,human,Man,Male,35,United Kingdom,United Kingdom,"single, never married",White,No,Some college but no degree,Employed part time,Right,No,"No, never",3
+5d862f1717edf1001cce7daf,human,Woman,Female,42,United Kingdom,United Kingdom,Married,White,Yes,Bachelor's degree,Employed full time,Right,No,"Yes, currently",7
+5e0b3d5dbf3d4e3868abc3ea,humAN,Man,Male,55,United Kingdom,United Kingdom,Married,White,No,Master's degree,Employed full time,Right,Yes,"Yes, currently",4
+5e0f26b63ccda26295505f0d,human,Woman,Female,56,United Kingdom,United Kingdom,Divorced,White,No,Bachelor's degree,Retired,Left,No,"No, never",8
+5e2df53ff420f03dee6a87b7,i am human,Man,Male,32,United Kingdom,United Kingdom,Married,White,No,Associate degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",3
+5e3723a2c0b2896ad554be73,human,Woman,Female,49,United Kingdom,United Kingdom,"single, never married",White,No,Some college but no degree,Employed full time,Right,No,"No, never",5
+5e78a08318ee0e41e1bc6a1a,human,Woman,Female,32,United Kingdom,United Kingdom,"single, never married",White,Yes,Some college but no degree,Employed part time,Right,No,"No, never",7
+5e85f278c880ee1edb7e96ee,Human,Woman,Female,30,China,United Kingdom,"single, never married",Asian,No,Bachelor's degree,Employed full time,Right,No,"No, never",7
+5e909d6c5321c13abee11725,human,Woman,Female,37,United Kingdom,United Kingdom,"single, never married",White,Yes,Associate degree,Employed full time,Right,No,"No, never",6
+5e95a177eaa3cb0177ef6cc9,human,Woman,Female,30,United Kingdom,United Kingdom,"single, never married",Asian,No,Master's degree,Employed full time,Right,No,"No, never",7
 5ea4cebb8944a8495280db42,Human,Woman,Female,30,United Kingdom,United Kingdom,"single, never married",White,No,High school graduate,Employed full time,Right,No,"No, never",4
-5ec96e3609117f0a67231842,I am a human.,Man,Male,55,Ireland,Ireland,"single, never married",White,No,Bachelor's degree,Employed full time,Right,No,"No, never",NA
-5f0cba80665294690790e03c,I am a human.,Woman,Female,41,United Kingdom,United Kingdom,"single, never married",Black or African American,No,Some college but no degree,Disabled,Right,Yes,"Yes, in the past (but not currently)",NA
-5f57be602095072bb238a7ab,i am human,Woman,Female,50,United Kingdom,United Kingdom,Widowed,White,No,Some college but no degree,Employed part time,Right,No,"No, never",NA
-5fb25a7e5960a87fb627c12b,Human,Man,Male,80,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Retired,Left,No,"No, never",NA
+5ec96e3609117f0a67231842,I am a human.,Man,Male,55,Ireland,Ireland,"single, never married",White,No,Bachelor's degree,Employed full time,Right,No,"No, never",6
+5ecd36302b4d3c05d4cc1ba2,i am human,Woman,Female,58,United Kingdom,United Kingdom,Married,White,No,Some college but no degree,Retired,Right,No,"No, never",6
+5eeb32c541b66f01379faff7,I'm a human,Prefer not to say,Prefer not to say,24,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Unemployed looking for work,Right,Yes,"Yes, currently",2
+5efa33c4e9f4160ffd817db9,human,Woman,Female,45,United Kingdom,United Kingdom,Married,White,No,Some college but no degree,Employed full time,Right,No,"No, never",5
+5f0c5efb791e025b52cb48b1,Human,Woman,Female,30,United Kingdom,United Kingdom,"single, never married",White,No,Master's degree,Employed full time,Right,Yes,"Yes, currently",6
+5f0cba80665294690790e03c,I am a human.,Woman,Female,41,United Kingdom,United Kingdom,"single, never married",Black or African American,No,Some college but no degree,Disabled,Right,Yes,"Yes, in the past (but not currently)",3
+5f42d4271627731086718372,human,Woman,Female,44,Canada,Canada,Married,White,No,Bachelor's degree,Employed full time,Right,No,"Yes, currently",4
+5f57be602095072bb238a7ab,i am human,Woman,Female,50,United Kingdom,United Kingdom,Widowed,White,No,Some college but no degree,Employed part time,Right,No,"No, never",5
+5f5bb87a0093333445af65f2,human,Man,Male,43,United Kingdom,United Kingdom,Divorced,White,No,Bachelor's degree,Employed full time,Right,No,"No, never",7
+5f5c9b80b79c5f02b7eb3968,human,Man,Male,28,South Africa,South Africa,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Left,No,"No, never",5
+5f8214581a35f532cee9ea52,human,Man,Male,37,United Kingdom,United Kingdom,"single, never married",White,Yes,Bachelor's degree,Employed part time,Left,Yes,"Yes, currently",2
+5f933255e25f2b0e6f794a54,human,Woman,Female,47,United Kingdom,United Kingdom,Married,White,No,Master's degree,Employed part time,Right,Yes,"Yes, in the past (but not currently)",7
+5fb25a7e5960a87fb627c12b,Human,Man,Male,80,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Retired,Left,No,"No, never",6
+5fb8c5a8bf771b29040065ac,Human,Man,Male,43,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Employed full time,Right,No,"No, never",3
+5fc3eb06c7a6322c11395528,human,Woman,Female,32,South Africa,South Africa,Married,Black or African American,No,Bachelor's degree,Employed part time,Right,No,"No, never",8
+5fd25420fc18fb0008f9e30e,human,Woman,Female,25,South Africa,South Africa,"single, never married",Black or African American,No,Some college but no degree,Employed full time,Right,No,"No, never",4
 6009606726f80266d809bf9a,I am a human,Man,Male,27,Singapore,South Korea,Separated,Asian,Yes,Bachelor's degree,Employed part time,Right,No,"No, never",7
+601129f77e0c21000b0c408a,Human,Man,Male,27,South Africa,South Africa,"single, never married",Black or African American,Yes,Bachelor's degree,Employed full time,Right,No,"No, never",6
+60205f5ba5fe0165fa0e5e01,human,Man,Male,29,South Africa,South Africa,"single, never married",Black or African American,Yes,Bachelor's degree,Employed full time,Right,No,"No, never",1
 602cf4568083d86318913385,Human,Woman,Female,32,South Africa,South Africa,Married,Black or African American,No,Associate degree,Employed full time,Right,No,"No, never",2
-6064fef22d11e88491d1ac57,human,Woman,Female,41,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed part time,Right,No,"No, never",NA
+6054ce9cd4e5c96ab84e9113,human,Woman,Female,28,South Africa,South Africa,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",3
+6061711f6ef8e3b652861dbf,I am a human,Man,Male,30,South Africa,South Africa,"single, never married",White,No,Master's degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",5
+6064fef22d11e88491d1ac57,human,Woman,Female,41,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed part time,Right,No,"No, never",4
+60656a924c99543d12555b86,human,Woman,Female,33,South Africa,South Africa,Married,Black or African American,Yes,Bachelor's degree,Employed full time,Right,No,"No, never",6
+60719da557d8241609b26e83,Human,Woman,Female,41,South Africa,South Africa,Married,Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",6
+6080359b7e55e8dbf21a225e,human,Woman,Female,48,United Kingdom,United Kingdom,Divorced,White,Yes,Bachelor's degree,Employed full time,Right,No,"No, never",6
+608f68107d9ea28c690af9d2,Human,Woman,Female,33,South Africa,South Africa,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",5
 60a252db049918aa001fe65a,i am human,Man,Male,44,Zimbabwe,South Africa,Married,Black or African American,Yes,Bachelor's degree,Employed full time,Right,No,"No, never",5
-60accd3d6f3f272083a2f14f,I'm human,Woman,Female,34,South Africa,South Africa,"single, never married",Black or African American,Yes,Associate degree,Employed full time,Right,No,"No, never",NA
-60fd1724be388fa301b32497,Human,Woman,Female,31,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Unemployed looking for work,Right,No,"No, never",NA
+60accd3d6f3f272083a2f14f,I'm human,Woman,Female,34,South Africa,South Africa,"single, never married",Black or African American,Yes,Associate degree,Employed full time,Right,No,"No, never",5
+60b78dc1eb46833a5c6b1235,human,Woman,Female,32,United Kingdom,United Kingdom,"single, never married",White,No,Some college but no degree,Employed full time,Left,No,"No, never",2
+60b932147633bf0dd446941e,human,Man,Male,51,United Kingdom,United Kingdom,"single, never married",White,No,Some college but no degree,Unemployed looking for work,Right,Yes,"Yes, currently",2
+60bb89b26ad33c84c19129f1,60bb89b26ad33c84c19129f1@email.prolific.com,Woman,Female,26,South Africa,South Africa,"single, never married",Black or African American,No,Some college but no degree,Unemployed looking for work,Right,No,"No, never",5
+60bf706fc3b12a3c4f11a487,human,Woman,Female,23,United Kingdom,United Kingdom,"single, never married",other,Yes,NA,NA,NA,NA,NA,NA
+60c329e4a31bf9f8b6c87b3d,i am a human,Man,Male,24,South Africa,South Africa,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",7
+60de09f7dc5304e0c0f19485,human,Woman,Female,34,United States,United States,Married,White,No,Some college but no degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",5
+60dfa6a5a12413b99195c3de,human,Woman,Female,25,United Kingdom,United Kingdom,"single, never married",Asian,Yes,Bachelor's degree,Student,Right,No,"No, never",5
+60fd1724be388fa301b32497,Human,Woman,Female,31,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Unemployed looking for work,Right,No,"No, never",7
+610d4df86c4abc6b5ced6fa0,Human,Woman,Female,45,United Kingdom,United Kingdom,"single, never married",Black or African American,No,Master's degree,Employed part time,Ambidextrous,Yes,"No, never",7
+611870a41de777ae15971e9d,I'm a human,Woman,Female,55,Canada,Canada,Divorced,White,No,Bachelor's degree,Employed part time,Right,Yes,"Yes, currently",3
+6150224c57e32a81a27ccb5a,human,Woman,Female,45,United Kingdom,United Kingdom,Divorced,White,No,Bachelor's degree,Employed full time,Right,No,"No, never",5
+6151556ef73ba765c7ff55f6,I am a human,Man,Male,44,United Kingdom,United Kingdom,Married,Asian,No,Bachelor's degree,Employed full time,Right,No,"No, never",6
+6152d75634b966697b09920f,human,Woman,Female,51,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed part time,Right,Yes,"No, never",3
+61656042f505fd7fa53e8628,61656042f505fd7fa53e8628,Woman,Female,57,United Kingdom,United Kingdom,Married,White,No,Less than high school,Employed part time,Right,No,"No, never",7
+61fa936e5719bc09cb834cbe,human,Woman,Female,32,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Employed full time,Right,No,"No, never",5
+6266a4e5846e1e41812a0432,human,Man,Male,54,United Kingdom,United Kingdom,"single, never married",White,No,High school graduate,Employed full time,Right,No,"No, never",7
+628781515f29a0394e23b15b,human,Man,Male,35,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed full time,Left,No,"No, never",8
 629f470832dba055c9d39800,Human,Man,Male,23,NA,NA,"single, never married",White,No,High school graduate,NA,NA,NA,NA,NA
-632222532c12ab0ab7ca00bd,human,Prefer not to say,Male,33,United Kingdom,United Kingdom,Married,White,No,High school graduate,Employed part time,Left,No,"No, never",5
-63f93b47bb0c1a1aca131480,Human,Man,Male,56,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Employed full time,Right,No,"No, never",4
+632222532c12ab0ab7ca00bd,human,Prefer not to say,Male,33,United Kingdom,United Kingdom,Married,White,No,High school graduate,Employed part time,Left,No,"No, never",6
+63614d513d6883f562b0ff79,human,Woman,Female,39,United States,United States,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, currently",3
+63af557b3d4f219c3226b7d6,I am a human,Woman,Female,52,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed part time,Right,No,"No, never",7
+63d7b72765ddb017724e78d3,human,Man,Male,25,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Unemployed looking for work,Right,No,"No, never",5
+63ed0392b8b24c34aaf26310,human,Woman,Female,47,Netherlands,United Kingdom,Married,White,No,Some college but no degree,Employed part time,Right,Yes,"Yes, in the past (but not currently)",3
+63ed4ffc9e011d70035477c5,human,Man,Male,34,Nigeria,United Kingdom,Married,Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",4
+63f7c60b1e096c2df51e3071,human,Man,Male,44,United Kingdom,United Kingdom,Married,White,No,Associate degree,Employed full time,Right,No,"No, never",7
+63f93b47bb0c1a1aca131480,Human,Man,Male,56,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Employed full time,Right,No,"No, never",5
+642b7196bbd075c765432265,human,Man,Male,44,Australia,Australia,Married,Multiracial / Mixed,No,Bachelor's degree,Employed full time,Right,No,"No, never",9
 6544ff9e0fb2eaaf83e2de5c,human,Woman,Female,64,United States,United States,Divorced,White,No,Bachelor's degree,Employed part time,Right,Yes,"Yes, currently",8
 65465ad50fb5c91a7da03f86,I am human,Man,Male,32,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed full time,Right,No,"No, never",7
-6658d66a5e45cac0aaeb54de,human,Woman,Female,35,United Kingdom,United Kingdom,"single, never married",White,No,Master's degree,Employed full time,Right,No,"No, never",NA
+656c8118ba4ac7120453cbc1,human,Man,Male,54,United Kingdom,United Kingdom,Divorced,White,No,Bachelor's degree,Employed full time,Right,No,"No, never",4
+66019f5e10adbe524f2a844a,human,Woman,Female,51,Ireland,Ireland,Married,White,No,Some college but no degree,Employed part time,Left,No,"No, never",6
+66293a02f66f851f4c9fec39,human,Woman,Female,50,United States,United States,Divorced,White,No,Associate degree,Employed full time,Right,Yes,"Yes, currently",3
+663127d07fb81f5532bcfdad,human,Woman,Female,56,United Kingdom,United Kingdom,Married,White,No,High school graduate,Unemployed not looking for work,Right,No,"No, never",6
+663b638be7226d4e3fcc255f,human,Woman,Female,28,Nigeria,United Kingdom,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",8
+6658beae5669d166e3c15990,human,Man,Male,37,United Kingdom,United Kingdom,Married,Black or African American,No,Master's degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",9
+6658d66a5e45cac0aaeb54de,human,Woman,Female,35,United Kingdom,United Kingdom,"single, never married",White,No,Master's degree,Employed full time,Right,No,"No, never",7
+665937686712e30718aac2f7,I am human,Man,Male,44,United Kingdom,United Kingdom,"single, never married",White,No,Some college but no degree,Employed full time,Right,No,"No, never",6
+6668c9df1d76dc85e0f95d40,A human,Woman,Female,29,Nigeria,United Kingdom,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",3
 6673eea04e15d2d270aa7ff8,I am human,Man,Male,66,United Kingdom,United Kingdom,"single, never married",White,No,Some college but no degree,Retired,Right,No,"No, never",5
-667eba97a530c308f48c8846,I'm a human,Woman,Female,30,Canada,Canada,"single, never married",Asian,No,Master's degree,Employed part time,Right,Yes,"Yes, in the past (but not currently)",NA
-66a1561d05457dd7ec9cd3a8,Human,Man,Male,55,United Kingdom,United Kingdom,Married,Multiracial / Mixed,No,Master's degree,Employed part time,Right,No,"No, never",NA
-66acd0f41a177db1483aaa33,human,Man,Male,49,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed full time,Right,No,"No, never",NA
+667eba97a530c308f48c8846,I'm a human,Woman,Female,30,Canada,Canada,"single, never married",Asian,No,Master's degree,Employed part time,Right,Yes,"Yes, in the past (but not currently)",8
+6680071d60b3642bcf5dad37,human,Man,Male,29,Kenya,United Kingdom,"single, never married",Black or African American,No,Master's degree,Unemployed looking for work,Right,No,"No, never",4
+6683a217cd77e4dd4c506f6c,Human,Man,Male,31,United Kingdom,United Kingdom,"single, never married",Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",5
+668a19f1edd91f3ef0a55fe2,I am human,Woman,Female,31,Nigeria,Canada,Married,Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",5
+6694fb732a72150ebef2c8e4,human,Man,Male,37,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed full time,Right,No,"No, never",7
+6697dd57c4db95eac07db01a,human,Woman,Female,59,United Kingdom,United Kingdom,Married,White,No,High school graduate,Retired,Right,No,"No, never",6
+66986ab71f2b54203f26ad32,human,Man,Male,29,United Kingdom,United Kingdom,Married,White,No,Master's degree,Employed part time,Right,No,"No, never",4
+66a1561d05457dd7ec9cd3a8,Human,Man,Male,55,United Kingdom,United Kingdom,Married,Multiracial / Mixed,No,Master's degree,Employed part time,Right,No,"No, never",7
+66acd0f41a177db1483aaa33,human,Man,Male,49,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed full time,Right,No,"No, never",7
+66b9c3a3e93996ce7d285665,im human,Woman,Female,56,Australia,Australia,Divorced,White,No,Some college but no degree,Employed part time,Right,No,"No, never",7
+66c24e9899628532dd846326,human,Woman,Female,28,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Employed full time,Left,No,"No, never",5
 66d31a1b0515fe747830bab9,human,Man,Male,62,United Kingdom,United Kingdom,Married,White,No,High school graduate,Employed full time,Right,No,"No, never",7
 66d5e128d49faf318dd776ec,Human,Man,Male,31,Canada,Canada,Married,Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",7
-66dd661dd80c9cc1df616f8a,human,Woman,Female,54,United States,United States,"single, never married",White,No,Bachelor's degree,Employed part time,Right,Yes,"Yes, currently",NA
-675733d2009c6e901b6af017,"what? what do you want me to do, dance in a damn box. Give more instruciton on how to prove i am a fucking human'",Woman,Female,38,United States,United States,Married,American Indian or Alaska Native,No,High school graduate,Unemployed looking for work,Right,Yes,"Yes, in the past (but not currently)",NA
-676055469b245b53e81358d0,human,Man,Male,22,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Unemployed looking for work,Left,No,"No, never",NA
+66dd661dd80c9cc1df616f8a,human,Woman,Female,54,United States,United States,"single, never married",White,No,Bachelor's degree,Employed part time,Right,Yes,"Yes, currently",3
+66fd3f6c93c24ecc119be354,Human,Man,Male,40,United Kingdom,United Kingdom,"single, never married",White,No,Associate degree,Unemployed looking for work,Right,Yes,"Yes, currently",6
+671538a99972f78921900da7,I am human,Man,Male,27,Nigeria,United Kingdom,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",6
+67155947b83a6aee15acbc0d,i am a human,Woman,Female,29,United States,United States,Married,White,No,Master's degree,Employed full time,Right,No,"No, never",6
+6717f0ac88d9f27d9b79af31,I am human,Woman,Female,51,United States,United States,Divorced,White,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, currently",2
+6727c56a4838a57961ee3822,Human,Woman,Female,29,United Kingdom,United Kingdom,Married,White,No,Master's degree,Employed full time,Right,No,"No, never",6
+672bb2f4838ef2ebdebe51c2,HUMAN,Man,Male,36,Nigeria,United States,"single, never married",Black or African American,Yes,Master's degree,Employed full time,Right,No,"No, never",4
+67383e65d99b84de45a85c28,I am human,Man,Male,38,Nigeria,United Kingdom,Married,Black or African American,No,Doctoral degree,Employed full time,Right,No,"No, never",7
+6743c8da977b0d274dad1fc2,human,Woman,Female,32,Nigeria,United Kingdom,"single, never married",Black or African American,Yes,Master's degree,Employed part time,Right,No,"No, never",7
+675733d2009c6e901b6af017,"what? what do you want me to do, dance in a damn box. Give more instruciton on how to prove i am a fucking human'",Woman,Female,38,United States,United States,Married,American Indian or Alaska Native,No,High school graduate,Unemployed looking for work,Right,Yes,"Yes, in the past (but not currently)",3
+676055469b245b53e81358d0,human,Man,Male,22,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Unemployed looking for work,Left,No,"No, never",6
+67659f81e052dae14b5dda86,I am a human,Man,Male,28,Nigeria,United Kingdom,"single, never married",Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",6
+6765ef2feed02bfb60182ecb,Human,Man,Male,31,Nigeria,United Kingdom,Married,Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",6
+67684dd84deabe73a9da9353,Human,Woman,Female,37,Nigeria,United Kingdom,Married,Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",6
+67698c3573d3cbf6add78578,I am a human,Woman,Female,28,Ghana,United Kingdom,"single, never married",Black or African American,No,Master's degree,Employed part time,Left,No,"No, never",5
 676ed6c97f59dba5a786886d,Human,Man,Male,44,United Kingdom,United Kingdom,Married,White,No,Master's degree,Employed full time,Right,No,"No, never",7
-67803b5508f3d995ef13696b,human,Woman,Female,57,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed part time,Left,No,"No, never",NA
-67acde79313292059de8a627,Human,Woman,Female,35,Canada,Canada,Married,Black or African American,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",NA
-67c0dafd6e94e9833dbe9524,I am a human!,Woman,Female,62,Canada,Canada,Married,White,No,Bachelor's degree,Retired,Right,No,"No, never",NA
+676f730d7b956c6dc4eb2102,human,Man,Male,32,Nigeria,United Kingdom,"single, never married",Black or African American,No,Master's degree,Employed full time,Right,No,"Yes, in the past (but not currently)",6
+67798247d6fc9e510470baef,human,Woman,Female,45,United Kingdom,United Kingdom,"single, never married",White,No,Master's degree,Employed part time,Right,No,"No, never",6
+677d87faabcf1e93c8c18c5e,Human,Man,Male,39,United Kingdom,United Kingdom,Married,White,No,Master's degree,Employed full time,Right,No,"No, never",7
+67803b5508f3d995ef13696b,human,Woman,Female,57,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed part time,Left,No,"No, never",7
+6783ebc2e89b75d66d952f41,human,Man,Male,59,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed full time,Right,No,"No, never",7
+678e883a9ac653bfb7ff5f1f,human,Man,Male,31,United States,United States,Married,Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",7
+67a66096bc5b99e5261aefc5,human,Man,Male,34,United States,United States,"single, never married",Black or African American,No,High school graduate,Employed part time,Left,No,"No, never",2
+67acde79313292059de8a627,Human,Woman,Female,35,Canada,Canada,Married,Black or African American,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",8
+67c0dafd6e94e9833dbe9524,I am a human!,Woman,Female,62,Canada,Canada,Married,White,No,Bachelor's degree,Retired,Right,No,"No, never",6
+67ca1243e7c4d398474fc95d,Human,Man,Male,36,United Kingdom,United Kingdom,Married,Black or African American,Yes,Master's degree,Employed full time,Right,Yes,"Yes, currently",5
+67dc7c814cd5af9421e0476a,human,Woman,Female,58,United Kingdom,United Kingdom,Married,White,No,High school graduate,Employed full time,Right,No,"No, never",7
 67e0870d582edce0a2764d1f,human,Man,Male,29,United Kingdom,United Kingdom,Married,Black or African American,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",6
+67e43d3171f3338caa047245,human,Woman,Female,53,United Kingdom,United Kingdom,Married,White,No,Master's degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",9
+680d5891d72bc74e45fb87f1,human,Man,Male,54,United Kingdom,United Kingdom,Separated,White,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",7
+6913757aae0da25ca51bdb7b,human,Woman,Female,39,Canada,Canada,Married,White,No,Bachelor's degree,Employed full time,Right,No,"Yes, in the past (but not currently)",5
 691cd0a261d7064af0b96599,Human,Woman,Female,22,Canada,Canada,"single, never married",White,No,Bachelor's degree,Employed full time,Right,No,"No, never",7
+695fecbb573c400800c895bb,human,Woman,Female,37,United States,United States,Married,White,No,Associate degree,Employed part time,Right,No,"No, never",5
+696ec8093bbc311f3f2b3f16,human,Woman,Female,30,Australia,Australia,"single, never married",White,No,Some college but no degree,Unemployed not looking for work,Right,No,"No, never",3
+696f07b53e3b99a786a261b0,human,Man,Male,19,Australia,Australia,"single, never married",White,Yes,Some college but no degree,Unemployed looking for work,Right,No,"No, never",7
+697171911e8c97f9701b29f0,Hello it's me a human,Woman,Female,27,Canada,Canada,Married,White,No,Some college but no degree,Employed full time,Right,No,"No, never",5
+6978d224639f15b0bf444a8f,human,Woman,Female,28,United Kingdom,United Kingdom,"single, never married",White,No,Master's degree,Employed full time,Left,No,"No, never",6
+697bb32b513ce5aec5c6cf3d,human,Woman,Female,23,United Kingdom,United Kingdom,"single, never married",White,No,Master's degree,Employed full time,Left,No,"No, never",6
+697d24efb667eda3edf789ca,human,Woman,Female,58,United States,United States,Married,White,No,Some college but no degree,Employed part time,Right,Yes,"Yes, currently",4
 6991e46740117ca6ef90cd7c,Human,Woman,Female,27,United States,United States,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",5
+6997699bfa8589e80145918b,I am a human.,Man,Male,39,Canada,Canada,"single, never married",White,No,Associate degree,Unemployed looking for work,Right,No,"No, never",4
+6998153b1d28ff630545fa88,I am human,Man,Male,27,Canada,Canada,Married,Black or African American,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, currently",7
+699ad28882624b23f9713908,i pretty sure i know that i'm still living and knowing english to type this to prove i'm human,Man,Male,30,United States,South Korea,"single, never married",Asian,No,Bachelor's degree,Employed full time,Right,No,"No, never",7
+699f262fc20cdd6f59a2f6c2,human,Man,Male,41,United States,United States,Married,White,No,Bachelor's degree,Employed full time,Right,No,"Yes, in the past (but not currently)",5
+699f83cc468a2f1781f00c12,Human,Man,Male,45,Nigeria,Canada,Married,Black or African American,No,Master's degree,Employed full time,Ambidextrous,No,"No, never",5
+699fcf6ce8e60730dbfc92ac,human,Man,Male,21,United States,United States,"single, never married",Black or African American,Yes,High school graduate,Employed part time,Right,Prefer not to say,"Yes, in the past (but not currently)",4
+69a662d2eab6dccb7ac4376a,human,Woman,Female,42,United States,United States,Married,Black or African American,Yes,NA,NA,NA,NA,NA,NA
+69a6f31da8afde8854c002a8,I am a human 100%,Woman,Female,43,Malaysia,Canada,Married,Asian,No,Master's degree,Employed full time,Right,No,"Yes, in the past (but not currently)",7
+69ac80d0bad16bd0877001c0,human,Woman,Female,29,United States,United States,"single, never married",Black or African American,No,Master's degree,Employed part time,Right,No,"No, never",5
+69acf8eb3eee6cc60d19a248,Human,Woman,Female,38,United States,United States,Married,White,No,Associate degree,Employed part time,Right,Yes,"Yes, in the past (but not currently)",4
 69ad388b63979c96dc085507,I am human,Man,Male,38,United Kingdom,Netherlands,"single, never married",White,No,Master's degree,Unemployed looking for work,Ambidextrous,Prefer not to say,Prefer not to answer,1
-69bfa90568c64f3e06f1a32e,Human,Man,Male,50,Canada,Canada,"single, never married",White,No,Bachelor's degree,Employed full time,Right,No,"No, never",NA
-69d6a275b26596eac5478f13,Human,Man,Male,31,United Kingdom,United Kingdom,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",NA
-69d8eab7b04ea057a65bdb4d,human,Man,Male,32,United States,United States,"single, never married",White,No,High school graduate,Employed full time,Right,Yes,"No, never",NA
-69f061c18bcd97022e700b95,human,Woman,Female,51,United Kingdom,United Kingdom,Married,Asian,No,Bachelor's degree,Unemployed looking for work,Right,No,"No, never",7
+69b0c18da5fae9eb6f4a1fe4,human,Man,Male,29,Canada,Canada,"single, never married",White,Yes,Bachelor's degree,Employed part time,Right,Yes,"Yes, currently",7
+69bd43b3638c297e98b9f8df,HUMAN,Man,Male,25,United Kingdom,United Kingdom,Married,Black or African American,Yes,Bachelor's degree,Employed full time,Right,No,"No, never",6
+69bfa90568c64f3e06f1a32e,Human,Man,Male,50,Canada,Canada,"single, never married",White,No,Bachelor's degree,Employed full time,Right,No,"No, never",4
+69c29ecdf9a92efab6908a2c,Human,Man,Male,30,Nigeria,Canada,"single, never married",Black or African American,No,Bachelor's degree,Employed part time,Right,No,"No, never",6
+69cb608f3d31d3d72fbff88d,Human,Man,Male,38,Canada,Canada,Married,Black or African American,No,Master's degree,Employed part time,Right,No,"No, never",6
+69d64b03e9555165634639ab,69d64b03e9555165634639ab,Man,Male,24,South Africa,United States,"single, never married",Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",7
+69d68fef496b299d4cd8e08d,69d68fef496b299d4cd8e08d,Man,Male,24,South Africa,South Africa,"single, never married",Black or African American,Yes,Bachelor's degree,Student,Right,No,"Yes, in the past (but not currently)",6
+69d6a275b26596eac5478f13,Human,Man,Male,31,United Kingdom,United Kingdom,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",5
+69d8eab7b04ea057a65bdb4d,human,Man,Male,32,United States,United States,"single, never married",White,No,High school graduate,Employed full time,Right,Yes,"No, never",3
+69e847860ae7104bac856107,I am human,Woman,Female,59,Ireland,United Kingdom,"single, never married",White,No,Bachelor's degree,Retired,Right,Yes,"Yes, in the past (but not currently)",5
+69e91fe037d0abdb091c2c05,human,Woman,Female,21,United States,South Africa,"single, never married",Black or African American,No,High school graduate,Employed full time,Right,Yes,"No, never",6
+69e949cc0dff53d48038cdcd,human,Man,Male,41,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Unemployed looking for work,Left,No,"No, never",6
+69ea32838e63a8af3d4ed1ae,human,Man,Male,37,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Employed part time,Right,Yes,"Yes, currently",5
+69f061c18bcd97022e700b95,human,Woman,Female,51,United Kingdom,United Kingdom,Married,Asian,No,Bachelor's degree,Unemployed looking for work,Right,No,"No, never",8
 69f0eddb8814c802224f8bad,human,Woman,Female,38,Canada,Canada,Married,White,No,Bachelor's degree,Unemployed looking for work,Right,No,"No, never",6
+69f20ef28c9e6a90d0e12909,human,Man,Male,53,United Kingdom,United Kingdom,"single, never married",White,No,High school graduate,Employed part time,Right,No,"No, never",7
+69f226b2032dea50182cbd55,Human,Woman,Female,33,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, currently",8
+69f26759e2c3ed8a93c92ede,human,Woman,Female,46,Nigeria,Canada,Married,Black or African American,Yes,Bachelor's degree,Employed part time,Right,No,"No, never",6
+69f3bcd5781bd961d2a5f880,I am a human,Man,Male,35,United Kingdom,United Kingdom,Married,Black or African American,Yes,Bachelor's degree,Employed part time,Right,No,"No, never",6
+69f49562a94a4da9c8520aa1,human,Man,Male,33,United States,United States,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Ambidextrous,No,"Yes, in the past (but not currently)",6
+69f586544b0395e639960cd5,human,Man,Male,29,Canada,Canada,"single, never married",Asian,No,High school graduate,Employed full time,Right,No,"No, never",5
 69f7666c2ce1f93d57e39940,Human,Man,Male,31,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed full time,Left,Yes,"Yes, currently",5
-69fa27f897bf4caf2d505098,human,Man,Male,20,United Kingdom,United Kingdom,"single, never married",White,Yes,Some college but no degree,Employed part time,Right,No,"No, never",NA
-69fcb1ce92f721e53752ed1e,human,Woman,Female,42,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed part time,Right,No,"No, never",NA
-6a012c1cbb725fe5329c2720,human,Woman,Female,44,Australia,United States,Married,White,No,High school graduate,Employed part time,Left,Yes,"No, never",NA
+69f76b21cab3bf4a9db3b459,69f76b21cab3bf4a9db3b459,Woman,Female,27,United Kingdom,United Kingdom,"single, never married",Black or African American,No,Bachelor's degree,Employed part time,Right,No,"No, never",5
+69f7e812b1abc5db9b1d0eac,human,Woman,Female,52,South Africa,Australia,Married,Black or African American,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, currently",6
+69f86a04fe802de5002bb70b,human,Man,Male,27,United States,United States,Married,White,No,Some college but no degree,Employed full time,Right,Yes,"Yes, currently",1
+69f8f3101505e3f57a832438,human,Woman,Female,21,South Africa,South Africa,"single, never married",Black or African American,Yes,Bachelor's degree,Employed full time,Right,No,"No, never",6
+69f9b0426f86f9ab7020710f,human,Man,Male,56,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Employed part time,Right,No,"No, never",3
+69fa27f897bf4caf2d505098,human,Man,Male,20,United Kingdom,United Kingdom,"single, never married",White,Yes,Some college but no degree,Employed part time,Right,No,"No, never",6
+69fb31c7fd922d9f38394582,human,Woman,Female,49,South Africa,United Kingdom,Divorced,White,No,Bachelor's degree,Employed full time,Right,No,"No, never",5
+69fb3666fb8ef17497b9514e,human,Man,Male,44,Kenya,United Kingdom,Married,Black or African American,No,Bachelor's degree,Employed part time,Right,No,"No, never",6
+69fc77a4daf6918e7a9b07f7,Human,Woman,Female,48,United States,United States,Divorced,Black or African American,Yes,Bachelor's degree,Employed full time,Right,Yes,"Yes, currently",7
+69fc79dc30e8f567c3105ff6,I am a human,Man,Male,40,United States,United States,Married,White,No,Some college but no degree,Employed full time,Right,No,"Yes, in the past (but not currently)",3
+69fcb1ce92f721e53752ed1e,human,Woman,Female,42,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed part time,Right,No,"No, never",6
+69fcb26251b7047bcc4538cd,human,Woman,Female,24,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Unemployed looking for work,Right,No,"No, never",6
+69fce3ef0b9da8b3ad46eedd,I am human.,Man,Male,43,United States,United States,Married,White,No,Some college but no degree,Unemployed looking for work,Right,Yes,"Yes, currently",6
+69fd3cfe17cfa9370ea1ef3a,Human,Woman,Female,24,United States,United States,Married,White,No,High school graduate,Employed full time,Right,Yes,"Yes, currently",3
+69fda5324f331e76e20c603b,I am a human.,Woman,Female,27,United States,United Kingdom,"single, never married",White,No,Master's degree,Employed part time,Right,No,"Yes, currently",5
+69fe2e31e0ff93d209f5aeca,I am a human,Woman,Female,33,United Kingdom,United Kingdom,"single, never married",White,No,Some college but no degree,Employed part time,Right,No,"No, never",3
+69fe3b0074c7895cbddca1e6,Human,Man,Male,51,United States,Ireland,"single, never married",Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",6
+69ffb9c188175306393bfe41,I am human,Woman,Female,35,Canada,United Kingdom,Married,White,No,Master's degree,Employed full time,Right,No,"No, never",7
+69ffc3bf55fd97a76c8122f4,Human,Man,Male,32,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",7
+6a00d96b190db7e5ec67cb89,human,Man,Male,60,United States,United States,Married,White,No,Bachelor's degree,Employed full time,Right,No,"No, never",6
+6a0103dcf8cd5a66ae3c25fa,Human,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6a012c1cbb725fe5329c2720,human,Woman,Female,44,Australia,United States,Married,White,No,High school graduate,Employed part time,Left,Yes,"No, never",5
+6a01b82647e5dd21cd05d8ee,human,Woman,Female,33,Poland,United Kingdom,Married,White,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",7
+6a01c4c8248651c0157c76c5,Human,Man,Male,31,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed full time,Right,No,"No, never",7
+6a0211f66d13da71cb35f782,human,Woman,Female,42,Nigeria,Canada,Divorced,Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",5
 6a02ed5bd6acf52c07ab46fa,"i am human, last time i checked",Man,Male,40,United Kingdom,United Kingdom,Married,White,No,Some college but no degree,Employed part time,Right,No,"Yes, in the past (but not currently)",5
-6a0489167a4c2f99c148aae3,human,Man,Male,32,United Kingdom,United Kingdom,Married,White,No,Master's degree,Employed full time,Right,No,"No, never",NA
-6a04a94d6915ae8637f94c84,Human,Woman,Female,33,Nigeria,United Kingdom,Married,Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",NA
+6a03092916c4774734733954,I am human,Man,Male,37,United Kingdom,United Kingdom,Married,White,No,Some college but no degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",4
+6a0489167a4c2f99c148aae3,human,Man,Male,32,United Kingdom,United Kingdom,Married,White,No,Master's degree,Employed full time,Right,No,"No, never",7
+6a0493b0ba30180995ebd884,human,Woman,Female,41,United Kingdom,United Kingdom,"single, never married",White,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",5
+6a04a94d6915ae8637f94c84,Human,Woman,Female,33,Nigeria,United Kingdom,Married,Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",5
+6a04b80e14874cdbefac323f,human,Man,Male,21,United Kingdom,United Kingdom,"single, never married",Multiracial / Mixed,No,Bachelor's degree,Employed full time,Right,No,"No, never",5
+6a04cc566f5c842e78c59add,I am a human,Man,Male,32,United Kingdom,United Kingdom,"single, never married",White,No,Some college but no degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",6
+6a04e558839eb469fa443cab,human,Man,Male,51,United Kingdom,United Kingdom,Married,White,No,Doctoral degree,Employed part time,Right,Yes,"Yes, currently",7
+6a057f4144808bd931bf3671,Human,Woman,Female,45,United Kingdom,United Kingdom,"single, never married",White,Yes,Bachelor's degree,Student,Right,Yes,"Yes, in the past (but not currently)",2
+6a05bdcf92767ea1ca7aa2f7,Human,Woman,Female,32,United Kingdom,United Kingdom,Married,Multiracial / Mixed,No,Doctoral degree,Employed part time,Right,No,"No, never",7
+6a07658dda0017a86f04f995,human,Man,Male,23,United Kingdom,United Kingdom,"single, never married",Black or African American,No,Bachelor's degree,Employed part time,Right,No,"No, never",7
+6a082b5b68b0948671bfa8d5,I'm human,Man,Female,34,United Kingdom,United Kingdom,"single, never married",White,No,High school graduate,Employed full time,Right,No,"No, never",3
+6a083fbf1cdeeaccf2e04d99,Human,Woman,Female,56,United Kingdom,United Kingdom,Married,White,No,Master's degree,Retired,Right,Yes,"Yes, currently",6
+6a084cb2633bd3f1ae139ced,human,Man,Male,29,United Kingdom,United Kingdom,Married,Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",7
+6a08cbfafd1950ac6e92a7b4,human,Woman,Female,27,Canada,Canada,"single, never married",White,No,Master's degree,Employed part time,Right,No,"No, never",5
+6a09f0f336314e43823c2a78,human,Woman,Female,53,United States,United States,Married,White,No,Associate degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",5
 6a0adfcc9de2f1c28b0db58b,human,Woman,Female,27,United Kingdom,United Kingdom,"single, never married",White,No,Master's degree,Employed full time,Right,No,"Yes, in the past (but not currently)",4
+6a0afc83f9a7ce885dc1f3b4,Human,Woman,Female,41,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed part time,Right,No,"No, never",5
 6a0b2bdbea2d151e845c3e38,human,Woman,Female,53,United Kingdom,United Kingdom,Separated,White,No,Some college but no degree,Retired,Right,Yes,"Yes, in the past (but not currently)",7
+6a0b2d56064dcea1f84eaa94,human,Man,Male,49,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed full time,Right,No,"Yes, in the past (but not currently)",5
 6a0da93c7800f8ed95424872,Human,Man,Male,63,United Kingdom,United Kingdom,Widowed,White,No,Bachelor's degree,Retired,Right,No,"No, never",7
-6a0f2dadb58effc3dd06ad4a,human,Man,Male,27,United Kingdom,United Kingdom,Married,Asian,Yes,Master's degree,Employed full time,Right,Yes,"No, never",NA
+6a0e225c055ed1c21f3b90d8,Human,Man,Male,40,Australia,Australia,Married,White,No,Doctoral degree,Employed full time,Right,No,"No, never",7
+6a0ec8830dd532d62cde8232,Human,Woman,Female,35,United Kingdom,United Kingdom,"single, never married",White,No,Some college but no degree,Employed full time,Right,No,"No, never",4
+6a0f2dadb58effc3dd06ad4a,human,Man,Male,27,United Kingdom,United Kingdom,Married,Asian,Yes,Master's degree,Employed full time,Right,Yes,"No, never",3
+6a1002dabe7f5c918f052d3e,human,Man,Male,31,United Kingdom,United Kingdom,"single, never married",Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",7
+6a106b5d33b08b727cb82c65,yes i am a human,Man,Male,29,United Kingdom,United Kingdom,Married,White,No,Some college but no degree,Employed full time,Right,No,"No, never",6
+6a1081e8c16f66fe9595bcaa,Human,Woman,Female,31,United Kingdom,United Kingdom,"single, never married",White,No,Master's degree,Employed full time,Right,No,"No, never",5
+6a10ae0279804a41e4d06468,human,Woman,Female,37,Nigeria,Ireland,Married,Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",6
+6a10ce25b3fadfdaca9d1914,I am human,Man,Male,28,United Kingdom,United Kingdom,"single, never married",Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",7
 6a11344dfa807a229abd5f83,Human,Man,Male,35,Australia,Australia,Married,Black or African American,No,Bachelor's degree,Employed part time,Right,No,"No, never",5
-6a16aef4b4417bcc99faa34e,human,Man,Male,29,New Zealand,New Zealand,"single, never married",other,No,Master's degree,Employed full time,Left,No,"No, never",NA
+6a119f8ef53d50d8dfd81fbf,human,Woman,Female,19,Austria,United Kingdom,"single, never married",White,Yes,High school graduate,Student,Right,No,"No, never",7
+6a135d0137a8ad16f2590393,human,Woman,Female,25,United Kingdom,United Kingdom,Married,Black or African American,Yes,Bachelor's degree,Employed full time,Right,No,"No, never",6
+6a146da67998f9a45a214595,I AM HUMAN,Man,Male,38,United Kingdom,United Kingdom,Married,Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",7
+6a16aef4b4417bcc99faa34e,human,Man,Male,29,New Zealand,New Zealand,"single, never married",other,No,Master's degree,Employed full time,Left,No,"No, never",4
+6a16d6b35437eb5386049fcd,human,Man,Male,28,Kenya,United States,"single, never married",Black or African American,No,Master's degree,Employed part time,Right,Yes,"Yes, in the past (but not currently)",5
+6a16ea99c41f24c9371f4d00,human,Woman,Female,30,United Kingdom,United Kingdom,"single, never married",Black or African American,Yes,Master's degree,Student,Right,No,"No, never",6
+6a1712c057793e3bfe739de8,human,Woman,Female,31,Nigeria,Canada,Separated,Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",6
+6a1759a83da9f4ed875b332d,Human,Man,Male,37,United Kingdom,United Kingdom,Married,Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",6
+6a17a7994ce626c29e68968a,human,Woman,Female,52,United States,United States,"single, never married",Black or African American,Yes,Bachelor's degree,Employed full time,Right,No,"Yes, in the past (but not currently)",4
 6a19a092d1e2eb2e4b072554,human,Woman,Female,29,United Kingdom,United Kingdom,"single, never married",Multiracial / Mixed,No,Bachelor's degree,Employed full time,Right,No,"No, never",5
+6a19b14498b3d36bccc467cb,human,Woman,Female,37,Nigeria,Canada,Married,Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",5
+6a19d9bdc85ad46cebd1ad1b,human,Woman,Female,52,Canada,Canada,Separated,White,No,Bachelor's degree,Employed part time,Right,No,"No, never",7
+6a1b0d0752aac3ae3568e1d8,human,Man,Male,45,United States,United States,Married,White,No,Doctoral degree,Employed full time,Right,No,"No, never",10
+6a1bec05fe75c61cdfc7acbc,a human,Woman,Female,27,United Kingdom,United Kingdom,Married,Black or African American,No,Master's degree,Employed full time,Right,Prefer not to say,Prefer not to answer,8
+6a1c278d31944f546d54e1b5,human,Man,Male,29,Nigeria,Canada,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",6
+6a1c948e11c0dcbff51b9083,human,Woman,Female,19,United States,United States,"single, never married",Black or African American,Yes,Some college but no degree,Student,Right,Yes,"Yes, currently",5
+6a1d9d56cfece324378b6731,I am a human,Woman,Female,46,United Kingdom,United Kingdom,Widowed,White,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, currently",7
 6a1dfa3eaef836ebd308886e,6a1dfa3eaef836ebd308886e,Woman,Female,51,United Kingdom,United Kingdom,Married,White,No,Bachelor's degree,Employed part time,Right,No,"Yes, in the past (but not currently)",6
-6a26311766436b2345c944e1,Human,Woman,Female,31,United States,United States,Married,Black or African American,No,Master's degree,Employed full time,Left,Yes,"Yes, currently",6
-6a271c0daa928450f32c7507,I am human,Man,Male,34,Ireland,Ireland,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",NA
-6a440175a490cecb1f3c27ec,Human,Woman,Female,25,Nigeria,United Kingdom,"single, never married",Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",NA
-6a55022ac3162a7be7ddadd5,human,Non-binary / third gender,Female,62,Australia,United Kingdom,Married,White,No,Some college but no degree,Employed part time,Right,Yes,"Yes, currently",3
-6a60b46470225b338d131c3f,Human,Woman,Female,25,India,India,"single, never married",Asian,No,Bachelor's degree,Employed part time,Right,No,"No, never",NA
-6abaf85abba07e29bf4ee3d9,human,Man,Male,23,United States,United States,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, currently",NA
+6a1efce6eacd6a04721457bb,human,Woman,Female,28,United Kingdom,United Kingdom,Prefer not to say,Asian,No,Some college but no degree,Employed full time,Right,No,"No, never",5
+6a1f029546cb342499d058e0,Human,Man,Male,32,Canada,Canada,Married,Black or African American,No,Master's degree,Employed full time,Right,No,"Yes, in the past (but not currently)",6
+6a1f148617273ff995df88a0,human,Woman,Female,22,United Kingdom,United Kingdom,"single, never married",White,Yes,Bachelor's degree,Student,Right,No,"No, never",6
+6a1f8098dda9c21e70c672cb,human,Man,Male,22,Nigeria,Canada,"single, never married",Black or African American,Yes,Bachelor's degree,Employed part time,Right,No,"No, never",7
+6a205d8176898540335bb525,I am a human,Man,Male,29,United Kingdom,United Kingdom,Married,Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",6
+6a216f571e7c4467c10b734b,6a216f571e7c4467c10b734b,Woman,Female,59,United Kingdom,United Kingdom,Married,White,No,Some college but no degree,Retired,Right,Yes,"No, never",6
+6a22c3eb4725e325fd168a95,Human,Woman,Female,33,United Kingdom,United Kingdom,"single, never married",White,No,Some college but no degree,Unemployed looking for work,Right,No,"No, never",4
+6a235cbdc5836f4cd80e70bb,human,Woman,Female,29,United Kingdom,United Kingdom,Married,White,No,Master's degree,Employed full time,Right,No,"Yes, currently",6
+6a24075160115784d45503dd,Human,Woman,Female,30,United Kingdom,United Kingdom,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",6
+6a26311766436b2345c944e1,Human,Woman,Female,31,United States,United States,Married,Black or African American,No,Master's degree,Employed full time,Left,Yes,"Yes, currently",7
+6a267fe4c68b0b7496434f09,human,Man,Male,28,United Kingdom,United Kingdom,"single, never married",White,No,High school graduate,Employed full time,Right,Yes,"Yes, in the past (but not currently)",7
+6a270f7312a26beb07cd8bf7,I'm human,Man,Male,29,India,United Kingdom,"single, never married",Asian,No,Master's degree,Employed part time,Ambidextrous,No,"No, never",7
+6a271c0daa928450f32c7507,I am human,Man,Male,34,Ireland,Ireland,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",6
+6a440175a490cecb1f3c27ec,Human,Woman,Female,25,Nigeria,United Kingdom,"single, never married",Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",9
+6a44e9476588bc3947bfb82f,Human,Man,Male,31,United Kingdom,United Kingdom,Married,White,No,Some college but no degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",3
+6a4ccfc6206d45c1fa7837fe,A Human,Woman,Female,35,New Zealand,New Zealand,"single, never married",White,No,Master's degree,Employed part time,Right,Yes,"Yes, in the past (but not currently)",3
+6a55022ac3162a7be7ddadd5,human,Non-binary / third gender,Female,62,Australia,United Kingdom,Married,White,No,Some college but no degree,Employed part time,Right,Yes,"Yes, currently",4
+6a5f448dea24d9eb0cf2c204,human,Woman,Female,23,India,India,"single, never married",Asian,No,Master's degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",8
+6a60b46470225b338d131c3f,Human,Woman,Female,25,India,India,"single, never married",Asian,No,Bachelor's degree,Employed part time,Right,No,"No, never",7
+6a671d8f7c25b67143d113e2,human,Man,Male,27,India,India,"single, never married",Asian,No,Master's degree,Employed full time,Left,No,"Yes, in the past (but not currently)",7
+6a73204044cfe42006d800d3,Human,Man,Male,23,United States,India,"single, never married",Asian,No,Bachelor's degree,Employed full time,Right,No,"No, never",8
+6aba90db34c1abb2b977ceee,human,Man,Male,22,United States,India,Married,Asian,Yes,Master's degree,Employed full time,Right,Yes,"Yes, in the past (but not currently)",8
+6abaf85abba07e29bf4ee3d9,human,Man,Male,23,United States,United States,"single, never married",Black or African American,No,Bachelor's degree,Employed full time,Right,Yes,"Yes, currently",5
+6abcc3fd0abc8028e910789f,human,Woman,Female,32,United States,United States,"single, never married",Black or African American,Yes,Bachelor's degree,Employed part time,Right,No,"No, never",6
+6ac246359c0580372ea7d6b7,Human,Woman,Female,26,United States,India,"single, never married",Asian,No,Master's degree,Employed full time,Right,No,"No, never",6
+6ac6adce08f75ef062967577,human,Man,Male,30,United Kingdom,United Kingdom,Married,Black or African American,No,Bachelor's degree,Employed full time,Right,No,"No, never",8
+6aca37cf2b9a5b9049437587,human,Man,Male,31,United Kingdom,United Kingdom,"single, never married",Black or African American,No,Master's degree,Employed full time,Right,No,"No, never",7
+6ad7d8a5bf4e6ff3cebc1224,human,Man,Male,18,United States,United Kingdom,"single, never married",Black or African American,Yes,Bachelor's degree,Employed full time,Ambidextrous,No,"No, never",6
+6ad913a46985891a10f64be7,human,Man,Male,47,United States,United States,"single, never married",White,No,Bachelor's degree,Employed full time,Right,No,"No, never",4
