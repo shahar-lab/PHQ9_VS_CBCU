@@ -1,6 +1,6 @@
 #### COMBINE CROSS-PARAMETER & PHQ9 RELATIONSHIP PLOTS INTO MULTI-PAGE PDF ####
 
-pdf(file.path(output_dir, "parameter_relationships_summary.pdf"), width = 10, height = 8)
+pdf(file.path(output_relations_dir, "parameter_relationships_summary.pdf"), width = 10, height = 8)
 print(p_u_vs_tau_time1)
 print(p_u_vs_tau_time2)
 print(p_u_vs_beta_time1)

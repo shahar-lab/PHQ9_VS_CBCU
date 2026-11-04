@@ -76,6 +76,10 @@ window_exit_max    <- 2
 max_window_left_ms <- 30000
 source(file.path(code_dir, "11_exclude_participants_window.R"))
 
+# Exclude participants with more than 4 quiz errors in either time1 or time2.
+quiz_error_max <- 4
+source(file.path(code_dir, "11b_exclude_participants_quiz_errors.R"))
+
 # Exclude trials with no recorded RT or choice (no response). RT is kept
 # exploratory only -- no RT-based cutoff is applied.
 source(file.path(code_dir, "12_exclude_trials_rt.R"))
@@ -87,8 +91,11 @@ source(file.path(code_dir, "13_write_processed_demographics.R"))
 # Write surviving CBCU trials, PHQ rows and feedback to data/processed/.
 source(file.path(code_dir, "14_write_processed_data.R"))
 
-# Write the number of quiz errors per surviving participant (reported only, no exclusion).
+# Write the number of quiz errors per surviving participant.
 source(file.path(code_dir, "16_write_processed_quiz_errors.R"))
+
+# Plot the RT distribution and RT by trial of the surviving trials (descriptive only).
+source(file.path(code_dir, "17_plot_rt.R"))
 
 # Write manuscript Participants and Data treatment excerpts from the exclusion
 # cascade counts.

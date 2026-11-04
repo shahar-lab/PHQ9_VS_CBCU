@@ -1,4 +1,5 @@
 # reads: artifacts/10_after_both_sessions.rds, artifacts/11_after_window_exits.rds,
+#        artifacts/11b_after_quiz_errors.rds,
 #        artifacts/12_after_rt_bounds.rds, data/processed/demographics.csv
 # writes: output/processed/15_participants_excerpt.md,
 #         output/processed/15_data_treatment_excerpt.md
@@ -7,25 +8,28 @@
 
 if (!exists("window_exit_max"))    window_exit_max    <- 2
 if (!exists("max_window_left_ms")) max_window_left_ms <- 30000
+if (!exists("quiz_error_max"))     quiz_error_max     <- 4
 
 step10 <- readRDS(file.path(artifacts_dir, "10_after_both_sessions.rds"))
 step11 <- readRDS(file.path(artifacts_dir, "11_after_window_exits.rds"))
+step11b <- readRDS(file.path(artifacts_dir, "11b_after_quiz_errors.rds"))
 step12 <- readRDS(file.path(artifacts_dir, "12_after_rt_bounds.rds"))
 demographics <- read_csv(file.path(processed_dir, "demographics.csv"), show_col_types = FALSE)
 
 n_recruited    <- length(step10$all_pids)
 n_missing      <- n_recruited - length(step10$after_both_sessions_pids)
 n_window       <- length(step11$after_both_sessions_pids) - length(step11$after_window_exits_pids)
+n_quiz         <- length(step11b$after_window_exits_pids) - length(step11b$after_quiz_errors_pids)
 n_trials_in    <- nrow(step12$after_window_cbcu)
 n_trials_out   <- n_trials_in - nrow(step12$after_rt_bounds)
 pct_trials_out <- round(100 * n_trials_out / n_trials_in, 1)
-n_final        <- length(step12$after_window_exits_pids)
+n_final        <- length(step12$after_quiz_errors_pids)
 n_final_trials <- nrow(step12$after_rt_bounds)
 mean_trials    <- round(n_final_trials / n_final, 2)
 
 final_demo <- demographics |>
   mutate(prolific_id = as.character(prolific_id)) |>
-  filter(prolific_id %in% step12$after_window_exits_pids)
+  filter(prolific_id %in% step12$after_quiz_errors_pids)
 
 n_female <- sum(final_demo$sex == "Female", na.rm = TRUE)
 n_male   <- sum(final_demo$sex == "Male", na.rm = TRUE)
@@ -53,7 +57,9 @@ data_treatment_excerpt <- paste0(
   "the study window more than ", window_exit_max, " times, or for more than ",
   max_window_left_ms / 1000,
   " seconds in total, during PHQ-9 or CBCU on either session (",
-  participants_people(n_window), " excluded). From the remaining CBCU ",
+  participants_people(n_window), " excluded). We also excluded participants who made more than ",
+  quiz_error_max, " errors on the task quiz in either session (",
+  participants_people(n_quiz), " excluded). From the remaining CBCU ",
   "observations we omitted trials with a missing RT or choice (",
   format(n_trials_out, big.mark = ","), " trials, ", pct_trials_out,
   "% of remaining trials). No RT-based trial or participant exclusion was ",

@@ -28,13 +28,13 @@ plot_phq9_vs_parameter <- function(df, x_var, x_label, y_var, y_label, plot_name
     labs(x = x_label, y = y_label)
 
   ggsave(
-    file.path(output_dir, paste0(plot_name, ".pdf")),
+    file.path(output_relations_dir, paste0(plot_name, ".pdf")),
     plot = p,
     width = 10, height = 8, bg = "white"
   )
 
   ggsave(
-    file.path(output_dir, paste0(plot_name, ".png")),
+    file.path(output_relations_dir, paste0(plot_name, ".png")),
     plot = p,
     width = 10, height = 8, dpi = 300, bg = "white"
   )

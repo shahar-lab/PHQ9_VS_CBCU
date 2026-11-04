@@ -43,7 +43,7 @@ plot_param_test_retest <- function(df, param_name, param_label, item_scale = FAL
   plot_name <- paste0(param_name, "_test_retest_scatter")
 
   ggsave(
-    file.path(output_dir, paste0(plot_name, ".png")),
+    file.path(output_retest_dir, paste0(plot_name, ".png")),
     plot = p,
     width = 10, height = 8, dpi = 300, bg = "white"
   )

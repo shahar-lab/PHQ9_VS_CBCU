@@ -37,7 +37,7 @@ p_utility_retest <- ggplot(df_utility_wide, aes(x = u_time1, y = u_time2)) +
 plot_name <- "utility_test_retest_scatter"
 
 ggsave(
-  file.path(output_dir, paste0(plot_name, ".png")),
+  file.path(output_retest_dir, paste0(plot_name, ".png")),
   plot = p_utility_retest,
   width = 10, height = 8, dpi = 300, bg = "white"
 )

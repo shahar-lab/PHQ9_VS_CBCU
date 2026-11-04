@@ -23,7 +23,8 @@
 
 - Processed, participant: exclude a participant who did not have both `time1` and `time2`.
 - Processed, participant: among survivors, exclude a participant who left the window twice or more, or for more than 30 seconds total, on either `time1` or `time2`, during PHQ9 or CBCU.
-- Processed, trial: among remaining participants, omit CBCU trials with missing RT or choice (no response recorded). RT is kept exploratory only -- no RT cutoff is applied, and no participant is excluded based on RT or on quiz attempts. `data/raw/` is not changed. After these steps, surviving CBCU trials and PHQ rows are written to `data/processed/`.
+- Processed, participant: among survivors, exclude a participant with more than 4 quiz errors in either `time1` or `time2` (per session, not summed; every wrong quiz attempt counts). `output/processed/11b_quiz_errors_by_session.md` tabulates participants per error count and session.
+- Processed, trial: among remaining participants, omit CBCU trials with missing RT or choice (no response recorded). RT is kept exploratory only -- no RT cutoff is applied, and no participant is excluded based on RT. `data/raw/` is not changed. After these steps, surviving CBCU trials and PHQ rows are written to `data/processed/`.
 
 ## Findings / Summary
 

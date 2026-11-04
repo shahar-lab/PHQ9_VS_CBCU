@@ -38,13 +38,13 @@ plot_utility_vs_scalar <- function(df, wave, scalar_param_name, scalar_param_lab
     labs(x = "Utility (u)", y = scalar_param_label)
 
   ggsave(
-    file.path(output_dir, paste0(plot_name, ".pdf")),
+    file.path(output_relations_dir, paste0(plot_name, ".pdf")),
     plot = p,
     width = 10, height = 8, bg = "white"
   )
 
   ggsave(
-    file.path(output_dir, paste0(plot_name, ".png")),
+    file.path(output_relations_dir, paste0(plot_name, ".png")),
     plot = p,
     width = 10, height = 8, dpi = 300, bg = "white"
   )
@@ -79,13 +79,13 @@ plot_scalar_vs_scalar <- function(df, wave, x_param_name, x_param_label, y_param
     labs(x = x_param_label, y = y_param_label)
 
   ggsave(
-    file.path(output_dir, paste0(plot_name, ".pdf")),
+    file.path(output_relations_dir, paste0(plot_name, ".pdf")),
     plot = p,
     width = 10, height = 8, bg = "white"
   )
 
   ggsave(
-    file.path(output_dir, paste0(plot_name, ".png")),
+    file.path(output_relations_dir, paste0(plot_name, ".png")),
     plot = p,
     width = 10, height = 8, dpi = 300, bg = "white"
   )

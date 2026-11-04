@@ -13,12 +13,12 @@ cbcu <- step12$after_rt_bounds
 phq <- phq9_results |>
   mutate(prolific_id = as.character(prolific_id)) |>
   mutate(phq9_sum = rowSums(pick(phq9_1:phq9_9))) |>
-  filter(prolific_id %in% step12$after_window_exits_pids)
+  filter(prolific_id %in% step12$after_quiz_errors_pids)
 
 # Feedback is kept for the surviving participants only, like the PHQ rows.
 feedback_processed <- feedback |>
   mutate(prolific_id = as.character(prolific_id)) |>
-  filter(prolific_id %in% step12$after_window_exits_pids)
+  filter(prolific_id %in% step12$after_quiz_errors_pids)
 
 write_csv(cbcu,               file.path(processed_dir, "cbcu.csv"),     na = "NA")
 write_csv(phq,                file.path(processed_dir, "phq.csv"),      na = "NA")

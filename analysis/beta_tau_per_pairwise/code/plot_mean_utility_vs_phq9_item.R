@@ -26,13 +26,13 @@ p_mean_utility_vs_phq9_item <- ggplot(df_mean_utility_vs_phq9_item, aes(x = u_gr
 plot_name <- "mean_utility_vs_mean_phq9_item"
 
 ggsave(
-  file.path(output_dir, paste0(plot_name, ".pdf")),
+  file.path(output_relations_dir, paste0(plot_name, ".pdf")),
   plot = p_mean_utility_vs_phq9_item,
   width = 10, height = 8, bg = "white"
 )
 
 ggsave(
-  file.path(output_dir, paste0(plot_name, ".png")),
+  file.path(output_relations_dir, paste0(plot_name, ".png")),
   plot = p_mean_utility_vs_phq9_item,
   width = 10, height = 8, dpi = 300, bg = "white"
 )

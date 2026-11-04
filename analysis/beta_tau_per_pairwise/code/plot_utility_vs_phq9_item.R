@@ -29,13 +29,13 @@ p_utility_vs_phq9_item <- ggplot(df_utility_phq9_item_long, aes(x = u_value, y =
 plot_name <- "utility_vs_phq9_item"
 
 ggsave(
-  file.path(output_dir, paste0(plot_name, ".pdf")),
+  file.path(output_relations_dir, paste0(plot_name, ".pdf")),
   plot = p_utility_vs_phq9_item,
   width = 10, height = 8, bg = "white"
 )
 
 ggsave(
-  file.path(output_dir, paste0(plot_name, ".png")),
+  file.path(output_relations_dir, paste0(plot_name, ".png")),
   plot = p_utility_vs_phq9_item,
   width = 10, height = 8, dpi = 300, bg = "white"
 )
