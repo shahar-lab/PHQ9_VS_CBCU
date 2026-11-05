@@ -42,30 +42,60 @@ participants_people <- function(n) {
   if (n == 1) "1 participant" else paste0(n, " participants")
 }
 
-participants_excerpt <- paste0(
-  "*Participants. ", n_recruited,
-  " adults were recruited via Prolific and completed at least one session of an ",
-  "online two-session study. The final sample included ", n_final,
-  " participants (", n_female, " female, ", n_male, " male; mean age ",
-  age_mean, " years, SD ", age_sd, ", range ", age_min, "–", age_max, ").*"
+n_other <- n_final - n_female - n_male
+
+other_text <- if (n_other > 0) {
+  paste0(", ", n_other, " preferred not to disclose")
+} else {
+  ""
+}
+
+residence_top <- final_demo |>
+  count(country_of_residence, sort = TRUE) |>
+  slice_head(n = 3) |>
+  mutate(pct = round(100 * n / n_final, 1))
+
+residence_text <- paste0(
+  "Most participants resided in ", residence_top$country_of_residence[1],
+  " (", residence_top$pct[1], "%), followed by ",
+  residence_top$country_of_residence[2], " (", residence_top$pct[2], "%) and ",
+  residence_top$country_of_residence[3], " (", residence_top$pct[3], "%)."
 )
 
+participants_excerpt <- paste0(
+  "**Participants.** ", n_recruited,
+  " adults recruited via Prolific began the study. Of these, ", n_final,
+  " participants (", n_female, " women, ", n_male, " men", other_text,
+  "; *M*<sub>age</sub> = ", age_mean, " years, *SD* = ", age_sd,
+  ", range = ", age_min, "–", age_max, ") met our inclusion criteria and ",
+  "constituted the final sample; the exclusion criteria are detailed in the ",
+  "Data Treatment section. ", residence_text
+)
+
+trials_text <- if (n_trials_out > 0) {
+  paste0(
+    "Trials with a missing response time or choice were omitted (",
+    format(n_trials_out, big.mark = ","), " trials, ", pct_trials_out,
+    "% of the remaining trials). "
+  )
+} else {
+  "No trials had a missing response time or choice. "
+}
+
 data_treatment_excerpt <- paste0(
-  "*Data treatment. During data preprocessing we excluded ",
-  participants_people(n_missing),
-  " who did not complete both sessions. We then excluded participants who left ",
-  "the study window more than ", window_exit_max, " times, or for more than ",
-  max_window_left_ms / 1000,
-  " seconds in total, during PHQ-9 or CBCU on either session (",
-  participants_people(n_window), " excluded). We also excluded participants who made more than ",
-  quiz_error_max, " errors on the task quiz in either session (",
-  participants_people(n_quiz), " excluded). From the remaining CBCU ",
-  "observations we omitted trials with a missing RT or choice (",
-  format(n_trials_out, big.mark = ","), " trials, ", pct_trials_out,
-  "% of remaining trials). No RT-based trial or participant exclusion was ",
-  "applied; RT was examined only descriptively. This resulted in ",
-  format(n_final_trials, big.mark = ","), " CBCU trials across ", n_final,
-  " participants (mean ", mean_trials, " trials per participant).*"
+  "**Data treatment.** Of the ", n_recruited, " participants who began the study, ",
+  n_missing, " did not complete both sessions and were excluded. Among the ",
+  "remaining participants, we excluded ", n_window,
+  " who left the study window more than ", window_exit_max,
+  " times, or for more than ", max_window_left_ms / 1000,
+  " seconds in total, during the PHQ-9 or the CBCU task in either session, and ",
+  n_quiz, " who made more than ", quiz_error_max,
+  " errors on the task quiz in either session. ",
+  trials_text,
+  "No exclusion was based on response times, which were examined only ",
+  "descriptively. The final dataset comprised ",
+  format(n_final_trials, big.mark = ","), " CBCU trials from ", n_final,
+  " participants (", mean_trials, " trials per participant on average)."
 )
 
 writeLines(
