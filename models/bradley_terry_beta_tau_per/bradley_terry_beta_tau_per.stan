@@ -8,9 +8,10 @@
 // parameters and added elementwise into the same 3-way decoupled Softmax as the
 // base model.
 //
-// ASSUMED: trials between two first_trial_in_block resets are in their experienced
-// chronological order (as bradley_terry_beta_tau_per.R's sim.block() produces them) —
-// the flag marks only where a subject's block starts, not the internal trial order.
+// ASSUMED: each subject's trials (everything between two first_trial_of_subject flags) are in
+// their experienced chronological order (as bradley_terry_beta_tau_per.R's sim.block()
+// produces them). The flag marks only where a subject's sequence starts - key_value resets
+// between subjects, NOT between blocks - so it carries across a subject's blocks.
 
 data {
   int<lower=1> N_trials;     // Total number of trials
@@ -25,7 +26,7 @@ data {
   array[N_trials] int<lower=1, upper=3> choice;
 
   // 1 on each subject's first trial; resets key_value per subject below.
-  array[N_trials] int<lower=0, upper=1> first_trial_in_block;
+  array[N_trials] int<lower=0, upper=1> first_trial_of_subject;
 }
 
 parameters {
@@ -80,7 +81,7 @@ transformed parameters {
   vector[3] key_value;
 
   for (t in 1:N_trials) {
-    if (first_trial_in_block[t] == 1) {
+    if (first_trial_of_subject[t] == 1) {
       key_value = rep_vector(0, 3);
     }
 
@@ -130,5 +131,20 @@ model {
     log_weights[3] = tau[subject_index[t]] + key_contrib[t, 3];
 
     choice[t] ~ categorical_logit(log_weights);
+  }
+}
+
+generated quantities {
+  // Pointwise log-likelihood per trial, for LOO model comparison
+  vector[N_trials] log_lik;
+
+  for (t in 1:N_trials) {
+    vector[3] log_weights;
+
+    log_weights[1] = beta[subject_index[t]] * u_matrix[subject_index[t], offer_A[t]] + key_contrib[t, 1];
+    log_weights[2] = beta[subject_index[t]] * u_matrix[subject_index[t], offer_B[t]] + key_contrib[t, 2];
+    log_weights[3] = tau[subject_index[t]] + key_contrib[t, 3];
+
+    log_lik[t] = categorical_logit_lpmf(choice[t] | log_weights);
   }
 }

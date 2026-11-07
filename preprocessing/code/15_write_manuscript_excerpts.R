@@ -62,6 +62,62 @@ residence_text <- paste0(
   residence_top$country_of_residence[3], " (", residence_top$pct[3], "%)."
 )
 
+pct_of_final <- function(n) paste0(round(100 * n / n_final, 1), "%")
+pct_where    <- function(x) pct_of_final(sum(x, na.rm = TRUE))
+
+ethnicity_top <- final_demo |>
+  count(ethnicity, sort = TRUE) |>
+  slice_head(n = 3) |>
+  mutate(text = paste0(ethnicity, " (", pct_of_final(n), ")"))
+
+ethnicity_text <- paste0(
+  "Participants identified as ", ethnicity_top$text[1], ", ",
+  ethnicity_top$text[2], ", or ", ethnicity_top$text[3], ", among others."
+)
+
+education_text <- paste0(
+  "Educationally, ", pct_where(final_demo$education %in% c("Bachelor's degree", "Master's degree", "Doctoral degree")),
+  " held at least a bachelor's degree, and ",
+  pct_where(final_demo$student == "Yes"), " were currently students."
+)
+
+employment_text <- paste0(
+  "Regarding employment, ",
+  pct_where(final_demo$employment_status == "Employed full time"), " worked full time, ",
+  pct_where(final_demo$employment_status == "Employed part time"), " part time, ",
+  pct_where(grepl("^Unemployed", final_demo$employment_status)), " were unemployed, and ",
+  pct_where(final_demo$employment_status == "Retired"), " were retired."
+)
+
+clinical_text <- paste0(
+  "Clinically, ", pct_where(final_demo$depression_diagnosis == "Yes"),
+  " reported a prior diagnosis of depression; ",
+  pct_where(final_demo$medication == "Yes, currently"),
+  " reported currently taking prescribed medication for depression and ",
+  pct_where(final_demo$medication == "Yes, in the past (but not currently)"),
+  " reported having done so in the past."
+)
+
+marital_text <- paste0(
+  "In terms of marital status, ",
+  pct_where(final_demo$marital_status == "Married"), " were married, ",
+  pct_where(final_demo$marital_status == "single, never married"), " were single (never married), and ",
+  pct_where(final_demo$marital_status %in% c("Divorced", "Separated", "Widowed")),
+  " were divorced, separated, or widowed."
+)
+
+hand_text <- paste0(
+  "As for handedness, ", pct_where(final_demo$hand == "Right"), " were right-handed, ",
+  pct_where(final_demo$hand == "Left"), " left-handed, and ",
+  pct_where(final_demo$hand == "Ambidextrous"), " ambidextrous."
+)
+
+ladder_text <- paste0(
+  "Mean subjective social status, measured with the MacArthur ladder, was ",
+  round(mean(final_demo$ladder_rung, na.rm = TRUE), 2), " (*SD* = ",
+  round(sd(final_demo$ladder_rung, na.rm = TRUE), 2), ")."
+)
+
 participants_excerpt <- paste0(
   "**Participants.** ", n_recruited,
   " adults recruited via Prolific began the study. Of these, ", n_final,
@@ -69,7 +125,9 @@ participants_excerpt <- paste0(
   "; *M*<sub>age</sub> = ", age_mean, " years, *SD* = ", age_sd,
   ", range = ", age_min, "–", age_max, ") met our inclusion criteria and ",
   "constituted the final sample; the exclusion criteria are detailed in the ",
-  "Data Treatment section. ", residence_text
+  "Data Treatment section. ", residence_text, " ", ethnicity_text, " ",
+  education_text, " ", employment_text, " ", marital_text, " ", hand_text, " ", ladder_text, " ",
+  clinical_text
 )
 
 trials_text <- if (n_trials_out > 0) {

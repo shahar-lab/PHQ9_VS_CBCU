@@ -1,49 +1,47 @@
-#### PREPARE STAN DATA ####
+#### PREPARE STAN DATA (ONE LIST PER WAVE) ####
 
-df_likert   <- read_csv(file.path(data_path, "likert_processed.csv"), show_col_types = FALSE)
-df_pairwise <- read_csv(file.path(data_path, "pairwise_processed.csv"), show_col_types = FALSE)
-
-# Keep every trial except the one flagged window_status == "left": participant
-# p3j7wasb's trial 96 lost window focus mid-trial (18s RT) yet still logged a
-# choice - a likely focus-loss artifact, not a genuine response. Genuine
-# skipped == TRUE trials are kept and coded as choice = 3 (None) below, so tau
-# is estimated from real non-response/avoidance behaviour.
-df <- df_pairwise |> filter(window_status != "left")
-
-df_subject_lookup <- df |>
-  distinct(participant_id) |>
-  arrange(participant_id) |>
-  mutate(subject = row_number())
-
-df <- df |> left_join(df_subject_lookup, by = "participant_id")
-
-item_ids <- sort(union(df$left_item, df$right_item))
-stopifnot(identical(as.integer(item_ids), seq_along(item_ids)))
-
-df_item_lookup <- bind_rows(
-  df |> select(item = left_item, item_phq_text = left_item_phq_text),
-  df |> select(item = right_item, item_phq_text = right_item_phq_text)
-) |>
-  distinct() |>
-  arrange(item)
-
-write_csv(df_subject_lookup, file.path(artifacts_dir, "subject_lookup.csv"))
-write_csv(df_item_lookup, file.path(artifacts_dir, "item_lookup.csv"))
+df_cbcu <- read_csv(file.path(data_path, "cbcu.csv"), show_col_types = FALSE)
 
 # Stan's categorical_logit choice coding: 1 = A (left), 2 = B (right), 3 = None (skip).
-df <- df |>
-  mutate(choice = case_when(
-    chosen_side == "left"  ~ 1L,
-    chosen_side == "right" ~ 2L,
-    chosen_side == "skip"  ~ 3L
+df_cbcu <- df_cbcu |>
+  mutate(choice_int = case_when(
+    choice == "left"  ~ 1L,
+    choice == "right" ~ 2L,
+    choice == "skip"  ~ 3L
   ))
 
-stan_data <- list(
-  N_trials   = nrow(df),
-  N_subjects = nrow(df_subject_lookup),
-  N_options  = max(item_ids),
-  subject    = df$subject,
-  offer_A    = df$left_item,
-  offer_B    = df$right_item,
-  choice     = df$choice
-)
+# Two hierarchical fits, one per wave (see summary.md) - each wave gets its own
+# subject lookup (a subject's index need not match across waves) and its own
+# stan_data list, keyed by wave name.
+waves          <- c("time1", "time2")
+subject_lookup <- vector("list", length(waves)) |> setNames(waves)
+stan_data_list <- vector("list", length(waves)) |> setNames(waves)
+
+for (wave in waves) {
+  df_wave <- df_cbcu |>
+    filter(time == wave) |>
+    arrange(prolific_id, block, trial)
+
+  df_lookup <- df_wave |>
+    distinct(prolific_id) |>
+    arrange(prolific_id) |>
+    mutate(subject_index = row_number())
+
+  df_wave <- df_wave |>
+    left_join(df_lookup, by = "prolific_id")
+
+  write_csv(df_lookup, file.path(artifacts_dir, paste0("subject_lookup_", wave, ".csv")))
+
+  subject_lookup[[wave]] <- df_lookup
+  # No perseveration terms, so no trial-order flag; the Stan data block names the subject
+  # index `subject`.
+  stan_data_list[[wave]] <- list(
+    N_trials   = nrow(df_wave),
+    N_subjects = nrow(df_lookup),
+    N_options  = 15,
+    subject    = df_wave$subject_index,
+    offer_A    = df_wave$item_number_left,
+    offer_B    = df_wave$item_number_right,
+    choice     = df_wave$choice_int
+  )
+}

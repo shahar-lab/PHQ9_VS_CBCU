@@ -1,9 +1,0 @@
-participant_id,consistency,cons_lo,cons_hi,verdict
-75y1tqf2,0.6234610564229337,0.5726456694937934,0.6638864462397288,low - choices near random; rely on severity score and interview
-7v1pxg3v,0.8736539154670138,0.8302638970532484,0.9067483503302957,high - ordering can be discussed with confidence
-lqeojjlx,0.5526257655051159,0.5099115171076651,0.5887530895107799,low - choices near random; rely on severity score and interview
-p3j7wasb,0.944268908839732,0.9091634468040946,0.9682885349555747,high - ordering can be discussed with confidence
-pc4u2ske,0.8368541106250338,0.7905377917970409,0.870524314628289,"moderate - broad tiers informative, exact positions less so"
-s2tddlj3,0.8805762994698547,0.8426181914092038,0.9059733141285474,high - ordering can be discussed with confidence
-sdf2mq45,0.5406077881790625,0.49664430397284287,0.5794633275868283,low - choices near random; rely on severity score and interview
-ty6pnexp,0.8335071664917504,0.7953341453951512,0.8620587261888853,"moderate - broad tiers informative, exact positions less so"

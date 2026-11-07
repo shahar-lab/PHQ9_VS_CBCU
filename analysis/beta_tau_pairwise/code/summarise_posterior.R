@@ -1,33 +1,34 @@
-#### SUMMARISE POSTERIOR ####
+#### SUMMARISE POSTERIOR (MEDIANS, PER WAVE) ####
 
-df_u_draws <- fit$draws("u_matrix") |>
-  as_draws_df() |>
-  pivot_longer(starts_with("u_matrix"), names_to = "variable", values_to = "u") |>
-  mutate(idx     = str_match(variable, "u_matrix\\[(\\d+),(\\d+)\\]"),
-         subject = as.integer(idx[, 2]),
-         item    = as.integer(idx[, 3])) |>
-  select(subject, item, u)
+# Posterior median (not mean) per subject per parameter.
+wave_summaries <- vector("list", length(waves)) |> setNames(waves)
 
-df_beta_draws <- fit$draws("beta") |>
-  as_draws_df() |>
-  pivot_longer(starts_with("beta"), names_to = "variable", values_to = "beta") |>
-  mutate(subject = as.integer(str_extract(variable, "\\d+"))) |>
-  left_join(df_subject_lookup, by = "subject") |>
-  mutate(distribution = participant_id)
+for (wave in waves) {
+  fit       <- fit_list[[wave]]
+  df_lookup <- subject_lookup[[wave]]
 
-df_pop_beta_draws <- fit$draws("mu_log_beta") |>
-  as_draws_df() |>
-  mutate(beta = exp(mu_log_beta), distribution = "population median")
+  df_u <- fit$summary("u_matrix", median = median) |>
+    mutate(idx     = str_match(variable, "u_matrix\\[(\\d+),(\\d+)\\]"),
+           subject_index = as.integer(idx[, 2]),
+           item          = as.integer(idx[, 3])) |>
+    select(subject_index, item, median) |>
+    mutate(item = paste0("u_", item)) |>
+    pivot_wider(names_from = item, values_from = median)
 
-df_tau_draws <- fit$draws("tau") |>
-  as_draws_df() |>
-  pivot_longer(starts_with("tau"), names_to = "variable", values_to = "tau") |>
-  mutate(subject = as.integer(str_extract(variable, "\\d+"))) |>
-  left_join(df_subject_lookup, by = "subject") |>
-  mutate(distribution = participant_id)
+  df_beta <- fit$summary("beta", median = median) |>
+    mutate(subject_index = as.integer(str_extract(variable, "\\d+"))) |>
+    select(subject_index, beta = median)
 
-# tau ~ normal(mu_tau, sigma_tau) is already on the natural scale, so the
-# population value is mu_tau directly - no log/exp transform needed (unlike beta).
-df_pop_tau_draws <- fit$draws("mu_tau") |>
-  as_draws_df() |>
-  mutate(tau = mu_tau, distribution = "population median")
+  df_tau <- fit$summary("tau", median = median) |>
+    mutate(subject_index = as.integer(str_extract(variable, "\\d+"))) |>
+    select(subject_index, tau = median)
+
+  wave_summaries[[wave]] <- df_lookup |>
+    left_join(df_u, by = "subject_index") |>
+    left_join(df_beta, by = "subject_index") |>
+    left_join(df_tau, by = "subject_index") |>
+    mutate(time = wave) |>
+    select(prolific_id, time, starts_with("u_"), tau, beta)
+}
+
+df_bt_params <- bind_rows(wave_summaries)

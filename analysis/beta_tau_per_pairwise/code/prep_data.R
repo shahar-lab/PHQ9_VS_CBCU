@@ -30,7 +30,7 @@ for (wave in waves) {
   df_wave <- df_wave |>
     left_join(df_lookup, by = "prolific_id") |>
     group_by(prolific_id) |>
-    mutate(first_trial_in_block = as.integer(row_number() == 1)) |>
+    mutate(first_trial_of_subject = as.integer(row_number() == 1)) |>
     ungroup()
 
   write_csv(df_lookup, file.path(artifacts_dir, paste0("subject_lookup_", wave, ".csv")))
@@ -44,6 +44,6 @@ for (wave in waves) {
     offer_A              = df_wave$item_number_left,
     offer_B              = df_wave$item_number_right,
     choice               = df_wave$choice_int,
-    first_trial_in_block = df_wave$first_trial_in_block
+    first_trial_of_subject = df_wave$first_trial_of_subject
   )
 }

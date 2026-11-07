@@ -7,14 +7,15 @@
 // of rho. There is no key_decay parameter, and no mu_logit_key_decay /
 // sigma_key_decay group-level hyperparameters.
 //
-// ASSUMED[no within-subject trial-order field given]: first_trial_in_block makes
+// ASSUMED[no within-subject trial-order field given]: first_trial_of_subject makes
 // subject boundaries explicit and checkable from the data itself (it flags each
 // subject's first trial), resolving the earlier lack of any way to verify where
 // one subject's trials end and the next begin. What remains assumed is the order
-// of trials WITHIN a subject's block: trials between two resets are assumed to be
+// of trials WITHIN a subject: trials between two flags are assumed to be
 // in their experienced chronological order (as bradley_terry_beta_tau_rho.R's
-// sim.block() produces them), since first_trial_in_block marks only where a
-// block starts, not the internal order of the trials inside it.
+// sim.block() produces them), since first_trial_of_subject marks only where a
+// subject's sequence starts (the reset is per subject, NOT per block), not the
+// internal order of that subject's trials.
 
 data {
   int<lower=1> N_trials;     // Total number of trials
@@ -32,7 +33,7 @@ data {
   // (in the order trials appear in the arrays), 0 otherwise. Lets the
   // key_value running pass in transformed parameters reset per subject with a
   // single flat loop instead of an implicit subject-grouping scan.
-  array[N_trials] int<lower=0, upper=1> first_trial_in_block;
+  array[N_trials] int<lower=0, upper=1> first_trial_of_subject;
 }
 
 parameters {
@@ -68,7 +69,7 @@ transformed parameters {
   // Deterministic per-trial key_value contribution, one row per trial, one
   // column per outcome slot (1 = A, 2 = B, 3 = None). With key_decay fixed at
   // 0, only the immediately preceding trial's chosen slot ever carries a
-  // nonzero value (rho); it is zero on each subject's first_trial_in_block,
+  // nonzero value (rho); it is zero on each subject's first_trial_of_subject,
   // since there is no preceding trial within that subject's block to carry a
   // bump forward from.
   matrix[N_trials, 3] key_contrib;
@@ -83,12 +84,12 @@ transformed parameters {
 
   // key_value is declared outside the loop so it carries forward exactly one
   // trial (key_decay fixed at 0 means it never survives a second decay step),
-  // and is reset to zero whenever first_trial_in_block flags a new subject's
+  // and is reset to zero whenever first_trial_of_subject flags a new subject's
   // block start, so no bump leaks in from the previous subject's last trial.
   vector[3] key_value = rep_vector(0, 3);
 
   for (t in 1:N_trials) {
-    if (first_trial_in_block[t] == 1) {
+    if (first_trial_of_subject[t] == 1) {
       key_value = rep_vector(0, 3);
     }
 
@@ -137,5 +138,20 @@ model {
     log_weights[3] = tau[subject_index[t]] + key_contrib[t, 3];
 
     choice[t] ~ categorical_logit(log_weights);
+  }
+}
+
+generated quantities {
+  // Pointwise log-likelihood per trial, for LOO model comparison
+  vector[N_trials] log_lik;
+
+  for (t in 1:N_trials) {
+    vector[3] log_weights;
+
+    log_weights[1] = beta[subject_index[t]] * u_matrix[subject_index[t], offer_A[t]] + key_contrib[t, 1];
+    log_weights[2] = beta[subject_index[t]] * u_matrix[subject_index[t], offer_B[t]] + key_contrib[t, 2];
+    log_weights[3] = tau[subject_index[t]] + key_contrib[t, 3];
+
+    log_lik[t] = categorical_logit_lpmf(choice[t] | log_weights);
   }
 }

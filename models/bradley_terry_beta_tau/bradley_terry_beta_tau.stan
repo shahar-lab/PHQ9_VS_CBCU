@@ -76,3 +76,18 @@ model {
     choice[t] ~ categorical_logit(log_weights);
   }
 }
+
+generated quantities {
+  // Pointwise log-likelihood per trial, for LOO model comparison
+  vector[N_trials] log_lik;
+
+  for (t in 1:N_trials) {
+    vector[3] log_weights;
+
+    log_weights[1] = beta[subject[t]] * u_matrix[subject[t], offer_A[t]];
+    log_weights[2] = beta[subject[t]] * u_matrix[subject[t], offer_B[t]];
+    log_weights[3] = tau[subject[t]];
+
+    log_lik[t] = categorical_logit_lpmf(choice[t] | log_weights);
+  }
+}

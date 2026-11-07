@@ -1,9 +1,0 @@
-participant_id,thr,thr_lo,thr_hi,n_above,n_above_lo,n_above_hi,n_at_median,n_skip,n_trials,never_skipped,verdict
-75y1tqf2,-6.212392508760473,-12.985793532462223,-3.275834530337103,15,15,15,7,0,105,TRUE,"never declined a pair - bar sits below every symptom, lower bound only"
-7v1pxg3v,-1.823273609331295,-3.166563856254793,-1.1914599582246144,15,13,15,8,0,105,TRUE,"never declined a pair - bar sits below every symptom, lower bound only"
-lqeojjlx,0.3411896629510849,0.08327402146148802,0.5875778376126853,4,3,6,6,42,105,FALSE,selective - only the most burdensome symptoms clear the bar
-p3j7wasb,-0.5520833248079118,-0.8567234336104731,-0.2070594334200224,11,11,11,9,6,104,FALSE,balanced - concern reaches past their average symptom
-pc4u2ske,-1.395433564537761,-2.0257651035329554,-0.972112267966879,14,12,15,8,2,105,FALSE,permissive - nearly every symptom clears the bar
-s2tddlj3,-0.7122012445802808,-0.9682915871523958,-0.4404620502822761,10,10,12,8,7,105,FALSE,balanced - concern reaches past their average symptom
-sdf2mq45,-1.206829333142345,-2.0964161702372883,-0.6748784776860481,13,11,15,8,12,105,FALSE,permissive - nearly every symptom clears the bar
-ty6pnexp,0.7671301851106908,0.59724168506651,0.9249704733682392,4,4,5,7,56,105,FALSE,selective - only the most burdensome symptoms clear the bar

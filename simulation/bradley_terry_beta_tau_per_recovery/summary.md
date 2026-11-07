@@ -28,7 +28,7 @@ threshold (tau), and the per-outcome perseveration parameters (key_decay, rho) f
 * No `set.seed()` used -- each run draws fresh truth.
 * Data simulated via `sim.block()` per subject (one call per subject, looped in
   `code/simulated_data.R`); choice factor (A/B/None) recoded to integer 1/2/3 for Stan's
-  `categorical_logit`. `first_trial_in_block` is set to 1 on each subject's first trial in the
+  `categorical_logit`. `first_trial_of_subject` is set to 1 on each subject's first trial in the
   combined trial ordering so the Stan model's key_value running pass resets per subject.
 * Fit via cmdstanr: 4 chains, parallel_chains = 4, iter_warmup = 3000, iter_sampling = 2000.
 * Single simulate -> fit -> compare run (not repeated across multiple simulated datasets).
