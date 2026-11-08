@@ -11,8 +11,12 @@ saveRDS(loo_list, file.path(artifacts_dir, "loo_objects.rds"))
 loo_comparison <- loo_compare(loo_list)
 print(loo_comparison, simplify = FALSE)
 
-df_loo_comparison <- as.data.frame(loo_comparison) |>
-  rownames_to_column("model") |>
+# newer loo versions already return a "model" column; older ones only have row names
+df_loo_comparison <- as.data.frame(loo_comparison)
+if (!"model" %in% names(df_loo_comparison)) {
+  df_loo_comparison <- rownames_to_column(df_loo_comparison, "model")
+}
+df_loo_comparison <- df_loo_comparison |>
   select(model, elpd_diff, se_diff, elpd_loo, se_elpd_loo, p_loo, looic)
 
 write_csv(df_loo_comparison, file.path(output_dir, "loo_comparison.csv"))

@@ -1,0 +1,211 @@
+prolific_id,time,block,trial,item_number_left,item_number_right,choice,chosen_item_number,chosen_item_text,rt,time_elapsed,skipped,item_phq9_left,item_text_left,item_phq9_right,item_text_right
+5d68c8aa40524c00189e8ac2,time1,1,1,2,13,left,2,Feeling down or depressed,11989,00:00:00,FALSE,2a,Feeling down or depressed,8b,Being so fidgety or restless that you have been moving around a lot more than usual
+5d68c8aa40524c00189e8ac2,time1,1,2,11,7,right,7,Poor appetite,4652,00:00:13,FALSE,7,Trouble concentrating,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time1,1,3,8,13,right,13,Being so fidgety or restless that you have been moving around a lot more than usual,8030,00:00:20,FALSE,5b,Overeating,8b,Being so fidgety or restless that you have been moving around a lot more than usual
+5d68c8aa40524c00189e8ac2,time1,1,4,12,8,skip,NA,NA,6022,00:00:30,TRUE,8a,Moving or speaking slowly that other people could have noticed,5b,Overeating
+5d68c8aa40524c00189e8ac2,time1,1,5,2,5,left,2,Feeling down or depressed,5838,00:00:38,FALSE,2a,Feeling down or depressed,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time1,1,6,7,6,right,6,Feeling tired or having little energy,2222,00:00:46,FALSE,5a,Poor appetite,4,Feeling tired or having little energy
+5d68c8aa40524c00189e8ac2,time1,1,7,8,3,right,3,Feeling hopeless,5990,00:00:50,FALSE,5b,Overeating,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time1,1,8,8,10,right,10,Feeling that you have let yourself or your family down,1965,00:00:58,FALSE,5b,Overeating,6b,Feeling that you have let yourself or your family down
+5d68c8aa40524c00189e8ac2,time1,1,9,1,10,right,10,Feeling that you have let yourself or your family down,6142,00:01:02,FALSE,1,Little interest or pleasure in doing things,6b,Feeling that you have let yourself or your family down
+5d68c8aa40524c00189e8ac2,time1,1,10,13,4,right,4,Trouble falling or staying asleep,3411,00:01:10,FALSE,8b,Being so fidgety or restless that you have been moving around a lot more than usual,3a,Trouble falling or staying asleep
+5d68c8aa40524c00189e8ac2,time1,1,11,11,3,right,3,Feeling hopeless,3758,00:01:16,FALSE,7,Trouble concentrating,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time1,1,12,9,4,right,4,Trouble falling or staying asleep,3510,00:01:22,FALSE,6a,Feeling bad about yourself or that you are a failure,3a,Trouble falling or staying asleep
+5d68c8aa40524c00189e8ac2,time1,1,13,10,5,left,10,Feeling that you have let yourself or your family down,1766,00:01:27,FALSE,6b,Feeling that you have let yourself or your family down,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time1,1,14,15,5,left,15,Thoughts of hurting yourself in some way,2292,00:01:31,FALSE,9b,Thoughts of hurting yourself in some way,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time1,1,15,6,8,left,6,Feeling tired or having little energy,1382,00:01:35,FALSE,4,Feeling tired or having little energy,5b,Overeating
+5d68c8aa40524c00189e8ac2,time1,1,16,8,14,right,14,Thoughts that you would be better off dead,1700,00:01:39,FALSE,5b,Overeating,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time1,1,17,2,14,left,2,Feeling down or depressed,1670,00:01:42,FALSE,2a,Feeling down or depressed,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time1,1,18,3,1,left,3,Feeling hopeless,1934,00:01:46,FALSE,2b,Feeling hopeless,1,Little interest or pleasure in doing things
+5d68c8aa40524c00189e8ac2,time1,1,19,14,10,right,10,Feeling that you have let yourself or your family down,16413,00:01:50,FALSE,9a,Thoughts that you would be better off dead,6b,Feeling that you have let yourself or your family down
+5d68c8aa40524c00189e8ac2,time1,1,20,11,15,left,11,Trouble concentrating,4222,00:02:08,FALSE,7,Trouble concentrating,9b,Thoughts of hurting yourself in some way
+5d68c8aa40524c00189e8ac2,time1,1,21,3,7,left,3,Feeling hopeless,1262,00:02:14,FALSE,2b,Feeling hopeless,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time1,1,22,8,15,right,15,Thoughts of hurting yourself in some way,5342,00:02:18,FALSE,5b,Overeating,9b,Thoughts of hurting yourself in some way
+5d68c8aa40524c00189e8ac2,time1,1,23,1,15,left,1,Little interest or pleasure in doing things,6013,00:02:25,FALSE,1,Little interest or pleasure in doing things,9b,Thoughts of hurting yourself in some way
+5d68c8aa40524c00189e8ac2,time1,1,24,12,3,right,3,Feeling hopeless,2645,00:02:33,FALSE,8a,Moving or speaking slowly that other people could have noticed,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time1,1,25,9,15,left,9,Feeling bad about yourself or that you are a failure,10197,00:02:38,FALSE,6a,Feeling bad about yourself or that you are a failure,9b,Thoughts of hurting yourself in some way
+5d68c8aa40524c00189e8ac2,time1,1,26,9,2,right,2,Feeling down or depressed,4030,00:02:50,FALSE,6a,Feeling bad about yourself or that you are a failure,2a,Feeling down or depressed
+5d68c8aa40524c00189e8ac2,time1,2,27,14,6,right,6,Feeling tired or having little energy,7045,00:02:58,FALSE,9a,Thoughts that you would be better off dead,4,Feeling tired or having little energy
+5d68c8aa40524c00189e8ac2,time1,2,28,7,1,left,7,Poor appetite,5011,00:03:07,FALSE,5a,Poor appetite,1,Little interest or pleasure in doing things
+5d68c8aa40524c00189e8ac2,time1,2,29,13,5,left,13,Being so fidgety or restless that you have been moving around a lot more than usual,4022,00:03:14,FALSE,8b,Being so fidgety or restless that you have been moving around a lot more than usual,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time1,2,30,9,14,left,9,Feeling bad about yourself or that you are a failure,9308,00:03:20,FALSE,6a,Feeling bad about yourself or that you are a failure,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time1,2,31,2,3,left,2,Feeling down or depressed,2470,00:03:31,FALSE,2a,Feeling down or depressed,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time1,2,32,6,1,left,6,Feeling tired or having little energy,2365,00:03:36,FALSE,4,Feeling tired or having little energy,1,Little interest or pleasure in doing things
+5d68c8aa40524c00189e8ac2,time1,2,33,7,14,left,7,Poor appetite,3748,00:03:40,FALSE,5a,Poor appetite,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time1,2,34,7,15,left,7,Poor appetite,1854,00:03:46,FALSE,5a,Poor appetite,9b,Thoughts of hurting yourself in some way
+5d68c8aa40524c00189e8ac2,time1,2,35,9,10,left,9,Feeling bad about yourself or that you are a failure,18909,00:03:50,FALSE,6a,Feeling bad about yourself or that you are a failure,6b,Feeling that you have let yourself or your family down
+5d68c8aa40524c00189e8ac2,time1,2,36,1,12,left,1,Little interest or pleasure in doing things,2597,00:04:11,FALSE,1,Little interest or pleasure in doing things,8a,Moving or speaking slowly that other people could have noticed
+5d68c8aa40524c00189e8ac2,time1,2,37,12,9,right,9,Feeling bad about yourself or that you are a failure,2013,00:04:15,FALSE,8a,Moving or speaking slowly that other people could have noticed,6a,Feeling bad about yourself or that you are a failure
+5d68c8aa40524c00189e8ac2,time1,2,38,7,9,right,9,Feeling bad about yourself or that you are a failure,4374,00:04:19,FALSE,5a,Poor appetite,6a,Feeling bad about yourself or that you are a failure
+5d68c8aa40524c00189e8ac2,time1,2,39,15,12,left,15,Thoughts of hurting yourself in some way,1349,00:04:26,FALSE,9b,Thoughts of hurting yourself in some way,8a,Moving or speaking slowly that other people could have noticed
+5d68c8aa40524c00189e8ac2,time1,2,40,5,9,right,9,Feeling bad about yourself or that you are a failure,2726,00:04:29,FALSE,3b,Sleeping too much,6a,Feeling bad about yourself or that you are a failure
+5d68c8aa40524c00189e8ac2,time1,2,41,5,3,right,3,Feeling hopeless,1308,00:04:34,FALSE,3b,Sleeping too much,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time1,2,42,1,2,right,2,Feeling down or depressed,4229,00:04:37,FALSE,1,Little interest or pleasure in doing things,2a,Feeling down or depressed
+5d68c8aa40524c00189e8ac2,time1,2,43,11,12,left,11,Trouble concentrating,1598,00:04:43,FALSE,7,Trouble concentrating,8a,Moving or speaking slowly that other people could have noticed
+5d68c8aa40524c00189e8ac2,time1,2,44,1,5,left,1,Little interest or pleasure in doing things,1933,00:04:47,FALSE,1,Little interest or pleasure in doing things,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time1,2,45,6,9,left,6,Feeling tired or having little energy,1636,00:04:51,FALSE,4,Feeling tired or having little energy,6a,Feeling bad about yourself or that you are a failure
+5d68c8aa40524c00189e8ac2,time1,2,46,2,8,left,2,Feeling down or depressed,1540,00:04:54,FALSE,2a,Feeling down or depressed,5b,Overeating
+5d68c8aa40524c00189e8ac2,time1,2,47,4,3,left,4,Trouble falling or staying asleep,2413,00:04:58,FALSE,3a,Trouble falling or staying asleep,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time1,2,48,13,9,right,9,Feeling bad about yourself or that you are a failure,17094,00:05:02,FALSE,8b,Being so fidgety or restless that you have been moving around a lot more than usual,6a,Feeling bad about yourself or that you are a failure
+5d68c8aa40524c00189e8ac2,time1,2,49,4,2,right,2,Feeling down or depressed,9669,00:05:21,FALSE,3a,Trouble falling or staying asleep,2a,Feeling down or depressed
+5d68c8aa40524c00189e8ac2,time1,2,50,11,9,right,9,Feeling bad about yourself or that you are a failure,2997,00:05:33,FALSE,7,Trouble concentrating,6a,Feeling bad about yourself or that you are a failure
+5d68c8aa40524c00189e8ac2,time1,2,51,12,2,right,2,Feeling down or depressed,1334,00:05:38,FALSE,8a,Moving or speaking slowly that other people could have noticed,2a,Feeling down or depressed
+5d68c8aa40524c00189e8ac2,time1,2,52,11,14,right,14,Thoughts that you would be better off dead,2438,00:05:41,FALSE,7,Trouble concentrating,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time1,3,53,13,10,right,10,Feeling that you have let yourself or your family down,2093,00:05:48,FALSE,8b,Being so fidgety or restless that you have been moving around a lot more than usual,6b,Feeling that you have let yourself or your family down
+5d68c8aa40524c00189e8ac2,time1,3,54,4,8,left,4,Trouble falling or staying asleep,1742,00:05:52,FALSE,3a,Trouble falling or staying asleep,5b,Overeating
+5d68c8aa40524c00189e8ac2,time1,3,55,13,7,right,7,Poor appetite,1677,00:05:56,FALSE,8b,Being so fidgety or restless that you have been moving around a lot more than usual,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time1,3,56,10,7,left,10,Feeling that you have let yourself or your family down,1750,00:05:59,FALSE,6b,Feeling that you have let yourself or your family down,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time1,3,57,5,4,right,4,Trouble falling or staying asleep,3404,00:06:03,FALSE,3b,Sleeping too much,3a,Trouble falling or staying asleep
+5d68c8aa40524c00189e8ac2,time1,3,58,13,6,right,6,Feeling tired or having little energy,9989,00:06:08,FALSE,8b,Being so fidgety or restless that you have been moving around a lot more than usual,4,Feeling tired or having little energy
+5d68c8aa40524c00189e8ac2,time1,3,59,12,6,right,6,Feeling tired or having little energy,1189,00:06:20,FALSE,8a,Moving or speaking slowly that other people could have noticed,4,Feeling tired or having little energy
+5d68c8aa40524c00189e8ac2,time1,3,60,9,8,left,9,Feeling bad about yourself or that you are a failure,31789,00:06:24,FALSE,6a,Feeling bad about yourself or that you are a failure,5b,Overeating
+5d68c8aa40524c00189e8ac2,time1,3,61,10,12,left,10,Feeling that you have let yourself or your family down,5759,00:06:57,FALSE,6b,Feeling that you have let yourself or your family down,8a,Moving or speaking slowly that other people could have noticed
+5d68c8aa40524c00189e8ac2,time1,3,62,1,8,left,1,Little interest or pleasure in doing things,1460,00:07:05,FALSE,1,Little interest or pleasure in doing things,5b,Overeating
+5d68c8aa40524c00189e8ac2,time1,3,63,11,13,left,11,Trouble concentrating,1477,00:07:09,FALSE,7,Trouble concentrating,8b,Being so fidgety or restless that you have been moving around a lot more than usual
+5d68c8aa40524c00189e8ac2,time1,3,64,3,13,left,3,Feeling hopeless,1109,00:07:12,FALSE,2b,Feeling hopeless,8b,Being so fidgety or restless that you have been moving around a lot more than usual
+5d68c8aa40524c00189e8ac2,time1,3,65,4,10,left,4,Trouble falling or staying asleep,6454,00:07:15,FALSE,3a,Trouble falling or staying asleep,6b,Feeling that you have let yourself or your family down
+5d68c8aa40524c00189e8ac2,time1,3,66,4,11,left,4,Trouble falling or staying asleep,1786,00:07:24,FALSE,3a,Trouble falling or staying asleep,7,Trouble concentrating
+5d68c8aa40524c00189e8ac2,time1,3,67,2,6,right,6,Feeling tired or having little energy,3324,00:07:27,FALSE,2a,Feeling down or depressed,4,Feeling tired or having little energy
+5d68c8aa40524c00189e8ac2,time1,3,68,13,12,skip,NA,NA,9636,00:07:33,TRUE,8b,Being so fidgety or restless that you have been moving around a lot more than usual,8a,Moving or speaking slowly that other people could have noticed
+5d68c8aa40524c00189e8ac2,time1,3,69,11,5,left,11,Trouble concentrating,3445,00:07:44,FALSE,7,Trouble concentrating,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time1,3,70,15,2,right,2,Feeling down or depressed,8388,00:07:50,FALSE,9b,Thoughts of hurting yourself in some way,2a,Feeling down or depressed
+5d68c8aa40524c00189e8ac2,time1,3,71,10,11,left,10,Feeling that you have let yourself or your family down,1718,00:08:00,FALSE,6b,Feeling that you have let yourself or your family down,7,Trouble concentrating
+5d68c8aa40524c00189e8ac2,time1,3,72,8,5,skip,NA,NA,3037,00:08:04,TRUE,5b,Overeating,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time1,3,73,11,2,right,2,Feeling down or depressed,2502,00:08:09,FALSE,7,Trouble concentrating,2a,Feeling down or depressed
+5d68c8aa40524c00189e8ac2,time1,3,74,6,10,left,6,Feeling tired or having little energy,2301,00:08:14,FALSE,4,Feeling tired or having little energy,6b,Feeling that you have let yourself or your family down
+5d68c8aa40524c00189e8ac2,time1,3,75,2,7,left,2,Feeling down or depressed,1710,00:08:18,FALSE,2a,Feeling down or depressed,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time1,3,76,14,3,right,3,Feeling hopeless,2782,00:08:22,FALSE,9a,Thoughts that you would be better off dead,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time1,3,77,5,14,right,14,Thoughts that you would be better off dead,2358,00:08:26,FALSE,3b,Sleeping too much,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time1,3,78,11,6,right,6,Feeling tired or having little energy,2197,00:08:31,FALSE,7,Trouble concentrating,4,Feeling tired or having little energy
+5d68c8aa40524c00189e8ac2,time1,4,79,14,4,right,4,Trouble falling or staying asleep,3237,00:08:37,FALSE,9a,Thoughts that you would be better off dead,3a,Trouble falling or staying asleep
+5d68c8aa40524c00189e8ac2,time1,4,80,13,14,right,14,Thoughts that you would be better off dead,2198,00:08:42,FALSE,8b,Being so fidgety or restless that you have been moving around a lot more than usual,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time1,4,81,15,14,right,14,Thoughts that you would be better off dead,4271,00:08:46,FALSE,9b,Thoughts of hurting yourself in some way,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time1,4,82,15,13,left,15,Thoughts of hurting yourself in some way,1789,00:08:52,FALSE,9b,Thoughts of hurting yourself in some way,8b,Being so fidgety or restless that you have been moving around a lot more than usual
+5d68c8aa40524c00189e8ac2,time1,4,83,8,11,right,11,Trouble concentrating,1957,00:08:56,FALSE,5b,Overeating,7,Trouble concentrating
+5d68c8aa40524c00189e8ac2,time1,4,84,3,9,left,3,Feeling hopeless,9693,00:09:00,FALSE,2b,Feeling hopeless,6a,Feeling bad about yourself or that you are a failure
+5d68c8aa40524c00189e8ac2,time1,4,85,1,13,left,1,Little interest or pleasure in doing things,1758,00:09:12,FALSE,1,Little interest or pleasure in doing things,8b,Being so fidgety or restless that you have been moving around a lot more than usual
+5d68c8aa40524c00189e8ac2,time1,4,86,3,6,right,6,Feeling tired or having little energy,2270,00:09:15,FALSE,2b,Feeling hopeless,4,Feeling tired or having little energy
+5d68c8aa40524c00189e8ac2,time1,4,87,15,3,right,3,Feeling hopeless,1429,00:09:20,FALSE,9b,Thoughts of hurting yourself in some way,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time1,4,88,14,1,left,14,Thoughts that you would be better off dead,3269,00:09:23,FALSE,9a,Thoughts that you would be better off dead,1,Little interest or pleasure in doing things
+5d68c8aa40524c00189e8ac2,time1,4,89,10,2,right,2,Feeling down or depressed,4759,00:09:28,FALSE,6b,Feeling that you have let yourself or your family down,2a,Feeling down or depressed
+5d68c8aa40524c00189e8ac2,time1,4,90,8,7,right,7,Poor appetite,1445,00:09:35,FALSE,5b,Overeating,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time1,4,91,12,5,skip,NA,NA,3238,00:09:39,TRUE,8a,Moving or speaking slowly that other people could have noticed,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time1,4,92,12,7,right,7,Poor appetite,2269,00:09:44,FALSE,8a,Moving or speaking slowly that other people could have noticed,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time1,4,93,15,6,right,6,Feeling tired or having little energy,1733,00:09:48,FALSE,9b,Thoughts of hurting yourself in some way,4,Feeling tired or having little energy
+5d68c8aa40524c00189e8ac2,time1,4,94,6,5,left,6,Feeling tired or having little energy,1284,00:09:52,FALSE,4,Feeling tired or having little energy,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time1,4,95,11,1,left,11,Trouble concentrating,2679,00:09:55,FALSE,7,Trouble concentrating,1,Little interest or pleasure in doing things
+5d68c8aa40524c00189e8ac2,time1,4,96,10,15,left,10,Feeling that you have let yourself or your family down,3453,00:10:00,FALSE,6b,Feeling that you have let yourself or your family down,9b,Thoughts of hurting yourself in some way
+5d68c8aa40524c00189e8ac2,time1,4,97,12,14,right,14,Thoughts that you would be better off dead,1773,00:10:05,FALSE,8a,Moving or speaking slowly that other people could have noticed,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time1,4,98,4,1,left,4,Trouble falling or staying asleep,3677,00:10:09,FALSE,3a,Trouble falling or staying asleep,1,Little interest or pleasure in doing things
+5d68c8aa40524c00189e8ac2,time1,4,99,7,5,left,7,Poor appetite,2413,00:10:15,FALSE,5a,Poor appetite,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time1,4,100,12,4,right,4,Trouble falling or staying asleep,1916,00:10:19,FALSE,8a,Moving or speaking slowly that other people could have noticed,3a,Trouble falling or staying asleep
+5d68c8aa40524c00189e8ac2,time1,4,101,4,7,left,4,Trouble falling or staying asleep,3181,00:10:23,FALSE,3a,Trouble falling or staying asleep,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time1,4,102,3,10,left,3,Feeling hopeless,4197,00:10:28,FALSE,2b,Feeling hopeless,6b,Feeling that you have let yourself or your family down
+5d68c8aa40524c00189e8ac2,time1,4,103,9,1,left,9,Feeling bad about yourself or that you are a failure,1670,00:10:35,FALSE,6a,Feeling bad about yourself or that you are a failure,1,Little interest or pleasure in doing things
+5d68c8aa40524c00189e8ac2,time1,4,104,6,4,left,6,Feeling tired or having little energy,2141,00:10:38,FALSE,4,Feeling tired or having little energy,3a,Trouble falling or staying asleep
+5d68c8aa40524c00189e8ac2,time1,4,105,4,15,left,4,Trouble falling or staying asleep,1870,00:10:42,FALSE,3a,Trouble falling or staying asleep,9b,Thoughts of hurting yourself in some way
+5d68c8aa40524c00189e8ac2,time2,1,1,6,9,left,6,Feeling tired or having little energy,2813,00:00:00,FALSE,4,Feeling tired or having little energy,6a,Feeling bad about yourself or that you are a failure
+5d68c8aa40524c00189e8ac2,time2,1,2,12,13,skip,NA,NA,3581,00:00:04,TRUE,8a,Moving or speaking slowly that other people could have noticed,8b,Being so fidgety or restless that you have been moving around a lot more than usual
+5d68c8aa40524c00189e8ac2,time2,1,3,11,5,left,11,Trouble concentrating,4974,00:00:10,FALSE,7,Trouble concentrating,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time2,1,4,1,13,left,1,Little interest or pleasure in doing things,1604,00:00:17,FALSE,1,Little interest or pleasure in doing things,8b,Being so fidgety or restless that you have been moving around a lot more than usual
+5d68c8aa40524c00189e8ac2,time2,1,5,12,14,right,14,Thoughts that you would be better off dead,3981,00:00:20,FALSE,8a,Moving or speaking slowly that other people could have noticed,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time2,1,6,10,3,right,3,Feeling hopeless,141509,00:00:26,FALSE,6b,Feeling that you have let yourself or your family down,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time2,1,7,15,4,right,4,Trouble falling or staying asleep,2404,00:02:50,FALSE,9b,Thoughts of hurting yourself in some way,3a,Trouble falling or staying asleep
+5d68c8aa40524c00189e8ac2,time2,1,8,10,6,right,6,Feeling tired or having little energy,1069,00:02:54,FALSE,6b,Feeling that you have let yourself or your family down,4,Feeling tired or having little energy
+5d68c8aa40524c00189e8ac2,time2,1,9,10,8,left,10,Feeling that you have let yourself or your family down,1741,00:02:57,FALSE,6b,Feeling that you have let yourself or your family down,5b,Overeating
+5d68c8aa40524c00189e8ac2,time2,1,10,11,4,right,4,Trouble falling or staying asleep,5486,00:03:01,FALSE,7,Trouble concentrating,3a,Trouble falling or staying asleep
+5d68c8aa40524c00189e8ac2,time2,1,11,12,4,right,4,Trouble falling or staying asleep,1294,00:03:09,FALSE,8a,Moving or speaking slowly that other people could have noticed,3a,Trouble falling or staying asleep
+5d68c8aa40524c00189e8ac2,time2,1,12,15,12,left,15,Thoughts of hurting yourself in some way,4045,00:03:12,FALSE,9b,Thoughts of hurting yourself in some way,8a,Moving or speaking slowly that other people could have noticed
+5d68c8aa40524c00189e8ac2,time2,1,13,10,14,left,10,Feeling that you have let yourself or your family down,1700,00:03:18,FALSE,6b,Feeling that you have let yourself or your family down,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time2,1,14,1,14,left,1,Little interest or pleasure in doing things,4500,00:03:22,FALSE,1,Little interest or pleasure in doing things,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time2,1,15,3,14,left,3,Feeling hopeless,1966,00:03:28,FALSE,2b,Feeling hopeless,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time2,1,16,6,8,left,6,Feeling tired or having little energy,1205,00:03:32,FALSE,4,Feeling tired or having little energy,5b,Overeating
+5d68c8aa40524c00189e8ac2,time2,1,17,13,6,right,6,Feeling tired or having little energy,1838,00:03:35,FALSE,8b,Being so fidgety or restless that you have been moving around a lot more than usual,4,Feeling tired or having little energy
+5d68c8aa40524c00189e8ac2,time2,1,18,11,6,right,6,Feeling tired or having little energy,12125,00:03:39,FALSE,7,Trouble concentrating,4,Feeling tired or having little energy
+5d68c8aa40524c00189e8ac2,time2,1,19,6,1,left,6,Feeling tired or having little energy,3766,00:03:53,FALSE,4,Feeling tired or having little energy,1,Little interest or pleasure in doing things
+5d68c8aa40524c00189e8ac2,time2,1,20,6,14,left,6,Feeling tired or having little energy,1151,00:03:59,FALSE,4,Feeling tired or having little energy,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time2,1,21,6,3,left,6,Feeling tired or having little energy,1030,00:04:02,FALSE,4,Feeling tired or having little energy,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time2,1,22,10,15,left,10,Feeling that you have let yourself or your family down,1733,00:04:05,FALSE,6b,Feeling that you have let yourself or your family down,9b,Thoughts of hurting yourself in some way
+5d68c8aa40524c00189e8ac2,time2,1,23,10,1,left,10,Feeling that you have let yourself or your family down,23382,00:04:09,FALSE,6b,Feeling that you have let yourself or your family down,1,Little interest or pleasure in doing things
+5d68c8aa40524c00189e8ac2,time2,1,24,15,6,right,6,Feeling tired or having little energy,1420,00:04:34,FALSE,9b,Thoughts of hurting yourself in some way,4,Feeling tired or having little energy
+5d68c8aa40524c00189e8ac2,time2,1,25,9,8,left,9,Feeling bad about yourself or that you are a failure,1317,00:04:38,FALSE,6a,Feeling bad about yourself or that you are a failure,5b,Overeating
+5d68c8aa40524c00189e8ac2,time2,1,26,5,9,right,9,Feeling bad about yourself or that you are a failure,1597,00:04:41,FALSE,3b,Sleeping too much,6a,Feeling bad about yourself or that you are a failure
+5d68c8aa40524c00189e8ac2,time2,2,27,9,1,left,9,Feeling bad about yourself or that you are a failure,3125,00:04:46,FALSE,6a,Feeling bad about yourself or that you are a failure,1,Little interest or pleasure in doing things
+5d68c8aa40524c00189e8ac2,time2,2,28,14,13,left,14,Thoughts that you would be better off dead,1933,00:04:51,FALSE,9a,Thoughts that you would be better off dead,8b,Being so fidgety or restless that you have been moving around a lot more than usual
+5d68c8aa40524c00189e8ac2,time2,2,29,4,14,left,4,Trouble falling or staying asleep,4245,00:04:55,FALSE,3a,Trouble falling or staying asleep,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time2,2,30,4,8,left,4,Trouble falling or staying asleep,1333,00:05:02,FALSE,3a,Trouble falling or staying asleep,5b,Overeating
+5d68c8aa40524c00189e8ac2,time2,2,31,3,5,left,3,Feeling hopeless,1165,00:05:05,FALSE,2b,Feeling hopeless,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time2,2,32,1,11,right,11,Trouble concentrating,57925,00:05:08,FALSE,1,Little interest or pleasure in doing things,7,Trouble concentrating
+5d68c8aa40524c00189e8ac2,time2,2,33,12,9,right,9,Feeling bad about yourself or that you are a failure,7574,00:06:08,FALSE,8a,Moving or speaking slowly that other people could have noticed,6a,Feeling bad about yourself or that you are a failure
+5d68c8aa40524c00189e8ac2,time2,2,34,4,2,left,4,Trouble falling or staying asleep,12917,00:06:18,FALSE,3a,Trouble falling or staying asleep,2a,Feeling down or depressed
+5d68c8aa40524c00189e8ac2,time2,2,35,2,1,left,2,Feeling down or depressed,2029,00:06:33,FALSE,2a,Feeling down or depressed,1,Little interest or pleasure in doing things
+5d68c8aa40524c00189e8ac2,time2,2,36,6,2,left,6,Feeling tired or having little energy,1982,00:06:37,FALSE,4,Feeling tired or having little energy,2a,Feeling down or depressed
+5d68c8aa40524c00189e8ac2,time2,2,37,6,4,left,6,Feeling tired or having little energy,990,00:06:41,FALSE,4,Feeling tired or having little energy,3a,Trouble falling or staying asleep
+5d68c8aa40524c00189e8ac2,time2,2,38,5,10,right,10,Feeling that you have let yourself or your family down,1414,00:06:44,FALSE,3b,Sleeping too much,6b,Feeling that you have let yourself or your family down
+5d68c8aa40524c00189e8ac2,time2,2,39,3,4,right,4,Trouble falling or staying asleep,5470,00:06:47,FALSE,2b,Feeling hopeless,3a,Trouble falling or staying asleep
+5d68c8aa40524c00189e8ac2,time2,2,40,14,7,left,14,Thoughts that you would be better off dead,6957,00:06:54,FALSE,9a,Thoughts that you would be better off dead,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time2,2,41,15,7,left,15,Thoughts of hurting yourself in some way,1291,00:07:03,FALSE,9b,Thoughts of hurting yourself in some way,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time2,2,42,4,10,left,4,Trouble falling or staying asleep,5894,00:07:07,FALSE,3a,Trouble falling or staying asleep,6b,Feeling that you have let yourself or your family down
+5d68c8aa40524c00189e8ac2,time2,2,43,10,11,left,10,Feeling that you have let yourself or your family down,4326,00:07:15,FALSE,6b,Feeling that you have let yourself or your family down,7,Trouble concentrating
+5d68c8aa40524c00189e8ac2,time2,2,44,14,15,left,14,Thoughts that you would be better off dead,2622,00:07:21,FALSE,9a,Thoughts that you would be better off dead,9b,Thoughts of hurting yourself in some way
+5d68c8aa40524c00189e8ac2,time2,2,45,1,7,left,1,Little interest or pleasure in doing things,3061,00:07:26,FALSE,1,Little interest or pleasure in doing things,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time2,2,46,11,8,left,11,Trouble concentrating,1731,00:07:31,FALSE,7,Trouble concentrating,5b,Overeating
+5d68c8aa40524c00189e8ac2,time2,2,47,13,10,right,10,Feeling that you have let yourself or your family down,2358,00:07:34,FALSE,8b,Being so fidgety or restless that you have been moving around a lot more than usual,6b,Feeling that you have let yourself or your family down
+5d68c8aa40524c00189e8ac2,time2,2,48,13,5,skip,NA,NA,2782,00:07:39,TRUE,8b,Being so fidgety or restless that you have been moving around a lot more than usual,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time2,2,49,11,13,left,11,Trouble concentrating,1631,00:07:43,FALSE,7,Trouble concentrating,8b,Being so fidgety or restless that you have been moving around a lot more than usual
+5d68c8aa40524c00189e8ac2,time2,2,50,4,13,left,4,Trouble falling or staying asleep,1469,00:07:47,FALSE,3a,Trouble falling or staying asleep,8b,Being so fidgety or restless that you have been moving around a lot more than usual
+5d68c8aa40524c00189e8ac2,time2,2,51,2,8,left,2,Feeling down or depressed,1318,00:07:51,FALSE,2a,Feeling down or depressed,5b,Overeating
+5d68c8aa40524c00189e8ac2,time2,2,52,5,15,right,15,Thoughts of hurting yourself in some way,2701,00:07:54,FALSE,3b,Sleeping too much,9b,Thoughts of hurting yourself in some way
+5d68c8aa40524c00189e8ac2,time2,3,53,2,14,left,2,Feeling down or depressed,1949,00:08:00,FALSE,2a,Feeling down or depressed,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time2,3,54,12,3,right,3,Feeling hopeless,1309,00:08:04,FALSE,8a,Moving or speaking slowly that other people could have noticed,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time2,3,55,11,9,right,9,Feeling bad about yourself or that you are a failure,6454,00:08:07,FALSE,7,Trouble concentrating,6a,Feeling bad about yourself or that you are a failure
+5d68c8aa40524c00189e8ac2,time2,3,56,13,3,right,3,Feeling hopeless,989,00:08:15,FALSE,8b,Being so fidgety or restless that you have been moving around a lot more than usual,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time2,3,57,7,12,left,7,Poor appetite,7662,00:08:18,FALSE,5a,Poor appetite,8a,Moving or speaking slowly that other people could have noticed
+5d68c8aa40524c00189e8ac2,time2,3,58,6,5,left,6,Feeling tired or having little energy,4038,00:08:28,FALSE,4,Feeling tired or having little energy,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time2,3,59,5,4,right,4,Trouble falling or staying asleep,2398,00:08:34,FALSE,3b,Sleeping too much,3a,Trouble falling or staying asleep
+5d68c8aa40524c00189e8ac2,time2,3,60,8,14,right,14,Thoughts that you would be better off dead,3269,00:08:38,FALSE,5b,Overeating,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time2,3,61,2,13,left,2,Feeling down or depressed,1270,00:08:44,FALSE,2a,Feeling down or depressed,8b,Being so fidgety or restless that you have been moving around a lot more than usual
+5d68c8aa40524c00189e8ac2,time2,3,62,11,3,right,3,Feeling hopeless,5294,00:08:47,FALSE,7,Trouble concentrating,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time2,3,63,10,2,right,2,Feeling down or depressed,5140,00:08:54,FALSE,6b,Feeling that you have let yourself or your family down,2a,Feeling down or depressed
+5d68c8aa40524c00189e8ac2,time2,3,64,7,10,right,10,Feeling that you have let yourself or your family down,9974,00:09:01,FALSE,5a,Poor appetite,6b,Feeling that you have let yourself or your family down
+5d68c8aa40524c00189e8ac2,time2,3,65,4,7,left,4,Trouble falling or staying asleep,2468,00:09:13,FALSE,3a,Trouble falling or staying asleep,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time2,3,66,8,7,right,7,Poor appetite,1647,00:09:18,FALSE,5b,Overeating,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time2,3,67,12,1,right,1,Little interest or pleasure in doing things,1340,00:09:22,FALSE,8a,Moving or speaking slowly that other people could have noticed,1,Little interest or pleasure in doing things
+5d68c8aa40524c00189e8ac2,time2,3,68,2,9,left,2,Feeling down or depressed,15830,00:09:25,FALSE,2a,Feeling down or depressed,6a,Feeling bad about yourself or that you are a failure
+5d68c8aa40524c00189e8ac2,time2,3,69,6,12,left,6,Feeling tired or having little energy,2229,00:09:43,FALSE,4,Feeling tired or having little energy,8a,Moving or speaking slowly that other people could have noticed
+5d68c8aa40524c00189e8ac2,time2,3,70,14,11,right,11,Trouble concentrating,72796,00:09:47,FALSE,9a,Thoughts that you would be better off dead,7,Trouble concentrating
+5d68c8aa40524c00189e8ac2,time2,3,71,8,3,right,3,Feeling hopeless,2517,00:11:02,FALSE,5b,Overeating,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time2,3,72,12,10,right,10,Feeling that you have let yourself or your family down,3150,00:11:06,FALSE,8a,Moving or speaking slowly that other people could have noticed,6b,Feeling that you have let yourself or your family down
+5d68c8aa40524c00189e8ac2,time2,3,73,7,13,left,7,Poor appetite,5845,00:11:11,FALSE,5a,Poor appetite,8b,Being so fidgety or restless that you have been moving around a lot more than usual
+5d68c8aa40524c00189e8ac2,time2,3,74,13,8,skip,NA,NA,3710,00:11:19,TRUE,8b,Being so fidgety or restless that you have been moving around a lot more than usual,5b,Overeating
+5d68c8aa40524c00189e8ac2,time2,3,75,2,7,left,2,Feeling down or depressed,1805,00:11:25,FALSE,2a,Feeling down or depressed,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time2,3,76,15,3,right,3,Feeling hopeless,3940,00:11:29,FALSE,9b,Thoughts of hurting yourself in some way,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time2,3,77,9,3,right,3,Feeling hopeless,5405,00:11:35,FALSE,6a,Feeling bad about yourself or that you are a failure,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time2,3,78,7,6,right,6,Feeling tired or having little energy,2773,00:11:42,FALSE,5a,Poor appetite,4,Feeling tired or having little energy
+5d68c8aa40524c00189e8ac2,time2,4,79,1,5,left,1,Little interest or pleasure in doing things,1926,00:11:48,FALSE,1,Little interest or pleasure in doing things,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time2,4,80,12,2,right,2,Feeling down or depressed,1308,00:11:52,FALSE,8a,Moving or speaking slowly that other people could have noticed,2a,Feeling down or depressed
+5d68c8aa40524c00189e8ac2,time2,4,81,13,9,right,9,Feeling bad about yourself or that you are a failure,1431,00:11:55,FALSE,8b,Being so fidgety or restless that you have been moving around a lot more than usual,6a,Feeling bad about yourself or that you are a failure
+5d68c8aa40524c00189e8ac2,time2,4,82,7,5,left,7,Poor appetite,3630,00:11:58,FALSE,5a,Poor appetite,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time2,4,83,2,15,left,2,Feeling down or depressed,2821,00:12:04,FALSE,2a,Feeling down or depressed,9b,Thoughts of hurting yourself in some way
+5d68c8aa40524c00189e8ac2,time2,4,84,5,14,right,14,Thoughts that you would be better off dead,1446,00:12:09,FALSE,3b,Sleeping too much,9a,Thoughts that you would be better off dead
+5d68c8aa40524c00189e8ac2,time2,4,85,4,1,left,4,Trouble falling or staying asleep,2758,00:12:12,FALSE,3a,Trouble falling or staying asleep,1,Little interest or pleasure in doing things
+5d68c8aa40524c00189e8ac2,time2,4,86,11,12,left,11,Trouble concentrating,101613,00:12:17,FALSE,7,Trouble concentrating,8a,Moving or speaking slowly that other people could have noticed
+5d68c8aa40524c00189e8ac2,time2,4,87,7,3,right,3,Feeling hopeless,4085,00:14:01,FALSE,5a,Poor appetite,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time2,4,88,15,13,left,15,Thoughts of hurting yourself in some way,1685,00:14:07,FALSE,9b,Thoughts of hurting yourself in some way,8b,Being so fidgety or restless that you have been moving around a lot more than usual
+5d68c8aa40524c00189e8ac2,time2,4,89,9,10,left,9,Feeling bad about yourself or that you are a failure,9716,00:14:11,FALSE,6a,Feeling bad about yourself or that you are a failure,6b,Feeling that you have let yourself or your family down
+5d68c8aa40524c00189e8ac2,time2,4,90,1,3,right,3,Feeling hopeless,1158,00:14:22,FALSE,1,Little interest or pleasure in doing things,2b,Feeling hopeless
+5d68c8aa40524c00189e8ac2,time2,4,91,3,2,right,2,Feeling down or depressed,2413,00:14:25,FALSE,2b,Feeling hopeless,2a,Feeling down or depressed
+5d68c8aa40524c00189e8ac2,time2,4,92,5,8,skip,NA,NA,3525,00:14:30,TRUE,3b,Sleeping too much,5b,Overeating
+5d68c8aa40524c00189e8ac2,time2,4,93,5,12,skip,NA,NA,1950,00:14:35,TRUE,3b,Sleeping too much,8a,Moving or speaking slowly that other people could have noticed
+5d68c8aa40524c00189e8ac2,time2,4,94,1,15,left,1,Little interest or pleasure in doing things,3230,00:14:39,FALSE,1,Little interest or pleasure in doing things,9b,Thoughts of hurting yourself in some way
+5d68c8aa40524c00189e8ac2,time2,4,95,1,8,left,1,Little interest or pleasure in doing things,1187,00:14:45,FALSE,1,Little interest or pleasure in doing things,5b,Overeating
+5d68c8aa40524c00189e8ac2,time2,4,96,4,9,left,4,Trouble falling or staying asleep,2502,00:14:48,FALSE,3a,Trouble falling or staying asleep,6a,Feeling bad about yourself or that you are a failure
+5d68c8aa40524c00189e8ac2,time2,4,97,8,15,right,15,Thoughts of hurting yourself in some way,1357,00:14:52,FALSE,5b,Overeating,9b,Thoughts of hurting yourself in some way
+5d68c8aa40524c00189e8ac2,time2,4,98,2,5,left,2,Feeling down or depressed,1054,00:14:56,FALSE,2a,Feeling down or depressed,3b,Sleeping too much
+5d68c8aa40524c00189e8ac2,time2,4,99,9,7,left,9,Feeling bad about yourself or that you are a failure,3405,00:14:59,FALSE,6a,Feeling bad about yourself or that you are a failure,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time2,4,100,8,12,skip,NA,NA,1854,00:15:04,TRUE,5b,Overeating,8a,Moving or speaking slowly that other people could have noticed
+5d68c8aa40524c00189e8ac2,time2,4,101,11,15,left,11,Trouble concentrating,3110,00:15:08,FALSE,7,Trouble concentrating,9b,Thoughts of hurting yourself in some way
+5d68c8aa40524c00189e8ac2,time2,4,102,11,7,left,11,Trouble concentrating,1733,00:15:13,FALSE,7,Trouble concentrating,5a,Poor appetite
+5d68c8aa40524c00189e8ac2,time2,4,103,9,15,left,9,Feeling bad about yourself or that you are a failure,3860,00:15:17,FALSE,6a,Feeling bad about yourself or that you are a failure,9b,Thoughts of hurting yourself in some way
+5d68c8aa40524c00189e8ac2,time2,4,104,14,9,right,9,Feeling bad about yourself or that you are a failure,1478,00:15:23,FALSE,9a,Thoughts that you would be better off dead,6a,Feeling bad about yourself or that you are a failure
+5d68c8aa40524c00189e8ac2,time2,4,105,11,2,right,2,Feeling down or depressed,2278,00:15:26,FALSE,7,Trouble concentrating,2a,Feeling down or depressed

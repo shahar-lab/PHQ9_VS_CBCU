@@ -14,8 +14,10 @@ models <- list(
 
 # All jobs must list the same participants (same trial order: prolific_id, block, trial)
 for (wave in waves) {
-  lookups <- map(job_dirs, \(d) read_csv(file.path(d, paste0("subject_lookup_", wave, ".csv")), show_col_types = FALSE))
-  stopifnot(identical(lookups$base, lookups$rho), identical(lookups$base, lookups$per))
+  lookups <- map(job_dirs, \(d) as.data.frame(read_csv(file.path(d, paste0("subject_lookup_", wave, ".csv")), show_col_types = FALSE)))
+  # as.data.frame + all.equal: read_csv attaches per-file spec/problems attributes that make identical() fail
+  stopifnot(isTRUE(all.equal(lookups$base, lookups$rho, check.attributes = FALSE)),
+            isTRUE(all.equal(lookups$base, lookups$per, check.attributes = FALSE)))
 }
 
 # Returns the (draws x trials) log_lik matrix and per-trial relative ESS for one fit
