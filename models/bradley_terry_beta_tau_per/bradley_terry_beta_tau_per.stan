@@ -107,7 +107,7 @@ model {
   tau_raw ~ std_normal();
 
   mu_logit_key_decay ~ normal(0, 2.5);
-  sigma_key_decay ~ exponential(1);
+  sigma_key_decay ~ normal(0, 1.5);
   key_decay_raw ~ std_normal();
 
   mu_rho ~ normal(0, 2);
