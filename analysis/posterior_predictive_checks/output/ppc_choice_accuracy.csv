@@ -1,0 +1,13 @@
+model,observed_type,n_trials,share_correct
+beta_tau (no perseveration),A (left),14125,0.941
+beta_tau (no perseveration),B (right),14039,0.94
+beta_tau (no perseveration),None (skip),10686,0.955
+beta_tau_per (rho + key_decay),A (left),14125,0.944
+beta_tau_per (rho + key_decay),B (right),14039,0.942
+beta_tau_per (rho + key_decay),None (skip),10686,0.954
+"beta_tau_rho (rho, no decay)",A (left),14125,0.944
+"beta_tau_rho (rho, no decay)",B (right),14039,0.941
+"beta_tau_rho (rho, no decay)",None (skip),10686,0.954
+beta_tau (no perseveration),all trials,38850,0.944
+beta_tau_per (rho + key_decay),all trials,38850,0.946
+"beta_tau_rho (rho, no decay)",all trials,38850,0.946

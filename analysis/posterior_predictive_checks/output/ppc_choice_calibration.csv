@@ -1,0 +1,91 @@
+model,outcome,bin,n_trials,mean_predicted,observed_rate
+beta_tau (no perseveration),A (left),"[0,0.1]",20807,0.01136011919065699,0.0027875234296150333
+beta_tau (no perseveration),A (left),"(0.1,0.2]",1447,0.14985487214927437,0.0691085003455425
+beta_tau (no perseveration),A (left),"(0.2,0.3]",991,0.25181634712411705,0.16246215943491424
+beta_tau (no perseveration),A (left),"(0.3,0.4]",790,0.35249367088607597,0.29620253164556964
+beta_tau (no perseveration),A (left),"(0.4,0.5]",788,0.45767766497461926,0.4746192893401015
+beta_tau (no perseveration),A (left),"(0.5,0.6]",720,0.5515833333333333,0.5861111111111111
+beta_tau (no perseveration),A (left),"(0.6,0.7]",789,0.6576552598225602,0.7275031685678074
+beta_tau (no perseveration),A (left),"(0.7,0.8]",1028,0.7588910505836576,0.853112840466926
+beta_tau (no perseveration),A (left),"(0.8,0.9]",1667,0.8610197960407918,0.9328134373125375
+beta_tau (no perseveration),A (left),"(0.9,1]",9823,0.9824921103532526,0.9946044996436934
+beta_tau (no perseveration),B (right),"[0,0.1]",20865,0.011094656122693506,0.002923556194584232
+beta_tau (no perseveration),B (right),"(0.1,0.2]",1494,0.1501338688085676,0.07697456492637215
+beta_tau (no perseveration),B (right),"(0.2,0.3]",970,0.25107216494845364,0.16391752577319588
+beta_tau (no perseveration),B (right),"(0.3,0.4]",774,0.3516925064599483,0.27648578811369506
+beta_tau (no perseveration),B (right),"(0.4,0.5]",830,0.4590963855421687,0.44216867469879517
+beta_tau (no perseveration),B (right),"(0.5,0.6]",731,0.5515731874145007,0.5376196990424077
+beta_tau (no perseveration),B (right),"(0.6,0.7]",761,0.6582128777923785,0.7345597897503285
+beta_tau (no perseveration),B (right),"(0.7,0.8]",1006,0.7588568588469184,0.8677932405566601
+beta_tau (no perseveration),B (right),"(0.8,0.9]",1601,0.8612429731417863,0.9506558400999375
+beta_tau (no perseveration),B (right),"(0.9,1]",9818,0.982221430026482,0.9957221430026482
+beta_tau (no perseveration),None (skip),"[0,0.1]",26237,0.008693448183862484,0.0036589549110035446
+beta_tau (no perseveration),None (skip),"(0.1,0.2]",1142,0.14702276707530648,0.11295971978984239
+beta_tau (no perseveration),None (skip),"(0.2,0.3]",519,0.24816955684007708,0.21772639691714837
+beta_tau (no perseveration),None (skip),"(0.3,0.4]",238,0.35063025210084037,0.35294117647058826
+beta_tau (no perseveration),None (skip),"(0.4,0.5]",202,0.4592574257425743,0.5247524752475248
+beta_tau (no perseveration),None (skip),"(0.5,0.6]",255,0.554,0.596078431372549
+beta_tau (no perseveration),None (skip),"(0.6,0.7]",270,0.6580370370370371,0.6666666666666666
+beta_tau (no perseveration),None (skip),"(0.7,0.8]",374,0.7573796791443851,0.8155080213903744
+beta_tau (no perseveration),None (skip),"(0.8,0.9]",672,0.8640625,0.9032738095238095
+beta_tau (no perseveration),None (skip),"(0.9,1]",8941,0.9841572531036796,0.9969802035566492
+beta_tau_per (rho + key_decay),A (left),"[0,0.1]",20800,0.011096153846153846,0.0022115384615384614
+beta_tau_per (rho + key_decay),A (left),"(0.1,0.2]",1457,0.15107755662319836,0.06863417982155114
+beta_tau_per (rho + key_decay),A (left),"(0.2,0.3]",982,0.2523421588594705,0.14052953156822812
+beta_tau_per (rho + key_decay),A (left),"(0.3,0.4]",769,0.35299089726918076,0.30039011703511054
+beta_tau_per (rho + key_decay),A (left),"(0.4,0.5]",786,0.45575063613231553,0.43765903307888043
+beta_tau_per (rho + key_decay),A (left),"(0.5,0.6]",729,0.5520164609053498,0.6145404663923183
+beta_tau_per (rho + key_decay),A (left),"(0.6,0.7]",817,0.6574051407588739,0.7356181150550796
+beta_tau_per (rho + key_decay),A (left),"(0.7,0.8]",992,0.7580241935483871,0.8497983870967742
+beta_tau_per (rho + key_decay),A (left),"(0.8,0.9]",1685,0.8605578635014837,0.944213649851632
+beta_tau_per (rho + key_decay),A (left),"(0.9,1]",9833,0.9825190684429981,0.9949150818671819
+beta_tau_per (rho + key_decay),B (right),"[0,0.1]",20893,0.01106877901689561,0.0023931460297707367
+beta_tau_per (rho + key_decay),B (right),"(0.1,0.2]",1504,0.15039228723404255,0.07712765957446809
+beta_tau_per (rho + key_decay),B (right),"(0.2,0.3]",944,0.25172669491525423,0.15995762711864406
+beta_tau_per (rho + key_decay),B (right),"(0.3,0.4]",794,0.3522418136020151,0.28463476070528965
+beta_tau_per (rho + key_decay),B (right),"(0.4,0.5]",776,0.45649484536082474,0.4265463917525773
+beta_tau_per (rho + key_decay),B (right),"(0.5,0.6]",771,0.5520233463035019,0.5642023346303502
+beta_tau_per (rho + key_decay),B (right),"(0.6,0.7]",733,0.6559754433833561,0.7094133697135061
+beta_tau_per (rho + key_decay),B (right),"(0.7,0.8]",1039,0.7586910490856593,0.8979788257940328
+beta_tau_per (rho + key_decay),B (right),"(0.8,0.9]",1557,0.8599357739242133,0.9460500963391136
+beta_tau_per (rho + key_decay),B (right),"(0.9,1]",9839,0.9825398922654741,0.9964427279195041
+beta_tau_per (rho + key_decay),None (skip),"[0,0.1]",26205,0.008654455256630415,0.0033199771036061822
+beta_tau_per (rho + key_decay),None (skip),"(0.1,0.2]",1122,0.14642602495543672,0.09803921568627451
+beta_tau_per (rho + key_decay),None (skip),"(0.2,0.3]",537,0.2481191806331471,0.21415270018621974
+beta_tau_per (rho + key_decay),None (skip),"(0.3,0.4]",263,0.35273764258555135,0.41825095057034223
+beta_tau_per (rho + key_decay),None (skip),"(0.4,0.5]",251,0.4548207171314741,0.4541832669322709
+beta_tau_per (rho + key_decay),None (skip),"(0.5,0.6]",243,0.5550205761316872,0.6049382716049383
+beta_tau_per (rho + key_decay),None (skip),"(0.6,0.7]",244,0.6556967213114754,0.6762295081967213
+beta_tau_per (rho + key_decay),None (skip),"(0.7,0.8]",353,0.7555524079320113,0.7818696883852692
+beta_tau_per (rho + key_decay),None (skip),"(0.8,0.9]",671,0.8631743666169895,0.9165424739195231
+beta_tau_per (rho + key_decay),None (skip),"(0.9,1]",8961,0.9839437562772012,0.9984376743667002
+"beta_tau_rho (rho, no decay)",A (left),"[0,0.1]",20822,0.011190567668811834,0.002737489194121602
+"beta_tau_rho (rho, no decay)",A (left),"(0.1,0.2]",1436,0.14973537604456824,0.06685236768802229
+"beta_tau_rho (rho, no decay)",A (left),"(0.2,0.3]",988,0.2523987854251012,0.14878542510121456
+"beta_tau_rho (rho, no decay)",A (left),"(0.3,0.4]",792,0.3521717171717172,0.3055555555555556
+"beta_tau_rho (rho, no decay)",A (left),"(0.4,0.5]",746,0.45725201072386057,0.4477211796246649
+"beta_tau_rho (rho, no decay)",A (left),"(0.5,0.6]",744,0.5539650537634409,0.5967741935483871
+"beta_tau_rho (rho, no decay)",A (left),"(0.6,0.7]",761,0.6573455978975032,0.7450722733245729
+"beta_tau_rho (rho, no decay)",A (left),"(0.7,0.8]",1003,0.7562412761714855,0.8444666001994018
+"beta_tau_rho (rho, no decay)",A (left),"(0.8,0.9]",1722,0.8612078977932637,0.9337979094076655
+"beta_tau_rho (rho, no decay)",A (left),"(0.9,1]",9836,0.9824156161041073,0.994611630744205
+"beta_tau_rho (rho, no decay)",B (right),"[0,0.1]",20906,0.011072897732708314,0.0028221563187601647
+"beta_tau_rho (rho, no decay)",B (right),"(0.1,0.2]",1527,0.1498755730189915,0.07400130975769482
+"beta_tau_rho (rho, no decay)",B (right),"(0.2,0.3]",924,0.25452380952380954,0.1764069264069264
+"beta_tau_rho (rho, no decay)",B (right),"(0.3,0.4]",781,0.3543021766965429,0.2740076824583867
+"beta_tau_rho (rho, no decay)",B (right),"(0.4,0.5]",809,0.45720642768850434,0.41656365883807167
+"beta_tau_rho (rho, no decay)",B (right),"(0.5,0.6]",698,0.5529799426934098,0.5945558739255015
+"beta_tau_rho (rho, no decay)",B (right),"(0.6,0.7]",770,0.6573376623376623,0.7103896103896103
+"beta_tau_rho (rho, no decay)",B (right),"(0.7,0.8]",1008,0.7570138888888889,0.8650793650793651
+"beta_tau_rho (rho, no decay)",B (right),"(0.8,0.9]",1565,0.8603897763578274,0.952076677316294
+"beta_tau_rho (rho, no decay)",B (right),"(0.9,1]",9862,0.9823555059825593,0.9966538227540053
+"beta_tau_rho (rho, no decay)",None (skip),"[0,0.1]",26255,0.008671491144543896,0.0034279184917158636
+"beta_tau_rho (rho, no decay)",None (skip),"(0.1,0.2]",1121,0.14661016949152542,0.09901873327386262
+"beta_tau_rho (rho, no decay)",None (skip),"(0.2,0.3]",537,0.24878957169459964,0.2644320297951583
+"beta_tau_rho (rho, no decay)",None (skip),"(0.3,0.4]",225,0.3522222222222222,0.37333333333333335
+"beta_tau_rho (rho, no decay)",None (skip),"(0.4,0.5]",215,0.45446511627906977,0.4790697674418605
+"beta_tau_rho (rho, no decay)",None (skip),"(0.5,0.6]",245,0.5557551020408164,0.5877551020408164
+"beta_tau_rho (rho, no decay)",None (skip),"(0.6,0.7]",249,0.6551807228915663,0.7028112449799196
+"beta_tau_rho (rho, no decay)",None (skip),"(0.7,0.8]",369,0.7586178861788618,0.7994579945799458
+"beta_tau_rho (rho, no decay)",None (skip),"(0.8,0.9]",655,0.8637404580152672,0.8946564885496183
+"beta_tau_rho (rho, no decay)",None (skip),"(0.9,1]",8979,0.9841017930727253,0.9974384675353603

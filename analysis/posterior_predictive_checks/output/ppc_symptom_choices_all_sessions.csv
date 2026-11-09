@@ -1,0 +1,4 @@
+model,sessions,share_cells_inside_90,mean_abs_diff_choices,median_r_across_symptoms
+beta_tau (no perseveration),370,1,0.14,1
+beta_tau_per (rho + key_decay),370,1,0.14,1
+"beta_tau_rho (rho, no decay)",370,1,0.14,1

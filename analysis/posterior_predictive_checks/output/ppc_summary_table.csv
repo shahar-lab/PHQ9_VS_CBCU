@@ -1,0 +1,76 @@
+model,statistic,n_sessions,share_outside,subgroup
+beta_tau (no perseveration),key_repeat,349,0.083,all sessions
+beta_tau_per (rho + key_decay),key_repeat,349,0.034,all sessions
+"beta_tau_rho (rho, no decay)",key_repeat,349,0.026,all sessions
+beta_tau (no perseveration),key_repeat,44,0.045,flagged (high Pareto k)
+beta_tau_per (rho + key_decay),key_repeat,44,0,flagged (high Pareto k)
+"beta_tau_rho (rho, no decay)",key_repeat,44,0,flagged (high Pareto k)
+beta_tau (no perseveration),key_repeat,148,0.074,heavy skippers (>20 skips)
+beta_tau_per (rho + key_decay),key_repeat,148,0.054,heavy skippers (>20 skips)
+"beta_tau_rho (rho, no decay)",key_repeat,148,0.041,heavy skippers (>20 skips)
+beta_tau (no perseveration),key_repeat,201,0.09,light skippers
+beta_tau_per (rho + key_decay),key_repeat,201,0.02,light skippers
+"beta_tau_rho (rho, no decay)",key_repeat,201,0.015,light skippers
+beta_tau (no perseveration),key_repeat,305,0.089,not flagged
+beta_tau_per (rho + key_decay),key_repeat,305,0.039,not flagged
+"beta_tau_rho (rho, no decay)",key_repeat,305,0.03,not flagged
+beta_tau (no perseveration),left_share,353,0.059,all sessions
+beta_tau_per (rho + key_decay),left_share,353,0.048,all sessions
+"beta_tau_rho (rho, no decay)",left_share,353,0.059,all sessions
+beta_tau (no perseveration),left_share,44,0,flagged (high Pareto k)
+beta_tau_per (rho + key_decay),left_share,44,0,flagged (high Pareto k)
+"beta_tau_rho (rho, no decay)",left_share,44,0,flagged (high Pareto k)
+beta_tau (no perseveration),left_share,152,0.059,heavy skippers (>20 skips)
+beta_tau_per (rho + key_decay),left_share,152,0.072,heavy skippers (>20 skips)
+"beta_tau_rho (rho, no decay)",left_share,152,0.053,heavy skippers (>20 skips)
+beta_tau (no perseveration),left_share,201,0.06,light skippers
+beta_tau_per (rho + key_decay),left_share,201,0.03,light skippers
+"beta_tau_rho (rho, no decay)",left_share,201,0.065,light skippers
+beta_tau (no perseveration),left_share,309,0.068,not flagged
+beta_tau_per (rho + key_decay),left_share,309,0.055,not flagged
+"beta_tau_rho (rho, no decay)",left_share,309,0.068,not flagged
+beta_tau (no perseveration),longest_run,370,0.043,all sessions
+beta_tau_per (rho + key_decay),longest_run,370,0.011,all sessions
+"beta_tau_rho (rho, no decay)",longest_run,370,0.032,all sessions
+beta_tau (no perseveration),longest_run,44,0,flagged (high Pareto k)
+beta_tau_per (rho + key_decay),longest_run,44,0,flagged (high Pareto k)
+"beta_tau_rho (rho, no decay)",longest_run,44,0,flagged (high Pareto k)
+beta_tau (no perseveration),longest_run,169,0.012,heavy skippers (>20 skips)
+beta_tau_per (rho + key_decay),longest_run,169,0,heavy skippers (>20 skips)
+"beta_tau_rho (rho, no decay)",longest_run,169,0.024,heavy skippers (>20 skips)
+beta_tau (no perseveration),longest_run,201,0.07,light skippers
+beta_tau_per (rho + key_decay),longest_run,201,0.02,light skippers
+"beta_tau_rho (rho, no decay)",longest_run,201,0.04,light skippers
+beta_tau (no perseveration),longest_run,326,0.049,not flagged
+beta_tau_per (rho + key_decay),longest_run,326,0.012,not flagged
+"beta_tau_rho (rho, no decay)",longest_run,326,0.037,not flagged
+beta_tau (no perseveration),skip_rate,370,0,all sessions
+beta_tau_per (rho + key_decay),skip_rate,370,0,all sessions
+"beta_tau_rho (rho, no decay)",skip_rate,370,0,all sessions
+beta_tau (no perseveration),skip_rate,44,0,flagged (high Pareto k)
+beta_tau_per (rho + key_decay),skip_rate,44,0,flagged (high Pareto k)
+"beta_tau_rho (rho, no decay)",skip_rate,44,0,flagged (high Pareto k)
+beta_tau (no perseveration),skip_rate,169,0,heavy skippers (>20 skips)
+beta_tau_per (rho + key_decay),skip_rate,169,0,heavy skippers (>20 skips)
+"beta_tau_rho (rho, no decay)",skip_rate,169,0,heavy skippers (>20 skips)
+beta_tau (no perseveration),skip_rate,201,0,light skippers
+beta_tau_per (rho + key_decay),skip_rate,201,0,light skippers
+"beta_tau_rho (rho, no decay)",skip_rate,201,0,light skippers
+beta_tau (no perseveration),skip_rate,326,0,not flagged
+beta_tau_per (rho + key_decay),skip_rate,326,0,not flagged
+"beta_tau_rho (rho, no decay)",skip_rate,326,0,not flagged
+beta_tau (no perseveration),viol_rate,302,0.036,all sessions
+beta_tau_per (rho + key_decay),viol_rate,302,0.04,all sessions
+"beta_tau_rho (rho, no decay)",viol_rate,302,0.033,all sessions
+beta_tau (no perseveration),viol_rate,44,0,flagged (high Pareto k)
+beta_tau_per (rho + key_decay),viol_rate,44,0,flagged (high Pareto k)
+"beta_tau_rho (rho, no decay)",viol_rate,44,0,flagged (high Pareto k)
+beta_tau (no perseveration),viol_rate,101,0.079,heavy skippers (>20 skips)
+beta_tau_per (rho + key_decay),viol_rate,101,0.099,heavy skippers (>20 skips)
+"beta_tau_rho (rho, no decay)",viol_rate,101,0.079,heavy skippers (>20 skips)
+beta_tau (no perseveration),viol_rate,201,0.015,light skippers
+beta_tau_per (rho + key_decay),viol_rate,201,0.01,light skippers
+"beta_tau_rho (rho, no decay)",viol_rate,201,0.01,light skippers
+beta_tau (no perseveration),viol_rate,258,0.043,not flagged
+beta_tau_per (rho + key_decay),viol_rate,258,0.047,not flagged
+"beta_tau_rho (rho, no decay)",viol_rate,258,0.039,not flagged

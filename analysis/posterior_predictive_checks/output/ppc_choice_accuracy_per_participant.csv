@@ -1,0 +1,556 @@
+model,prolific_id,n_sessions,n_trials,n_skips,accuracy,accuracy_time1,accuracy_time2,accuracy_AB_trials,accuracy_skip_trials
+beta_tau (no perseveration),544e94c4fdf99b50bd30726c,2,210,7,0.938,0.962,0.914,0.951,0.571
+beta_tau (no perseveration),54dfac92fdf99b4b6b6595d9,2,210,56,0.99,0.99,0.99,0.987,1
+beta_tau (no perseveration),55d39f64da14d7001295375a,2,210,26,0.957,0.962,0.952,0.951,1
+beta_tau (no perseveration),55ecd6ff748092000daa9f5f,2,210,3,0.924,0.933,0.914,0.937,0
+beta_tau (no perseveration),5689916dd3d6a7000aa1cbf0,2,210,58,0.962,0.981,0.943,0.967,0.948
+beta_tau (no perseveration),571a1295c97ad400123ab3bd,2,210,17,0.933,0.914,0.952,0.959,0.647
+beta_tau (no perseveration),594ee0aa7095f80001da4c4e,2,210,124,0.971,0.971,0.971,0.965,0.976
+beta_tau (no perseveration),5992af75c825cf0001d7d94c,2,210,138,0.957,0.952,0.962,0.958,0.957
+beta_tau (no perseveration),59cb95053306be000195be2e,2,210,64,0.924,0.876,0.971,0.952,0.859
+beta_tau (no perseveration),5a0a057c80acd80001047392,2,210,18,0.948,0.933,0.962,0.943,1
+beta_tau (no perseveration),5b01842bc573030001c345e0,2,210,7,0.9,0.876,0.924,0.916,0.429
+beta_tau (no perseveration),5ba292385301b80001c71ba2,2,210,92,0.967,0.971,0.962,0.958,0.978
+beta_tau (no perseveration),5bd2a0799afb5b00015be460,2,210,158,0.962,0.962,0.962,0.923,0.975
+beta_tau (no perseveration),5be9784e18a71d0001317761,2,210,11,0.952,0.943,0.962,0.95,1
+beta_tau (no perseveration),5bf7be3abd1fd30001aa5498,2,210,107,0.986,0.971,1,0.971,1
+beta_tau (no perseveration),5c27db7f00942400019a0c11,2,210,8,0.986,1,0.971,0.99,0.875
+beta_tau (no perseveration),5c7dd22debc24800018e7ca0,2,210,65,0.952,0.952,0.952,0.945,0.969
+beta_tau (no perseveration),5d1ba27e43fc40001e6bef4f,2,210,13,0.933,0.943,0.924,0.939,0.846
+beta_tau (no perseveration),5d68c8aa40524c00189e8ac2,2,210,10,0.995,0.99,1,1,0.9
+beta_tau (no perseveration),5e3723a2c0b2896ad554be73,2,210,34,0.943,0.971,0.914,0.938,0.971
+beta_tau (no perseveration),5e78a08318ee0e41e1bc6a1a,2,210,73,0.995,1,0.99,1,0.986
+beta_tau (no perseveration),5e85f278c880ee1edb7e96ee,2,210,34,0.957,0.962,0.952,0.966,0.912
+beta_tau (no perseveration),5e95a177eaa3cb0177ef6cc9,2,210,26,0.952,0.914,0.99,0.973,0.808
+beta_tau (no perseveration),5ea4cebb8944a8495280db42,2,210,54,0.919,0.905,0.933,0.91,0.944
+beta_tau (no perseveration),5ecd36302b4d3c05d4cc1ba2,2,210,210,1,1,1,NA,1
+beta_tau (no perseveration),5eeb32c541b66f01379faff7,2,210,0,0.962,0.971,0.952,0.962,NA
+beta_tau (no perseveration),5efa33c4e9f4160ffd817db9,2,210,35,0.957,0.943,0.971,0.96,0.943
+beta_tau (no perseveration),5f0c5efb791e025b52cb48b1,2,210,0,0.881,0.838,0.924,0.881,NA
+beta_tau (no perseveration),5f8214581a35f532cee9ea52,2,210,2,0.986,0.981,0.99,0.99,0.5
+beta_tau (no perseveration),5f933255e25f2b0e6f794a54,2,210,19,0.976,1,0.952,0.974,1
+beta_tau (no perseveration),5fb8c5a8bf771b29040065ac,2,210,15,0.981,0.971,0.99,0.979,1
+beta_tau (no perseveration),5fc3eb06c7a6322c11395528,2,210,92,0.838,0.81,0.867,0.797,0.891
+beta_tau (no perseveration),601129f77e0c21000b0c408a,2,210,42,0.967,0.971,0.962,0.958,1
+beta_tau (no perseveration),602cf4568083d86318913385,2,210,42,0.962,0.981,0.943,0.952,1
+beta_tau (no perseveration),6054ce9cd4e5c96ab84e9113,2,210,119,0.929,0.933,0.924,0.89,0.958
+beta_tau (no perseveration),60656a924c99543d12555b86,2,210,6,0.91,0.933,0.886,0.931,0.167
+beta_tau (no perseveration),60719da557d8241609b26e83,2,210,156,0.981,0.971,0.99,0.963,0.987
+beta_tau (no perseveration),6080359b7e55e8dbf21a225e,2,210,56,0.976,0.962,0.99,0.981,0.964
+beta_tau (no perseveration),608f68107d9ea28c690af9d2,2,210,13,0.938,0.933,0.943,0.939,0.923
+beta_tau (no perseveration),60a252db049918aa001fe65a,2,210,3,0.929,0.943,0.914,0.942,0
+beta_tau (no perseveration),60b78dc1eb46833a5c6b1235,2,210,84,0.929,0.886,0.971,0.929,0.929
+beta_tau (no perseveration),60b932147633bf0dd446941e,2,210,0,0.714,0.695,0.733,0.714,NA
+beta_tau (no perseveration),60de09f7dc5304e0c0f19485,2,210,20,0.938,0.952,0.924,0.942,0.9
+beta_tau (no perseveration),60dfa6a5a12413b99195c3de,2,210,25,0.962,0.943,0.981,0.957,1
+beta_tau (no perseveration),610d4df86c4abc6b5ced6fa0,2,210,41,0.9,0.867,0.933,0.935,0.756
+beta_tau (no perseveration),611870a41de777ae15971e9d,2,210,0,0.929,0.895,0.962,0.929,NA
+beta_tau (no perseveration),6150224c57e32a81a27ccb5a,2,210,8,0.957,0.943,0.971,0.965,0.75
+beta_tau (no perseveration),6152d75634b966697b09920f,2,210,21,1,1,1,1,1
+beta_tau (no perseveration),61656042f505fd7fa53e8628,2,210,189,0.967,0.971,0.962,1,0.963
+beta_tau (no perseveration),61fa936e5719bc09cb834cbe,2,210,2,0.886,0.867,0.905,0.885,1
+beta_tau (no perseveration),6266a4e5846e1e41812a0432,2,210,153,0.962,0.952,0.971,0.877,0.993
+beta_tau (no perseveration),628781515f29a0394e23b15b,2,210,130,0.967,0.943,0.99,0.938,0.985
+beta_tau (no perseveration),632222532c12ab0ab7ca00bd,2,210,57,0.99,0.981,1,0.993,0.982
+beta_tau (no perseveration),63614d513d6883f562b0ff79,2,210,0,0.9,0.876,0.924,0.9,NA
+beta_tau (no perseveration),63af557b3d4f219c3226b7d6,2,210,19,0.948,0.971,0.924,0.948,0.947
+beta_tau (no perseveration),63d7b72765ddb017724e78d3,2,210,6,0.957,0.943,0.971,0.961,0.833
+beta_tau (no perseveration),63ed0392b8b24c34aaf26310,2,210,11,0.957,0.981,0.933,0.96,0.909
+beta_tau (no perseveration),63ed4ffc9e011d70035477c5,2,210,18,0.981,0.99,0.971,0.995,0.833
+beta_tau (no perseveration),63f7c60b1e096c2df51e3071,2,210,101,0.981,0.971,0.99,0.982,0.98
+beta_tau (no perseveration),63f93b47bb0c1a1aca131480,2,210,210,1,1,1,NA,1
+beta_tau (no perseveration),6544ff9e0fb2eaaf83e2de5c,2,210,148,0.943,0.952,0.933,0.919,0.953
+beta_tau (no perseveration),65465ad50fb5c91a7da03f86,2,210,210,1,1,1,NA,1
+beta_tau (no perseveration),656c8118ba4ac7120453cbc1,2,210,43,0.99,0.981,1,0.994,0.977
+beta_tau (no perseveration),66019f5e10adbe524f2a844a,2,210,49,0.948,0.914,0.981,0.975,0.857
+beta_tau (no perseveration),663127d07fb81f5532bcfdad,2,210,155,0.995,0.99,1,0.982,1
+beta_tau (no perseveration),663b638be7226d4e3fcc255f,2,210,79,0.971,0.943,1,0.954,1
+beta_tau (no perseveration),665937686712e30718aac2f7,2,210,0,0.986,0.971,1,0.986,NA
+beta_tau (no perseveration),6668c9df1d76dc85e0f95d40,2,210,18,0.952,0.933,0.971,0.969,0.778
+beta_tau (no perseveration),6673eea04e15d2d270aa7ff8,2,210,210,1,1,1,NA,1
+beta_tau (no perseveration),6680071d60b3642bcf5dad37,2,210,13,0.967,0.99,0.943,0.97,0.923
+beta_tau (no perseveration),6694fb732a72150ebef2c8e4,2,210,64,0.852,0.81,0.895,0.863,0.828
+beta_tau (no perseveration),6697dd57c4db95eac07db01a,2,210,210,1,1,1,NA,1
+beta_tau (no perseveration),66986ab71f2b54203f26ad32,2,210,18,0.624,0.619,0.629,0.682,0
+beta_tau (no perseveration),66b9c3a3e93996ce7d285665,2,210,91,0.976,0.981,0.971,0.966,0.989
+beta_tau (no perseveration),66c24e9899628532dd846326,2,210,13,0.952,0.943,0.962,0.949,1
+beta_tau (no perseveration),66d31a1b0515fe747830bab9,2,210,93,0.938,0.99,0.886,0.915,0.968
+beta_tau (no perseveration),66d5e128d49faf318dd776ec,2,210,55,0.943,0.933,0.952,0.923,1
+beta_tau (no perseveration),671538a99972f78921900da7,2,210,157,0.995,0.99,1,1,0.994
+beta_tau (no perseveration),6727c56a4838a57961ee3822,2,210,1,0.967,0.962,0.971,0.967,1
+beta_tau (no perseveration),6743c8da977b0d274dad1fc2,2,210,210,1,1,1,NA,1
+beta_tau (no perseveration),67684dd84deabe73a9da9353,2,210,105,0.938,0.943,0.933,0.952,0.924
+beta_tau (no perseveration),67698c3573d3cbf6add78578,2,210,24,0.962,0.952,0.971,0.962,0.958
+beta_tau (no perseveration),676ed6c97f59dba5a786886d,2,210,120,0.948,0.981,0.914,0.944,0.95
+beta_tau (no perseveration),67798247d6fc9e510470baef,2,210,76,0.948,0.933,0.962,0.963,0.921
+beta_tau (no perseveration),677d87faabcf1e93c8c18c5e,2,210,8,0.943,0.924,0.962,0.95,0.75
+beta_tau (no perseveration),6783ebc2e89b75d66d952f41,2,210,64,0.967,0.971,0.962,0.959,0.984
+beta_tau (no perseveration),678e883a9ac653bfb7ff5f1f,2,210,17,0.824,0.695,0.952,0.824,0.824
+beta_tau (no perseveration),67a66096bc5b99e5261aefc5,2,210,210,1,1,1,NA,1
+beta_tau (no perseveration),67ca1243e7c4d398474fc95d,2,210,9,0.852,0.781,0.924,0.856,0.778
+beta_tau (no perseveration),67dc7c814cd5af9421e0476a,2,210,16,0.924,0.914,0.933,0.928,0.875
+beta_tau (no perseveration),67e0870d582edce0a2764d1f,2,210,8,0.976,0.962,0.99,0.98,0.875
+beta_tau (no perseveration),67e43d3171f3338caa047245,2,210,55,0.976,0.971,0.981,0.974,0.982
+beta_tau (no perseveration),680d5891d72bc74e45fb87f1,2,210,75,0.986,1,0.971,1,0.96
+beta_tau (no perseveration),6913757aae0da25ca51bdb7b,2,210,59,0.91,0.895,0.924,0.921,0.881
+beta_tau (no perseveration),696ec8093bbc311f3f2b3f16,2,210,137,0.929,0.952,0.905,0.918,0.934
+beta_tau (no perseveration),696f07b53e3b99a786a261b0,2,210,0,0.962,0.943,0.981,0.962,NA
+beta_tau (no perseveration),697171911e8c97f9701b29f0,2,210,4,0.938,0.895,0.981,0.947,0.5
+beta_tau (no perseveration),6978d224639f15b0bf444a8f,2,210,4,0.971,0.981,0.962,0.976,0.75
+beta_tau (no perseveration),697bb32b513ce5aec5c6cf3d,2,210,29,0.952,0.943,0.962,0.967,0.862
+beta_tau (no perseveration),697d24efb667eda3edf789ca,2,210,163,0.962,0.933,0.99,0.979,0.957
+beta_tau (no perseveration),6991e46740117ca6ef90cd7c,2,210,40,0.895,0.857,0.933,0.918,0.8
+beta_tau (no perseveration),6997699bfa8589e80145918b,2,210,22,0.938,0.933,0.943,0.941,0.909
+beta_tau (no perseveration),699ad28882624b23f9713908,2,210,161,0.976,0.962,0.99,1,0.969
+beta_tau (no perseveration),699f262fc20cdd6f59a2f6c2,2,210,84,0.776,0.714,0.838,0.817,0.714
+beta_tau (no perseveration),699f83cc468a2f1781f00c12,2,210,181,0.995,0.99,1,0.966,1
+beta_tau (no perseveration),699fcf6ce8e60730dbfc92ac,2,210,4,0.929,0.924,0.933,0.937,0.5
+beta_tau (no perseveration),69a6f31da8afde8854c002a8,2,210,26,0.995,1,0.99,1,0.962
+beta_tau (no perseveration),69ac80d0bad16bd0877001c0,2,210,0,0.943,0.914,0.971,0.943,NA
+beta_tau (no perseveration),69acf8eb3eee6cc60d19a248,2,210,0,0.919,0.914,0.924,0.919,NA
+beta_tau (no perseveration),69ad388b63979c96dc085507,2,210,10,0.933,0.886,0.981,0.95,0.6
+beta_tau (no perseveration),69b0c18da5fae9eb6f4a1fe4,2,210,13,0.962,0.933,0.99,0.97,0.846
+beta_tau (no perseveration),69bd43b3638c297e98b9f8df,2,210,0,0.857,0.886,0.829,0.857,NA
+beta_tau (no perseveration),69cb608f3d31d3d72fbff88d,2,210,0,0.69,0.638,0.743,0.69,NA
+beta_tau (no perseveration),69d68fef496b299d4cd8e08d,2,210,73,0.948,0.952,0.943,0.949,0.945
+beta_tau (no perseveration),69e847860ae7104bac856107,2,210,4,0.948,0.943,0.952,0.951,0.75
+beta_tau (no perseveration),69e91fe037d0abdb091c2c05,2,210,34,0.838,0.79,0.886,0.841,0.824
+beta_tau (no perseveration),69ea32838e63a8af3d4ed1ae,2,210,20,0.962,0.971,0.952,0.958,1
+beta_tau (no perseveration),69f061c18bcd97022e700b95,2,210,27,0.986,0.99,0.981,0.984,1
+beta_tau (no perseveration),69f0eddb8814c802224f8bad,2,210,42,1,1,1,1,1
+beta_tau (no perseveration),69f226b2032dea50182cbd55,2,210,6,0.981,0.99,0.971,0.98,1
+beta_tau (no perseveration),69f26759e2c3ed8a93c92ede,2,210,93,0.919,0.886,0.952,0.88,0.968
+beta_tau (no perseveration),69f586544b0395e639960cd5,2,210,13,0.838,0.829,0.848,0.868,0.385
+beta_tau (no perseveration),69f7666c2ce1f93d57e39940,2,210,6,1,1,1,1,1
+beta_tau (no perseveration),69f7e812b1abc5db9b1d0eac,2,210,69,0.89,0.857,0.924,0.901,0.87
+beta_tau (no perseveration),69f8f3101505e3f57a832438,2,210,31,0.948,0.933,0.962,0.944,0.968
+beta_tau (no perseveration),69f9b0426f86f9ab7020710f,2,210,2,0.957,0.962,0.952,0.962,0.5
+beta_tau (no perseveration),69fb31c7fd922d9f38394582,2,210,162,0.924,0.914,0.933,0.854,0.944
+beta_tau (no perseveration),69fb3666fb8ef17497b9514e,2,210,30,0.981,0.99,0.971,0.978,1
+beta_tau (no perseveration),69fce3ef0b9da8b3ad46eedd,2,210,4,0.933,0.952,0.914,0.937,0.75
+beta_tau (no perseveration),69fda5324f331e76e20c603b,2,210,15,0.957,0.971,0.943,0.954,1
+beta_tau (no perseveration),69ffc3bf55fd97a76c8122f4,2,210,9,0.957,0.943,0.971,0.965,0.778
+beta_tau (no perseveration),6a00d96b190db7e5ec67cb89,2,210,135,0.981,1,0.962,0.987,0.978
+beta_tau (no perseveration),6a01b82647e5dd21cd05d8ee,2,210,99,0.986,1,0.971,0.982,0.99
+beta_tau (no perseveration),6a01c4c8248651c0157c76c5,2,210,154,0.967,0.952,0.981,0.929,0.981
+beta_tau (no perseveration),6a0211f66d13da71cb35f782,2,210,154,0.871,0.781,0.962,0.625,0.961
+beta_tau (no perseveration),6a02ed5bd6acf52c07ab46fa,2,210,47,0.981,0.971,0.99,0.975,1
+beta_tau (no perseveration),6a03092916c4774734733954,2,210,0,1,1,1,1,NA
+beta_tau (no perseveration),6a0493b0ba30180995ebd884,2,210,2,0.962,0.962,0.962,0.966,0.5
+beta_tau (no perseveration),6a04a94d6915ae8637f94c84,2,210,210,1,1,1,NA,1
+beta_tau (no perseveration),6a04b80e14874cdbefac323f,2,210,12,0.99,0.99,0.99,0.99,1
+beta_tau (no perseveration),6a04e558839eb469fa443cab,2,210,18,0.948,0.933,0.962,0.943,1
+beta_tau (no perseveration),6a057f4144808bd931bf3671,2,210,110,0.986,0.971,1,0.98,0.991
+beta_tau (no perseveration),6a07658dda0017a86f04f995,2,210,35,0.886,0.886,0.886,0.891,0.857
+beta_tau (no perseveration),6a082b5b68b0948671bfa8d5,2,210,2,0.99,0.981,1,0.99,1
+beta_tau (no perseveration),6a083fbf1cdeeaccf2e04d99,2,210,22,0.976,1,0.952,0.984,0.909
+beta_tau (no perseveration),6a08cbfafd1950ac6e92a7b4,2,210,2,0.967,0.952,0.981,0.966,1
+beta_tau (no perseveration),6a0adfcc9de2f1c28b0db58b,2,210,16,1,1,1,1,1
+beta_tau (no perseveration),6a0b2bdbea2d151e845c3e38,2,210,113,0.957,0.943,0.971,0.948,0.965
+beta_tau (no perseveration),6a0b2d56064dcea1f84eaa94,2,210,14,0.905,0.914,0.895,0.918,0.714
+beta_tau (no perseveration),6a0da93c7800f8ed95424872,2,210,43,0.971,0.962,0.981,0.97,0.977
+beta_tau (no perseveration),6a0e225c055ed1c21f3b90d8,2,210,98,0.948,0.914,0.981,0.982,0.908
+beta_tau (no perseveration),6a0ec8830dd532d62cde8232,2,210,82,0.995,0.99,1,0.992,1
+beta_tau (no perseveration),6a106b5d33b08b727cb82c65,2,210,1,0.871,0.876,0.867,0.876,0
+beta_tau (no perseveration),6a1081e8c16f66fe9595bcaa,2,210,0,0.938,0.933,0.943,0.938,NA
+beta_tau (no perseveration),6a10ae0279804a41e4d06468,2,210,132,1,1,1,1,1
+beta_tau (no perseveration),6a10ce25b3fadfdaca9d1914,2,210,98,0.938,0.886,0.99,0.92,0.959
+beta_tau (no perseveration),6a119f8ef53d50d8dfd81fbf,2,210,0,0.933,0.914,0.952,0.933,NA
+beta_tau (no perseveration),6a135d0137a8ad16f2590393,2,210,139,0.81,0.638,0.981,0.592,0.921
+beta_tau (no perseveration),6a16ea99c41f24c9371f4d00,2,210,1,0.852,0.829,0.876,0.856,0
+beta_tau (no perseveration),6a1712c057793e3bfe739de8,2,210,2,0.929,0.905,0.952,0.933,0.5
+beta_tau (no perseveration),6a1759a83da9f4ed875b332d,2,210,183,0.995,0.99,1,1,0.995
+beta_tau (no perseveration),6a19a092d1e2eb2e4b072554,2,210,141,0.919,0.848,0.99,0.768,0.993
+beta_tau (no perseveration),6a19b14498b3d36bccc467cb,2,210,76,0.895,0.867,0.924,0.866,0.947
+beta_tau (no perseveration),6a19d9bdc85ad46cebd1ad1b,2,210,2,0.976,0.971,0.981,0.976,1
+beta_tau (no perseveration),6a1bec05fe75c61cdfc7acbc,2,210,18,0.938,0.914,0.962,0.948,0.833
+beta_tau (no perseveration),6a1c278d31944f546d54e1b5,2,210,85,0.952,0.943,0.962,0.928,0.988
+beta_tau (no perseveration),6a1c948e11c0dcbff51b9083,2,210,0,0.933,0.981,0.886,0.933,NA
+beta_tau (no perseveration),6a1d9d56cfece324378b6731,2,210,20,0.924,0.933,0.914,0.932,0.85
+beta_tau (no perseveration),6a1dfa3eaef836ebd308886e,2,210,94,0.976,0.99,0.962,0.991,0.957
+beta_tau (no perseveration),6a1efce6eacd6a04721457bb,2,210,62,0.914,0.867,0.962,0.885,0.984
+beta_tau (no perseveration),6a1f148617273ff995df88a0,2,210,31,0.952,0.952,0.952,0.961,0.903
+beta_tau (no perseveration),6a1f8098dda9c21e70c672cb,2,210,71,0.962,0.943,0.981,0.95,0.986
+beta_tau (no perseveration),6a205d8176898540335bb525,2,210,57,0.976,0.952,1,0.974,0.982
+beta_tau (no perseveration),6a216f571e7c4467c10b734b,2,210,22,0.948,0.933,0.962,0.973,0.727
+beta_tau (no perseveration),6a22c3eb4725e325fd168a95,2,210,43,0.986,0.99,0.981,0.988,0.977
+beta_tau (no perseveration),6a235cbdc5836f4cd80e70bb,2,210,32,0.938,0.924,0.952,0.938,0.938
+beta_tau (no perseveration),6a24075160115784d45503dd,2,210,137,0.929,0.905,0.952,0.918,0.934
+beta_tau (no perseveration),6a4ccfc6206d45c1fa7837fe,2,210,2,0.99,1,0.981,0.99,1
+beta_tau (no perseveration),6a55022ac3162a7be7ddadd5,2,210,3,0.976,0.962,0.99,0.976,1
+beta_tau (no perseveration),6a5f448dea24d9eb0cf2c204,2,210,104,0.733,0.743,0.724,0.717,0.75
+beta_tau (no perseveration),6abcc3fd0abc8028e910789f,2,210,88,0.957,0.924,0.99,0.943,0.977
+beta_tau (no perseveration),6ac246359c0580372ea7d6b7,2,210,0,0.943,0.933,0.952,0.943,NA
+beta_tau (no perseveration),6ac6adce08f75ef062967577,2,210,135,0.948,0.952,0.943,0.92,0.963
+beta_tau (no perseveration),6aca37cf2b9a5b9049437587,2,210,209,0.995,0.99,1,0,1
+beta_tau (no perseveration),6ad913a46985891a10f64be7,2,210,21,0.971,0.952,0.99,0.974,0.952
+beta_tau_per (rho + key_decay),544e94c4fdf99b50bd30726c,2,210,7,0.943,0.952,0.933,0.951,0.714
+beta_tau_per (rho + key_decay),54dfac92fdf99b4b6b6595d9,2,210,56,0.986,0.99,0.981,0.981,1
+beta_tau_per (rho + key_decay),55d39f64da14d7001295375a,2,210,26,0.952,0.943,0.962,0.946,1
+beta_tau_per (rho + key_decay),55ecd6ff748092000daa9f5f,2,210,3,0.914,0.933,0.895,0.928,0
+beta_tau_per (rho + key_decay),5689916dd3d6a7000aa1cbf0,2,210,58,0.962,0.981,0.943,0.967,0.948
+beta_tau_per (rho + key_decay),571a1295c97ad400123ab3bd,2,210,17,0.943,0.933,0.952,0.969,0.647
+beta_tau_per (rho + key_decay),594ee0aa7095f80001da4c4e,2,210,124,0.967,0.962,0.971,0.953,0.976
+beta_tau_per (rho + key_decay),5992af75c825cf0001d7d94c,2,210,138,0.957,0.952,0.962,0.958,0.957
+beta_tau_per (rho + key_decay),59cb95053306be000195be2e,2,210,64,0.914,0.857,0.971,0.938,0.859
+beta_tau_per (rho + key_decay),5a0a057c80acd80001047392,2,210,18,0.952,0.933,0.971,0.948,1
+beta_tau_per (rho + key_decay),5b01842bc573030001c345e0,2,210,7,0.89,0.867,0.914,0.906,0.429
+beta_tau_per (rho + key_decay),5ba292385301b80001c71ba2,2,210,92,0.976,0.971,0.981,0.975,0.978
+beta_tau_per (rho + key_decay),5bd2a0799afb5b00015be460,2,210,158,0.952,0.943,0.962,0.904,0.968
+beta_tau_per (rho + key_decay),5be9784e18a71d0001317761,2,210,11,0.971,0.971,0.971,0.97,1
+beta_tau_per (rho + key_decay),5bf7be3abd1fd30001aa5498,2,210,107,0.986,0.971,1,0.971,1
+beta_tau_per (rho + key_decay),5c27db7f00942400019a0c11,2,210,8,0.981,0.99,0.971,0.985,0.875
+beta_tau_per (rho + key_decay),5c7dd22debc24800018e7ca0,2,210,65,0.948,0.952,0.943,0.938,0.969
+beta_tau_per (rho + key_decay),5d1ba27e43fc40001e6bef4f,2,210,13,0.952,0.952,0.952,0.959,0.846
+beta_tau_per (rho + key_decay),5d68c8aa40524c00189e8ac2,2,210,10,0.995,0.99,1,1,0.9
+beta_tau_per (rho + key_decay),5e3723a2c0b2896ad554be73,2,210,34,0.952,0.971,0.933,0.949,0.971
+beta_tau_per (rho + key_decay),5e78a08318ee0e41e1bc6a1a,2,210,73,0.995,1,0.99,1,0.986
+beta_tau_per (rho + key_decay),5e85f278c880ee1edb7e96ee,2,210,34,0.948,0.943,0.952,0.96,0.882
+beta_tau_per (rho + key_decay),5e95a177eaa3cb0177ef6cc9,2,210,26,0.952,0.914,0.99,0.973,0.808
+beta_tau_per (rho + key_decay),5ea4cebb8944a8495280db42,2,210,54,0.914,0.895,0.933,0.91,0.926
+beta_tau_per (rho + key_decay),5ecd36302b4d3c05d4cc1ba2,2,210,210,1,1,1,NA,1
+beta_tau_per (rho + key_decay),5eeb32c541b66f01379faff7,2,210,0,0.962,0.981,0.943,0.962,NA
+beta_tau_per (rho + key_decay),5efa33c4e9f4160ffd817db9,2,210,35,0.962,0.952,0.971,0.966,0.943
+beta_tau_per (rho + key_decay),5f0c5efb791e025b52cb48b1,2,210,0,0.886,0.857,0.914,0.886,NA
+beta_tau_per (rho + key_decay),5f8214581a35f532cee9ea52,2,210,2,0.981,0.971,0.99,0.986,0.5
+beta_tau_per (rho + key_decay),5f933255e25f2b0e6f794a54,2,210,19,0.976,1,0.952,0.974,1
+beta_tau_per (rho + key_decay),5fb8c5a8bf771b29040065ac,2,210,15,0.986,0.981,0.99,0.985,1
+beta_tau_per (rho + key_decay),5fc3eb06c7a6322c11395528,2,210,92,0.838,0.819,0.857,0.797,0.891
+beta_tau_per (rho + key_decay),601129f77e0c21000b0c408a,2,210,42,0.967,0.981,0.952,0.958,1
+beta_tau_per (rho + key_decay),602cf4568083d86318913385,2,210,42,0.967,0.99,0.943,0.958,1
+beta_tau_per (rho + key_decay),6054ce9cd4e5c96ab84e9113,2,210,119,0.938,0.933,0.943,0.923,0.95
+beta_tau_per (rho + key_decay),60656a924c99543d12555b86,2,210,6,0.9,0.933,0.867,0.922,0.167
+beta_tau_per (rho + key_decay),60719da557d8241609b26e83,2,210,156,0.981,0.971,0.99,0.963,0.987
+beta_tau_per (rho + key_decay),6080359b7e55e8dbf21a225e,2,210,56,0.971,0.952,0.99,0.974,0.964
+beta_tau_per (rho + key_decay),608f68107d9ea28c690af9d2,2,210,13,0.933,0.933,0.933,0.934,0.923
+beta_tau_per (rho + key_decay),60a252db049918aa001fe65a,2,210,3,0.933,0.943,0.924,0.947,0
+beta_tau_per (rho + key_decay),60b78dc1eb46833a5c6b1235,2,210,84,0.933,0.905,0.962,0.937,0.929
+beta_tau_per (rho + key_decay),60b932147633bf0dd446941e,2,210,0,0.771,0.695,0.848,0.771,NA
+beta_tau_per (rho + key_decay),60de09f7dc5304e0c0f19485,2,210,20,0.943,0.952,0.933,0.947,0.9
+beta_tau_per (rho + key_decay),60dfa6a5a12413b99195c3de,2,210,25,0.952,0.924,0.981,0.951,0.96
+beta_tau_per (rho + key_decay),610d4df86c4abc6b5ced6fa0,2,210,41,0.89,0.838,0.943,0.917,0.78
+beta_tau_per (rho + key_decay),611870a41de777ae15971e9d,2,210,0,0.943,0.933,0.952,0.943,NA
+beta_tau_per (rho + key_decay),6150224c57e32a81a27ccb5a,2,210,8,0.952,0.924,0.981,0.96,0.75
+beta_tau_per (rho + key_decay),6152d75634b966697b09920f,2,210,21,1,1,1,1,1
+beta_tau_per (rho + key_decay),61656042f505fd7fa53e8628,2,210,189,0.967,0.971,0.962,1,0.963
+beta_tau_per (rho + key_decay),61fa936e5719bc09cb834cbe,2,210,2,0.9,0.895,0.905,0.899,1
+beta_tau_per (rho + key_decay),6266a4e5846e1e41812a0432,2,210,153,0.967,0.962,0.971,0.93,0.98
+beta_tau_per (rho + key_decay),628781515f29a0394e23b15b,2,210,130,0.967,0.943,0.99,0.938,0.985
+beta_tau_per (rho + key_decay),632222532c12ab0ab7ca00bd,2,210,57,0.995,0.99,1,1,0.982
+beta_tau_per (rho + key_decay),63614d513d6883f562b0ff79,2,210,0,0.905,0.876,0.933,0.905,NA
+beta_tau_per (rho + key_decay),63af557b3d4f219c3226b7d6,2,210,19,0.933,0.971,0.895,0.937,0.895
+beta_tau_per (rho + key_decay),63d7b72765ddb017724e78d3,2,210,6,0.957,0.943,0.971,0.961,0.833
+beta_tau_per (rho + key_decay),63ed0392b8b24c34aaf26310,2,210,11,0.967,0.981,0.952,0.965,1
+beta_tau_per (rho + key_decay),63ed4ffc9e011d70035477c5,2,210,18,0.976,0.99,0.962,0.99,0.833
+beta_tau_per (rho + key_decay),63f7c60b1e096c2df51e3071,2,210,101,0.981,0.971,0.99,0.982,0.98
+beta_tau_per (rho + key_decay),63f93b47bb0c1a1aca131480,2,210,210,1,1,1,NA,1
+beta_tau_per (rho + key_decay),6544ff9e0fb2eaaf83e2de5c,2,210,148,0.943,0.952,0.933,0.919,0.953
+beta_tau_per (rho + key_decay),65465ad50fb5c91a7da03f86,2,210,210,1,1,1,NA,1
+beta_tau_per (rho + key_decay),656c8118ba4ac7120453cbc1,2,210,43,0.99,0.981,1,0.994,0.977
+beta_tau_per (rho + key_decay),66019f5e10adbe524f2a844a,2,210,49,0.948,0.914,0.981,0.975,0.857
+beta_tau_per (rho + key_decay),663127d07fb81f5532bcfdad,2,210,155,0.995,0.99,1,0.982,1
+beta_tau_per (rho + key_decay),663b638be7226d4e3fcc255f,2,210,79,0.976,0.952,1,0.962,1
+beta_tau_per (rho + key_decay),665937686712e30718aac2f7,2,210,0,0.99,0.981,1,0.99,NA
+beta_tau_per (rho + key_decay),6668c9df1d76dc85e0f95d40,2,210,18,0.952,0.943,0.962,0.969,0.778
+beta_tau_per (rho + key_decay),6673eea04e15d2d270aa7ff8,2,210,210,1,1,1,NA,1
+beta_tau_per (rho + key_decay),6680071d60b3642bcf5dad37,2,210,13,0.971,0.99,0.952,0.975,0.923
+beta_tau_per (rho + key_decay),6694fb732a72150ebef2c8e4,2,210,64,0.848,0.8,0.895,0.856,0.828
+beta_tau_per (rho + key_decay),6697dd57c4db95eac07db01a,2,210,210,1,1,1,NA,1
+beta_tau_per (rho + key_decay),66986ab71f2b54203f26ad32,2,210,18,0.624,0.6,0.648,0.682,0
+beta_tau_per (rho + key_decay),66b9c3a3e93996ce7d285665,2,210,91,0.986,0.99,0.981,0.983,0.989
+beta_tau_per (rho + key_decay),66c24e9899628532dd846326,2,210,13,0.967,0.962,0.971,0.964,1
+beta_tau_per (rho + key_decay),66d31a1b0515fe747830bab9,2,210,93,0.943,0.99,0.895,0.923,0.968
+beta_tau_per (rho + key_decay),66d5e128d49faf318dd776ec,2,210,55,0.929,0.905,0.952,0.903,1
+beta_tau_per (rho + key_decay),671538a99972f78921900da7,2,210,157,0.995,0.99,1,1,0.994
+beta_tau_per (rho + key_decay),6727c56a4838a57961ee3822,2,210,1,0.971,0.971,0.971,0.971,1
+beta_tau_per (rho + key_decay),6743c8da977b0d274dad1fc2,2,210,210,1,1,1,NA,1
+beta_tau_per (rho + key_decay),67684dd84deabe73a9da9353,2,210,105,0.933,0.933,0.933,0.962,0.905
+beta_tau_per (rho + key_decay),67698c3573d3cbf6add78578,2,210,24,0.957,0.933,0.981,0.957,0.958
+beta_tau_per (rho + key_decay),676ed6c97f59dba5a786886d,2,210,120,0.952,0.99,0.914,0.956,0.95
+beta_tau_per (rho + key_decay),67798247d6fc9e510470baef,2,210,76,0.948,0.933,0.962,0.963,0.921
+beta_tau_per (rho + key_decay),677d87faabcf1e93c8c18c5e,2,210,8,0.967,0.962,0.971,0.97,0.875
+beta_tau_per (rho + key_decay),6783ebc2e89b75d66d952f41,2,210,64,0.971,0.981,0.962,0.966,0.984
+beta_tau_per (rho + key_decay),678e883a9ac653bfb7ff5f1f,2,210,17,0.824,0.695,0.952,0.819,0.882
+beta_tau_per (rho + key_decay),67a66096bc5b99e5261aefc5,2,210,210,1,1,1,NA,1
+beta_tau_per (rho + key_decay),67ca1243e7c4d398474fc95d,2,210,9,0.871,0.819,0.924,0.876,0.778
+beta_tau_per (rho + key_decay),67dc7c814cd5af9421e0476a,2,210,16,0.919,0.905,0.933,0.938,0.688
+beta_tau_per (rho + key_decay),67e0870d582edce0a2764d1f,2,210,8,0.981,0.971,0.99,0.985,0.875
+beta_tau_per (rho + key_decay),67e43d3171f3338caa047245,2,210,55,0.981,0.981,0.981,0.981,0.982
+beta_tau_per (rho + key_decay),680d5891d72bc74e45fb87f1,2,210,75,0.986,1,0.971,1,0.96
+beta_tau_per (rho + key_decay),6913757aae0da25ca51bdb7b,2,210,59,0.924,0.943,0.905,0.927,0.915
+beta_tau_per (rho + key_decay),696ec8093bbc311f3f2b3f16,2,210,137,0.929,0.952,0.905,0.918,0.934
+beta_tau_per (rho + key_decay),696f07b53e3b99a786a261b0,2,210,0,0.981,0.962,1,0.981,NA
+beta_tau_per (rho + key_decay),697171911e8c97f9701b29f0,2,210,4,0.938,0.905,0.971,0.942,0.75
+beta_tau_per (rho + key_decay),6978d224639f15b0bf444a8f,2,210,4,0.981,0.99,0.971,0.985,0.75
+beta_tau_per (rho + key_decay),697bb32b513ce5aec5c6cf3d,2,210,29,0.957,0.943,0.971,0.967,0.897
+beta_tau_per (rho + key_decay),697d24efb667eda3edf789ca,2,210,163,0.962,0.933,0.99,0.979,0.957
+beta_tau_per (rho + key_decay),6991e46740117ca6ef90cd7c,2,210,40,0.9,0.867,0.933,0.929,0.775
+beta_tau_per (rho + key_decay),6997699bfa8589e80145918b,2,210,22,0.952,0.943,0.962,0.957,0.909
+beta_tau_per (rho + key_decay),699ad28882624b23f9713908,2,210,161,0.976,0.962,0.99,1,0.969
+beta_tau_per (rho + key_decay),699f262fc20cdd6f59a2f6c2,2,210,84,0.771,0.676,0.867,0.817,0.702
+beta_tau_per (rho + key_decay),699f83cc468a2f1781f00c12,2,210,181,0.995,0.99,1,0.966,1
+beta_tau_per (rho + key_decay),699fcf6ce8e60730dbfc92ac,2,210,4,0.919,0.905,0.933,0.927,0.5
+beta_tau_per (rho + key_decay),69a6f31da8afde8854c002a8,2,210,26,0.995,1,0.99,1,0.962
+beta_tau_per (rho + key_decay),69ac80d0bad16bd0877001c0,2,210,0,0.957,0.943,0.971,0.957,NA
+beta_tau_per (rho + key_decay),69acf8eb3eee6cc60d19a248,2,210,0,0.914,0.905,0.924,0.914,NA
+beta_tau_per (rho + key_decay),69ad388b63979c96dc085507,2,210,10,0.952,0.924,0.981,0.965,0.7
+beta_tau_per (rho + key_decay),69b0c18da5fae9eb6f4a1fe4,2,210,13,0.957,0.933,0.981,0.964,0.846
+beta_tau_per (rho + key_decay),69bd43b3638c297e98b9f8df,2,210,0,0.857,0.905,0.81,0.857,NA
+beta_tau_per (rho + key_decay),69cb608f3d31d3d72fbff88d,2,210,0,0.724,0.657,0.79,0.724,NA
+beta_tau_per (rho + key_decay),69d68fef496b299d4cd8e08d,2,210,73,0.952,0.952,0.952,0.956,0.945
+beta_tau_per (rho + key_decay),69e847860ae7104bac856107,2,210,4,0.952,0.943,0.962,0.956,0.75
+beta_tau_per (rho + key_decay),69e91fe037d0abdb091c2c05,2,210,34,0.843,0.79,0.895,0.847,0.824
+beta_tau_per (rho + key_decay),69ea32838e63a8af3d4ed1ae,2,210,20,0.962,0.971,0.952,0.958,1
+beta_tau_per (rho + key_decay),69f061c18bcd97022e700b95,2,210,27,0.981,0.99,0.971,0.978,1
+beta_tau_per (rho + key_decay),69f0eddb8814c802224f8bad,2,210,42,1,1,1,1,1
+beta_tau_per (rho + key_decay),69f226b2032dea50182cbd55,2,210,6,0.981,0.971,0.99,0.98,1
+beta_tau_per (rho + key_decay),69f26759e2c3ed8a93c92ede,2,210,93,0.919,0.876,0.962,0.906,0.935
+beta_tau_per (rho + key_decay),69f586544b0395e639960cd5,2,210,13,0.857,0.867,0.848,0.883,0.462
+beta_tau_per (rho + key_decay),69f7666c2ce1f93d57e39940,2,210,6,1,1,1,1,1
+beta_tau_per (rho + key_decay),69f7e812b1abc5db9b1d0eac,2,210,69,0.914,0.905,0.924,0.929,0.884
+beta_tau_per (rho + key_decay),69f8f3101505e3f57a832438,2,210,31,0.952,0.933,0.971,0.95,0.968
+beta_tau_per (rho + key_decay),69f9b0426f86f9ab7020710f,2,210,2,0.948,0.952,0.943,0.952,0.5
+beta_tau_per (rho + key_decay),69fb31c7fd922d9f38394582,2,210,162,0.919,0.905,0.933,0.875,0.932
+beta_tau_per (rho + key_decay),69fb3666fb8ef17497b9514e,2,210,30,0.986,0.981,0.99,0.983,1
+beta_tau_per (rho + key_decay),69fce3ef0b9da8b3ad46eedd,2,210,4,0.938,0.952,0.924,0.937,1
+beta_tau_per (rho + key_decay),69fda5324f331e76e20c603b,2,210,15,0.981,0.981,0.981,0.979,1
+beta_tau_per (rho + key_decay),69ffc3bf55fd97a76c8122f4,2,210,9,0.971,0.962,0.981,0.975,0.889
+beta_tau_per (rho + key_decay),6a00d96b190db7e5ec67cb89,2,210,135,0.981,1,0.962,0.987,0.978
+beta_tau_per (rho + key_decay),6a01b82647e5dd21cd05d8ee,2,210,99,0.986,1,0.971,0.982,0.99
+beta_tau_per (rho + key_decay),6a01c4c8248651c0157c76c5,2,210,154,0.967,0.952,0.981,0.946,0.974
+beta_tau_per (rho + key_decay),6a0211f66d13da71cb35f782,2,210,154,0.876,0.79,0.962,0.643,0.961
+beta_tau_per (rho + key_decay),6a02ed5bd6acf52c07ab46fa,2,210,47,0.981,0.971,0.99,0.975,1
+beta_tau_per (rho + key_decay),6a03092916c4774734733954,2,210,0,1,1,1,1,NA
+beta_tau_per (rho + key_decay),6a0493b0ba30180995ebd884,2,210,2,0.962,0.962,0.962,0.966,0.5
+beta_tau_per (rho + key_decay),6a04a94d6915ae8637f94c84,2,210,210,1,1,1,NA,1
+beta_tau_per (rho + key_decay),6a04b80e14874cdbefac323f,2,210,12,0.976,0.981,0.971,0.975,1
+beta_tau_per (rho + key_decay),6a04e558839eb469fa443cab,2,210,18,0.952,0.933,0.971,0.948,1
+beta_tau_per (rho + key_decay),6a057f4144808bd931bf3671,2,210,110,0.99,0.981,1,0.99,0.991
+beta_tau_per (rho + key_decay),6a07658dda0017a86f04f995,2,210,35,0.886,0.886,0.886,0.897,0.829
+beta_tau_per (rho + key_decay),6a082b5b68b0948671bfa8d5,2,210,2,0.981,0.962,1,0.981,1
+beta_tau_per (rho + key_decay),6a083fbf1cdeeaccf2e04d99,2,210,22,0.967,1,0.933,0.973,0.909
+beta_tau_per (rho + key_decay),6a08cbfafd1950ac6e92a7b4,2,210,2,0.967,0.943,0.99,0.966,1
+beta_tau_per (rho + key_decay),6a0adfcc9de2f1c28b0db58b,2,210,16,1,1,1,1,1
+beta_tau_per (rho + key_decay),6a0b2bdbea2d151e845c3e38,2,210,113,0.967,0.962,0.971,0.969,0.965
+beta_tau_per (rho + key_decay),6a0b2d56064dcea1f84eaa94,2,210,14,0.924,0.933,0.914,0.934,0.786
+beta_tau_per (rho + key_decay),6a0da93c7800f8ed95424872,2,210,43,0.976,0.962,0.99,0.976,0.977
+beta_tau_per (rho + key_decay),6a0e225c055ed1c21f3b90d8,2,210,98,0.948,0.914,0.981,0.982,0.908
+beta_tau_per (rho + key_decay),6a0ec8830dd532d62cde8232,2,210,82,0.995,0.99,1,0.992,1
+beta_tau_per (rho + key_decay),6a106b5d33b08b727cb82c65,2,210,1,0.862,0.876,0.848,0.866,0
+beta_tau_per (rho + key_decay),6a1081e8c16f66fe9595bcaa,2,210,0,0.943,0.943,0.943,0.943,NA
+beta_tau_per (rho + key_decay),6a10ae0279804a41e4d06468,2,210,132,1,1,1,1,1
+beta_tau_per (rho + key_decay),6a10ce25b3fadfdaca9d1914,2,210,98,0.938,0.886,0.99,0.911,0.969
+beta_tau_per (rho + key_decay),6a119f8ef53d50d8dfd81fbf,2,210,0,0.924,0.914,0.933,0.924,NA
+beta_tau_per (rho + key_decay),6a135d0137a8ad16f2590393,2,210,139,0.781,0.581,0.981,0.549,0.899
+beta_tau_per (rho + key_decay),6a16ea99c41f24c9371f4d00,2,210,1,0.848,0.819,0.876,0.852,0
+beta_tau_per (rho + key_decay),6a1712c057793e3bfe739de8,2,210,2,0.933,0.914,0.952,0.938,0.5
+beta_tau_per (rho + key_decay),6a1759a83da9f4ed875b332d,2,210,183,0.995,0.99,1,1,0.995
+beta_tau_per (rho + key_decay),6a19a092d1e2eb2e4b072554,2,210,141,0.914,0.838,0.99,0.754,0.993
+beta_tau_per (rho + key_decay),6a19b14498b3d36bccc467cb,2,210,76,0.9,0.867,0.933,0.881,0.934
+beta_tau_per (rho + key_decay),6a19d9bdc85ad46cebd1ad1b,2,210,2,0.976,0.971,0.981,0.976,1
+beta_tau_per (rho + key_decay),6a1bec05fe75c61cdfc7acbc,2,210,18,0.924,0.886,0.962,0.932,0.833
+beta_tau_per (rho + key_decay),6a1c278d31944f546d54e1b5,2,210,85,0.957,0.943,0.971,0.936,0.988
+beta_tau_per (rho + key_decay),6a1c948e11c0dcbff51b9083,2,210,0,0.948,1,0.895,0.948,NA
+beta_tau_per (rho + key_decay),6a1d9d56cfece324378b6731,2,210,20,0.924,0.933,0.914,0.932,0.85
+beta_tau_per (rho + key_decay),6a1dfa3eaef836ebd308886e,2,210,94,0.971,0.981,0.962,0.983,0.957
+beta_tau_per (rho + key_decay),6a1efce6eacd6a04721457bb,2,210,62,0.91,0.848,0.971,0.899,0.935
+beta_tau_per (rho + key_decay),6a1f148617273ff995df88a0,2,210,31,0.957,0.952,0.962,0.961,0.935
+beta_tau_per (rho + key_decay),6a1f8098dda9c21e70c672cb,2,210,71,0.957,0.943,0.971,0.942,0.986
+beta_tau_per (rho + key_decay),6a205d8176898540335bb525,2,210,57,0.967,0.933,1,0.961,0.982
+beta_tau_per (rho + key_decay),6a216f571e7c4467c10b734b,2,210,22,0.943,0.924,0.962,0.963,0.773
+beta_tau_per (rho + key_decay),6a22c3eb4725e325fd168a95,2,210,43,0.986,0.981,0.99,0.988,0.977
+beta_tau_per (rho + key_decay),6a235cbdc5836f4cd80e70bb,2,210,32,0.933,0.924,0.943,0.933,0.938
+beta_tau_per (rho + key_decay),6a24075160115784d45503dd,2,210,137,0.929,0.905,0.952,0.918,0.934
+beta_tau_per (rho + key_decay),6a4ccfc6206d45c1fa7837fe,2,210,2,0.995,1,0.99,0.995,1
+beta_tau_per (rho + key_decay),6a55022ac3162a7be7ddadd5,2,210,3,0.971,0.971,0.971,0.976,0.667
+beta_tau_per (rho + key_decay),6a5f448dea24d9eb0cf2c204,2,210,104,0.752,0.781,0.724,0.745,0.76
+beta_tau_per (rho + key_decay),6abcc3fd0abc8028e910789f,2,210,88,0.957,0.924,0.99,0.943,0.977
+beta_tau_per (rho + key_decay),6ac246359c0580372ea7d6b7,2,210,0,0.933,0.905,0.962,0.933,NA
+beta_tau_per (rho + key_decay),6ac6adce08f75ef062967577,2,210,135,0.962,0.971,0.952,0.96,0.963
+beta_tau_per (rho + key_decay),6aca37cf2b9a5b9049437587,2,210,209,0.995,0.99,1,0,1
+beta_tau_per (rho + key_decay),6ad913a46985891a10f64be7,2,210,21,0.971,0.971,0.971,0.974,0.952
+"beta_tau_rho (rho, no decay)",544e94c4fdf99b50bd30726c,2,210,7,0.948,0.962,0.933,0.956,0.714
+"beta_tau_rho (rho, no decay)",54dfac92fdf99b4b6b6595d9,2,210,56,0.995,1,0.99,0.994,1
+"beta_tau_rho (rho, no decay)",55d39f64da14d7001295375a,2,210,26,0.962,0.952,0.971,0.957,1
+"beta_tau_rho (rho, no decay)",55ecd6ff748092000daa9f5f,2,210,3,0.933,0.943,0.924,0.947,0
+"beta_tau_rho (rho, no decay)",5689916dd3d6a7000aa1cbf0,2,210,58,0.962,0.981,0.943,0.967,0.948
+"beta_tau_rho (rho, no decay)",571a1295c97ad400123ab3bd,2,210,17,0.938,0.924,0.952,0.964,0.647
+"beta_tau_rho (rho, no decay)",594ee0aa7095f80001da4c4e,2,210,124,0.962,0.962,0.962,0.942,0.976
+"beta_tau_rho (rho, no decay)",5992af75c825cf0001d7d94c,2,210,138,0.957,0.952,0.962,0.958,0.957
+"beta_tau_rho (rho, no decay)",59cb95053306be000195be2e,2,210,64,0.933,0.895,0.971,0.952,0.891
+"beta_tau_rho (rho, no decay)",5a0a057c80acd80001047392,2,210,18,0.952,0.943,0.962,0.948,1
+"beta_tau_rho (rho, no decay)",5b01842bc573030001c345e0,2,210,7,0.905,0.895,0.914,0.916,0.571
+"beta_tau_rho (rho, no decay)",5ba292385301b80001c71ba2,2,210,92,0.986,0.981,0.99,0.992,0.978
+"beta_tau_rho (rho, no decay)",5bd2a0799afb5b00015be460,2,210,158,0.962,0.962,0.962,0.923,0.975
+"beta_tau_rho (rho, no decay)",5be9784e18a71d0001317761,2,210,11,0.962,0.962,0.962,0.96,1
+"beta_tau_rho (rho, no decay)",5bf7be3abd1fd30001aa5498,2,210,107,0.986,0.971,1,0.971,1
+"beta_tau_rho (rho, no decay)",5c27db7f00942400019a0c11,2,210,8,0.976,0.99,0.962,0.98,0.875
+"beta_tau_rho (rho, no decay)",5c7dd22debc24800018e7ca0,2,210,65,0.948,0.943,0.952,0.938,0.969
+"beta_tau_rho (rho, no decay)",5d1ba27e43fc40001e6bef4f,2,210,13,0.933,0.933,0.933,0.939,0.846
+"beta_tau_rho (rho, no decay)",5d68c8aa40524c00189e8ac2,2,210,10,0.995,0.99,1,1,0.9
+"beta_tau_rho (rho, no decay)",5e3723a2c0b2896ad554be73,2,210,34,0.952,0.971,0.933,0.949,0.971
+"beta_tau_rho (rho, no decay)",5e78a08318ee0e41e1bc6a1a,2,210,73,0.995,1,0.99,1,0.986
+"beta_tau_rho (rho, no decay)",5e85f278c880ee1edb7e96ee,2,210,34,0.967,0.971,0.962,0.983,0.882
+"beta_tau_rho (rho, no decay)",5e95a177eaa3cb0177ef6cc9,2,210,26,0.943,0.895,0.99,0.962,0.808
+"beta_tau_rho (rho, no decay)",5ea4cebb8944a8495280db42,2,210,54,0.929,0.914,0.943,0.923,0.944
+"beta_tau_rho (rho, no decay)",5ecd36302b4d3c05d4cc1ba2,2,210,210,1,1,1,NA,1
+"beta_tau_rho (rho, no decay)",5eeb32c541b66f01379faff7,2,210,0,0.952,0.962,0.943,0.952,NA
+"beta_tau_rho (rho, no decay)",5efa33c4e9f4160ffd817db9,2,210,35,0.957,0.943,0.971,0.96,0.943
+"beta_tau_rho (rho, no decay)",5f0c5efb791e025b52cb48b1,2,210,0,0.876,0.848,0.905,0.876,NA
+"beta_tau_rho (rho, no decay)",5f8214581a35f532cee9ea52,2,210,2,0.986,0.981,0.99,0.99,0.5
+"beta_tau_rho (rho, no decay)",5f933255e25f2b0e6f794a54,2,210,19,0.976,1,0.952,0.974,1
+"beta_tau_rho (rho, no decay)",5fb8c5a8bf771b29040065ac,2,210,15,0.99,0.981,1,0.99,1
+"beta_tau_rho (rho, no decay)",5fc3eb06c7a6322c11395528,2,210,92,0.843,0.819,0.867,0.805,0.891
+"beta_tau_rho (rho, no decay)",601129f77e0c21000b0c408a,2,210,42,0.971,0.981,0.962,0.964,1
+"beta_tau_rho (rho, no decay)",602cf4568083d86318913385,2,210,42,0.962,0.99,0.933,0.952,1
+"beta_tau_rho (rho, no decay)",6054ce9cd4e5c96ab84e9113,2,210,119,0.929,0.924,0.933,0.923,0.933
+"beta_tau_rho (rho, no decay)",60656a924c99543d12555b86,2,210,6,0.919,0.933,0.905,0.941,0.167
+"beta_tau_rho (rho, no decay)",60719da557d8241609b26e83,2,210,156,0.981,0.971,0.99,0.963,0.987
+"beta_tau_rho (rho, no decay)",6080359b7e55e8dbf21a225e,2,210,56,0.971,0.952,0.99,0.974,0.964
+"beta_tau_rho (rho, no decay)",608f68107d9ea28c690af9d2,2,210,13,0.943,0.943,0.943,0.944,0.923
+"beta_tau_rho (rho, no decay)",60a252db049918aa001fe65a,2,210,3,0.938,0.933,0.943,0.952,0
+"beta_tau_rho (rho, no decay)",60b78dc1eb46833a5c6b1235,2,210,84,0.933,0.905,0.962,0.937,0.929
+"beta_tau_rho (rho, no decay)",60b932147633bf0dd446941e,2,210,0,0.738,0.695,0.781,0.738,NA
+"beta_tau_rho (rho, no decay)",60de09f7dc5304e0c0f19485,2,210,20,0.948,0.962,0.933,0.953,0.9
+"beta_tau_rho (rho, no decay)",60dfa6a5a12413b99195c3de,2,210,25,0.957,0.933,0.981,0.951,1
+"beta_tau_rho (rho, no decay)",610d4df86c4abc6b5ced6fa0,2,210,41,0.91,0.876,0.943,0.941,0.78
+"beta_tau_rho (rho, no decay)",611870a41de777ae15971e9d,2,210,0,0.929,0.905,0.952,0.929,NA
+"beta_tau_rho (rho, no decay)",6150224c57e32a81a27ccb5a,2,210,8,0.948,0.924,0.971,0.955,0.75
+"beta_tau_rho (rho, no decay)",6152d75634b966697b09920f,2,210,21,1,1,1,1,1
+"beta_tau_rho (rho, no decay)",61656042f505fd7fa53e8628,2,210,189,0.967,0.971,0.962,1,0.963
+"beta_tau_rho (rho, no decay)",61fa936e5719bc09cb834cbe,2,210,2,0.919,0.886,0.952,0.918,1
+"beta_tau_rho (rho, no decay)",6266a4e5846e1e41812a0432,2,210,153,0.962,0.952,0.971,0.877,0.993
+"beta_tau_rho (rho, no decay)",628781515f29a0394e23b15b,2,210,130,0.971,0.952,0.99,0.95,0.985
+"beta_tau_rho (rho, no decay)",632222532c12ab0ab7ca00bd,2,210,57,0.99,0.981,1,0.993,0.982
+"beta_tau_rho (rho, no decay)",63614d513d6883f562b0ff79,2,210,0,0.91,0.876,0.943,0.91,NA
+"beta_tau_rho (rho, no decay)",63af557b3d4f219c3226b7d6,2,210,19,0.924,0.952,0.895,0.927,0.895
+"beta_tau_rho (rho, no decay)",63d7b72765ddb017724e78d3,2,210,6,0.967,0.952,0.981,0.971,0.833
+"beta_tau_rho (rho, no decay)",63ed0392b8b24c34aaf26310,2,210,11,0.971,0.99,0.952,0.97,1
+"beta_tau_rho (rho, no decay)",63ed4ffc9e011d70035477c5,2,210,18,0.981,0.99,0.971,0.995,0.833
+"beta_tau_rho (rho, no decay)",63f7c60b1e096c2df51e3071,2,210,101,0.981,0.971,0.99,0.982,0.98
+"beta_tau_rho (rho, no decay)",63f93b47bb0c1a1aca131480,2,210,210,1,1,1,NA,1
+"beta_tau_rho (rho, no decay)",6544ff9e0fb2eaaf83e2de5c,2,210,148,0.943,0.952,0.933,0.919,0.953
+"beta_tau_rho (rho, no decay)",65465ad50fb5c91a7da03f86,2,210,210,1,1,1,NA,1
+"beta_tau_rho (rho, no decay)",656c8118ba4ac7120453cbc1,2,210,43,0.99,0.981,1,0.994,0.977
+"beta_tau_rho (rho, no decay)",66019f5e10adbe524f2a844a,2,210,49,0.948,0.914,0.981,0.975,0.857
+"beta_tau_rho (rho, no decay)",663127d07fb81f5532bcfdad,2,210,155,0.995,0.99,1,0.982,1
+"beta_tau_rho (rho, no decay)",663b638be7226d4e3fcc255f,2,210,79,0.971,0.943,1,0.954,1
+"beta_tau_rho (rho, no decay)",665937686712e30718aac2f7,2,210,0,0.99,0.981,1,0.99,NA
+"beta_tau_rho (rho, no decay)",6668c9df1d76dc85e0f95d40,2,210,18,0.952,0.943,0.962,0.969,0.778
+"beta_tau_rho (rho, no decay)",6673eea04e15d2d270aa7ff8,2,210,210,1,1,1,NA,1
+"beta_tau_rho (rho, no decay)",6680071d60b3642bcf5dad37,2,210,13,0.971,0.99,0.952,0.975,0.923
+"beta_tau_rho (rho, no decay)",6694fb732a72150ebef2c8e4,2,210,64,0.848,0.81,0.886,0.856,0.828
+"beta_tau_rho (rho, no decay)",6697dd57c4db95eac07db01a,2,210,210,1,1,1,NA,1
+"beta_tau_rho (rho, no decay)",66986ab71f2b54203f26ad32,2,210,18,0.6,0.6,0.6,0.656,0
+"beta_tau_rho (rho, no decay)",66b9c3a3e93996ce7d285665,2,210,91,0.981,0.99,0.971,0.975,0.989
+"beta_tau_rho (rho, no decay)",66c24e9899628532dd846326,2,210,13,0.957,0.933,0.981,0.954,1
+"beta_tau_rho (rho, no decay)",66d31a1b0515fe747830bab9,2,210,93,0.938,0.99,0.886,0.915,0.968
+"beta_tau_rho (rho, no decay)",66d5e128d49faf318dd776ec,2,210,55,0.948,0.933,0.962,0.929,1
+"beta_tau_rho (rho, no decay)",671538a99972f78921900da7,2,210,157,0.995,0.99,1,1,0.994
+"beta_tau_rho (rho, no decay)",6727c56a4838a57961ee3822,2,210,1,0.976,0.981,0.971,0.976,1
+"beta_tau_rho (rho, no decay)",6743c8da977b0d274dad1fc2,2,210,210,1,1,1,NA,1
+"beta_tau_rho (rho, no decay)",67684dd84deabe73a9da9353,2,210,105,0.938,0.943,0.933,0.952,0.924
+"beta_tau_rho (rho, no decay)",67698c3573d3cbf6add78578,2,210,24,0.957,0.933,0.981,0.957,0.958
+"beta_tau_rho (rho, no decay)",676ed6c97f59dba5a786886d,2,210,120,0.952,0.981,0.924,0.956,0.95
+"beta_tau_rho (rho, no decay)",67798247d6fc9e510470baef,2,210,76,0.952,0.943,0.962,0.97,0.921
+"beta_tau_rho (rho, no decay)",677d87faabcf1e93c8c18c5e,2,210,8,0.957,0.952,0.962,0.96,0.875
+"beta_tau_rho (rho, no decay)",6783ebc2e89b75d66d952f41,2,210,64,0.967,0.971,0.962,0.959,0.984
+"beta_tau_rho (rho, no decay)",678e883a9ac653bfb7ff5f1f,2,210,17,0.833,0.695,0.971,0.829,0.882
+"beta_tau_rho (rho, no decay)",67a66096bc5b99e5261aefc5,2,210,210,1,1,1,NA,1
+"beta_tau_rho (rho, no decay)",67ca1243e7c4d398474fc95d,2,210,9,0.857,0.8,0.914,0.861,0.778
+"beta_tau_rho (rho, no decay)",67dc7c814cd5af9421e0476a,2,210,16,0.943,0.933,0.952,0.948,0.875
+"beta_tau_rho (rho, no decay)",67e0870d582edce0a2764d1f,2,210,8,0.976,0.962,0.99,0.98,0.875
+"beta_tau_rho (rho, no decay)",67e43d3171f3338caa047245,2,210,55,0.981,0.981,0.981,0.981,0.982
+"beta_tau_rho (rho, no decay)",680d5891d72bc74e45fb87f1,2,210,75,0.986,1,0.971,1,0.96
+"beta_tau_rho (rho, no decay)",6913757aae0da25ca51bdb7b,2,210,59,0.929,0.943,0.914,0.927,0.932
+"beta_tau_rho (rho, no decay)",696ec8093bbc311f3f2b3f16,2,210,137,0.924,0.952,0.895,0.918,0.927
+"beta_tau_rho (rho, no decay)",696f07b53e3b99a786a261b0,2,210,0,0.967,0.952,0.981,0.967,NA
+"beta_tau_rho (rho, no decay)",697171911e8c97f9701b29f0,2,210,4,0.938,0.905,0.971,0.947,0.5
+"beta_tau_rho (rho, no decay)",6978d224639f15b0bf444a8f,2,210,4,0.981,0.99,0.971,0.985,0.75
+"beta_tau_rho (rho, no decay)",697bb32b513ce5aec5c6cf3d,2,210,29,0.957,0.952,0.962,0.972,0.862
+"beta_tau_rho (rho, no decay)",697d24efb667eda3edf789ca,2,210,163,0.962,0.933,0.99,0.979,0.957
+"beta_tau_rho (rho, no decay)",6991e46740117ca6ef90cd7c,2,210,40,0.9,0.867,0.933,0.935,0.75
+"beta_tau_rho (rho, no decay)",6997699bfa8589e80145918b,2,210,22,0.938,0.924,0.952,0.941,0.909
+"beta_tau_rho (rho, no decay)",699ad28882624b23f9713908,2,210,161,0.976,0.962,0.99,1,0.969
+"beta_tau_rho (rho, no decay)",699f262fc20cdd6f59a2f6c2,2,210,84,0.752,0.638,0.867,0.802,0.679
+"beta_tau_rho (rho, no decay)",699f83cc468a2f1781f00c12,2,210,181,0.995,0.99,1,0.966,1
+"beta_tau_rho (rho, no decay)",699fcf6ce8e60730dbfc92ac,2,210,4,0.929,0.924,0.933,0.937,0.5
+"beta_tau_rho (rho, no decay)",69a6f31da8afde8854c002a8,2,210,26,0.995,1,0.99,1,0.962
+"beta_tau_rho (rho, no decay)",69ac80d0bad16bd0877001c0,2,210,0,0.957,0.943,0.971,0.957,NA
+"beta_tau_rho (rho, no decay)",69acf8eb3eee6cc60d19a248,2,210,0,0.924,0.933,0.914,0.924,NA
+"beta_tau_rho (rho, no decay)",69ad388b63979c96dc085507,2,210,10,0.943,0.914,0.971,0.95,0.8
+"beta_tau_rho (rho, no decay)",69b0c18da5fae9eb6f4a1fe4,2,210,13,0.952,0.924,0.981,0.959,0.846
+"beta_tau_rho (rho, no decay)",69bd43b3638c297e98b9f8df,2,210,0,0.848,0.886,0.81,0.848,NA
+"beta_tau_rho (rho, no decay)",69cb608f3d31d3d72fbff88d,2,210,0,0.719,0.638,0.8,0.719,NA
+"beta_tau_rho (rho, no decay)",69d68fef496b299d4cd8e08d,2,210,73,0.952,0.952,0.952,0.956,0.945
+"beta_tau_rho (rho, no decay)",69e847860ae7104bac856107,2,210,4,0.948,0.943,0.952,0.951,0.75
+"beta_tau_rho (rho, no decay)",69e91fe037d0abdb091c2c05,2,210,34,0.848,0.81,0.886,0.852,0.824
+"beta_tau_rho (rho, no decay)",69ea32838e63a8af3d4ed1ae,2,210,20,0.967,0.971,0.962,0.963,1
+"beta_tau_rho (rho, no decay)",69f061c18bcd97022e700b95,2,210,27,0.971,0.99,0.952,0.967,1
+"beta_tau_rho (rho, no decay)",69f0eddb8814c802224f8bad,2,210,42,1,1,1,1,1
+"beta_tau_rho (rho, no decay)",69f226b2032dea50182cbd55,2,210,6,0.99,0.99,0.99,0.99,1
+"beta_tau_rho (rho, no decay)",69f26759e2c3ed8a93c92ede,2,210,93,0.89,0.829,0.952,0.863,0.925
+"beta_tau_rho (rho, no decay)",69f586544b0395e639960cd5,2,210,13,0.857,0.848,0.867,0.883,0.462
+"beta_tau_rho (rho, no decay)",69f7666c2ce1f93d57e39940,2,210,6,1,1,1,1,1
+"beta_tau_rho (rho, no decay)",69f7e812b1abc5db9b1d0eac,2,210,69,0.886,0.857,0.914,0.901,0.855
+"beta_tau_rho (rho, no decay)",69f8f3101505e3f57a832438,2,210,31,0.943,0.924,0.962,0.939,0.968
+"beta_tau_rho (rho, no decay)",69f9b0426f86f9ab7020710f,2,210,2,0.957,0.962,0.952,0.962,0.5
+"beta_tau_rho (rho, no decay)",69fb31c7fd922d9f38394582,2,210,162,0.91,0.886,0.933,0.854,0.926
+"beta_tau_rho (rho, no decay)",69fb3666fb8ef17497b9514e,2,210,30,0.986,0.99,0.981,0.983,1
+"beta_tau_rho (rho, no decay)",69fce3ef0b9da8b3ad46eedd,2,210,4,0.938,0.943,0.933,0.937,1
+"beta_tau_rho (rho, no decay)",69fda5324f331e76e20c603b,2,210,15,0.967,0.981,0.952,0.964,1
+"beta_tau_rho (rho, no decay)",69ffc3bf55fd97a76c8122f4,2,210,9,0.952,0.933,0.971,0.965,0.667
+"beta_tau_rho (rho, no decay)",6a00d96b190db7e5ec67cb89,2,210,135,0.981,1,0.962,0.987,0.978
+"beta_tau_rho (rho, no decay)",6a01b82647e5dd21cd05d8ee,2,210,99,0.986,1,0.971,0.982,0.99
+"beta_tau_rho (rho, no decay)",6a01c4c8248651c0157c76c5,2,210,154,0.962,0.943,0.981,0.911,0.981
+"beta_tau_rho (rho, no decay)",6a0211f66d13da71cb35f782,2,210,154,0.881,0.8,0.962,0.643,0.968
+"beta_tau_rho (rho, no decay)",6a02ed5bd6acf52c07ab46fa,2,210,47,0.976,0.962,0.99,0.969,1
+"beta_tau_rho (rho, no decay)",6a03092916c4774734733954,2,210,0,1,1,1,1,NA
+"beta_tau_rho (rho, no decay)",6a0493b0ba30180995ebd884,2,210,2,0.962,0.971,0.952,0.966,0.5
+"beta_tau_rho (rho, no decay)",6a04a94d6915ae8637f94c84,2,210,210,1,1,1,NA,1
+"beta_tau_rho (rho, no decay)",6a04b80e14874cdbefac323f,2,210,12,0.995,0.99,1,0.995,1
+"beta_tau_rho (rho, no decay)",6a04e558839eb469fa443cab,2,210,18,0.957,0.933,0.981,0.958,0.944
+"beta_tau_rho (rho, no decay)",6a057f4144808bd931bf3671,2,210,110,0.986,0.971,1,0.98,0.991
+"beta_tau_rho (rho, no decay)",6a07658dda0017a86f04f995,2,210,35,0.89,0.886,0.895,0.897,0.857
+"beta_tau_rho (rho, no decay)",6a082b5b68b0948671bfa8d5,2,210,2,0.981,0.962,1,0.981,1
+"beta_tau_rho (rho, no decay)",6a083fbf1cdeeaccf2e04d99,2,210,22,0.962,1,0.924,0.973,0.864
+"beta_tau_rho (rho, no decay)",6a08cbfafd1950ac6e92a7b4,2,210,2,0.967,0.952,0.981,0.966,1
+"beta_tau_rho (rho, no decay)",6a0adfcc9de2f1c28b0db58b,2,210,16,1,1,1,1,1
+"beta_tau_rho (rho, no decay)",6a0b2bdbea2d151e845c3e38,2,210,113,0.962,0.952,0.971,0.959,0.965
+"beta_tau_rho (rho, no decay)",6a0b2d56064dcea1f84eaa94,2,210,14,0.914,0.933,0.895,0.923,0.786
+"beta_tau_rho (rho, no decay)",6a0da93c7800f8ed95424872,2,210,43,0.976,0.962,0.99,0.976,0.977
+"beta_tau_rho (rho, no decay)",6a0e225c055ed1c21f3b90d8,2,210,98,0.943,0.914,0.971,0.973,0.908
+"beta_tau_rho (rho, no decay)",6a0ec8830dd532d62cde8232,2,210,82,0.995,0.99,1,0.992,1
+"beta_tau_rho (rho, no decay)",6a106b5d33b08b727cb82c65,2,210,1,0.862,0.867,0.857,0.866,0
+"beta_tau_rho (rho, no decay)",6a1081e8c16f66fe9595bcaa,2,210,0,0.952,0.952,0.952,0.952,NA
+"beta_tau_rho (rho, no decay)",6a10ae0279804a41e4d06468,2,210,132,1,1,1,1,1
+"beta_tau_rho (rho, no decay)",6a10ce25b3fadfdaca9d1914,2,210,98,0.948,0.905,0.99,0.929,0.969
+"beta_tau_rho (rho, no decay)",6a119f8ef53d50d8dfd81fbf,2,210,0,0.933,0.914,0.952,0.933,NA
+"beta_tau_rho (rho, no decay)",6a135d0137a8ad16f2590393,2,210,139,0.79,0.6,0.981,0.577,0.899
+"beta_tau_rho (rho, no decay)",6a16ea99c41f24c9371f4d00,2,210,1,0.857,0.838,0.876,0.861,0
+"beta_tau_rho (rho, no decay)",6a1712c057793e3bfe739de8,2,210,2,0.933,0.905,0.962,0.938,0.5
+"beta_tau_rho (rho, no decay)",6a1759a83da9f4ed875b332d,2,210,183,0.995,0.99,1,1,0.995
+"beta_tau_rho (rho, no decay)",6a19a092d1e2eb2e4b072554,2,210,141,0.919,0.848,0.99,0.768,0.993
+"beta_tau_rho (rho, no decay)",6a19b14498b3d36bccc467cb,2,210,76,0.9,0.867,0.933,0.888,0.921
+"beta_tau_rho (rho, no decay)",6a19d9bdc85ad46cebd1ad1b,2,210,2,0.976,0.971,0.981,0.976,1
+"beta_tau_rho (rho, no decay)",6a1bec05fe75c61cdfc7acbc,2,210,18,0.919,0.886,0.952,0.927,0.833
+"beta_tau_rho (rho, no decay)",6a1c278d31944f546d54e1b5,2,210,85,0.957,0.943,0.971,0.936,0.988
+"beta_tau_rho (rho, no decay)",6a1c948e11c0dcbff51b9083,2,210,0,0.929,0.981,0.876,0.929,NA
+"beta_tau_rho (rho, no decay)",6a1d9d56cfece324378b6731,2,210,20,0.919,0.933,0.905,0.926,0.85
+"beta_tau_rho (rho, no decay)",6a1dfa3eaef836ebd308886e,2,210,94,0.971,0.981,0.962,0.983,0.957
+"beta_tau_rho (rho, no decay)",6a1efce6eacd6a04721457bb,2,210,62,0.91,0.857,0.962,0.885,0.968
+"beta_tau_rho (rho, no decay)",6a1f148617273ff995df88a0,2,210,31,0.952,0.943,0.962,0.961,0.903
+"beta_tau_rho (rho, no decay)",6a1f8098dda9c21e70c672cb,2,210,71,0.943,0.914,0.971,0.921,0.986
+"beta_tau_rho (rho, no decay)",6a205d8176898540335bb525,2,210,57,0.981,0.962,1,0.98,0.982
+"beta_tau_rho (rho, no decay)",6a216f571e7c4467c10b734b,2,210,22,0.943,0.933,0.952,0.963,0.773
+"beta_tau_rho (rho, no decay)",6a22c3eb4725e325fd168a95,2,210,43,0.986,0.981,0.99,0.988,0.977
+"beta_tau_rho (rho, no decay)",6a235cbdc5836f4cd80e70bb,2,210,32,0.933,0.914,0.952,0.933,0.938
+"beta_tau_rho (rho, no decay)",6a24075160115784d45503dd,2,210,137,0.924,0.905,0.943,0.904,0.934
+"beta_tau_rho (rho, no decay)",6a4ccfc6206d45c1fa7837fe,2,210,2,0.995,1,0.99,0.995,1
+"beta_tau_rho (rho, no decay)",6a55022ac3162a7be7ddadd5,2,210,3,0.967,0.943,0.99,0.971,0.667
+"beta_tau_rho (rho, no decay)",6a5f448dea24d9eb0cf2c204,2,210,104,0.724,0.743,0.705,0.708,0.74
+"beta_tau_rho (rho, no decay)",6abcc3fd0abc8028e910789f,2,210,88,0.962,0.933,0.99,0.951,0.977
+"beta_tau_rho (rho, no decay)",6ac246359c0580372ea7d6b7,2,210,0,0.943,0.924,0.962,0.943,NA
+"beta_tau_rho (rho, no decay)",6ac6adce08f75ef062967577,2,210,135,0.952,0.952,0.952,0.933,0.963
+"beta_tau_rho (rho, no decay)",6aca37cf2b9a5b9049437587,2,210,209,0.995,0.99,1,0,1
+"beta_tau_rho (rho, no decay)",6ad913a46985891a10f64be7,2,210,21,0.971,0.952,0.99,0.974,0.952
