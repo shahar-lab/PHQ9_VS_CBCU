@@ -34,9 +34,9 @@ parameters {
   matrix[N_subjects, N_options] u_raw;
 
   // Group-level beta parameters
-  real mu_log_beta;
-  real<lower=0> sigma_log_beta;
-  vector[N_subjects] beta_raw;   // non-centered raw term -> beta
+  // (half-normal: beta ~ normal(0, sigma_beta) truncated at 0 by the lower bound)
+  real<lower=0> sigma_beta;
+  vector<lower=0>[N_subjects] beta;
 
   // Group-level tau (Burden Threshold) parameters
   real mu_tau;
@@ -58,8 +58,7 @@ transformed parameters {
   // Constrained utilities
   matrix[N_subjects, N_options] u_matrix;
 
-  // Non-centered reconstructions (raw std-normal * scale + location)
-  vector<lower=0>[N_subjects] beta = exp(mu_log_beta + sigma_log_beta * beta_raw);
+  // Non-centered reconstructions of tau and rho (raw std-normal * scale + location)
   vector[N_subjects] tau = mu_tau + sigma_tau * tau_raw;
   vector[N_subjects] rho = mu_rho + sigma_rho * rho_raw;
   vector[N_subjects] logit_key_decay = mu_logit_key_decay + sigma_key_decay * key_decay_raw;
@@ -98,9 +97,9 @@ transformed parameters {
 
 model {
   // Hierarchical priors, all non-centered (raw ~ std_normal(), scaled/shifted above)
-  mu_log_beta ~ normal(0, 2);
-  sigma_log_beta ~ exponential(2);
-  beta_raw ~ std_normal();
+  // beta: mean fixed at 0 (constant truncation normalizer), centered half-normal
+  sigma_beta ~ normal(0, 3);
+  beta ~ normal(0, sigma_beta);
 
   mu_tau ~ normal(0, 2);
   sigma_tau ~ exponential(2);

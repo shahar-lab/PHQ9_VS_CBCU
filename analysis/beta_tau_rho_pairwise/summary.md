@@ -15,7 +15,7 @@ Fit the rho-only (no-decay) perseveration model to the real data, one fit per wa
 * Participant table (`artifacts/participant_parameters.csv`): posterior medians of `u_1`...`u_15`, `tau`, `beta`, `rho`, joined with PHQ9.
 * No figures yet (test-retest / relationship plots were not requested for this model).
 * Priors are in the `model {}` block of the `.stan` file (centered parameterization, as in `bradley_terry_beta_tau`):
-  `mu_log_beta ~ N(0,2)`, `sigma_log_beta ~ Exp(2)`, `mu_tau ~ N(0,2)`, `sigma_tau ~ Exp(2)`, `mu_rho ~ N(0,2)`, `sigma_rho ~ Exp(2)`, `u_raw ~ N(0,1)`.
+  `sigma_beta ~ N(0,3)` (lower=0), `beta[i] ~ N(0, sigma_beta)` (lower=0, half-normal), `mu_tau ~ N(0,2)`, `sigma_tau ~ Exp(2)`, `mu_rho ~ N(0,2)`, `sigma_rho ~ Exp(2)`, `u_raw ~ N(0,1)`.
 
 ## 3. Findings / Summary
 

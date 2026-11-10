@@ -4,7 +4,7 @@ model <- cmdstan_model(model_path)
 
 fit_list <- vector("list", length(waves)) |> setNames(waves)
 
-hyperparams <- c("mu_log_beta", "sigma_log_beta", "mu_tau", "sigma_tau", "mu_rho", "sigma_rho")
+hyperparams <- c("sigma_beta", "mu_tau", "sigma_tau", "mu_rho", "sigma_rho")
 
 for (wave in waves) {
   fit <- model$sample(

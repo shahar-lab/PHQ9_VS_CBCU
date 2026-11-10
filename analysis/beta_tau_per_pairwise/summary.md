@@ -13,7 +13,7 @@ downstream PHQ9-vs-CBCU association analyses.
 
 **Two fits, one per wave, not per-subject fits.** `bradley_terry_beta_tau_per.stan`
 is hierarchical: it estimates population-level hyperparameters
-(`mu_log_beta`/`sigma_log_beta`, `mu_tau`/`sigma_tau`, `mu_logit_key_decay`/
+(`sigma_beta`, `mu_tau`/`sigma_tau`, `mu_logit_key_decay`/
 `sigma_key_decay`, `mu_rho`/`sigma_rho`) that require pooling across multiple
 subjects within a fit. Splitting into per-subject fits would leave those
 hyperparameters unidentified without modifying the Stan model itself, which is out
@@ -52,9 +52,8 @@ Stan model).
 
 | Parameter | Prior | Justification (from the .stan file) |
 |---|---|---|
-| `mu_log_beta` | Normal(0, 2) | Group-level mean on the log-beta scale; not otherwise commented in the model file. |
-| `sigma_log_beta` | Exponential(2) | Group-level SD on the log-beta scale; not otherwise commented in the model file. |
-| `beta` (subject) | Lognormal(`mu_log_beta`, `sigma_log_beta`) | Lognormal keeps subject-level choice sensitivity strictly positive. |
+| `sigma_beta` | Half-Normal(0, 3) (Normal(0, 3), lower=0) | Group-level scale of subject-level beta. |
+| `beta` (subject) | Half-Normal(0, `sigma_beta`) (Normal(0, `sigma_beta`), lower=0) | Half-normal keeps subject-level choice sensitivity strictly positive. |
 | `mu_tau` | Normal(0, 2) | Group-level mean for the burden-threshold parameter; not otherwise commented. |
 | `sigma_tau` | Exponential(2) | Group-level SD for `tau`; not otherwise commented. |
 | `tau` (subject) | Normal(`mu_tau`, `sigma_tau`) | `tau` is left unconstrained (no lower/upper bound in `parameters {}`). |
