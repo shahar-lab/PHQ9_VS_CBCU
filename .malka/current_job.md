@@ -1,36 +1,51 @@
 Job Card
 JOB
-New model pair: Bradley-Terry beta/tau with alpha_per (learning-rate) perseveration
+Fit bradley_terry_beta_tau_rho_noncentered to the real data; diagnostics, test-retest, relationships between parameters, mirroring analysis/beta_tau_per_pairwise
 FOLDER
-models/bradley_terry_beta_tau_alpha_per/ (new)
+analysis/beta_tau_rho_noncentered/ (new)
 ROUTED READS
-- 03-models/references/how-to-write-a-model-definition.md
+- 02-analysis/smart_clone.md
+- visualization/plot-types/plot-scatter.md
+- visualization/standards/EXPORT_STANDARD.md, COLOR_STANDARD.md
 CHECKS
-- Parameters, task structure, new vs variant, generating/fitting agreements
+- answered below
 SPECIFICATION
-- Variant of models/bradley_terry_beta_tau_per (leave it untouched); same task (N_options symptoms, 2 offered per trial, None option)
-- key_value (slots 1=A, 2=B, 3=None) starts at 0, reset at each subject's first trial
-- Softmax: exp(beta*u1 + rho*key[1]), exp(beta*u2 + rho*key[2]), exp(tau + rho*key[3])
-- Update after choice: key[chosen] += alpha_per*(1 - key[chosen]); key[each unchosen] += alpha_per*(0 - key[unchosen]). No key_decay parameter.
-- Hierarchical non-centered: beta = exp(mu_log_beta + sigma_log_beta*raw); tau, rho normal; alpha_per = inv_logit(mu_logit_alpha + sigma_alpha*raw)
-- Priors: mu_log_beta, mu_tau, mu_rho ~ normal(0,2); mu_logit_alpha ~ normal(0,1.5); ALL FOUR sigmas ~ half-normal(0,2) (normal(0,2) on <lower=0>); raw terms std_normal; u_raw ~ normal(0,1); u_matrix standardized per subject as in existing model
-- Files: bradley_terry_beta_tau_alpha_per.R (sim.block generator, arguments subject,u,beta,tau,alpha_per,rho,cfg) and .stan
+- Source job-folder: analysis/beta_tau_per_pairwise (clone code/ and main.R; empty artifacts/ and output/)
+- Model: models/bradley_terry_beta_tau_rho_noncentered/bradley_terry_beta_tau_rho_noncentered.stan
+- Data: data/processed/cbcu.csv, data/processed/phq.csv; one fit per wave (time1, time2)
+- Priors: as in the .stan file
+- Sampling: 4 chains, 2000 warmup, 2000 sampling
+- Subject estimates: posterior medians of u_1..u_15, beta, tau, rho (no key_decay)
+- Diagnostics per wave: beta_location, beta_scale, tau_location, tau_scale, rho_location, rho_scale
+- Test-retest: u, beta, tau, rho, PHQ9 sum and items
+- Relationships: as in source, plus u vs rho, beta vs rho, tau vs rho per wave, PHQ9 sum / item SD vs rho
+- Plot styles: as in source
 
 Job Card
 JOB
-Parameter-recovery study for the alpha_per model
+Create bradley_terry_beta_tau_rho_noncentered without rho
 FOLDER
-simulation/bradley_terry_beta_tau_alpha_per_recovery/ (new)  -- waits for Job 1
+models/bradley_terry_beta_tau_noncentered/ (new)
 ROUTED READS
-- parameter_recovery/context.md
-- parameter_recovery/template_summary.md
-- 04-simulations/references/how-to-build-a-recovery-pipeline.md
-- 04-simulations/references/how-to-read-recovery.md
-- visualization/plot-scatter.md, plot-dot-histogram.md, standards/COLOR, EXPORT, PANEL_TAGGING
+- 03-models/references/how-to-write-a-model-definition.md
+CHECKS
+- answered below
 SPECIFICATION
-- Clone structure from simulation/bradley_terry_beta_tau_per_recovery, re-pointed to the new model; alpha replaces key_decay (plot_alpha_per_recovery.R)
-- 200 subjects, 15 options, 105 trials
-- True group values: mu_log_beta 0.5/sigma 0.3; mu_tau 0/sigma 1; mu_rho 0/sigma 0.75; mu_logit_alpha 0/sigma 1
-- Stan via cmdstanr, 4 chains, 3000 warmup, 2000 sampling
-- Outputs: individual recovery for u, beta, tau, alpha_per, rho; group-level mu/sigma recovery; combined summary PDF
-- Criteria: r >= 0.75; bias within 10% of true SD; 90% CI coverage 80-95%
+- Same as bradley_terry_beta_tau_rho_noncentered with rho, key_contrib and first_trial_of_subject removed (.stan and .R)
+- Priors for beta, tau, u unchanged; non-centered
+
+Job Card
+JOB
+Fit bradley_terry_beta_tau_noncentered to the real data; same outputs as job 1 without rho
+FOLDER
+analysis/beta_tau_noncentered/ (new)
+ROUTED READS
+- 02-analysis/smart_clone.md
+- visualization/plot-types/plot-scatter.md
+- visualization/standards/EXPORT_STANDARD.md, COLOR_STANDARD.md
+CHECKS
+- answered below
+SPECIFICATION
+- As job 1, model models/bradley_terry_beta_tau_noncentered, no rho anywhere
+- Diagnostics: beta_location, beta_scale, tau_location, tau_scale
+- Waits for job 2
