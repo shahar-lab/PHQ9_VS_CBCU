@@ -1,0 +1,2 @@
+participants,mean_diff_ppa,group_diff_ppa_q05,group_diff_ppa_q95,median_diff_ppa,n_rho_higher_ppa,n_base_higher_ppa,n_rho_higher_90,n_base_higher_90,mean_diff_best,n_rho_higher_best,n_equal_best,n_base_higher_best,mean_agreement,min_agreement,cor_ppa_between_models,cor_diff_ppa_with_rho
+185,0.0027,-7e-4,0.0063,0.0013,152,30,0,0,0.0029,69,80,36,0.9836,0.7476,0.9974,0.1683

@@ -20,6 +20,7 @@ output_dir    <- file.path(project_root, "analysis", "beta_tau_rho_noncentered",
 output_retest_dir    <- file.path(output_dir, "test-retest across sessions")
 output_relations_dir <- file.path(output_dir, "relations between parameters")
 output_repeat_dir    <- file.path(output_dir, "repeat types vs rho")
+output_choice_stay_dir <- file.path(output_dir, "choice and stay rates")
 data_path    <- file.path(project_root, "data", "processed")
 model_path    <- file.path(project_root, "models", "bradley_terry_beta_tau_rho_noncentered", "bradley_terry_beta_tau_rho_noncentered.stan")
 
@@ -28,6 +29,7 @@ if (!dir.exists(output_dir))    dir.create(output_dir, recursive = TRUE)
 if (!dir.exists(output_retest_dir))    dir.create(output_retest_dir, recursive = TRUE)
 if (!dir.exists(output_relations_dir)) dir.create(output_relations_dir, recursive = TRUE)
 if (!dir.exists(output_repeat_dir))    dir.create(output_repeat_dir, recursive = TRUE)
+if (!dir.exists(output_choice_stay_dir)) dir.create(output_choice_stay_dir, recursive = TRUE)
 
 # Sampling
 n_chains   <- 4
@@ -62,6 +64,8 @@ source(file.path(code_dir, "summarise_repeat_types_vs_rho.R"))
 source(file.path(code_dir, "check_average_rho.R"))
 source(file.path(code_dir, "write_repeat_types_report.R"))
 source(file.path(code_dir, "plot_rho_by_repeat_type.R"))
+source(file.path(code_dir, "prep_choice_stay_rates.R"))
+source(file.path(code_dir, "plot_choice_stay_histograms.R"))
 source(file.path(code_dir, "prep_phq9_parameter_summary.R"))
 source(file.path(code_dir, "plot_phq9_parameter_scatter.R"))
 source(file.path(code_dir, "prep_utility_phq9_item_mapping.R"))

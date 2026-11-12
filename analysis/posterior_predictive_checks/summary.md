@@ -102,3 +102,69 @@ For each observed and each simulated sequence, per participant-session:
 ## 6. Findings / Summary
 
 * (Leave this section blank until the code has been run.)
+
+---
+
+## 7. Accuracy of the non-centered models (added 2026-11-11)
+
+**Entry point:** `main_accuracy_noncentered.R` (independent of `main.R`; code files `code/noncentered_*.R`; outputs in `output/accuracy_noncentered/`).
+
+**Models compared:**
+1. `models/bradley_terry_beta_tau_noncentered` (job `analysis/beta_tau_noncentered`): no perseveration.
+2. `models/bradley_terry_beta_tau_rho_noncentered` (job `analysis/beta_tau_rho_noncentered`): one-trial perseveration `rho`.
+
+Both fits are reused, not refit. Note that in these models the None weight is `beta * tau` (not `tau` as in the older pairwise models), and `rho` is
+a bonus for the previous trial's response only (no decay).
+
+### Question
+For each participant, on what share of trials does the model predict the response the participant actually gave? How is that share distributed
+across participants for each model, and how differently do the two models predict?
+
+### Steps
+1. **Inputs** (`noncentered_prep_inputs.R`). Observed trials per wave, ordered as in the fits (`arrange(prolific_id, block, trial)`). Stops if the two jobs'
+   subject lookups differ.
+2. **Draws** (`noncentered_extract_draws.R`). 1000 posterior draws per fit (same seeded indices for both models): `beta`, `tau`, `u_matrix`, and `rho`
+   (set to 0 for beta_tau). Cached in `artifacts/noncentered_draws.rds`, because the fits are 1.5-2.7 GB each.
+3. **Prediction** (`noncentered_predict_accuracy.R`). For every draw, participant-session and trial, the probabilities of A, B and None are computed
+   exactly as in the Stan model. The `rho` bonus goes to the **observed** previous response (one-step-ahead prediction). This is how the model is fit,
+   and it is the fair test of whether the model predicts the next response. (The full-sequence simulation in `main.R` lets rho follow its own simulated history,
+   which removes most of what rho can predict.)
+   * **Posterior predictive accuracy (main measure).** Per draw, one response is drawn on every trial from the model's probabilities. Accuracy is the share
+     of trials where the drawn response equals the observed one. Across the 1000 draws this gives the posterior predictive distribution of the participant's
+     accuracy, summarised by its mean and central 90% interval.
+   * **Best-guess accuracy.** The single most probable response per trial (posterior-mean probabilities), compared with the observed response.
+   * Both sessions are pooled per participant (up to 210 trials); per-session means are also reported.
+4. **Histograms per model** (`noncentered_plot_accuracy.R`). One value per participant (the mean of their accuracy distribution), with the median
+   participant and chance (1/3) marked.
+5. **Comparison** (`noncentered_compare_accuracy.R`). Per participant: the accuracy difference (beta_tau_rho minus beta_tau) with a 90% interval over draws,
+   the best-guess difference, the **agreement** between the two models' best guesses (how differently they predict, whoever is right), and the difference
+   plotted against the participant's `rho`.
+
+### Outputs (`output/accuracy_noncentered/`)
+* `accuracy_per_participant.csv`: per model and participant: posterior predictive accuracy (mean, 5%, 95%, per session) and best-guess accuracy (all trials, A/B trials, skip trials).
+* `accuracy_summary_by_model.csv`: per model: group mean accuracy with its posterior predictive 90% interval, median, range, best-guess accuracy.
+* `accuracy_histogram_beta_tau.pdf/.png`, `accuracy_histogram_beta_tau_rho.pdf/.png`: the histogram per model (page 2 of the PDF: best-guess accuracy).
+* `accuracy_group_mean_distribution.pdf`: posterior predictive distribution of the group mean accuracy, both models.
+* `accuracy_model_comparison_per_participant.csv`, `accuracy_model_comparison_summary.csv`: the comparison numbers.
+* `accuracy_model_comparison.pdf/.png`: (A) both histograms on a shared axis, (B) participant-by-participant scatter, (C) histogram of the difference,
+  (D) difference against `rho`; page 2: agreement between the models' best guesses, best-guess scatter.
+
+### Limitations
+* The data are used twice (the same trials fit the model and are predicted), so the accuracies are optimistic. They describe how well each model accounts for the data,
+  not how well it would predict new trials.
+* Posterior predictive accuracy includes the randomness of drawing a response, so it is lower than best-guess accuracy whenever the model is uncertain.
+  A model that put probability 0.6 on the right response every trial would score about 60% on the first measure and 100% on the second.
+
+### Findings (run 2026-11-11, 185 participants, 1000 draws per fit)
+* **Both models predict most responses.** Posterior predictive accuracy averages 89.8% (90% interval 89.5-90.0%) for beta_tau and 90.0% (89.8-90.3%) for
+  beta_tau_rho. The median participant is at 91.2% under both models. Best-guess accuracy is higher: 94.4% vs 94.7% on average, median 95.7% for both.
+* **The histograms are nearly identical.** Most participants are between 85% and 100%. A tail of 16-17 participants falls below 80%, with the lowest at 48% (beta_tau) and 52% (beta_tau_rho).
+  No participant is near chance (33%).
+* **The two models predict almost the same responses.** Their best guesses agree on 98.4% of trials on average (lowest participant: 75%). Per-participant
+  accuracies correlate at r = 0.997 between the models.
+* **rho adds a small but consistent gain.** beta_tau_rho is higher for 152 of 185 participants, but the gain is small: mean +0.27 percentage points (pp), median +0.13 pp.
+  The group-level 90% interval of the gain (-0.07 to +0.63 pp) includes 0. No single participant's 90% interval excludes 0, because each interval also carries the
+  randomness of drawing a response. On best-guess accuracy, rho is better for 69 participants, equal for 80 and worse for 36.
+* **The gain concentrates in the poorly fit participants.** Gains of 2-6 pp occur only among participants whose beta_tau accuracy is below about 80%. The gain is only weakly
+  related to the participant's posterior mean rho (r = 0.17). Some of the largest gains come from participants with rho near 0 or even negative, so rho may be absorbing
+  other misfit there, not only key repetition.

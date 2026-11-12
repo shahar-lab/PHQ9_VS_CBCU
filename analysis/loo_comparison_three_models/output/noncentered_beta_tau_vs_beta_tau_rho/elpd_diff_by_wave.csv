@@ -1,0 +1,4 @@
+time,n_trials,elpd_diff,se_diff,share_k_gt_threshold_beta_tau,share_k_gt_threshold_beta_tau_rho,z
+time1,19425,68.754,12.886,0.07,0.081,5.336
+time2,19425,41.881,9.796,0.105,0.115,4.275
+both waves,38850,110.635,16.187,0.087,0.098,6.835

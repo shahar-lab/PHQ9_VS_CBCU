@@ -1,0 +1,3 @@
+model,participants,ppa_group_mean,ppa_group_mean_q05,ppa_group_mean_q95,ppa_median_participant,ppa_min,ppa_max,best_guess_acc_mean,best_guess_acc_median
+beta_tau,185,0.8978,0.8953,0.9002,0.9122,0.4794,0.9982,0.9445,0.9571
+beta_tau_rho,185,0.9005,0.8981,0.903,0.9122,0.515,0.9981,0.9473,0.9571

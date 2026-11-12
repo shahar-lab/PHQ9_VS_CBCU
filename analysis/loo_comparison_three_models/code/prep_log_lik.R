@@ -5,25 +5,28 @@
 
 waves <- c("time1", "time2")
 
-# model label -> job artifacts folder and fit-file prefix
-models <- list(
-  "beta_tau (no perseveration)"            = list(dir = job_dirs$base, prefix = "bt_fit_"),
-  "beta_tau_rho (rho, no decay)"           = list(dir = job_dirs$rho,  prefix = "bt_rho_fit_"),
-  "beta_tau_per (rho + key_decay)"         = list(dir = job_dirs$per,  prefix = "bt_per_fit_")
-)
-
 # All jobs must list the same participants (same trial order: prolific_id, block, trial)
-for (wave in waves) {
-  lookups <- map(job_dirs, \(d) as.data.frame(read_csv(file.path(d, paste0("subject_lookup_", wave, ".csv")), show_col_types = FALSE)))
+subject_lookup <- map(waves, \(wave) {
+  lookups <- map(models, \(m) as.data.frame(read_csv(file.path(m$dir, paste0("subject_lookup_", wave, ".csv")), show_col_types = FALSE)))
   # as.data.frame + all.equal: read_csv attaches per-file spec/problems attributes that make identical() fail
-  stopifnot(isTRUE(all.equal(lookups$base, lookups$rho, check.attributes = FALSE)),
-            isTRUE(all.equal(lookups$base, lookups$per, check.attributes = FALSE)))
-}
+  for (k in seq_along(lookups)[-1]) stopifnot(isTRUE(all.equal(lookups[[1]], lookups[[k]], check.attributes = FALSE)))
+  as_tibble(lookups[[1]])
+}) |> setNames(waves)
+
+# Which participant-session each log_lik column belongs to (same order as the fits: 105 trials per subject)
+trial_index <- map_dfr(waves, \(wave) {
+  n_subjects <- nrow(subject_lookup[[wave]])
+  tibble(time = wave,
+         prolific_id = rep(subject_lookup[[wave]]$prolific_id, each = 105),
+         trial = rep(seq_len(105), times = n_subjects))
+})
 
 # Returns the (draws x trials) log_lik matrix and per-trial relative ESS for one fit
 extract_log_lik <- function(fit_path) {
+  message("Loading ", fit_path)
   fit      <- readRDS(fit_path)
   ll_array <- fit$draws("log_lik", format = "draws_array")
+  rm(fit); gc()
   ll_mat   <- as.matrix(as_draws_matrix(ll_array))
   r_eff    <- relative_eff(exp(ll_array))
   list(log_lik = ll_mat, r_eff = r_eff)
@@ -38,5 +41,6 @@ ll_by_model <- map(models, \(m) {
 
 stopifnot(
   length(unique(map_int(ll_by_model, \(m) ncol(m$log_lik)))) == 1,
-  length(unique(map_int(ll_by_model, \(m) nrow(m$log_lik)))) == 1
+  length(unique(map_int(ll_by_model, \(m) nrow(m$log_lik)))) == 1,
+  ncol(ll_by_model[[1]]$log_lik) == nrow(trial_index)
 )

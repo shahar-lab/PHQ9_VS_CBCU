@@ -1,0 +1,3 @@
+subset,n_trials,elpd_diff,se_diff,share_k_gt_threshold_beta_tau,share_k_gt_threshold_beta_tau_rho,n_sessions,z
+flagged sessions,14280,9.9,6.09,0.202,0.229,136,1.626
+not flagged,24570,100.735,14.994,0.021,0.021,234,6.718
