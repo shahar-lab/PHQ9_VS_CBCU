@@ -66,12 +66,12 @@ model {
   // Priors
   // beta ~ lognormal(beta_location, beta_scale), written non-centered;
   // the hyperparameters are on the log scale
-  beta_location ~ normal(1, 1);   // typical beta ~ exp(1) = 2.7
+  beta_location ~ normal(2, 1.5);   // typical beta ~ exp(2) = 7.39
   beta_scale ~ normal(0, 1);      // half-normal
   beta_raw ~ std_normal();
 
-  tau_location ~ normal(0, 2);
-  tau_scale ~ normal(0, 2);       // half-normal
+  tau_location ~ normal(0, 1.5);
+  tau_scale ~ normal(0, 1.5);       // half-normal
   tau_raw ~ std_normal();
 
   // Utility prior: needed for identification, not just regularization.
