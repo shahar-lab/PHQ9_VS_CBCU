@@ -23,6 +23,11 @@ data {
   array[N_trials] int<lower=1, upper=3> choice;   // 1 = A, 2 = B, 3 = None
 }
 
+transformed data {
+  // Prior SD for the sum-to-zero utilities (see the u prior in the model block)
+  real u_prior_sd = sqrt(N_options / (N_options - 1.0));
+}
+
 parameters {
   array[N_subjects] sum_to_zero_vector[N_options] u;   // utilities per subject
 
@@ -69,10 +74,17 @@ model {
   tau_scale ~ normal(0, 2);       // half-normal
   tau_raw ~ std_normal();
 
-  // Gives each utility a marginal SD of 1 under the sum-to-zero constraint;
-  // this also fixes the scale of u relative to beta
+  // Utility prior: needed for identification, not just regularization.
+  // The likelihood only sees beta * u and beta * tau, so scaling u and tau
+  // by c and beta by 1/c leaves it unchanged. Sum-to-zero fixes the mean of
+  // u but not its spread; this prior fixes the spread (SD ~1), and with it
+  // the scale of beta.
+  // Why u_prior_sd = sqrt(N / (N - 1)) and not 1: forcing N values to sum to
+  // zero shrinks each one's marginal SD by sqrt((N - 1) / N). Scaling the
+  // prior SD up by the inverse gives each utility a marginal SD of exactly 1
+  // (as in the Stan User's Guide).
   for (i in 1:N_subjects) {
-    u[i] ~ normal(0, sqrt(N_options / (N_options - 1.0)));
+    u[i] ~ normal(0, u_prior_sd);
   }
 
   // Likelihood
