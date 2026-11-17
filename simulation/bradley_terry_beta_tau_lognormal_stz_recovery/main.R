@@ -64,7 +64,7 @@ source(file.path(code_dir, "03_generate_data.R"))
 #### RECOVERING PARAMETERS ####
 
 n_chains   <- 4
-n_warmup   <- 1000
+n_warmup   <- 2000   # 1000 left one chain stuck: adaptation ended before it reached the posterior
 n_sampling <- 2000
 
 source(file.path(code_dir, "04_fit_model.R"))
@@ -77,3 +77,17 @@ source(file.path(code_dir, "06_plot_individual_recovery.R"))
 source(file.path(code_dir, "07_plot_population_posteriors.R"))
 source(file.path(code_dir, "08_plot_parameter_relationships.R"))
 source(file.path(code_dir, "09_compile_recovery_pdf.R"))
+
+# Utility recovery split by subjects' true beta and tau: lowest and highest
+# extreme_quantile of subjects vs the middle, and n_quantile_groups equal-sized groups
+extreme_quantile  <- 0.10
+n_quantile_groups <- 10
+source(file.path(code_dir, "11_plot_u_recovery_by_extremes.R"))
+
+# Utility uncertainty: mean 95% HDI width of the 15 utilities vs posterior mean beta and tau
+source(file.path(code_dir, "12_utility_hdi_vs_beta_tau.R"))
+
+
+#### MCMC DIAGNOSTICS ####
+
+source(file.path(code_dir, "10_mcmc_diagnostics.R"))
