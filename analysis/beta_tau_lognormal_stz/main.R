@@ -26,7 +26,7 @@ if (!dir.exists(output_relations_dir)) dir.create(output_relations_dir, recursiv
 # Sampling
 n_chains   <- 4
 n_warmup   <- 2000
-n_sampling <- 2000
+n_sampling <- 4000
 
 #### EXECUTE PIPELINE ####
 

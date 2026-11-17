@@ -33,7 +33,7 @@ are all transformed parameters, so they are in the saved draws.
 subjects in that wave, with its own subject-index lookup
 (`artifacts/subject_lookup_time1.csv`, `artifacts/subject_lookup_time2.csv`).
 
-**Sampling.** 4 chains, 2000 warmup, 2000 sampling iterations per wave (set in `main.R`).
+**Sampling.** 4 chains, 2000 warmup, 4000 sampling iterations per wave (set in `main.R`).
 
 **Posterior summary: median.** Participant-level estimates (`u_1`...`u_15`, `beta`,
 `tau`) are posterior medians.
