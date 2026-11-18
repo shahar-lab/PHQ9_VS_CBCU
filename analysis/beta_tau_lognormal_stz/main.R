@@ -10,10 +10,19 @@ library(bayesplot)
 library(gridExtra)
 library(patchwork)
 
+# Each fit writes to its own folders, so a new fit never overwrites an earlier one.
+# run_name = "" -> artifacts/ and output/: the first fit, with the wide beta prior
+#   beta_location ~ normal(2, 1.5), beta_scale ~ half-normal(0, 1)
+# run_name = "beta_prior_narrow" -> artifacts_beta_prior_narrow/ and output_beta_prior_narrow/:
+#   beta_location ~ normal(2, 0.75), beta_scale ~ half-normal(0, 0.5)
+# The prior itself is set in the .stan file; run_name only names the folders.
+run_name   <- "beta_prior_narrow"
+run_suffix <- if (run_name == "") "" else paste0("_", run_name)
+
 project_root  <- here::here()
 code_dir      <- file.path(project_root, "analysis", "beta_tau_lognormal_stz", "code")
-artifacts_dir <- file.path(project_root, "analysis", "beta_tau_lognormal_stz", "artifacts")
-output_dir    <- file.path(project_root, "analysis", "beta_tau_lognormal_stz", "output")
+artifacts_dir <- file.path(project_root, "analysis", "beta_tau_lognormal_stz", paste0("artifacts", run_suffix))
+output_dir    <- file.path(project_root, "analysis", "beta_tau_lognormal_stz", paste0("output", run_suffix))
 output_retest_dir    <- file.path(output_dir, "test-retest across sessions")
 output_relations_dir <- file.path(output_dir, "relations between parameters")
 data_path    <- file.path(project_root, "data", "processed")

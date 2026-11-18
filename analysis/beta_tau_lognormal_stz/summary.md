@@ -35,6 +35,13 @@ subjects in that wave, with its own subject-index lookup
 
 **Sampling.** 4 chains, 2000 warmup, 4000 sampling iterations per wave (set in `main.R`).
 
+**Runs (separate folders, set by `run_name` in `main.R`).**
+* `artifacts/`, `output/`: first fit, wide beta prior (`beta_location ~ normal(2, 1.5)`,
+  `beta_scale ~ half-normal(0, 1)`).
+* `artifacts_beta_prior_narrow/`, `output_beta_prior_narrow/`: narrower beta prior
+  (`beta_location ~ normal(2, 0.75)`, `beta_scale ~ half-normal(0, 0.5)`); implied beta
+  97.5% quantile ~44 instead of ~258.
+
 **Posterior summary: median.** Participant-level estimates (`u_1`...`u_15`, `beta`,
 `tau`) are posterior medians.
 
