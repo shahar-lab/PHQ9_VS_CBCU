@@ -66,8 +66,8 @@ model {
   // Priors
   // beta ~ lognormal(beta_location, beta_scale), written non-centered;
   // the hyperparameters are on the log scale
-  beta_location ~ normal(2, 1.5);   // typical beta ~ exp(2) = 7.39
-  beta_scale ~ normal(0, 1);      // half-normal
+  beta_location ~ normal(2, 0.75);   // typical beta ~ exp(2) = 7.39
+  beta_scale ~ normal(0, 0.5);      // half-normal
   beta_raw ~ std_normal();
 
   tau_location ~ normal(0, 1.5);

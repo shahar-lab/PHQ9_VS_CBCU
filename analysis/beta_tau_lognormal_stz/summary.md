@@ -38,6 +38,23 @@ subjects in that wave, with its own subject-index lookup
 **Posterior summary: median.** Participant-level estimates (`u_1`...`u_15`, `beta`,
 `tau`) are posterior medians.
 
+**Beta test-retest with full posteriors** (`code/plot_beta_test_retest_posterior.R` →
+`output/test-retest across sessions/beta_test_retest_posterior_scatter.png`;
+`artifacts/beta_draws_by_wave.rds`). A version of `beta_test_retest_scatter.png` that
+shows the full time 2 posterior instead of the time 2 median: each participant sits at
+their time 1 posterior median on the x axis, with a vertical violin of their time 2
+posterior draws (0.5%-99.5% quantiles) and the time 2 median as a dot. Panel A:
+participants with time 1 median beta > 7 (`beta_threshold_time1`); panel B: <= 7. Shared
+y axis; log axes, since beta is lognormal with long posterior tails. Each panel reports
+the Pearson r of the log medians.
+
+**Beta posterior width vs beta** (`code/plot_beta_posterior_width.R` →
+`output/beta_posterior_width.png`; `artifacts/beta_posterior_width.csv`). Per participant
+and wave, the width of the 95% HDI of beta against its posterior median: (A) in beta
+units, (B) on the log scale (relative width). Both rise with beta (Spearman rho 0.98 and
+~0.89 in both waves): high-beta participants are measured less precisely, also in
+relative terms.
+
 **Join behavior.** PHQ9 is left-joined onto the parameter table by `(prolific_id, time)`.
 
 ## 3. Priors
