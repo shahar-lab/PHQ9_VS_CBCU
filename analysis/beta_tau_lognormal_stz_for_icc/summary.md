@@ -64,6 +64,34 @@ relative terms.
 
 **Join behavior.** PHQ9 is left-joined onto the parameter table by `(prolific_id, time)`.
 
+**Beta ICC with measurement error** (`code/fit_icc_beta.R` → `output/test-retest across
+sessions/icc_beta.csv`, `icc_beta_posterior.png`; `output/diagnostic_icc_beta.pdf`;
+`artifacts/brms_icc_beta_me.rds`, `artifacts/beta_icc_data.csv`). Hypothesis 2, eq. [3]–[4]
+on log(beta), with a measurement layer: per participant and day, the posterior mean of
+log(beta) is the outcome and its posterior SD is a known standard error,
+`log_beta | se(se_log_beta, sigma = TRUE) ~ 1 + (1 | id)`. ICC = sd(id)² / (sd(id)² + sigma²)
+per posterior draw; reports median, 95% CrI and P(ICC > 0.80). Priors (log scale):
+Intercept ~ Normal(1.5, 1), sd(id) ~ half-t(3, 0, 1), sigma ~ half-t(3, 0, 1).
+185 participants with both days. Only the measurement-error model is fit (no plain model).
+**Superseded by the joint model below.** Result: ICC 0.96 (95% CrI 0.82–1.00), sigma ~0.09,
+but the posterior predictive check failed: predicted day 1 vs day 2 r of the point estimates
+0.54 (0.42–0.64) vs observed 0.67. The posterior SDs overstate the noise in the posterior
+means (each per-session fit shrinks beta toward its own population mean), so the model
+attributes almost all day-to-day change to estimation error and the ICC is too high.
+
+**Joint model for the beta ICC** (`models/bradley_terry_beta_tau_lognormal_stz_joint_icc/`;
+`code/prep_data_joint.R`, `code/fit_model_joint.R`, `code/icc_beta_joint.R` →
+`artifacts/fit_joint.rds`, `artifacts/unit_lookup_joint.csv`, `output/diagnostic_joint.pdf`,
+`output/test-retest across sessions/icc_beta_joint.csv`, `icc_beta_joint_posterior.png`).
+One Bradley-Terry fit to both sessions. A unit = one participant in one session, with its
+own `u`, `beta`, `tau`. Hypothesis 2, eq. [3] is the prior on beta:
+`log(beta_ij) = b_0 + b_0i + e_ij`, `b_0i ~ N(0, sigma_b²)`, `e_ij ~ N(0, sigma_e²)`, no
+session effect (absolute agreement). `icc_beta = sigma_b² / (sigma_b² + sigma_e²)` is in
+generated quantities, so beta's uncertainty is accounted for directly, without the two-step
+approximation. `tau` keeps a separate location and scale per session; `u` prior unchanged.
+Priors: `b_0 ~ N(2, 0.75)`, `sigma_b`, `sigma_e ~ half-N(0, 0.5)` (the narrow beta prior of
+the per-session model). No `log_lik` output, to keep the output files small.
+
 ## 3. Priors
 
 Defined in the `.stan` file's `model {}` block.

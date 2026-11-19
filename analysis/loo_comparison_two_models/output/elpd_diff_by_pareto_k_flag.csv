@@ -1,0 +1,3 @@
+subset,n_trials,elpd_diff,se_diff,share_k_gt_threshold_lognormal,share_k_gt_threshold_halfnormal,n_sessions,z
+flagged sessions,9975,-49.321,3.718,0.239,0.17,95,-13.265
+not flagged,28875,-10.914,5.05,0.023,0.024,275,-2.161

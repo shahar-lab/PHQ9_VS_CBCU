@@ -1,0 +1,4 @@
+time,n_trials,elpd_diff,se_diff,share_k_gt_threshold_lognormal,share_k_gt_threshold_halfnormal,z
+time1,19425,-26.684,4.447,0.067,0.051,-6.001
+time2,19425,-33.551,4.44,0.09,0.073,-7.557
+both waves,38850,-60.235,6.284,0.078,0.062,-9.586

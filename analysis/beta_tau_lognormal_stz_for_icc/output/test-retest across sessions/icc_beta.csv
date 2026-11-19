@@ -1,0 +1,2 @@
+parameter,model,n_participants,icc_median,icc_lower_95,icc_upper_95,p_icc_above_0.80,sigma_b_median,sigma_e_median
+log(beta),random intercept + measurement error (se),185,0.9599125904602926,0.8183138177238417,0.9998604884746787,0.98525,0.444438175,0.091069425

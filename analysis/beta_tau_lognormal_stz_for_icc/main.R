@@ -29,6 +29,7 @@ output_retest_dir    <- file.path(output_dir, "test-retest across sessions")
 output_relations_dir <- file.path(output_dir, "relations between parameters")
 data_path    <- file.path(project_root, "data", "processed")
 model_path    <- file.path(project_root, "models", "bradley_terry_beta_tau_lognormal_stz", "bradley_terry_beta_tau_lognormal_stz.stan")
+model_path_joint <- file.path(project_root, "models", "bradley_terry_beta_tau_lognormal_stz_joint_icc", "bradley_terry_beta_tau_lognormal_stz_joint_icc.stan")
 
 if (!dir.exists(artifacts_dir)) dir.create(artifacts_dir, recursive = TRUE)
 if (!dir.exists(output_dir))    dir.create(output_dir, recursive = TRUE)
@@ -40,6 +41,10 @@ n_chains   <- 4
 n_warmup   <- 2000
 n_sampling <- 4000
 
+# Sampling, joint model (both sessions in one fit; ~2x the trials of a per-session fit)
+n_warmup_joint   <- 1000
+n_sampling_joint <- 2000
+
 #### EXECUTE PIPELINE ####
 
 source(file.path(code_dir, "prep_data.R"))
@@ -50,6 +55,13 @@ source(file.path(code_dir, "plot_utility_test_retest.R"))
 source(file.path(code_dir, "plot_scalar_param_test_retest.R"))
 source(file.path(code_dir, "plot_beta_test_retest_posterior.R"))
 source(file.path(code_dir, "plot_beta_posterior_width.R"))   # needs beta_draws_by_wave.rds from the line above
+source(file.path(code_dir, "fit_icc_beta.R"))                # two-step ICC of log(beta); superseded by the joint model below
+
+# Joint model: both sessions in one fit, with the log(beta) test-retest model inside it.
+# Standalone: needs only the SETUP block above.
+source(file.path(code_dir, "prep_data_joint.R"))
+source(file.path(code_dir, "fit_model_joint.R"))
+source(file.path(code_dir, "icc_beta_joint.R"))
 source(file.path(code_dir, "plot_cross_parameter_scatter.R"))
 source(file.path(code_dir, "prep_phq9_parameter_summary.R"))
 source(file.path(code_dir, "plot_phq9_parameter_scatter.R"))
