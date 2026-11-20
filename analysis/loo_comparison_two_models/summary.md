@@ -46,6 +46,11 @@ normal truncated at 0 ("half-normal")?
   Pareto-k shares, `beta` and `tau` from both models, flag. Figure: (A) histogram of the per-session
   difference, (B) difference vs the session's `beta` (lognormal model), (C) `beta` in the two models,
   coloured by the difference.
+* `output/beta_agreement_by_tau_bin.pdf` / `.png`: panel C split into 5 panels by tau. Each participant's tau
+  (posterior median, lognormal model) is averaged over their sessions, and participants are split into 5
+  equal-count bins (quintiles) of that mean; both sessions of a participant fall in the same bin. All panels
+  share the same x and y range and are square (`n_tau_bins` in `code/compare_by_participant.R`).
+* `output/tau_bins_per_participant.csv`: each participant's mean tau, number of sessions and tau bin.
 * `artifacts/loo_objects.rds`: the two `loo` objects.
 
 ## 4. Findings / Summary

@@ -110,6 +110,8 @@ p_beta <- df_session |>
   theme(legend.position = "bottom")
 
 # C: how much the two models disagree on each session's beta
+# Same range on both axes (and a square panel), so the dashed identity line is the diagonal
+beta_limits <- range(c(df_session[[paste0("beta_", model_a)]], df_session[[paste0("beta_", model_b)]]), na.rm = TRUE)
 p_beta_agreement <- df_session |>
   ggplot(aes(x = .data[[paste0("beta_", model_a)]], y = .data[[paste0("beta_", model_b)]])) +
   geom_abline(slope = 1, intercept = 0, linetype = "dashed", colour = "grey50") +
@@ -118,6 +120,7 @@ p_beta_agreement <- df_session |>
                          name = sprintf("elpd diff\n(%s)", diff_label)) +
   scale_x_log10(breaks = log_breaks, labels = as.character(log_breaks)) +
   scale_y_log10(breaks = log_breaks, labels = as.character(log_breaks)) +
+  coord_equal(xlim = beta_limits, ylim = beta_limits) +
   labs(title = "C. beta in the two models",
        subtitle = "Posterior medians per participant-session. Dashed: equal.",
        x = sprintf("beta, %s model (log axis)", model_a),
@@ -131,3 +134,57 @@ pdf(file.path(output_dir, "elpd_diff_per_participant_session.pdf"), width = 19, 
 print(p_session)
 dev.off()
 ggsave(file.path(output_dir, "elpd_diff_per_participant_session.png"), p_session, width = 19, height = 6.5, dpi = 130)
+
+#### PANEL C SPLIT BY TAU ####
+# Participants are split into n_tau_bins equal-count bins (quintiles) of their tau, averaged
+# over the sessions they have (tau = posterior median from the reference model, model_a).
+# Both sessions of a participant fall in the same bin. All panels share the same x and y range
+# (beta_limits, as in panel C) and are square, so the dashed identity line is the diagonal.
+
+n_tau_bins <- 5
+tau_col    <- paste0("tau_", model_a)
+
+df_tau_bin <- df_session |>
+  group_by(prolific_id) |>
+  summarise(tau_mean = mean(.data[[tau_col]], na.rm = TRUE), n_sessions = n(), .groups = "drop") |>
+  mutate(tau_bin = ntile(tau_mean, n_tau_bins))
+
+# Panel labels: bin number, tau range, and participant / session counts
+tau_bin_labels <- df_tau_bin |>
+  group_by(tau_bin) |>
+  summarise(label = sprintf("Tau bin %d: mean tau %.2f to %.2f\n(%d participants, %d sessions)",
+                            first(tau_bin), min(tau_mean), max(tau_mean), n(), sum(n_sessions)),
+            .groups = "drop")
+
+df_session_tau <- df_session |>
+  left_join(select(df_tau_bin, prolific_id, tau_mean, tau_bin), by = "prolific_id") |>
+  left_join(tau_bin_labels, by = "tau_bin") |>
+  mutate(label = factor(label, levels = tau_bin_labels$label))
+
+write_csv(df_tau_bin |> mutate(tau_mean = round(tau_mean, 4)),
+          file.path(output_dir, "tau_bins_per_participant.csv"))
+print(df_session_tau |>
+        group_by(tau_bin) |>
+        summarise(n_sessions = n(), elpd_diff = sum(elpd_diff), .groups = "drop"))
+
+p_beta_agreement_by_tau <- df_session_tau |>
+  ggplot(aes(x = .data[[paste0("beta_", model_a)]], y = .data[[paste0("beta_", model_b)]])) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", colour = "grey50") +
+  geom_point(aes(colour = elpd_diff), size = 2, alpha = 0.85) +
+  facet_wrap(~ label, nrow = 1) +
+  scale_colour_gradient2(low = "#B2182B", mid = "grey85", high = "#2166AC", midpoint = 0,
+                         name = sprintf("elpd diff\n(%s)", diff_label)) +
+  scale_x_log10(breaks = log_breaks, labels = as.character(log_breaks)) +
+  scale_y_log10(breaks = log_breaks, labels = as.character(log_breaks)) +
+  coord_equal(xlim = beta_limits, ylim = beta_limits) +
+  labs(title = sprintf("beta in the two models, by tau bin (%d equal-count bins of each participant's mean tau across sessions)", n_tau_bins),
+       subtitle = sprintf("Posterior medians per participant-session. tau from the %s model. Dashed: equal. Same axes in every panel.", model_a),
+       x = sprintf("beta, %s model (log axis)", model_a),
+       y = sprintf("beta, %s model (log axis)", model_b)) +
+  base_theme +
+  theme(legend.position = "bottom", strip.text = element_text(size = 9))
+
+pdf(file.path(output_dir, "beta_agreement_by_tau_bin.pdf"), width = 20, height = 5.8)
+print(p_beta_agreement_by_tau)
+dev.off()
+ggsave(file.path(output_dir, "beta_agreement_by_tau_bin.png"), p_beta_agreement_by_tau, width = 20, height = 5.8, dpi = 130)
