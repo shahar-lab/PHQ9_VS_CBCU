@@ -24,7 +24,9 @@
       "Bash(\"/c/Program Files/R/R-4.4.3/bin/Rscript.exe\" \"C:/Users/lihina/AppData/Local/Temp/claude/7a85bfe44e2f3be4/26cc5b89-9253-477d-9d18-332878b2b19d/scratchpad/run_beta_posterior.R\")",
       "Bash(gh repo *)",
       "Bash(gh api *)",
-      "PowerShell(Get-ChildItem analysis\\\\loo_comparison_three_models -Recurse | Select-Object @{n='Path';e={$_.FullName.Substring\\(\\(Get-Location\\).Path.Length+1\\)}}, Length)"
+      "PowerShell(Get-ChildItem analysis\\\\loo_comparison_three_models -Recurse | Select-Object @{n='Path';e={$_.FullName.Substring\\(\\(Get-Location\\).Path.Length+1\\)}}, Length)",
+      "PowerShell($r = Get-Command Rscript -ErrorAction SilentlyContinue; if \\($r\\) { $r.Source } else { Get-ChildItem \"C:\\\\Program Files\\\\R\" -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName })",
+      "PowerShell(& \"C:\\\\Program Files\\\\R\\\\R-4.4.3\\\\bin\\\\Rscript.exe\" \"C:\\\\Users\\\\lihina\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\7a85bfe44e2f3be4\\\\56c1de24-f4ee-453e-b944-98d9f969400f\\\\scratchpad\\\\run_08.R\" 2>&1 | Select-Object -Last 30)"
     ]
   }
 }

@@ -73,12 +73,12 @@ model {
   // The truncation's normalizing constant depends on the hyperparameters, so it
   // must be added explicitly (one term per subject).
   beta_location ~ normal(4, 0.9);   // typical beta ~ 4; lower=0 cuts off < 0.001% of this prior
-  beta_scale ~ normal(0, 1.1);      // half-normal
+  beta_scale ~ normal(0, 1);      // half-normal
   beta_raw ~ std_normal();
   target += -N_subjects * normal_lccdf(0 | beta_location, beta_scale);
 
-  tau_location ~ normal(0, 1.5);
-  tau_scale ~ normal(0, 1.5);       // half-normal
+  tau_location ~ normal(0, 0.4);
+  tau_scale ~ normal(1, 0.3);       // half-normal
   tau_raw ~ std_normal();
 
   // Utility prior: needed for identification, not just regularization.
