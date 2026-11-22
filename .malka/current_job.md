@@ -1,51 +1,20 @@
 Job Card
 JOB
-Fit bradley_terry_beta_tau_rho_noncentered to the real data; diagnostics, test-retest, relationships between parameters, mirroring analysis/beta_tau_per_pairwise
+Fit the same model to both sessions together (session ignored), in a separate job folder
 FOLDER
-analysis/beta_tau_rho_noncentered/ (new)
+analysis/beta_tau_halfnormal_stz_joint/ (new)
 ROUTED READS
 - 02-analysis/smart_clone.md
-- visualization/plot-types/plot-scatter.md
-- visualization/standards/EXPORT_STANDARD.md, COLOR_STANDARD.md
 CHECKS
-- answered below
+- Source job-folder
+- What changes in the clone
 SPECIFICATION
-- Source job-folder: analysis/beta_tau_per_pairwise (clone code/ and main.R; empty artifacts/ and output/)
-- Model: models/bradley_terry_beta_tau_rho_noncentered/bradley_terry_beta_tau_rho_noncentered.stan
-- Data: data/processed/cbcu.csv, data/processed/phq.csv; one fit per wave (time1, time2)
-- Priors: as in the .stan file
-- Sampling: 4 chains, 2000 warmup, 2000 sampling
-- Subject estimates: posterior medians of u_1..u_15, beta, tau, rho (no key_decay)
-- Diagnostics per wave: beta_location, beta_scale, tau_location, tau_scale, rho_location, rho_scale
-- Test-retest: u, beta, tau, rho, PHQ9 sum and items
-- Relationships: as in source, plus u vs rho, beta vs rho, tau vs rho per wave, PHQ9 sum / item SD vs rho
-- Plot styles: as in source
-
-Job Card
-JOB
-Create bradley_terry_beta_tau_rho_noncentered without rho
-FOLDER
-models/bradley_terry_beta_tau_noncentered/ (new)
-ROUTED READS
-- 03-models/references/how-to-write-a-model-definition.md
-CHECKS
-- answered below
-SPECIFICATION
-- Same as bradley_terry_beta_tau_rho_noncentered with rho, key_contrib and first_trial_of_subject removed (.stan and .R)
-- Priors for beta, tau, u unchanged; non-centered
-
-Job Card
-JOB
-Fit bradley_terry_beta_tau_noncentered to the real data; same outputs as job 1 without rho
-FOLDER
-analysis/beta_tau_noncentered/ (new)
-ROUTED READS
-- 02-analysis/smart_clone.md
-- visualization/plot-types/plot-scatter.md
-- visualization/standards/EXPORT_STANDARD.md, COLOR_STANDARD.md
-CHECKS
-- answered below
-SPECIFICATION
-- As job 1, model models/bradley_terry_beta_tau_noncentered, no rho anywhere
-- Diagnostics: beta_location, beta_scale, tau_location, tau_scale
-- Waits for job 2
+- Source job-folder: analysis/beta_tau_halfnormal_stz/ (code/ and main.R copied; artifacts/ and output/ start empty; source untouched)
+- Model: models/bradley_terry_beta_tau_halfnormal_stz/bradley_terry_beta_tau_halfnormal_stz.stan, unchanged
+- Priors (in the .stan file): beta_location ~ normal(4, 0.9); beta_scale ~ half-normal(0, 1); tau_location ~ normal(0, 0.4); tau_scale ~ normal(1, 0.3) truncated at 0; u ~ normal(0, sqrt(N/(N-1))) sum-to-zero
+- Data: data/processed/cbcu.csv, session ignored; one unit per subject (185), all trials from both sessions (210 per subject); one fit
+- Sampling: 4 chains, 3000 warmup, 5000 sampling per chain
+- PHQ-9: sum and items 1-9 averaged over each subject's available sessions
+- Kept (adapted to one fit): diagnostics PDF, participant parameter table, hyperparameter posterior plot (single density per panel; location filled, scale diagonal hatching, thick median line), u vs tau / u vs beta / beta vs tau scatters, PHQ-9 vs parameter scatters, utility vs PHQ-9 item, mean utility vs PHQ-9 item, parameter relationships summary
+- Dropped: all test-retest scatters, beta test-retest posterior, beta posterior width, test-retest summary, both P(higher-utility option) test-retest measures
+- Script and output names kept as in the source folder (approved on the Summary Card)
