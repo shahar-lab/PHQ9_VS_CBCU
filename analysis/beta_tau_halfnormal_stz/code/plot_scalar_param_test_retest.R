@@ -14,7 +14,7 @@ plot_param_test_retest <- function(df, param_name, param_label, item_scale = FAL
   stopifnot(length(df_param_wide$value_time1) == length(df_param_wide$value_time2))
 
   shared_limits <- if (item_scale) c(0, 3) else range(c(df_param_wide$value_time1, df_param_wide$value_time2), na.rm = TRUE)
-  axis_breaks   <- if (item_scale) 0:3 else seq(shared_limits[1], shared_limits[2], length.out = 4)
+  axis_breaks   <- if (item_scale) 0:3 else scales::breaks_pretty(n = 4)(shared_limits)   # round tick values
   df_counts     <- count(df_param_wide, value_time1, value_time2)
   pearson_r     <- cor(df_param_wide$value_time1, df_param_wide$value_time2, method = "pearson")
 

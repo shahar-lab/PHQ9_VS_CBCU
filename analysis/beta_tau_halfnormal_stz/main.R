@@ -40,9 +40,12 @@ n_sampling <- 5000
 source(file.path(code_dir, "prep_data.R"))
 source(file.path(code_dir, "fit_model.R"))
 source(file.path(code_dir, "summarise_posterior.R"))
+source(file.path(code_dir, "plot_hyperparameter_posteriors.R"))
 source(file.path(code_dir, "join_phq9_and_write.R"))
 source(file.path(code_dir, "plot_utility_test_retest.R"))
 source(file.path(code_dir, "plot_scalar_param_test_retest.R"))
+source(file.path(code_dir, "plot_p_higher_test_retest.R"))   # needs plot_param_test_retest() from the line above
+source(file.path(code_dir, "plot_p_higher_above_tau_test_retest.R"))
 source(file.path(code_dir, "plot_beta_test_retest_posterior.R"))
 source(file.path(code_dir, "plot_beta_posterior_width.R"))   # needs beta_draws_by_wave.rds from the line above
 source(file.path(code_dir, "plot_cross_parameter_scatter.R"))
