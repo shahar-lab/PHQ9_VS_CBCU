@@ -1,21 +1,31 @@
 Job Card
 JOB
-Pick 5 patients with heterogeneous utility rankings and show a pilot-style clinical report for each (time 1 fit)
+ICC of item profiles for CBCU utilities and PHQ-9 item ratings, centred within participant x occasion (no scaling)
 FOLDER
 analysis/beta_tau_halfnormal_stz/ (existing)
 ROUTED READS
-- visualization/standards/COLOR_STANDARD.md
+- regression/01_sampling_and_priors.md
+- regression/02_diagnostics.md
+- visualization/plot-types/plot-posterior.md
 - visualization/standards/EXPORT_STANDARD.md
-- visualization/standards/PANEL_TAGGING_STANDARD.md
+- visualization/standards/COLOR_STANDARD.md
 CHECKS
-—
+- Formula and RE structure
+- Family
+- Priors (offer weakly informative)
+- Sampling (offer 4 / 2000 / half warmup)
+- Which parameters or effects
+- Effect vs bounded vs other
+- Single figure or composite
 SPECIFICATION
-- Reference: PHQ9_pairwise_pilot/analysis/beta_tau_pairwise/code (prep_clinical_report.R, prep_burden_threshold.R, prep_consistency.R, plot_clinical_report.R)
-- Fit: time 1 only (artifacts/fit_time1.rds)
-- Selection: Spearman distance (1 - rank correlation) between subjects' time 1 posterior-median utility vectors; hierarchical clustering, average linkage, 5 clusters; clusters taken largest first; from each, the most central subject (smallest mean distance to its cluster) whose time 1 PHQ-9 sum differs from every earlier pick (5 distinct sums)
-- Eligibility: no filter (all 185 subjects)
-- Ladder: utility posterior median and 90% HDI; tiers where adjacent items differ with probability >= 0.90; strip = time 1 PHQ-9 answer (0-3) of the PHQ-9 item each CBCU item maps to
-- Burden threshold: tau (None beats an item when u < tau); count of items with u > tau per draw (median, 90% interval); verdicts >= 13 permissive, 8-12 balanced, 4-7 selective, < 4 highly selective; never chose None -> lower bound only
-- Severity: time 1 PHQ-9 sum, 0-27 bar, bands Minimal 0-4, Mild 5-9, Moderate 10-14, Moderately severe 15-19, Severe 20-27; sum score shown in header and on the bar; no uncertainty shading
-- Consistency: time 1 P(higher-utility option | not None) from artifacts/p_higher_option.csv (median, 95% interval); verdicts < 0.70 low, 0.70-0.85 moderate, >= 0.85 high
-- Outputs: output/clinical reports/clinical_report.pdf (5 pages), clinical_report_<id>.png per patient, profile_clusters.csv
+- Sample: 185 participants with both occasions, same people for both measures; nobody dropped
+- CBCU: posterior medians u_1..u_15 from artifacts/participant_parameters.csv; 5,550 rows; centred within participant x occasion, not scaled (replaces the standardised fit; standardised ICC 0.76 kept as a note in summary.md)
+- PHQ-9: phq9_1..phq9_9 from artifacts/participant_parameters.csv; 3,330 rows; centred within participant x occasion, not scaled; flat profiles kept (all zeros after centring)
+- Formula (both): y ~ 1 + (1 | item) + (1 | participant:item) + (1 | occasion:item); gaussian; no participant or participant x occasion term
+- Priors (both): Intercept ~ Normal(0, 1); sd(item), sd(participant:item), sd(occasion:item), sigma ~ Half-Normal(0, 1)
+- Sampling (both): 4 chains, iter 3000, warmup 1000, adapt_delta 0.95, seed 2026, cmdstanr
+- Diagnostics: ESS/R-hat table, divergences, rank plots, pairs plot per model; pass before interpreting
+- ICC = s2(participant:item) / (s2(participant:item) + s2(occasion:item) + s2(residual)) per draw
+- Report: CSV per measure, ICC + each variance component, median + 95% CrI
+- Plots: one single-posterior plot per measure (gray, 90% interval, x 0-1, dashed 0.80) + one comparison plot (CBCU #4477AA, PHQ-9 #EE6677, medians in legend); PDF + PNG in "test-retest across sessions"
+- summary.md: model, centring rule, ICC definition, diagnostics

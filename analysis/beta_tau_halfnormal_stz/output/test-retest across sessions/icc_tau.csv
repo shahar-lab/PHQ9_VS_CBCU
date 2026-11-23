@@ -1,0 +1,3 @@
+version,parameter,n_participants,icc_median,icc_lower_95,icc_upper_95,p_icc_above_0.80,sigma_b_median,sigma_e_median
+Measurement error (se),tau,185,0.9876282083415537,0.9734469650413683,0.9973614006323958,1,0.9865369,0.11081289999999999
+No measurement error,tau,185,0.9218009788372058,0.897187607860247,0.9406270284980728,1,1.05899835,0.308489845

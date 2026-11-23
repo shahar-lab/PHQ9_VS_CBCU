@@ -3,6 +3,7 @@ rm(list = ls())
 #### SETUP ####
 
 library(here)
+library(brms)        # loaded before posterior so posterior's rhat()/ess_*() stay unmasked
 library(tidyverse)
 library(cmdstanr)
 library(posterior)
@@ -61,6 +62,24 @@ source(file.path(code_dir, "prep_mean_utility_vs_phq9_item.R"))
 source(file.path(code_dir, "plot_mean_utility_vs_phq9_item.R"))
 source(file.path(code_dir, "plot_test_retest_summary.R"))
 source(file.path(code_dir, "plot_parameter_relationships_summary.R"))
+
+# ICC of tau and beta across days (Hypothesis 2, eq. [3]-[4]), from the two per-session fits.
+# Standalone: needs only the SETUP block above.
+source(file.path(code_dir, "fit_icc_tau_with_ms.R"))      # tau, with measurement error (posterior SD as se)
+source(file.path(code_dir, "fit_icc_tau_without_ms.R"))   # tau, without measurement error (posterior medians)
+source(file.path(code_dir, "fit_icc_beta_plain.R"))   # beta, without measurement error (posterior medians)
+source(file.path(code_dir, "fit_icc_phq9_without_ms.R"))  # PHQ-9 sum score (observed, raw 0-27)
+source(file.path(code_dir, "diagnose_icc.R"))         # all four ICC models
+source(file.path(code_dir, "plot_icc_tau.R"))
+source(file.path(code_dir, "plot_icc_beta.R"))
+source(file.path(code_dir, "plot_icc_phq9.R"))
+
+# ICC of item profiles (agreement, eq. [1]-[2]): CBCU utilities and PHQ-9 item ratings,
+# both centred (not scaled) within participant x occasion, same 185 participants
+source(file.path(code_dir, "fit_icc_utility_without_ms.R"))   # CBCU utilities
+source(file.path(code_dir, "fit_icc_phq9_items.R"))           # PHQ-9 item ratings
+source(file.path(code_dir, "diagnose_icc_items.R"))           # both models
+source(file.path(code_dir, "plot_icc_items.R"))
 
 # Five patients with different time 1 symptom profiles, one clinical report page each
 source(file.path(code_dir, "select_profile_patients.R"))

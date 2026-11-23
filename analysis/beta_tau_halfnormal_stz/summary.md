@@ -47,6 +47,73 @@ enough participants and adjust if not.
 
 **Join behavior.** PHQ9 is left-joined onto the parameter table by `(prolific_id, time)`.
 
+**Tau ICC with measurement error** (`code/fit_icc_tau_with_ms.R`, `code/diagnose_icc.R`,
+`code/plot_icc_tau.R` → `output/test-retest across sessions/icc_tau.csv`,
+`icc_tau_posterior.{pdf,png}`; `output/diagnostic_icc_tau.pdf`;
+`artifacts/brms_icc_tau_me.rds`, `artifacts/tau_icc_data.csv`). Hypothesis 2, eq. [3]–[4] on
+tau, two-step from the per-session fits, same structure as the beta ICC in
+`analysis/beta_tau_lognormal_stz_for_icc/`. Per participant and day, the posterior mean of tau
+is the outcome and its posterior SD is a known standard error:
+`tau | se(se_tau, sigma = TRUE) ~ 1 + (1 | id)`, gaussian, no day effect (absolute
+agreement). ICC = sd(id)² / (sd(id)² + sigma²) per posterior draw; reports median, 95% CrI and
+P(ICC > 0.80). Priors (tau scale): Intercept ~ Normal(0, 1), sd(id) ~ Half-Normal(0, 1),
+sigma ~ Half-Normal(0, 1). 4 chains, 3000 iterations (1000 warmup), adapt_delta 0.95.
+185 participants with both days. The diagnostic PDF includes posterior predictive checks of
+the point estimates, among them the day 1 vs day 2 correlation, the check that showed the
+beta two-step ICC was too high.
+A second version without the measurement layer (`code/fit_icc_tau_without_ms.R` →
+`artifacts/brms_icc_tau_plain.rds`, `artifacts/tau_icc_data_plain.csv`,
+`output/diagnostic_icc_tau_plain.pdf`) fits eq. [3] as written on the posterior medians of
+tau from `participant_parameters.csv`: `tau ~ 1 + (1 | id)`, same priors and sampling.
+`icc_tau.csv` has one row per version and `icc_tau_posterior` shows both posteriors.
+Not fit on the joint model: `beta_tau_halfnormal_stz_joint`
+has one tau per participant (sessions pooled), so it has no day 1 / day 2 values.
+Diagnostics for all ICC models are written by `code/diagnose_icc.R`.
+
+**Beta ICC without measurement error** (`code/fit_icc_beta_plain.R`, `code/plot_icc_beta.R` →
+`output/test-retest across sessions/icc_beta.csv`, `icc_beta_posterior.{pdf,png}`;
+`output/diagnostic_icc_beta_plain.pdf`; `artifacts/brms_icc_beta_plain.rds`,
+`artifacts/beta_icc_data_plain.csv`). Eq. [3] as written on the posterior medians of beta from
+`participant_parameters.csv`, on the raw beta scale (this model's population distribution for
+beta is a truncated normal; the medians are left-skewed, more so on log):
+`beta ~ 1 + (1 | id)`, gaussian, no day effect (absolute agreement). Priors (beta scale):
+Intercept ~ Normal(4, 3) (centred on the choice model's beta_location prior),
+sd(id) ~ Half-Normal(0, 3), sigma ~ Half-Normal(0, 3). Same sampling as the tau ICC.
+
+**PHQ-9 sum score ICC** (`code/fit_icc_phq9_without_ms.R`, `code/plot_icc_phq9.R` →
+`output/test-retest across sessions/icc_phq9.csv`, `icc_phq9_posterior.{pdf,png}`;
+`output/diagnostic_icc_phq9.pdf`; `artifacts/brms_icc_phq9.rds`, `artifacts/phq9_icc_data.csv`).
+Eq. [3] as written on the raw PHQ-9 sum score (0–27) from `participant_parameters.csv`, as a
+benchmark for tau and beta. The sum is observed, so there is no measurement layer:
+`phq9_sum ~ 1 + (1 | id)`, gaussian, no day effect (absolute agreement). Not centred: shifting
+all scores by a constant moves only b_0, not sigma_b or sigma_e, so the ICC is unchanged.
+Priors (PHQ-9 scale, set from the scale, not the data): Intercept ~ Normal(13.5, 7) (scale
+midpoint), sd(id) ~ Half-Normal(0, 7), sigma ~ Half-Normal(0, 7). Same sampling as the tau ICC.
+
+**Item-level utility ICC (agreement)** (`code/fit_icc_utility_without_ms.R`,
+`code/diagnose_icc_utility.R`, `code/plot_icc_utility.R` →
+`output/test-retest across sessions/icc_utility.csv`, `icc_utility_posterior.{pdf,png}`;
+`output/diagnostic_icc_utility.pdf`; `artifacts/brms_icc_utility.rds`,
+`artifacts/utility_icc_data.csv`).
+*Data.* Posterior medians of u_1…u_15 from `participant_parameters.csv`, no measurement-error
+layer; 185 participants with both occasions × 2 occasions × 15 items = 5,550 rows. Within each
+participant × occasion the 15 utilities are centred to mean 0 and scaled to SD 1 (checked:
+all 370 cells have mean 0 and SD 1 to machine precision).
+*Model.* `utility ~ 1 + (1 | item) + (1 | participant:item) + (1 | occasion:item)`, gaussian.
+No participant intercept and no participant × occasion term: the centring and scaling make
+their variance exactly zero. The residual is the participant × occasion × item term.
+Priors (standardised scale): Intercept ~ Normal(0, 1); sd(item), sd(participant:item),
+sd(occasion:item) and sigma ~ Half-Normal(0, 1). 4 chains, 3000 iterations (1000 warmup),
+adapt_delta 0.95, seed 2026, cmdstanr.
+*ICC (agreement).* Per posterior draw, from squared SDs:
+ICC = σ²(participant:item) / (σ²(participant:item) + σ²(occasion:item) + σ²(residual)).
+The item variance is in neither the numerator nor the denominator. `icc_utility.csv` gives the
+median and 95% CrI of the ICC and of each variance component (item variance included for
+reference).
+*Diagnostics.* ESS/R-hat table, divergences, rank plots and pairs plot for b_Intercept, the three
+SDs and sigma in `diagnostic_icc_utility.pdf`. Run of 2026-11-23: 0 divergent transitions,
+max R-hat 1.005 over all parameters, lowest bulk ESS 626 (b_Intercept).
+
 ## 3. Priors
 
 Defined in the `.stan` file's `model {}` block.

@@ -1,0 +1,2 @@
+parameter,n_participants,icc_median,icc_lower_95,icc_upper_95,p_icc_above_0.80,sigma_b_median,sigma_e_median
+PHQ-9 sum score,185,0.9180446782901636,0.8912923892408152,0.9379561508982749,1,5.62359255,1.68108915
