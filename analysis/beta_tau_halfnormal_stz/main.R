@@ -80,6 +80,7 @@ source(file.path(code_dir, "fit_icc_utility_without_ms.R"))   # CBCU utilities
 source(file.path(code_dir, "fit_icc_phq9_items.R"))           # PHQ-9 item ratings
 source(file.path(code_dir, "diagnose_icc_items.R"))           # both models
 source(file.path(code_dir, "plot_icc_items.R"))
+source(file.path(code_dir, "plot_icc_items_difference.R"))   # ICC CBCU - ICC PHQ-9, per draw
 
 # Five patients with different time 1 symptom profiles, one clinical report page each
 source(file.path(code_dir, "select_profile_patients.R"))

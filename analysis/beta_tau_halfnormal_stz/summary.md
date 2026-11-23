@@ -90,29 +90,47 @@ all scores by a constant moves only b_0, not sigma_b or sigma_e, so the ICC is u
 Priors (PHQ-9 scale, set from the scale, not the data): Intercept ~ Normal(13.5, 7) (scale
 midpoint), sd(id) ~ Half-Normal(0, 7), sigma ~ Half-Normal(0, 7). Same sampling as the tau ICC.
 
-**Item-level utility ICC (agreement)** (`code/fit_icc_utility_without_ms.R`,
-`code/diagnose_icc_utility.R`, `code/plot_icc_utility.R` →
-`output/test-retest across sessions/icc_utility.csv`, `icc_utility_posterior.{pdf,png}`;
-`output/diagnostic_icc_utility.pdf`; `artifacts/brms_icc_utility.rds`,
-`artifacts/utility_icc_data.csv`).
-*Data.* Posterior medians of u_1…u_15 from `participant_parameters.csv`, no measurement-error
-layer; 185 participants with both occasions × 2 occasions × 15 items = 5,550 rows. Within each
-participant × occasion the 15 utilities are centred to mean 0 and scaled to SD 1 (checked:
-all 370 cells have mean 0 and SD 1 to machine precision).
-*Model.* `utility ~ 1 + (1 | item) + (1 | participant:item) + (1 | occasion:item)`, gaussian.
-No participant intercept and no participant × occasion term: the centring and scaling make
-their variance exactly zero. The residual is the participant × occasion × item term.
-Priors (standardised scale): Intercept ~ Normal(0, 1); sd(item), sd(participant:item),
+**Item-profile ICC (agreement), CBCU utilities and PHQ-9 items** (`code/fit_icc_utility_without_ms.R`,
+`code/fit_icc_phq9_items.R`, `code/diagnose_icc_items.R`, `code/plot_icc_items.R` →
+`output/test-retest across sessions/icc_utility.csv`, `icc_phq9_items.csv`,
+`icc_utility_posterior.{pdf,png}`, `icc_phq9_items_posterior.{pdf,png}`,
+`icc_items_comparison_posterior.{pdf,png}`; `output/diagnostic_icc_utility.pdf`,
+`output/diagnostic_icc_phq9_items.pdf`; `artifacts/brms_icc_utility.rds`,
+`artifacts/brms_icc_phq9_items.rds`, `artifacts/utility_icc_data.csv`,
+`artifacts/phq9_items_icc_data.csv`). Eq. [1]–[2] of the preregistration: are individual symptom
+profiles preserved from measure 1 to measure 2.
+*Data.* The same 185 participants (both occasions) for both measures; nobody is dropped.
+CBCU: posterior medians of u_1…u_15 from `participant_parameters.csv`, no measurement-error
+layer; 185 × 2 × 15 = 5,550 rows. PHQ-9: item ratings phq9_1…phq9_9 (0–3); 185 × 2 × 9 =
+3,330 rows.
+*Centring rule (both).* Within each participant × occasion, values are centred to mean 0 and
+not scaled. Scaling to SD 1 was not used: 48 of 370 PHQ-9 cells are flat (all 9 ratings equal,
+45 all zeros) and have SD 0, and near-flat profiles (CBCU: 17 cells with utility SD < 0.3,
+participants with tau ≈ 2.2) would be inflated to a full-size profile. Flat profiles stay in
+and are all zeros after centring.
+*Model (both).* `y ~ 1 + (1 | item) + (1 | participant:item) + (1 | occasion:item)`, gaussian
+(an approximation for the 0–3 PHQ-9 ratings). No participant intercept and no participant ×
+occasion term: centring makes their variance exactly zero. The residual is the participant ×
+occasion × item term. Priors: Intercept ~ Normal(0, 1); sd(item), sd(participant:item),
 sd(occasion:item) and sigma ~ Half-Normal(0, 1). 4 chains, 3000 iterations (1000 warmup),
 adapt_delta 0.95, seed 2026, cmdstanr.
-*ICC (agreement).* Per posterior draw, from squared SDs:
+*ICC (agreement), eq. [2].* Per posterior draw, from squared SDs:
 ICC = σ²(participant:item) / (σ²(participant:item) + σ²(occasion:item) + σ²(residual)).
-The item variance is in neither the numerator nor the denominator. `icc_utility.csv` gives the
-median and 95% CrI of the ICC and of each variance component (item variance included for
-reference).
+The item variance is in neither the numerator nor the denominator. Each CSV gives the median
+and 95% CrI of the ICC and of each variance component (item variance included for reference).
+One variance per component is shared by all items, so the ICC is one number per measure.
 *Diagnostics.* ESS/R-hat table, divergences, rank plots and pairs plot for b_Intercept, the three
-SDs and sigma in `diagnostic_icc_utility.pdf`. Run of 2026-11-23: 0 divergent transitions,
-max R-hat 1.005 over all parameters, lowest bulk ESS 626 (b_Intercept).
+SDs and sigma, one PDF per model. Run of 2026-11-23: both models 0 divergent transitions,
+max R-hat 1.004 over all parameters; lowest bulk ESS 1533 (CBCU) and 1102 (PHQ-9).
+*ICC difference* (`code/plot_icc_items_difference.R` → `icc_items_difference.csv`,
+`icc_items_difference_posterior.{pdf,png}`). ICC(CBCU) − ICC(PHQ-9) per posterior draw, draw k of
+one fit paired with draw k of the other (8,000 each). The two models are fit separately, so the
+pairing treats their posteriors as independent; the correlation between the two ICCs (same
+participants) is not modelled. Reports median, 95% CrI, P(difference > 0) and pd; plot x axis is
+the full range [−1, 1] with a line at 0.
+*Earlier version.* A first CBCU fit standardised the utilities (centred and scaled to SD 1
+within participant × occasion) and gave ICC 0.76 (95% CrI 0.75–0.78); it was replaced by the
+centred-only version so CBCU and PHQ-9 use the same rule.
 
 ## 3. Priors
 
