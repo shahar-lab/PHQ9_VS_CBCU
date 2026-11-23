@@ -1,0 +1,6 @@
+patient,prolific_id,profile,matches_profile,phq9_sum,band
+1,69f7e812b1abc5db9b1d0eac,4,NA,4,Minimal
+2,5e95a177eaa3cb0177ef6cc9,2,NA,5,Mild
+3,6a205d8176898540335bb525,5,NA,6,Mild
+4,69ad388b63979c96dc085507,3,NA,9,Mild
+5,60656a924c99543d12555b86,6,1,16,Moderately severe

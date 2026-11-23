@@ -44,6 +44,21 @@ if (cache_is_fresh) {
   saveRDS(df_hyper_draws, hyper_draws_path)
 }
 
+# X axis = the range the parameter can take (PI's request), not just where the posterior
+# sits: a parameter bounded below starts at its bound (lower=0 in the .stan file) and runs
+# 20% of the draws' range past the largest draw; an unbounded one (tau_location) is
+# symmetric about 0, the average utility.
+param_lower_bound <- c(beta_location = 0, beta_scale = 0, tau_location = NA, tau_scale = 0)
+
+hyperparameter_axis_limits <- function(values, lower_bound) {
+  if (is.na(lower_bound)) {
+    max_abs <- max(abs(values))
+    c(-max_abs, max_abs)
+  } else {
+    c(lower_bound, max(values) + 0.20 * diff(range(values)))
+  }
+}
+
 df_hyper_medians <- df_hyper_draws |>
   group_by(parameter) |>
   summarise(median = median(value), .groups = "drop")
@@ -55,15 +70,15 @@ print(df_hyper_medians)
 # in both directions, so they run at about 45 degrees on screen. Each line is sampled
 # finely along x and kept only where it lies under the curve; a line that leaves and
 # re-enters the area becomes separate pieces ("run").
-make_density_hatch <- function(values) {
+make_density_hatch <- function(values, x_limits) {
   curve  <- density(values, n = 512, from = min(values), to = max(values))
   x_unit <- seq(0, 1, length.out = 1000)
-  x_data <- min(curve$x) + x_unit * diff(range(curve$x))
-  height_unit <- approx(curve$x, curve$y, xout = x_data)$y / max(curve$y)
+  x_data <- x_limits[1] + x_unit * diff(x_limits)   # the panel's x range, so 45 degrees holds
+  height_unit <- approx(curve$x, curve$y, xout = x_data)$y / max(curve$y)   # NA outside the curve
 
   imap(seq(-1, 1, by = hatch_spacing), \(intercept, line) {
     y_unit <- intercept + x_unit
-    inside <- y_unit >= 0 & y_unit <= height_unit
+    inside <- !is.na(height_unit) & y_unit >= 0 & y_unit <= height_unit
     tibble(x = x_data, y = y_unit * max(curve$y), line = line,
            run = cumsum(c(TRUE, diff(inside) != 0)))[inside, ]
   }) |>
@@ -87,11 +102,12 @@ plot_hyperparameter <- function(param) {
   draws    <- filter(df_hyper_draws, parameter == param)
   medians  <- filter(df_hyper_medians, parameter == param)
   is_scale <- str_ends(param, "_scale")
+  x_limits <- hyperparameter_axis_limits(draws$value, param_lower_bound[[param]])
 
   # The density is one legend entry (colour/fill), the median another (linetype)
   fill_layers <- if (is_scale) {
     list(
-      geom_path(data = make_density_hatch(draws$value), aes(x = x, y = y, group = group),
+      geom_path(data = make_density_hatch(draws$value, x_limits), aes(x = x, y = y, group = group),
                 colour = density_colour, linewidth = hatch_linewidth),
       geom_density(aes(colour = "Posterior density"), linewidth = 0.8,
                    key_glyph = draw_key_hatched_fill)
@@ -112,6 +128,7 @@ plot_hyperparameter <- function(param) {
     scale_linetype_manual(values = c("Posterior median" = "solid"), name = NULL) +
     guides(colour = guide_legend(order = 1), fill = guide_legend(order = 1),
            linetype = guide_legend(order = 2)) +
+    coord_cartesian(xlim = x_limits) +
     theme_minimal(base_size = 13) +
     theme(panel.grid.minor = element_blank(),
           axis.text.y      = element_blank(),   # density height has no meaning of its own

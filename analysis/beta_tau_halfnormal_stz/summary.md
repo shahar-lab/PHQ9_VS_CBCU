@@ -68,6 +68,20 @@ Defined in the `.stan` file's `model {}` block.
 - `output/relations between parameters/` — u vs `tau`/`beta`, `beta` vs `tau` (per wave); PHQ9 sum and PHQ9 item SD vs `beta`/`tau`; utility vs mapped PHQ9 item; `parameter_relationships_summary.pdf`.
 - `output/beta_posterior_width.png`, `artifacts/beta_posterior_width.csv` — beta posterior width vs beta.
 - `artifacts/participant_parameters.csv` — the participant-level table.
+- `output/clinical reports/` — five patients with different time 1 symptom profiles, one
+  pilot-style page each (`clinical_report.pdf`, one PNG per patient). Patients are picked by
+  k-medoids (PAM, k = 5) on Spearman distance between time 1 utility rankings, largest
+  cluster first, the most central subject whose PHQ-9 sum is not already used (all five sums
+  differ). Ladder: utility median and 90% HDCI, tiers where neighbours differ with
+  probability ≥ 0.90. Burden threshold = tau (None beats an item when u < tau). Consistency =
+  time 1 P(higher-utility option | not None). PHQ-9 bands: 0–4, 5–9, 10–14, 15–19, 20–27.
+  `profile_clusters.csv` lists the picks and their cluster sizes. A sixth page is a
+  higher-severity match: among subjects with time 1 PHQ-9 sum ≥ 10, the one whose utility
+  ranking has the highest Spearman correlation with any of the five. Article version:
+  profile 1 is left out (`profiles_excluded` in `prep_clinical_report.R`); the remaining
+  five are numbered Patient 1–5 by PHQ-9 sum (`patient_key.csv` maps them to participant
+  IDs, which are kept out of the figures). Each page: A ladder, B PHQ-9 sum on its bands,
+  C choice consistency, D symptoms above the burden threshold; PDF and PNG per patient.
 
 ## 5. Findings / Summary
 

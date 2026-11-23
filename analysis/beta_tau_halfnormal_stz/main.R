@@ -9,6 +9,8 @@ library(posterior)
 library(bayesplot)
 library(gridExtra)
 library(patchwork)
+library(ggdist)
+library(cluster)
 
 # Half-normal beta: beta ~ normal(beta_location, beta_scale) truncated at 0, with the
 # priors beta_location ~ normal(4, 0.9), beta_scale ~ half-normal(0, 1.1).
@@ -22,6 +24,7 @@ artifacts_dir <- file.path(project_root, "analysis", analysis_name, "artifacts")
 output_dir    <- file.path(project_root, "analysis", analysis_name, "output")
 output_retest_dir    <- file.path(output_dir, "test-retest across sessions")
 output_relations_dir <- file.path(output_dir, "relations between parameters")
+output_clinical_dir  <- file.path(output_dir, "clinical reports")
 data_path    <- file.path(project_root, "data", "processed")
 model_path   <- file.path(project_root, "models", model_name, paste0(model_name, ".stan"))
 
@@ -29,6 +32,7 @@ if (!dir.exists(artifacts_dir)) dir.create(artifacts_dir, recursive = TRUE)
 if (!dir.exists(output_dir))    dir.create(output_dir, recursive = TRUE)
 if (!dir.exists(output_retest_dir))    dir.create(output_retest_dir, recursive = TRUE)
 if (!dir.exists(output_relations_dir)) dir.create(output_relations_dir, recursive = TRUE)
+if (!dir.exists(output_clinical_dir))  dir.create(output_clinical_dir, recursive = TRUE)
 
 # Sampling
 n_chains   <- 4
@@ -57,3 +61,13 @@ source(file.path(code_dir, "prep_mean_utility_vs_phq9_item.R"))
 source(file.path(code_dir, "plot_mean_utility_vs_phq9_item.R"))
 source(file.path(code_dir, "plot_test_retest_summary.R"))
 source(file.path(code_dir, "plot_parameter_relationships_summary.R"))
+
+# Five patients with different time 1 symptom profiles, one clinical report page each
+source(file.path(code_dir, "select_profile_patients.R"))
+source(file.path(code_dir, "select_high_severity_match.R"))   # adds a sixth, PHQ-9 >= 10 patient
+# Two pairs (high and low PHQ-9 sum): same sum, highest vs lowest discriminability
+source(file.path(code_dir, "select_discriminability_pairs.R"))   # needs p_higher_option.csv
+source(file.path(code_dir, "prep_clinical_report.R"))
+source(file.path(code_dir, "prep_clinical_report_summaries.R"))   # needs p_higher_option.csv
+source(file.path(code_dir, "plot_clinical_report.R"))
+source(file.path(code_dir, "plot_discriminability_pairs.R"))   # needs build_report_panels() from the line above
