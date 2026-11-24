@@ -151,7 +151,8 @@ plot_hyperparameter <- function(param) {
            linetype = guide_legend(order = 2, override.aes = list(colour = "grey20"))) +
     coord_cartesian(xlim = x_limits) +
     theme_minimal(base_size = 13) +
-    theme(panel.grid.minor = element_blank(),
+    theme(aspect.ratio     = 0.5,               # panel height = half its width
+          panel.grid.minor = element_blank(),
           axis.text.y      = element_blank(),   # density height has no meaning of its own
           axis.title.y     = element_text(size = 16, angle = 0, vjust = 0.5),
           legend.key.width = unit(1.6, "cm")) +
@@ -163,4 +164,4 @@ p_hyperparameters <- map(names(hyperparam_labels), plot_hyperparameter) |>
   plot_annotation(tag_levels = "A")
 
 ggsave(file.path(output_dir, "hyperparameter_posteriors.png"), plot = p_hyperparameters,
-       width = 14, height = 9, dpi = 300, bg = "white")
+       width = 14, height = 5.9, dpi = 300, bg = "white")
