@@ -3,7 +3,7 @@
 #        (from fit_model.R; read from artifacts/fit_<wave>.rds if not in memory) and
 #        artifacts/subject_lookup_<wave>.csv
 # writes: artifacts/p_higher_above_tau.csv,
-#         output/test-retest across sessions/p_higher_above_tau_test_retest_scatter.png
+#         output/test-retest across sessions/correlation/p_higher_above_tau_test_retest_scatter.png
 #
 # Measure: on the pairs where at least one of the two items has a utility above tau
 # (i.e. at least one option is better than None), the probability of choosing the

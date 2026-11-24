@@ -48,8 +48,8 @@ enough participants and adjust if not.
 **Join behavior.** PHQ9 is left-joined onto the parameter table by `(prolific_id, time)`.
 
 **Tau ICC with measurement error** (`code/fit_icc_tau_with_ms.R`, `code/diagnose_icc.R`,
-`code/plot_icc_tau.R` → `output/test-retest across sessions/icc_tau.csv`,
-`icc_tau_posterior.{pdf,png}`; `output/diagnostic_icc_tau.pdf`;
+`code/plot_icc_tau.R` → `output/test-retest across sessions/icc/icc_tau.csv`,
+`icc_tau_posterior.{pdf,png}`; `output/diagnostics/diagnostic_icc_tau.pdf`;
 `artifacts/brms_icc_tau_me.rds`, `artifacts/tau_icc_data.csv`). Hypothesis 2, eq. [3]–[4] on
 tau, two-step from the per-session fits, same structure as the beta ICC in
 `analysis/beta_tau_lognormal_stz_for_icc/`. Per participant and day, the posterior mean of tau
@@ -63,7 +63,7 @@ the point estimates, among them the day 1 vs day 2 correlation, the check that s
 beta two-step ICC was too high.
 A second version without the measurement layer (`code/fit_icc_tau_without_ms.R` →
 `artifacts/brms_icc_tau_plain.rds`, `artifacts/tau_icc_data_plain.csv`,
-`output/diagnostic_icc_tau_plain.pdf`) fits eq. [3] as written on the posterior medians of
+`output/diagnostics/diagnostic_icc_tau_plain.pdf`) fits eq. [3] as written on the posterior medians of
 tau from `participant_parameters.csv`: `tau ~ 1 + (1 | id)`, same priors and sampling.
 `icc_tau.csv` has one row per version and `icc_tau_posterior` shows both posteriors.
 Not fit on the joint model: `beta_tau_halfnormal_stz_joint`
@@ -71,8 +71,8 @@ has one tau per participant (sessions pooled), so it has no day 1 / day 2 values
 Diagnostics for all ICC models are written by `code/diagnose_icc.R`.
 
 **Beta ICC without measurement error** (`code/fit_icc_beta_plain.R`, `code/plot_icc_beta.R` →
-`output/test-retest across sessions/icc_beta.csv`, `icc_beta_posterior.{pdf,png}`;
-`output/diagnostic_icc_beta_plain.pdf`; `artifacts/brms_icc_beta_plain.rds`,
+`output/test-retest across sessions/icc/icc_beta.csv`, `icc_beta_posterior.{pdf,png}`;
+`output/diagnostics/diagnostic_icc_beta_plain.pdf`; `artifacts/brms_icc_beta_plain.rds`,
 `artifacts/beta_icc_data_plain.csv`). Eq. [3] as written on the posterior medians of beta from
 `participant_parameters.csv`, on the raw beta scale (this model's population distribution for
 beta is a truncated normal; the medians are left-skewed, more so on log):
@@ -80,9 +80,24 @@ beta is a truncated normal; the medians are left-skewed, more so on log):
 Intercept ~ Normal(4, 3) (centred on the choice model's beta_location prior),
 sd(id) ~ Half-Normal(0, 3), sigma ~ Half-Normal(0, 3). Same sampling as the tau ICC.
 
+**Beta ICC with measurement error** (`code/fit_icc_beta_with_ms.R` → `artifacts/beta_icc_data.csv`,
+`artifacts/brms_icc_beta_me.rds`, `output/diagnostics/diagnostic_icc_beta_me.pdf`; plotted with the plain version in
+`code/plot_icc_beta.R` → `icc_beta.csv` (one row per version), `icc_beta_posterior.{pdf,png}` (both),
+`icc_beta_without_ms_posterior.{pdf,png}`).
+`beta | se(se_beta, sigma = TRUE) ~ 1 + (1 | id)`: the same posterior medians as the plain fit, and
+se = posterior SD of beta from `beta_draws_by_wave.rds`. Same priors and sampling as the plain fit.
+Run of 2026-11-24: 0 divergent transitions, max R-hat 1.003. ICC 0.98 (95% CrI 0.84–1.00) vs 0.54
+without measurement error. Not credible:
+- mean se² is about as large as the variance of the point estimates (ratio 0.81 on day 1, 1.14 on
+  day 2), so σ_e collapses to 0.30 (vs 1.61 without) and the ICC piles up against 1;
+- posterior predictive checks fail: predicted SD per day 3.1 vs observed 2.4 / 2.2, predicted
+  day 1–day 2 r 0.48 vs observed 0.66, and the day 2 mean (8.45) is outside the predictions.
+The medians are already shrunk by the choice model, so subtracting their posterior variance
+double-counts the uncertainty (see the tau note). Kept as a bound, not as the estimate.
+
 **PHQ-9 sum score ICC** (`code/fit_icc_phq9_without_ms.R`, `code/plot_icc_phq9.R` →
-`output/test-retest across sessions/icc_phq9.csv`, `icc_phq9_posterior.{pdf,png}`;
-`output/diagnostic_icc_phq9.pdf`; `artifacts/brms_icc_phq9.rds`, `artifacts/phq9_icc_data.csv`).
+`output/test-retest across sessions/icc/icc_phq9.csv`, `icc_phq9_posterior.{pdf,png}`;
+`output/diagnostics/diagnostic_icc_phq9.pdf`; `artifacts/brms_icc_phq9.rds`, `artifacts/phq9_icc_data.csv`).
 Eq. [3] as written on the raw PHQ-9 sum score (0–27) from `participant_parameters.csv`, as a
 benchmark for tau and beta. The sum is observed, so there is no measurement layer:
 `phq9_sum ~ 1 + (1 | id)`, gaussian, no day effect (absolute agreement). Not centred: shifting
@@ -90,12 +105,39 @@ all scores by a constant moves only b_0, not sigma_b or sigma_e, so the ICC is u
 Priors (PHQ-9 scale, set from the scale, not the data): Intercept ~ Normal(13.5, 7) (scale
 midpoint), sd(id) ~ Half-Normal(0, 7), sigma ~ Half-Normal(0, 7). Same sampling as the tau ICC.
 
+**Choice prediction ICC, with and without measurement error** (`code/prep_choice_prediction.R`,
+`code/fit_icc_choice_prediction_without_ms.R`, `code/fit_icc_choice_prediction_with_ms.R`,
+`code/plot_icc_choice_prediction.R` → `output/test-retest across sessions/icc/icc_choice_prediction.csv`,
+`icc_choice_prediction_posterior.{pdf,png}` (both versions), `icc_choice_prediction_without_ms_posterior.{pdf,png}`;
+`output/diagnostics/diagnostic_icc_cp_me.pdf`, `output/diagnostics/diagnostic_icc_cp_plain.pdf`; `artifacts/choice_prediction_icc_data.csv`,
+`artifacts/brms_icc_cp_plain.rds`, `artifacts/brms_icc_cp_me.rds`).
+*Measure.* Choice prediction = the model's probability of the option the participant actually chose
+(A, B or None, 3-way softmax), averaged over all 105 trials of the session; same definition as
+`choice_prediction_all` in the recovery simulation (`simulation/bradley_terry_beta_tau_halfnormal_stz_recovery`).
+Computed from the per-session fits as exp(log_lik), averaged over the participant's trials within each
+draw, giving a posterior per participant × day. 185 participants with both days.
+*Without measurement error.* `cp ~ 1 + (1 | id)` on the posterior median.
+*With measurement error.* `cp | se(se_cp, sigma = TRUE) ~ 1 + (1 | id)`: same posterior median, with
+the posterior SD as a known se. Both versions use the median, so they differ only in the measurement layer.
+Raw probability scale, gaussian, no day effect (absolute agreement). Priors (probability scale):
+Intercept ~ Normal(0.75, 0.25), sd(id) ~ Half-Normal(0, 0.25), sigma ~ Half-Normal(0, 0.25).
+Same sampling as the tau ICC. ICC = σ_b² / (σ_b² + σ_e²) per draw.
+*Diagnostics (run of 2026-11-24).* Both fits: 0 divergent transitions, max R-hat 1.003, lowest
+bulk ESS 1975. Posterior predictive checks fail in both versions:
+- mean shift: 0.884 on day 1 vs 0.913 on day 2;
+- the spread shrinks on day 2 (SD 0.096 vs 0.069, but the model has one σ_e);
+- about 10% of predicted values are > 1.
+This is a ceiling effect on the 0–1 scale, so the ICC on the raw scale (0.59 without, 0.63 with
+measurement error) is likely biased down. Day 1 vs day 2 Pearson r of the medians = 0.68.
+Measurement error is small here (posterior SD 0.004–0.027; mean se² / variance of estimates
+0.03–0.05), so the two versions differ little.
+
 **Item-profile ICC (agreement), CBCU utilities and PHQ-9 items** (`code/fit_icc_utility_without_ms.R`,
 `code/fit_icc_phq9_items.R`, `code/diagnose_icc_items.R`, `code/plot_icc_items.R` →
-`output/test-retest across sessions/icc_utility.csv`, `icc_phq9_items.csv`,
+`output/test-retest across sessions/icc/icc_utility.csv`, `icc_phq9_items.csv`,
 `icc_utility_posterior.{pdf,png}`, `icc_phq9_items_posterior.{pdf,png}`,
-`icc_items_comparison_posterior.{pdf,png}`; `output/diagnostic_icc_utility.pdf`,
-`output/diagnostic_icc_phq9_items.pdf`; `artifacts/brms_icc_utility.rds`,
+`icc_items_comparison_posterior.{pdf,png}`; `output/diagnostics/diagnostic_icc_utility.pdf`,
+`output/diagnostics/diagnostic_icc_phq9_items.pdf`; `artifacts/brms_icc_utility.rds`,
 `artifacts/brms_icc_phq9_items.rds`, `artifacts/utility_icc_data.csv`,
 `artifacts/phq9_items_icc_data.csv`). Eq. [1]–[2] of the preregistration: are individual symptom
 profiles preserved from measure 1 to measure 2.
@@ -148,8 +190,9 @@ Defined in the `.stan` file's `model {}` block.
 
 ## 4. Outputs
 
-- `output/diagnostic_time1.pdf`, `output/diagnostic_time2.pdf` — ESS/R-hat table, trank plot, pairs plot for the four population parameters.
-- `output/test-retest across sessions/` — time1 vs time2 scatters for utilities, `beta`, `tau`, PHQ9 sum and items; `test_retest_summary.pdf`.
+- `output/diagnostics/diagnostic_time1.pdf`, `output/diagnostics/diagnostic_time2.pdf` — ESS/R-hat table, trank plot, pairs plot for the four population parameters.
+- `output/test-retest across sessions/correlation/` — time1 vs time2 scatters for utilities, `beta`, `tau`, PHQ9 sum and items; `test_retest_summary.pdf`.
+- `output/test-retest across sessions/icc/` — ICC tables (`icc_*.csv`) and posterior plots for tau, beta, PHQ-9 sum, choice prediction, item profiles (CBCU, PHQ-9) and the item-profile ICC difference. ICC diagnostics are in `output/diagnostics/diagnostic_icc_*.pdf`.
 - `output/relations between parameters/` — u vs `tau`/`beta`, `beta` vs `tau` (per wave); PHQ9 sum and PHQ9 item SD vs `beta`/`tau`; utility vs mapped PHQ9 item; `parameter_relationships_summary.pdf`.
 - `output/beta_posterior_width.png`, `artifacts/beta_posterior_width.csv` — beta posterior width vs beta.
 - `artifacts/participant_parameters.csv` — the participant-level table.

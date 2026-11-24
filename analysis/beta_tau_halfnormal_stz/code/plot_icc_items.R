@@ -1,7 +1,7 @@
 #### ICC OF ITEM PROFILES (CBCU, PHQ-9): TABLES AND POSTERIOR PLOTS ####
 # reads:  artifacts/brms_icc_utility.rds, artifacts/brms_icc_phq9_items.rds
-# writes: output/test-retest across sessions/icc_utility.csv, icc_phq9_items.csv,
-#         output/test-retest across sessions/icc_utility_posterior.{pdf,png},
+# writes: output/test-retest across sessions/icc/icc_utility.csv, icc_phq9_items.csv,
+#         output/test-retest across sessions/icc/icc_utility_posterior.{pdf,png},
 #         icc_phq9_items_posterior.{pdf,png}, icc_items_comparison_posterior.{pdf,png}
 #
 # ICC (agreement), eq. [2], per posterior draw, from squared SDs:
@@ -49,7 +49,7 @@ for (k in seq_len(nrow(icc_item_measures))) {
               n_participants = first(n_participants),
               .groups = "drop")
   print(icc_table)
-  write_csv(icc_table, file.path(output_retest_dir, paste0(icc_item_measures$file_stem[k], ".csv")))
+  write_csv(icc_table, file.path(output_retest_icc_dir, paste0(icc_item_measures$file_stem[k], ".csv")))
 }
 
 #### 2. SINGLE-MEASURE POSTERIOR PLOTS ####
@@ -65,9 +65,9 @@ theme_icc <- theme_minimal(base_size = 13) +
   )
 
 save_icc_plot <- function(plot, plot_name) {
-  ggsave(file.path(output_retest_dir, paste0(plot_name, ".pdf")), plot = plot,
+  ggsave(file.path(output_retest_icc_dir, paste0(plot_name, ".pdf")), plot = plot,
          width = 10, height = 4, bg = "white")
-  ggsave(file.path(output_retest_dir, paste0(plot_name, ".png")), plot = plot,
+  ggsave(file.path(output_retest_icc_dir, paste0(plot_name, ".png")), plot = plot,
          width = 10, height = 4, dpi = 300, bg = "white")
 }
 

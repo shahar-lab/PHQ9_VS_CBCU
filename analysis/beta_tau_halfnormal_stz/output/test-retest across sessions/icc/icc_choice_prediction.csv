@@ -1,0 +1,3 @@
+version,parameter,n_participants,icc_median,icc_lower_95,icc_upper_95,p_icc_above_0.80,sigma_b_median,sigma_e_median
+Measurement error (se),"choice prediction (A, B and None)",185,0.6339835724865139,0.5265684818468873,0.7191395411792623,0,0.065137523,0.0495797795
+No measurement error,"choice prediction (A, B and None)",185,0.594695989372835,0.49400125934636374,0.6812633203515616,0,0.0656713095,0.054287459

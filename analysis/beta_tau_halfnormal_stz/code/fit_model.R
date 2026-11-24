@@ -32,7 +32,7 @@ for (wave in waves) {
   trank_plot <- mcmc_rank_overlay(draws)
   pairs_plot <- mcmc_pairs(draws)
 
-  pdf(file.path(output_dir, paste0("diagnostic_", wave, ".pdf")), width = 8, height = 6)
+  pdf(file.path(output_diagnostics_dir, paste0("diagnostic_", wave, ".pdf")), width = 8, height = 6)
   grid.arrange(tableGrob(summary_table))
   print(trank_plot)
   print(pairs_plot)

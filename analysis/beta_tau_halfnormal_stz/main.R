@@ -24,16 +24,21 @@ code_dir      <- file.path(project_root, "analysis", analysis_name, "code")
 artifacts_dir <- file.path(project_root, "analysis", analysis_name, "artifacts")
 output_dir    <- file.path(project_root, "analysis", analysis_name, "output")
 output_retest_dir    <- file.path(output_dir, "test-retest across sessions")
+output_retest_corr_dir <- file.path(output_retest_dir, "correlation")   # day 1 vs day 2 scatters
+output_retest_icc_dir  <- file.path(output_retest_dir, "icc")           # ICC tables and posteriors
 output_relations_dir <- file.path(output_dir, "relations between parameters")
 output_clinical_dir  <- file.path(output_dir, "clinical reports")
+output_diagnostics_dir <- file.path(output_dir, "diagnostics")   # choice-model and ICC-model diagnostics
 data_path    <- file.path(project_root, "data", "processed")
 model_path   <- file.path(project_root, "models", model_name, paste0(model_name, ".stan"))
 
 if (!dir.exists(artifacts_dir)) dir.create(artifacts_dir, recursive = TRUE)
 if (!dir.exists(output_dir))    dir.create(output_dir, recursive = TRUE)
-if (!dir.exists(output_retest_dir))    dir.create(output_retest_dir, recursive = TRUE)
+if (!dir.exists(output_retest_corr_dir)) dir.create(output_retest_corr_dir, recursive = TRUE)
+if (!dir.exists(output_retest_icc_dir))  dir.create(output_retest_icc_dir, recursive = TRUE)
 if (!dir.exists(output_relations_dir)) dir.create(output_relations_dir, recursive = TRUE)
 if (!dir.exists(output_clinical_dir))  dir.create(output_clinical_dir, recursive = TRUE)
+if (!dir.exists(output_diagnostics_dir)) dir.create(output_diagnostics_dir, recursive = TRUE)
 
 # Sampling
 n_chains   <- 4
@@ -68,11 +73,17 @@ source(file.path(code_dir, "plot_parameter_relationships_summary.R"))
 source(file.path(code_dir, "fit_icc_tau_with_ms.R"))      # tau, with measurement error (posterior SD as se)
 source(file.path(code_dir, "fit_icc_tau_without_ms.R"))   # tau, without measurement error (posterior medians)
 source(file.path(code_dir, "fit_icc_beta_plain.R"))   # beta, without measurement error (posterior medians)
+source(file.path(code_dir, "fit_icc_beta_with_ms.R")) # beta, same medians, posterior SD as se (needs beta_draws_by_wave.rds)
 source(file.path(code_dir, "fit_icc_phq9_without_ms.R"))  # PHQ-9 sum score (observed, raw 0-27)
-source(file.path(code_dir, "diagnose_icc.R"))         # all four ICC models
+# Choice prediction: mean P(chosen option) over all trials (A, B and None), per participant x day
+source(file.path(code_dir, "prep_choice_prediction.R"))                 # posterior median and SD from log_lik
+source(file.path(code_dir, "fit_icc_choice_prediction_without_ms.R"))   # posterior medians
+source(file.path(code_dir, "fit_icc_choice_prediction_with_ms.R"))      # medians, posterior SD as se
+source(file.path(code_dir, "diagnose_icc.R"))         # all seven ICC models
 source(file.path(code_dir, "plot_icc_tau.R"))
 source(file.path(code_dir, "plot_icc_beta.R"))
 source(file.path(code_dir, "plot_icc_phq9.R"))
+source(file.path(code_dir, "plot_icc_choice_prediction.R"))
 
 # ICC of item profiles (agreement, eq. [1]-[2]): CBCU utilities and PHQ-9 item ratings,
 # both centred (not scaled) within participant x occasion, same 185 participants

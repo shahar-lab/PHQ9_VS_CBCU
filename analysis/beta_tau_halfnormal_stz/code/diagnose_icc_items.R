@@ -1,6 +1,6 @@
 #### ITEM-PROFILE ICC MODELS (CBCU, PHQ-9): CONVERGENCE DIAGNOSTICS ####
 # reads:  artifacts/brms_icc_utility.rds, artifacts/brms_icc_phq9_items.rds
-# writes: output/diagnostic_icc_utility.pdf, output/diagnostic_icc_phq9_items.pdf
+# writes: output/diagnostics/diagnostic_icc_utility.pdf, output/diagnostics/diagnostic_icc_phq9_items.pdf
 
 icc_item_models <- c(
   "diagnostic_icc_utility.pdf"    = "brms_icc_utility.rds",
@@ -31,7 +31,7 @@ for (pdf_file in names(icc_item_models)) {
   print(convergence_table)
   cat("Divergent transitions:", n_divergent, "| max R-hat over all parameters:", round(max_rhat_all, 3), "\n")
 
-  pdf(file.path(output_dir, pdf_file), width = 10, height = 7)
+  pdf(file.path(output_diagnostics_dir, pdf_file), width = 10, height = 7)
   grid.arrange(tableGrob(convergence_table),
                top = sprintf("Divergent transitions: %d | max R-hat (all parameters): %.3f",
                              n_divergent, max_rhat_all))

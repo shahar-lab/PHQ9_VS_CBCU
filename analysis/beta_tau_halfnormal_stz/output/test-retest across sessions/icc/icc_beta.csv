@@ -1,2 +1,3 @@
 version,parameter,n_participants,icc_median,icc_lower_95,icc_upper_95,p_icc_above_0.80,sigma_b_median,sigma_e_median
+Measurement error (se),beta (raw scale),185,0.9819149241184402,0.8377342075395579,0.999942130343137,0.989875,2.16709765,0.297153155
 No measurement error,beta (raw scale),185,0.5375802890736583,0.4288789138772732,0.6341376503151999,0,1.7339368,1.6110511

@@ -2,7 +2,7 @@
 # reads: artifacts/beta_draws_by_wave.rds if it exists, otherwise fit_list (from
 #        fit_model.R; read from artifacts/fit_<wave>.rds if not in memory) and
 #        artifacts/subject_lookup_<wave>.csv
-# writes: output/test-retest across sessions/beta_test_retest_posterior_scatter.png,
+# writes: output/test-retest across sessions/correlation/beta_test_retest_posterior_scatter.png,
 #         artifacts/beta_draws_by_wave.rds
 #
 # A version of beta_test_retest_scatter.png that shows the time 2 posterior instead of
@@ -108,7 +108,7 @@ p_beta_retest_posterior <- (p_beta_posterior_above | p_beta_posterior_below) +
   )
 
 ggsave(
-  file.path(output_retest_dir, "beta_test_retest_posterior_scatter.png"),
+  file.path(output_retest_corr_dir, "beta_test_retest_posterior_scatter.png"),
   plot = p_beta_retest_posterior,
   width = 18, height = 8, dpi = 300, bg = "white"
 )

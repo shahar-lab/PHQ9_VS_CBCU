@@ -1,7 +1,7 @@
 #### ICC OF PHQ-9 SUM SCORE: TABLE AND POSTERIOR PLOT ####
 # reads:  artifacts/brms_icc_phq9.rds
-# writes: output/test-retest across sessions/icc_phq9.csv,
-#         output/test-retest across sessions/icc_phq9_posterior.{pdf,png}
+# writes: output/test-retest across sessions/icc/icc_phq9.csv,
+#         output/test-retest across sessions/icc/icc_phq9_posterior.{pdf,png}
 #
 # Eq. [4]: ICC = sigma_b^2 / (sigma_b^2 + sigma_e^2), computed per posterior draw.
 
@@ -27,7 +27,7 @@ icc_phq9_table <- tibble(
   sigma_e_median   = median(sqrt(sigma_e2))
 )
 print(icc_phq9_table)
-write_csv(icc_phq9_table, file.path(output_retest_dir, "icc_phq9.csv"))
+write_csv(icc_phq9_table, file.path(output_retest_icc_dir, "icc_phq9.csv"))
 
 #### 2. POSTERIOR PLOT ####
 
@@ -56,7 +56,7 @@ p_icc_phq9 <- ggplot(tibble(icc = icc_phq9_draws), aes(x = icc, y = 0)) +
 
 plot_name <- "icc_phq9_posterior"
 
-ggsave(file.path(output_retest_dir, paste0(plot_name, ".pdf")), plot = p_icc_phq9,
+ggsave(file.path(output_retest_icc_dir, paste0(plot_name, ".pdf")), plot = p_icc_phq9,
        width = 10, height = 4, bg = "white")
-ggsave(file.path(output_retest_dir, paste0(plot_name, ".png")), plot = p_icc_phq9,
+ggsave(file.path(output_retest_icc_dir, paste0(plot_name, ".png")), plot = p_icc_phq9,
        width = 10, height = 4, dpi = 300, bg = "white")

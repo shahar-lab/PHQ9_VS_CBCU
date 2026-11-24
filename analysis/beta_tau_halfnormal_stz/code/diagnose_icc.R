@@ -1,21 +1,28 @@
 #### ICC MODELS: CONVERGENCE AND POSTERIOR PREDICTIVE CHECKS ####
 # reads:  artifacts/brms_icc_tau_me.rds,    artifacts/tau_icc_data.csv,
 #         artifacts/brms_icc_tau_plain.rds, artifacts/tau_icc_data_plain.csv,
+#         artifacts/brms_icc_beta_me.rds,    artifacts/beta_icc_data.csv,
 #         artifacts/brms_icc_beta_plain.rds, artifacts/beta_icc_data_plain.csv,
-#         artifacts/brms_icc_phq9.rds,       artifacts/phq9_icc_data.csv
-# writes: output/diagnostic_icc_tau.pdf (tau, measurement error),
-#         output/diagnostic_icc_tau_plain.pdf (tau, no measurement error),
-#         output/diagnostic_icc_beta_plain.pdf (beta, no measurement error),
-#         output/diagnostic_icc_phq9.pdf (PHQ-9 sum score)
+#         artifacts/brms_icc_phq9.rds,       artifacts/phq9_icc_data.csv,
+#         artifacts/brms_icc_cp_me.rds, artifacts/brms_icc_cp_plain.rds, artifacts/choice_prediction_icc_data.csv
+# writes: output/diagnostics/diagnostic_icc_tau.pdf (tau, measurement error),
+#         output/diagnostics/diagnostic_icc_tau_plain.pdf (tau, no measurement error),
+#         output/diagnostics/diagnostic_icc_beta_me.pdf (beta, measurement error),
+#         output/diagnostics/diagnostic_icc_beta_plain.pdf (beta, no measurement error),
+#         output/diagnostics/diagnostic_icc_phq9.pdf (PHQ-9 sum score),
+#         output/diagnostics/diagnostic_icc_cp_me.pdf, output/diagnostics/diagnostic_icc_cp_plain.pdf (choice prediction)
 
 icc_versions <- tibble(
-  outcome   = c("tau", "tau", "beta", "phq9_sum"),
-  fit_file  = c("brms_icc_tau_me.rds", "brms_icc_tau_plain.rds", "brms_icc_beta_plain.rds",
-                "brms_icc_phq9.rds"),
-  data_file = c("tau_icc_data.csv", "tau_icc_data_plain.csv", "beta_icc_data_plain.csv",
-                "phq9_icc_data.csv"),
+  outcome   = c("tau", "tau", "beta", "beta", "phq9_sum", "cp", "cp"),
+  fit_file  = c("brms_icc_tau_me.rds", "brms_icc_tau_plain.rds", "brms_icc_beta_me.rds",
+                "brms_icc_beta_plain.rds", "brms_icc_phq9.rds", "brms_icc_cp_me.rds",
+                "brms_icc_cp_plain.rds"),
+  data_file = c("tau_icc_data.csv", "tau_icc_data_plain.csv", "beta_icc_data.csv",
+                "beta_icc_data_plain.csv", "phq9_icc_data.csv", "choice_prediction_icc_data.csv",
+                "choice_prediction_icc_data.csv"),
   pdf_file  = c("diagnostic_icc_tau.pdf", "diagnostic_icc_tau_plain.pdf",
-                "diagnostic_icc_beta_plain.pdf", "diagnostic_icc_phq9.pdf")
+                "diagnostic_icc_beta_me.pdf", "diagnostic_icc_beta_plain.pdf",
+                "diagnostic_icc_phq9.pdf", "diagnostic_icc_cp_me.pdf", "diagnostic_icc_cp_plain.pdf")
 )
 
 # Population-level parameters only (the 185 r_id[...] draws are left out)
@@ -63,7 +70,7 @@ for (k in seq_len(nrow(icc_versions))) {
   ppc_retest  <- ppc_stat(y_obs, yrep, stat = retest_r) +
     labs(title = "Posterior predictive: day 1 vs day 2 correlation", x = "Pearson r")
 
-  pdf(file.path(output_dir, icc_versions$pdf_file[k]), width = 8, height = 6)
+  pdf(file.path(output_diagnostics_dir, icc_versions$pdf_file[k]), width = 8, height = 6)
   grid.arrange(tableGrob(convergence_table),
                top = sprintf("Divergent transitions: %d | max R-hat (all parameters): %.3f",
                              n_divergent, max_rhat_all))

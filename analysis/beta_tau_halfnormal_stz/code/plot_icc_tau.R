@@ -1,8 +1,8 @@
 #### ICC OF TAU: TABLE AND POSTERIOR PLOT (BOTH VERSIONS) ####
 # reads:  artifacts/brms_icc_tau_me.rds, artifacts/brms_icc_tau_plain.rds
-# writes: output/test-retest across sessions/icc_tau.csv (one row per version),
-#         output/test-retest across sessions/icc_tau_posterior.{pdf,png} (both versions),
-#         output/test-retest across sessions/icc_tau_without_ms_posterior.{pdf,png}
+# writes: output/test-retest across sessions/icc/icc_tau.csv (one row per version),
+#         output/test-retest across sessions/icc/icc_tau_posterior.{pdf,png} (both versions),
+#         output/test-retest across sessions/icc/icc_tau_without_ms_posterior.{pdf,png}
 #
 # Eq. [4]: ICC = sigma_b^2 / (sigma_b^2 + sigma_e^2), computed per posterior draw.
 
@@ -39,7 +39,7 @@ icc_tau_table <- df_icc_draws |>
             sigma_b_median   = median(sigma_b),
             sigma_e_median   = median(sigma_e))
 print(icc_tau_table)
-write_csv(icc_tau_table, file.path(output_retest_dir, "icc_tau.csv"))
+write_csv(icc_tau_table, file.path(output_retest_icc_dir, "icc_tau.csv"))
 
 #### 2. POSTERIOR PLOT ####
 
@@ -78,9 +78,9 @@ p_icc_tau <- ggplot(df_icc_draws, aes(x = icc, y = 0, fill = version, colour = v
 
 plot_name <- "icc_tau_posterior"
 
-ggsave(file.path(output_retest_dir, paste0(plot_name, ".pdf")), plot = p_icc_tau,
+ggsave(file.path(output_retest_icc_dir, paste0(plot_name, ".pdf")), plot = p_icc_tau,
        width = 10, height = 4, bg = "white")
-ggsave(file.path(output_retest_dir, paste0(plot_name, ".png")), plot = p_icc_tau,
+ggsave(file.path(output_retest_icc_dir, paste0(plot_name, ".png")), plot = p_icc_tau,
        width = 10, height = 4, dpi = 300, bg = "white")
 
 #### 3. POSTERIOR PLOT: NO MEASUREMENT ERROR ONLY ####
@@ -110,7 +110,7 @@ p_icc_tau_without_ms <- ggplot(df_icc_without_ms, aes(x = icc, y = 0)) +
 
 plot_name <- "icc_tau_without_ms_posterior"
 
-ggsave(file.path(output_retest_dir, paste0(plot_name, ".pdf")), plot = p_icc_tau_without_ms,
+ggsave(file.path(output_retest_icc_dir, paste0(plot_name, ".pdf")), plot = p_icc_tau_without_ms,
        width = 10, height = 4, bg = "white")
-ggsave(file.path(output_retest_dir, paste0(plot_name, ".png")), plot = p_icc_tau_without_ms,
+ggsave(file.path(output_retest_icc_dir, paste0(plot_name, ".png")), plot = p_icc_tau_without_ms,
        width = 10, height = 4, dpi = 300, bg = "white")

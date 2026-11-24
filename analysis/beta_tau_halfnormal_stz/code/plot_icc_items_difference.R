@@ -1,7 +1,7 @@
 #### ICC DIFFERENCE: CBCU UTILITIES - PHQ-9 ITEMS ####
 # reads:  artifacts/brms_icc_utility.rds, artifacts/brms_icc_phq9_items.rds
-# writes: output/test-retest across sessions/icc_items_difference.csv,
-#         output/test-retest across sessions/icc_items_difference_posterior.{pdf,png}
+# writes: output/test-retest across sessions/icc/icc_items_difference.csv,
+#         output/test-retest across sessions/icc/icc_items_difference_posterior.{pdf,png}
 #
 # ICC (eq. [2]) per posterior draw in each model, then difference = ICC_CBCU - ICC_PHQ9, draw by draw.
 # The two models were fit separately, so draw k of one is paired with draw k of the other
@@ -38,7 +38,7 @@ icc_difference_table <- tibble(
   n_draws       = length(icc_difference)
 )
 print(icc_difference_table)
-write_csv(icc_difference_table, file.path(output_retest_dir, "icc_items_difference.csv"))
+write_csv(icc_difference_table, file.path(output_retest_icc_dir, "icc_items_difference.csv"))
 
 #### 2. POSTERIOR PLOT ####
 
@@ -66,7 +66,7 @@ p_icc_difference <- ggplot(tibble(diff = icc_difference), aes(x = diff, y = 0)) 
 
 plot_name <- "icc_items_difference_posterior"
 
-ggsave(file.path(output_retest_dir, paste0(plot_name, ".pdf")), plot = p_icc_difference,
+ggsave(file.path(output_retest_icc_dir, paste0(plot_name, ".pdf")), plot = p_icc_difference,
        width = 10, height = 4, bg = "white")
-ggsave(file.path(output_retest_dir, paste0(plot_name, ".png")), plot = p_icc_difference,
+ggsave(file.path(output_retest_icc_dir, paste0(plot_name, ".png")), plot = p_icc_difference,
        width = 10, height = 4, dpi = 300, bg = "white")

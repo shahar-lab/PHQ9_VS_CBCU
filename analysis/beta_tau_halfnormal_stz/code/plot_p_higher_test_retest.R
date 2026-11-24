@@ -3,7 +3,7 @@
 #        (from fit_model.R; read from artifacts/fit_<wave>.rds if not in memory) and
 #        artifacts/subject_lookup_<wave>.csv
 # writes: artifacts/p_higher_option.csv,
-#         output/test-retest across sessions/p_higher_test_retest_scatter.png
+#         output/test-retest across sessions/correlation/p_higher_test_retest_scatter.png
 #
 # Measure: given that the subject did not choose None, the probability that they choose
 # the option with the higher utility. On a trial with items A and B:
