@@ -1,7 +1,8 @@
 #### CHOICE PREDICTION PER PARTICIPANT X DAY: POSTERIOR SUMMARY ####
 # reads:  artifacts/fit_time1.rds, artifacts/fit_time2.rds,
 #         artifacts/subject_lookup_time1.csv, artifacts/subject_lookup_time2.csv
-# writes: artifacts/choice_prediction_icc_data.csv
+# writes: artifacts/choice_prediction_icc_data.csv (participants with both days),
+#         artifacts/choice_prediction_by_wave.csv (every participant per day)
 #
 # Choice prediction (as choice_prediction_all in
 # simulation/bradley_terry_beta_tau_halfnormal_stz_recovery/code/05_compute_choice_prediction.R):
@@ -10,9 +11,20 @@
 # log_lik[t] in the Stan model is log P(chosen option on trial t) under the 3-way softmax
 # (logits beta*u[A], beta*u[B], beta*tau), so P(chosen) = exp(log_lik[t]).
 # Per draw: mean of exp(log_lik) over the participant's trials -> one posterior per participant x day.
-# Summarised by its median (point estimate) and SD (measurement error, used as se).
+# Summarised by its median (point estimate), SD (measurement error, used as se) and 95% HDI
+# (whiskers in the scatter plots).
 
-icc_waves <- c("time1", "time2")
+icc_waves   <- c("time1", "time2")
+cp_hdi_prob <- 0.95
+
+# Shortest interval containing prob of the draws (same as in plot_beta_posterior_width.R)
+hdi_bounds <- function(x, prob) {
+  x       <- sort(x)
+  n_in    <- ceiling(prob * length(x))
+  widths  <- x[n_in:length(x)] - x[1:(length(x) - n_in + 1)]
+  i_start <- which.min(widths)
+  c(lower = x[i_start], upper = x[i_start + n_in - 1])
+}
 
 # Trial -> subject_index, in the same row order the model was fitted on (prep_data.R)
 df_cbcu_trials <- read_csv(file.path(data_path, "cbcu.csv"), show_col_types = FALSE)
@@ -38,15 +50,22 @@ df_cp_by_wave <- map(icc_waves, \(wave) {
   rm(prob_chosen)
   gc()
 
+  cp_hdi <- unname(apply(unname(cp_draws), 2, hdi_bounds, prob = cp_hdi_prob))   # 2 x subjects: row 1 lower, row 2 upper
+
   tibble(subject_index = seq_len(ncol(cp_draws)),
          cp            = apply(cp_draws, 2, median),
          cp_mean       = colMeans(cp_draws),
          se_cp         = apply(cp_draws, 2, sd),
+         hdi_lower     = cp_hdi[1, ],
+         hdi_upper     = cp_hdi[2, ],
          n_trials      = as.vector(table(trial_subject))) |>
     left_join(df_lookup, by = "subject_index") |>
-    transmute(id = prolific_id, day = wave, cp, cp_mean, se_cp, n_trials)
+    transmute(id = prolific_id, day = wave, cp, cp_mean, se_cp, hdi_lower, hdi_upper, n_trials)
 }) |>
   list_rbind()
+
+# Every participant per day (also those with one day only), for the within-session scatters
+write_csv(df_cp_by_wave, file.path(artifacts_dir, "choice_prediction_by_wave.csv"))
 
 # Participants with both days
 ids_both_days <- df_cp_by_wave |> count(id) |> filter(n == 2) |> pull(id)

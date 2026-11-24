@@ -58,7 +58,9 @@ source(file.path(code_dir, "plot_p_higher_test_retest.R"))   # needs plot_param_
 source(file.path(code_dir, "plot_p_higher_above_tau_test_retest.R"))
 source(file.path(code_dir, "plot_beta_test_retest_posterior.R"))
 source(file.path(code_dir, "plot_beta_posterior_width.R"))   # needs beta_draws_by_wave.rds from the line above
+source(file.path(code_dir, "plot_beta_test_retest_hdi.R"))   # needs beta_posterior_width.csv from the line above
 source(file.path(code_dir, "plot_cross_parameter_scatter.R"))
+source(file.path(code_dir, "plot_beta_vs_utility_sd.R"))   # beta vs SD of the 15 utility medians, per session
 source(file.path(code_dir, "prep_phq9_parameter_summary.R"))
 source(file.path(code_dir, "plot_phq9_parameter_scatter.R"))
 source(file.path(code_dir, "prep_utility_phq9_item_mapping.R"))
@@ -84,6 +86,8 @@ source(file.path(code_dir, "plot_icc_tau.R"))
 source(file.path(code_dir, "plot_icc_beta.R"))
 source(file.path(code_dir, "plot_icc_phq9.R"))
 source(file.path(code_dir, "plot_icc_choice_prediction.R"))
+source(file.path(code_dir, "plot_choice_prediction_test_retest_hdi.R"))   # day 1 vs day 2, 95% HDI whiskers
+source(file.path(code_dir, "plot_beta_vs_choice_prediction.R"))           # per session; needs beta_posterior_width.csv
 
 # ICC of item profiles (agreement, eq. [1]-[2]): CBCU utilities and PHQ-9 item ratings,
 # both centred (not scaled) within participant x occasion, same 185 participants
