@@ -3,6 +3,7 @@ rm(list = ls())
 #### SETUP ####
 
 library(here)
+library(brms)        # loaded before posterior so posterior's rhat()/ess_*() stay unmasked
 library(tidyverse)
 library(cmdstanr)
 library(posterior)
@@ -25,6 +26,7 @@ artifacts_dir <- file.path(project_root, "analysis", analysis_name, "artifacts")
 output_dir    <- file.path(project_root, "analysis", analysis_name, "output")
 output_retest_dir      <- file.path(output_dir, "test-retest across sessions")
 output_retest_corr_dir <- file.path(output_retest_dir, "correlation")   # time 1 vs time 2 scatters
+output_retest_icc_dir  <- file.path(output_retest_dir, "icc")           # ICC tables and posteriors
 output_diagnostics_dir <- file.path(output_dir, "diagnostics")
 output_clinical_dir    <- file.path(output_dir, "clinical reports")
 data_path    <- file.path(project_root, "data", "processed")
@@ -33,6 +35,7 @@ model_path   <- file.path(project_root, "models", model_name, paste0(model_name,
 if (!dir.exists(artifacts_dir)) dir.create(artifacts_dir, recursive = TRUE)
 if (!dir.exists(output_dir))    dir.create(output_dir, recursive = TRUE)
 if (!dir.exists(output_retest_corr_dir)) dir.create(output_retest_corr_dir, recursive = TRUE)
+if (!dir.exists(output_retest_icc_dir))  dir.create(output_retest_icc_dir, recursive = TRUE)
 if (!dir.exists(output_diagnostics_dir)) dir.create(output_diagnostics_dir, recursive = TRUE)
 if (!dir.exists(output_clinical_dir))    dir.create(output_clinical_dir, recursive = TRUE)
 
@@ -50,6 +53,14 @@ source(file.path(code_dir, "plot_hyperparameter_posteriors.R"))  # sigma_locatio
 source(file.path(code_dir, "join_phq9_and_write.R"))             # artifacts/participant_parameters.csv
 source(file.path(code_dir, "plot_test_retest.R"))                # sigma (HDI), tau, u, PHQ-9 sum
 source(file.path(code_dir, "compare_with_beta_model.R"))         # vs analysis/beta_tau_halfnormal_stz
+
+# ICC of sigma across days, same models as beta in analysis/beta_tau_halfnormal_stz.
+# Standalone: needs only the SETUP block above.
+source(file.path(code_dir, "fit_icc_sigma_without_ms.R"))   # posterior medians; no day effect (agreement)
+source(file.path(code_dir, "fit_icc_sigma_with_ms.R"))      # same medians, posterior SD as se
+source(file.path(code_dir, "fit_icc_sigma_day_effect.R"))   # both, plus a day effect (consistency)
+source(file.path(code_dir, "diagnose_icc.R"))               # all four ICC models
+source(file.path(code_dir, "plot_icc_sigma.R"))
 
 # Clinical reports (time 1): same patients and pairs as the beta report.
 # Ladder = P(bothers most): softmax over the symptoms above tau plus None, per draw.

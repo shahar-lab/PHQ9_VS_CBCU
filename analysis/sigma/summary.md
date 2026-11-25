@@ -55,7 +55,16 @@ Defined in the `.stan` file's `model {}` block.
 - `output/test-retest across sessions/correlation/` — time 1 vs time 2 for sigma (95% HDI), tau, u, PHQ-9 sum; `test_retest_summary.pdf`.
 - `output/comparison with beta model/` — sigma vs beta, sigma vs implied sigma, tau and u vs the beta model; `artifacts/comparison_with_beta_model.csv`.
 
-Not yet ported from `beta_tau_halfnormal_stz`: ICCs, choice prediction, PHQ-9 relations, clinical reports.
+- `output/test-retest across sessions/icc/` — ICC of sigma across days (`icc_sigma.csv`, posterior plots); diagnostics in `output/diagnostics/diagnostic_icc_sigma_*.pdf`.
+
+**ICC of sigma.** Same brms models, priors (Intercept centred on the sigma_location prior, 5) and
+sampling as the beta ICC in `beta_tau_halfnormal_stz`: `sigma ~ 1 + (1 | id)` on posterior medians,
+without and with measurement error (posterior SD as known `se`). These put the day 2 shift in
+mean sigma into the residual (absolute agreement). Two more fits add a fixed day effect
+(`sigma ~ 1 + day + (1 | id)`), which removes the shared shift from the residual, so their
+ICC = sigma_b^2 / (sigma_b^2 + sigma_e^2) is a consistency ICC.
+
+Not yet ported from `beta_tau_halfnormal_stz`: choice prediction, PHQ-9 relations.
 
 ## 5. Findings / Summary
 
