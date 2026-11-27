@@ -1,0 +1,19 @@
+run,run_label,quantity,type,parameter,true_value,median,lower,upper,covered
+icc_sigma_0.5,"Run 1: true ICC sigma 0.5, items 0.8, tau 0.7",sigma,Consistency,icc_sigma,0.5,0.43063154,0.20166807174999998,0.6358030124999999,TRUE
+icc_sigma_0.7,"Run 2: true ICC sigma 0.7, items 0.6, tau 0.9",sigma,Consistency,icc_sigma,0.7,0.572484235,0.33954338125,0.75829626825,TRUE
+icc_sigma_0.9,"Run 3: true ICC sigma 0.9, items 0.4, tau 0.5",sigma,Consistency,icc_sigma,0.9,0.838762325,0.6716291925,0.9595392629999999,TRUE
+icc_sigma_0.5,"Run 1: true ICC sigma 0.5, items 0.8, tau 0.7",sigma,Agreement,icc_A_sigma,0.45505617977528084,0.39173461,0.18196392225,0.5841395537499998,TRUE
+icc_sigma_0.7,"Run 2: true ICC sigma 0.7, items 0.6, tau 0.9",sigma,Agreement,icc_A_sigma,0.6370786516853931,0.45097135499999996,0.25959917699999996,0.6162954277499999,FALSE
+icc_sigma_0.9,"Run 3: true ICC sigma 0.9, items 0.4, tau 0.5",sigma,Agreement,icc_A_sigma,0.8191011235955056,0.8084246900000001,0.643628161,0.9310843114999999,TRUE
+icc_sigma_0.5,"Run 1: true ICC sigma 0.5, items 0.8, tau 0.7",Item profile (15 items),Consistency,icc_profile_C,0.8,0.799756515,0.7777802537499999,0.8191658095,TRUE
+icc_sigma_0.7,"Run 2: true ICC sigma 0.7, items 0.6, tau 0.9",Item profile (15 items),Consistency,icc_profile_C,0.6,0.61043398,0.574978569,0.64303436575,TRUE
+icc_sigma_0.9,"Run 3: true ICC sigma 0.9, items 0.4, tau 0.5",Item profile (15 items),Consistency,icc_profile_C,0.4,0.41747211500000003,0.37490910875,0.456425361,TRUE
+icc_sigma_0.5,"Run 1: true ICC sigma 0.5, items 0.8, tau 0.7",Item profile (15 items),Agreement,icc_profile_A,0.7802346896671138,0.77136916,0.74833328575,0.79264730125,TRUE
+icc_sigma_0.7,"Run 2: true ICC sigma 0.7, items 0.6, tau 0.9",Item profile (15 items),Agreement,icc_profile_A,0.5784421690214578,0.59021215,0.55478332425,0.622861589,TRUE
+icc_sigma_0.9,"Run 3: true ICC sigma 0.9, items 0.4, tau 0.5",Item profile (15 items),Agreement,icc_profile_A,0.3850382799693159,0.40300296,0.36171263375,0.44068837975,TRUE
+icc_sigma_0.5,"Run 1: true ICC sigma 0.5, items 0.8, tau 0.7",tau (None),Consistency,icc_tau,0.7,0.642773575,0.537691558,0.723007931,TRUE
+icc_sigma_0.7,"Run 2: true ICC sigma 0.7, items 0.6, tau 0.9",tau (None),Consistency,icc_tau,0.9,0.89001342,0.8457880807499999,0.92352848775,TRUE
+icc_sigma_0.9,"Run 3: true ICC sigma 0.9, items 0.4, tau 0.5",tau (None),Consistency,icc_tau,0.5,0.48508200999999995,0.35237685775,0.5920742584999998,TRUE
+icc_sigma_0.5,"Run 1: true ICC sigma 0.5, items 0.8, tau 0.7",tau (None),Agreement,icc_A_tau,0.6787792244499296,0.6251861599999999,0.5228396827499999,0.70708441575,TRUE
+icc_sigma_0.7,"Run 2: true ICC sigma 0.7, items 0.6, tau 0.9",tau (None),Agreement,icc_A_tau,0.894963991512765,0.87014916,0.824517848,0.9057655512499999,TRUE
+icc_sigma_0.9,"Run 3: true ICC sigma 0.9, items 0.4, tau 0.5",tau (None),Agreement,icc_A_tau,0.4995371861922445,0.482639045,0.35045077550000003,0.5897723354999999,TRUE
